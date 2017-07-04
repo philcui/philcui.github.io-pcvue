@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import utvue from 'utvue'
+import 'iview/dist/styles/iview.css'
+import axios from '@/util/http.js'
 
 Vue.config.productionTip = false
-
-/* eslint-disable no-new */
+Vue.use(utvue);
+Vue.prototype.axios = axios;
 new Vue({
   el: '#app',
   router,
