@@ -2,7 +2,7 @@
   <div id="app">
     <div class="layout">
       <Menu mode="horizontal" theme="dark" active-name="/home"  @on-select="getTopMenuUrl">
-        <div class="layout-logo">UtryUI-Vue界面元素库</div>
+        <div class="layout-logo">UtryUI-Vue</div>
         <div class="layout-nav">
           <Menu-item :name="item.url"  v-for="item in topMenu" :key="item.menuId">
             <Icon :type="item.icon"></Icon>
