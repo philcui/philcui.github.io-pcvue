@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="layout">
-      <Menu mode="horizontal" theme="dark" active-name="2">
+      <Menu mode="horizontal" theme="dark" active-name="2"  @on-select="getTopMenuUrl">
         <div class="layout-logo">UtryUI-Vue界面元素库</div>
         <div class="layout-nav">
-          <Menu-item :name="item.code" v-for="item in topMenu" :key="item.menuId">
+          <Menu-item :name="item.url"  v-for="item in topMenu" :key="item.menuId">
             <Icon :type="item.icon"></Icon>
             {{item.title}}
           </Menu-item>
@@ -57,7 +57,9 @@
         act:false,
         leftMenu:[],
         leftTopMenu:[],
-        topMenu:[{menuId:'1',title:'指南',code:'1',icon:'navigate'},{menuId:'2',title:'组件',code:'2',icon:'grid'},{menuId:'3',title:'手脚架',code:'3',icon:'settings'}],
+        topMenu:[{menuId:'1',title:'指南',code:'1',icon:'navigate',url:'/topMenu/guide'},
+                 {menuId:'2',title:'组件',code:'2',icon:'grid',url:'/home'},
+                 {menuId:'3',title:'手脚架',code:'3',icon:'settings',url:'/topMenu/footRack'}],
         data:[],
       }
     },
@@ -100,6 +102,10 @@
         this.leftMenu=root[0].children;
       },
       getRouter(url){
+        this.$router.push(url);
+      },
+      getTopMenuUrl(url){
+          debugger
         this.$router.push(url);
       },
       getUrl(val){

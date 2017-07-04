@@ -149,133 +149,132 @@ var data=[
     "id": "doc_0A19C2634C4F4A35B7936EF859FFC093",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Alert 警告提示",
-    "url": "/form/form"
+    "url": "/view/alert"
   },
   {
     "id": "doc_72AC50CBCD994385AE4F96181BABFC0D",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Card 卡片",
-    "url": "/form/form"
+    "url": "/view/card"
   },
   {
     "id": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Message 全局提示",
-    "url": "/form/form"
+    "url": "/view/message"
   },
   {
     "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Notice 通知提醒",
-    "url": "/form/form"
+    "url": "/view/notice"
   },
   {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Modal 对话框",
-    "url": "/form/form"
+    "url": "/view/modal"
   },
   {
     "id": "doc_F49A64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Progress 进度条",
-    "url": "/form/form"
+    "url": "/view/progress"
   },
   {
     "id": "doc_F499C9631DCF6B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Badge 徽标数",
-    "url": "/form/form"
+    "url": "/view/badge"
   },
   {
     "id": "doc_F499C9631DCF446B89FFA642627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Collapse 折叠面板",
-    "url": "/form/form"
+    "url": "/view/collapse"
   },
   {
     "id": "doc_F499C9631DCF446AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Timeline 时间轴",
-    "url": "/form/form"
+    "url": "/view/timeLine"
   },
   {
     "id": "doc_F499C9631DCF4346AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tag 标签",
-    "url": "/form/form"
+    "url": "/view/tag"
   },
   {
     "id": "doc_F499C9631DCF4464AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tooltip 文字提示",
-    "url": "/form/form"
+    "url": "/view/toolTip"
   },
   {
     "id": "doc_F499C9631DCF446AB24627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Poptip 气泡提示",
-    "url": "/form/form"
+    "url": "/view/popTip"
   },
   {
     "id": "doc_F499C9631DCF446AB332627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Carousel 走马灯",
-    "url": "/form/form"
+    "url": "/view/carousel"
   },
   {
     "id": "doc_F499C9631DCF446AB2633327336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tree 树形控件",
-    "url": "/form/form"
+    "url": "/view/tree"
   },
   {
     "id": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "pid": "V1.0.0",
-    "name": "Navigation",
-    "url": "/form/form"
+    "name": "Navigation"
   },
   {
     "id": "doc_41469D0A9F734406B2276152B5083994",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Menu 导航菜单",
-    "url": "/form/form"
+    "url": "/navigation/menu"
   },
   {
     "id": "doc_4CADAD6AD3634AE99591025BF457F2ED",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Tabs 标签页",
-    "url": "/form/form"
+    "url": "/navigation/tabs"
   },
   {
     "id": "doc_77368258DBB441A6A9E1966C4D214D84",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Dropdown 下拉菜单",
-    "url": "/form/form"
+    "url": "/navigation/dropDown"
   },
   {
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Page 分页",
-    "url": "/form/form"
+    "url": "/navigation/page"
   },
   {
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Breadcrumb 面包屑",
-    "url": "/form/form"
+    "url": "/navigation/breadcrumb"
   },
   {
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Steps 步骤条",
-    "url": "/form/form"
+    "url": "/navigation/steps"
   },
   {
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "LoadingBar 加载进度条",
-    "url": "/form/form"
+    "url": "/navigation/loadingBar"
   },
   {
     "id": "3CC4B2C730C94DA8AAC48333A38F7ww489",
@@ -297,19 +296,19 @@ var data=[
     "id": "doc_7D5EF512649C465081E8BF3805522024",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "Affix 图钉",
-    "url": "/form/form"
+    "url": "/other/affix"
   },
   {
     "id": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "BackTop 返回顶部",
-    "url": "/form/form"
+    "url": "/other/backTop"
   },
   {
     "id": "doc_F729475453FD4A3E8D45C1B19173F2D3",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "Spin 加载中",
-    "url": "/form/form"
+    "url": "/other/spin"
   }
 ]
 

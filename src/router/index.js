@@ -24,17 +24,47 @@ const timePicker = resolve => require(['../views/form/timePicker.vue'],resolve)
 const transfer = resolve => require(['../views/form/transfer.vue'],resolve)
 const upload = resolve => require(['../views/form/upload.vue'],resolve)
 const alert = resolve => require(['../views/view/alert.vue'],resolve)
+const badge = resolve => require(['../views/view/badge.vue'],resolve)
+const card = resolve => require(['../views/view/card.vue'],resolve)
+const carousel = resolve => require(['../views/view/carousel'],resolve)
+const collapse = resolve => require(['../views/view/collapse.vue'],resolve)
+const message = resolve => require(['../views/view/message.vue'],resolve)
+const modal = resolve => require(['../views/view/modal.vue'],resolve)
+const notice = resolve => require(['../views/view/notice.vue'],resolve)
+const popTip = resolve => require(['../views/view/popTip.vue'],resolve)
+const progress = resolve => require(['../views/view/progress.vue'],resolve)
+const tag = resolve => require(['../views/view/tag.vue'],resolve)
+const timeLine = resolve => require(['../views/view/timeLine.vue'],resolve)
+const toolTip = resolve => require(['../views/view/toolTip.vue'],resolve)
+const tree = resolve => require(['../views/view/tree.vue'],resolve)
+const breadcrumb = resolve => require(['../views/navigation/breadcrumb.vue'],resolve)
+const dropDown = resolve => require(['../views/navigation/dropDown.vue'],resolve)
+const loadingBar = resolve => require(['../views/navigation/loadingBar.vue'],resolve)
+const menu = resolve => require(['../views/navigation/menu.vue'],resolve)
+const page = resolve => require(['../views/navigation/page.vue'],resolve)
+const steps = resolve => require(['../views/navigation/steps.vue'],resolve)
+const tabs = resolve => require(['../views/navigation/tabs.vue'],resolve)
 const circle = resolve => require(['../views/chart/circle.vue'],resolve)
+const affix = resolve => require(['../views/other/affix.vue'],resolve)
+const backTop = resolve => require(['../views/other/backTop.vue'],resolve)
+const spin = resolve => require(['../views/other/spin.vue'],resolve)
 const install = resolve => require(['../views/leftTopMenu/install.vue'],resolve)
+const international = resolve => require(['../views/leftTopMenu/international.vue'],resolve)
+const overview = resolve => require(['../views/leftTopMenu/overview.vue'],resolve)
+const quickStart = resolve => require(['../views/leftTopMenu/quickStart.vue'],resolve)
+const theme = resolve => require(['../views/leftTopMenu/theme.vue'],resolve)
+const updateLog = resolve => require(['../views/leftTopMenu/updateLog.vue'],resolve)
+const footRack = resolve => require(['../views/topMenu/footRack.vue'],resolve)
+const guide = resolve => require(['../views/topMenu/guide.vue'],resolve)
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {path: '/',component: index},
-    {
-      path: '/home',
-      name: 'home',
-      component: home,
+    {path: '/topMenu/footRack',component:footRack},
+    {path: '/topMenu/guide',component:guide},
+    {path: '/home',component: home,
       children: [
         {path: '/basic/grid', component: grid},
         {path: '/basic/font', component: font},
@@ -57,9 +87,37 @@ export default new Router({
         {path: '/form/timePicker', component: timePicker},
         {path: '/form/transfer', component: transfer},
         {path: '/form/upload', component: upload},
-        {path: '/chart/circle', component:circle},
         {path: '/view/alert', component:alert},
-        {path: '/leftTopMenu/install',component:install}
+        {path: '/view/badge', component:badge},
+        {path: '/view/card', component:card},
+        {path: '/view/carousel', component:carousel},
+        {path: '/view/collapse', component:collapse},
+        {path: '/view/message', component:message},
+        {path: '/view/modal', component:modal},
+        {path: '/view/notice', component:notice},
+        {path: '/view/popTip', component:popTip},
+        {path: '/view/progress', component:progress},
+        {path: '/view/tag', component:tag},
+        {path: '/view/timeLine', component:timeLine},
+        {path: '/view/toolTip', component:toolTip},
+        {path: '/view/tree', component:tree},
+        {path: '/navigation/breadcrumb', component:breadcrumb},
+        {path: '/navigation/dropDown', component:dropDown},
+        {path: '/navigation/loadingBar', component:loadingBar},
+        {path: '/navigation/menu', component:menu},
+        {path: '/navigation/page', component:page},
+        {path: '/navigation/steps', component:steps},
+        {path: '/navigation/tabs', component:tabs},
+        {path: '/chart/circle', component:circle},
+        {path: '/other/affix', component:affix},
+        {path: '/other/backTop', component:backTop},
+        {path: '/other/spin', component:spin},
+        {path: '/leftTopMenu/install',component:install},
+        {path: '/leftTopMenu/international',component:international},
+        {path: '/leftTopMenu/overview',component:overview},
+        {path: '/leftTopMenu/quickStart',component:quickStart},
+        {path: '/leftTopMenu/theme',component:theme},
+        {path: '/leftTopMenu/updateLog',component:updateLog},
       ]
     },
   ]
