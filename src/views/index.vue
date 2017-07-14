@@ -1,7 +1,7 @@
 <template>
   <div class="ind-wrap">
-    <div class="ind-top-menu">
-            <span class="top-title">
+    <div class="ind-top-menu" :class="{blue:actColor}">
+      <span class="top-title">
               UTRY DESIGN
             </span>
       <ul class="top-menu">
@@ -101,6 +101,7 @@
             aDes:false,
             aDep:false,
             aRes:false,
+            actColor:false,
           }
       },
       methods:{
@@ -108,6 +109,7 @@
           let winH = window.innerHeight;
           let topH = document.body.scrollTop;
           let scH = winH * winH / 1700;
+          //动画显示隐藏
           if((scH + topH ) > 800){
             this.show = true;
             this.out = false;
@@ -115,27 +117,36 @@
             this.out = true;
             this.show = false;
           }
-          if(topH >= 725){
-            this.aIndex=false;
-            this.aDes=false;
-            this.aDep=false;
-            this.aRes=false;
+          debugger
+          //顶部菜单颜色变化
+          // topH>722px => a == white
+          if(topH >= 722){
+            this.aIndex = false;
+            this.aDes = false;
+            this.aDep = false;
+            this.aRes = false;
             if (this.index) {
               this.aIndex = true;
             } else if (this.des) {
-              this.aDes =true ;
+              this.aDes = true;
             } else if (this.dep) {
-              this.aDep=true;
+              this.aDep = true;
             } else if (this.res) {
-              this.aRes=true;
-            }else {
-              this.aIndex=true;
+              this.aRes = true;
+            } else {
+              this.aIndex = true;
             }
           }else {
-            this.aIndex=false;
-            this.aDes=false;
-            this.aDep=false;
-            this.aRes=false;
+            this.aIndex = false;
+            this.aDes = false;
+            this.aDep = false;
+            this.aRes = false;
+          }
+          // topH > 773px  => menu color == blue
+          if(topH > 773){
+            this.actColor = true;
+          }else {
+            this.actColor = false;
           }
         },
         changeAct(val){
@@ -183,6 +194,7 @@
     width: 100%;
     height: 100%;
   .ind-top-menu {
+    z-index: 9999;
     color: white;
     background-image: url("../assets/topMenu.bg.png");
     position: fixed;
@@ -221,6 +233,9 @@
   }
   }
   }
+  }
+  .blue {
+    color: #1156bf;
   }
     .ind-content {
       width: 1200px;
