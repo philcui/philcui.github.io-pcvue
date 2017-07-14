@@ -66,8 +66,7 @@ export default new Router({
       children: [
         {path: '/topMenu/footRack',component:footRack},
         {path: '/topMenu/guide',component:guide},
-        {path: '/topMenu/assembly',component:assembly,
-          children: [
+        {path: '/topMenu/assembly',component:assembly},
             {path: '/basic/grid', component: grid},
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},
@@ -120,8 +119,6 @@ export default new Router({
             {path: '/leftTopMenu/quickStart',component:quickStart},
             {path: '/leftTopMenu/theme',component:theme},
             {path: '/leftTopMenu/updateLog',component:updateLog},
-          ]
-        },
       ]
     },
   ]

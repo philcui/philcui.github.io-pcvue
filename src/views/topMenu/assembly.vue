@@ -10,7 +10,7 @@
             <div class="markMenu">
               <div class="leftMenu-title">组件</div>
             </div>
-            <Menu active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']">
+            <Menu active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
               <Submenu v-for="item in leftMenu" :name="item.code"  :key="item.id">
                 <template slot="title">
                   <Icon type="navicon-round"></Icon>

@@ -73,7 +73,7 @@
             <div class="font-content">
               <span class="fc-title">各取所需的体验设计解决方案  </span>
               <div class="fc-describe">
-                UtryDesign是一套内容丰富的语言，从设计原则、组件模式、协作流程到案例演示、资源下载.....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                UtryDesign是一套内容丰富的语言，从设计原则、组件模式、协作流程到案例演示、资源下载.....<br>
                 提供各种解决方法和指导,设计师、产品经理和工程师可以快速找到各自相关内容，有效提升工作效率
               </div>
             </div>
@@ -117,7 +117,6 @@
             this.out = true;
             this.show = false;
           }
-          debugger
           //顶部菜单颜色变化
           // topH>722px => a == white
           if(topH >= 722){
