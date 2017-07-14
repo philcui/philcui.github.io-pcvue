@@ -1,18 +1,18 @@
 <template>
   <div class="ind-wrap">
+    <div class="ind-top-menu">
+            <span class="top-title">
+              UTRY DESIGN
+            </span>
+      <ul class="top-menu">
+        <li @click="changeAct(1)">首页 <a :class="{active:index,activeA:aIndex}"></a></li>
+        <li @click="changeAct(2)">设计 <a :class="{active:des,activeA:aDes}" ></a></li>
+        <li @click="changeAct(3)">开发 <a :class="{active:dep,activeA:aDep}" ></a></li>
+        <li @click="changeAct(4)">资源 <a :class="{active:res,activeA:aRes}" ></a></li>
+      </ul>
+    </div>
     <div class="ind-content">
       <div class="ind-top">
-        <div class="ind-top-menu">
-          <span class="top-title">
-            UTRY DESIGN
-          </span>
-          <ul class="top-menu">
-            <li @click="changeAct(1)">首页 <a :class="{active:index}" class="a1"></a></li>
-            <li @click="changeAct(2)">设计 <a :class="{active:des}" class="a2"></a></li>
-            <li @click="changeAct(3)">开发 <a :class="{active:dep}" class="a3"></a></li>
-            <li @click="changeAct(4)">资源 <a :class="{active:res}" class="a4"></a></li>
-          </ul>
-        </div>
         <div class="ind-top-banner">
           <div class="banner-title">
             <span class="title-top">
@@ -95,8 +95,13 @@
             des:false,
             dep:false,
             res:false,
+           /* active:[{index:true},{des:false},{dep:false},{res:false}],*/
             show:false,
             out:false,
+            aIndex:false,
+            aDes:false,
+            aDep:false,
+            aRes:false,
           }
       },
       methods:{
@@ -104,32 +109,60 @@
           let winH = window.innerHeight;
           let topH = document.body.scrollTop;
           let scH = winH * winH / 1700;
-          if((scH + topH )>800){
-            this.show=true;
-            this.out=false;
+          if((scH + topH ) > 800){
+            this.show = true;
+            this.out = false;
           }else {
-            this.out=true;
-            this.show=false;
+            this.out = true;
+            this.show = false;
+          }
+          if(topH >= 725){
+            this.aIndex=false;
+            this.aDes=false;
+            this.aDep=false;
+            this.aRes=false;
+            if (this.index) {
+              this.aIndex = true;
+            } else if (this.des) {
+              this.aDes =true ;
+            } else if (this.dep) {
+              this.aDep=true;
+            } else if (this.res) {
+              this.res=true;
+            }
+          }else {
+            this.aIndex=false;
+            this.aDes=false;
+            this.aDep=false;
+            this.aRes=false;
           }
         },
         changeAct(val){
-          this.index=false;
-          this.des=false;
-          this.dep=false;
-          this.res=false;
-            if(val==1){
-              this.index=true;
+          this.index = false;
+          this.des = false;
+          this.dep = false;
+          this.res = false;
+          switch(val)
+          {
+            case 1:
+              this.index = true;
               this.$router.push("/");
-            }else if(val==2){
-              this.des=true;
+              break;
+            case 2:
+              this.des = true;
               this.$router.push("/home");
-            }else if (val==3){
-              this.dep=true;
-              this.$router.push(url);
-            }else if(val==4){
-              this.res=true;
-              this.$router.push(url);
-            }
+              break;
+            case 3:
+              this.dep = true;
+              this.$router.push("/");
+              break;
+            case 4:
+              this.dep = true;
+              this.$router.push("/");
+              break;
+            default:
+              this.$router.push("/");
+          }
         },
         goHome(){
           this.$router.push("/home");
@@ -148,6 +181,46 @@
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+  .ind-top-menu {
+    color: white;
+    background-image: url("../assets/topMenu.bg.png");
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 80px;
+  .top-title {
+    font-size: 24px;
+  }
+  .top-menu {
+    font-size: 14px;
+  li {
+    margin-left: 45px;
+    line-height: 80px;
+    height: 80px;
+    float: left;
+    width: 38px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  a {
+    border:2px solid  rgba(200,200,200,0);
+    border-radius: 3px;
+    width: 40px;
+  }
+  .active {
+    border: 2px solid white ;
+  }
+  .activeA {
+    border: 2px solid #1156bf !important;
+  }
+  }
+  }
+  }
     .ind-content {
       width: 1200px;
       margin:0 auto;
@@ -155,51 +228,7 @@
         height: 800px;
         width: 100%;
         color: #ffffff;
-        .ind-top-menu {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          flex-direction: row;
-          height: 80px;
-            .top-title {
-              font-size: 24px;
-            }
-            .top-menu {
-              font-size: 14px;
-              li {
-                margin-left: 45px;
-                line-height: 80px;
-                height: 80px;
-                float: left;
-                width: 38px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                flex-direction: column;
-                a {
-                  border: 2px solid #1f74e1;
-                  border-radius: 3px;
-                  width: 40px;
-                }
-                .a1 {
-                  border: 2px solid #2072de;
-                }
-                .a2 {
-                  border: 2px solid #2270dc;
-                }
-                .a3 {
-                  border: 2px solid #216bd4;
-                }
-                .a4 {
-                  border: 2px solid #1f66d0;
-                }
-                .active {
-                  border: 2px solid white !important;
-                }
-              }
-            }
-        }
+
         .ind-top-banner {
           height: 720px;
           width: 100%;
@@ -313,33 +342,33 @@
 
   .cr-img-ue {
     position:relative;
-    animation:moveUe 3s alternate;
-    -webkit-animation:moveUe 3s alternate;
+    animation:moveUe 1s alternate;
+    -webkit-animation:moveUe 1s alternate;
   }
   .cr-img-pm {
     position:relative;
-    animation:movePm 3.5s alternate;
-    -webkit-animation:movePm 3.5s alternate;
+    animation:movePm 1.2s alternate;
+    -webkit-animation:movePm 1.2s alternate;
   }
   .cr-img-dlp {
     position:relative;
-    animation:moveDlp 4s alternate;
-    -webkit-animation:moveDlp 4s alternate;
+    animation:moveDlp 1.5s alternate;
+    -webkit-animation:moveDlp 1.5s alternate;
   }
   .crImgUeOut {
     position:relative;
-    animation:moveUeOut 3s alternate;
-    -webkit-animation:moveUeOut 3s alternate;
+    animation:moveUeOut 1.5s alternate;
+    -webkit-animation:moveUeOut 1.5s alternate;
   }
   .crImgPmOut {
     position:relative;
-    animation:moveDlpOut 3.5s alternate;
-    -webkit-animation:moveDlpOut 3.5s alternate;
+    animation:moveDlpOut 1.2s alternate;
+    -webkit-animation:moveDlpOut 1.2s alternate;
   }
   .crImgDlpOut {
     position:relative;
-    animation:movePmOut 3.5s alternate;
-    -webkit-animation:movePmOut 3.5s alternate;
+    animation:movePmOut 1s alternate;
+    -webkit-animation:movePmOut 1s alternate;
   }
   .img-pen {
     position: absolute;
@@ -367,7 +396,7 @@
     -webkit-animation:moveDownload 6s linear infinite;
   }
   @keyframes moveUe{
-    from {right:-300px;}
+    from {right:-400px;}
     to {right:268px;}
     0% {
       transform: scale(0);
@@ -381,7 +410,7 @@
   }
   @keyframes moveUeOut{
     from {right:268px;}
-    to {right:-300px;}
+    to {right:-400px;}
     0% {
       transform: scale(1);
     }
@@ -393,7 +422,7 @@
     }
   }
   @keyframes moveDlp{
-    from {right:-300px;}
+    from {right:-400px;}
     to {right:75px;}
     0% {
       transform: scale(0);
@@ -407,7 +436,7 @@
   }
   @keyframes moveDlpOut{
     from {right:75px;}
-    to {right:-300px;}
+    to {right:-400px;}
     0% {
       transform: scale(1);
     }
@@ -419,7 +448,7 @@
     }
   }
   @keyframes movePm{
-    from {right:-300px;}
+    from {right:-400px;}
     to {right:0;}
     0% {
       transform: scale(0);
@@ -433,7 +462,7 @@
   }
   @keyframes movePmOut{
     from {right:0px;}
-    to { right: -300px;}
+    to { right: -400px;}
     0% {
       transform: scale(1);
     }
