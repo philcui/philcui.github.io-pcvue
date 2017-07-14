@@ -95,7 +95,6 @@
             des:false,
             dep:false,
             res:false,
-           /* active:[{index:true},{des:false},{dep:false},{res:false}],*/
             show:false,
             out:false,
             aIndex:false,
@@ -128,7 +127,9 @@
             } else if (this.dep) {
               this.aDep=true;
             } else if (this.res) {
-              this.res=true;
+              this.aRes=true;
+            }else {
+              this.aIndex=true;
             }
           }else {
             this.aIndex=false;
@@ -142,8 +143,7 @@
           this.des = false;
           this.dep = false;
           this.res = false;
-          switch(val)
-          {
+          switch(val){
             case 1:
               this.index = true;
               this.$router.push("/");
@@ -157,12 +157,13 @@
               this.$router.push("/");
               break;
             case 4:
-              this.dep = true;
+              this.res = true;
               this.$router.push("/");
               break;
             default:
               this.$router.push("/");
           }
+          this.showAnimation();
         },
         goHome(){
           this.$router.push("/home");
