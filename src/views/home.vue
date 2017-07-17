@@ -90,6 +90,9 @@
           align-items: center;
           justify-content: flex-end;
           flex-direction: column;
+          &:hover{
+            cursor: pointer;
+          }
         a {
           border:2px solid  rgba(200,200,200,0);
           border-radius: 3px;

@@ -4,7 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import utvue from 'utvue'
-import 'iview/dist/styles/iview.css'
+// import 'iview/dist/styles/iview.css'
+import 'utvue/src/styles/index.less'
 import axios from '@/util/http.js'
 
 Vue.config.productionTip = false
