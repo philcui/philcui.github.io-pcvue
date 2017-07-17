@@ -160,11 +160,11 @@
               break;
             case 2:
               this.des = true;
-              this.$router.push("/home");
+              this.$router.push("/design");
               break;
             case 3:
               this.dep = true;
-              this.$router.push("/");
+              this.$router.push("/develop");
               break;
             case 4:
               this.res = true;

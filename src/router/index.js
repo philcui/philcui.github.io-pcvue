@@ -2,12 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const index = resolve => require(['../views/index.vue'],resolve)
 const home = resolve => require(['../views/home.vue'],resolve)
+const design = resolve => require(['../views/design.vue'],resolve)
+const develop = resolve => require(['../views/develop.vue'],resolve)
 const grid = resolve => require(['../views/basic/grid.vue'],resolve)
 const font = resolve => require(['../views/basic/font.vue'],resolve)
 const color = resolve => require(['../views/basic/color.vue'],resolve)
 const layout = resolve => require(['../views/basic/layout.vue'],resolve)
 const icon = resolve => require(['../views/basic/icon.vue'],resolve)
 const button = resolve => require(['../views/basic/button.vue'],resolve)
+const colorMatch = resolve => require(['../views/basic/colorMatch.vue'],resolve)
 const cascsder = resolve => require(['../views/form/cascsder.vue'],resolve)
 const checkbox = resolve => require(['../views/form/checkbox.vue'],resolve)
 const datePicker = resolve => require(['../views/form/datePicker.vue'],resolve)
@@ -57,22 +60,27 @@ const updateLog = resolve => require(['../views/leftTopMenu/updateLog.vue'],reso
 const footRack = resolve => require(['../views/topMenu/footRack.vue'],resolve)
 const guide = resolve => require(['../views/topMenu/guide.vue'],resolve)
 const assembly = resolve => require(['../views/topMenu/assembly.vue'],resolve)
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {path: '/',component: index},
     {path: '/home',component: home,
-      children: [
-        {path: '/topMenu/footRack',component:footRack},
-        {path: '/topMenu/guide',component:guide},
-        {path: '/topMenu/assembly',component:assembly},
+      children:[
+        {path: '/design',component: design},
+        {path: '/develop',component: develop,
+          children:[
+            {path: '/topMenu/footRack',component:footRack},
+            {path: '/topMenu/guide',component:guide},
+            {path: '/topMenu/assembly',component:assembly},
             {path: '/basic/grid', component: grid},
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},
             {path: '/basic/layout', component: layout},
             {path: '/basic/icon', component: color},
             {path: '/basic/button', component: layout},
+            {path: '/basic/colorMatch',component : colorMatch},
             {path: '/form/cascsder', component: cascsder},
             {path: '/form/checkbox', component: checkbox},
             {path: '/form/datePicker', component: datePicker},
@@ -119,7 +127,8 @@ export default new Router({
             {path: '/leftTopMenu/quickStart',component:quickStart},
             {path: '/leftTopMenu/theme',component:theme},
             {path: '/leftTopMenu/updateLog',component:updateLog},
-      ]
-    },
+          ]
+        },
+      ]},
   ]
 })
