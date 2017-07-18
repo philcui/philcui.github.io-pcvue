@@ -18,7 +18,13 @@
     </div>
     <div class="hc-left">
       <div class="hcl-search">
-        <div class="search">在此处搜索组件...</div>
+        <Input style="border: none;width: 100%" @on-focus="changeFocus" @on-blur="changeBlur" @input="search" placeholder="在此处搜索组件..." />
+        <!--<div class="search"></div>-->
+        <div class="hcl-search-list" v-show="seaShow">
+          <ul>
+            <li v-for="item in searchList"><a @click="clickItem(item.id,item.name,item.url)">{{item.name}}</a></li>
+          </ul>
+        </div>
       </div>
       <div class="leftMenu">
         <Menu 　ref="leftMenu"　active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
@@ -53,13 +59,20 @@
           margin: '0 auto',
           left:'1230px',
           top:'0',
-        }
+        },
+        searchList:[],
+        seaShow:false,
+        isFocus:false
       }
     },
     created(){
       this.styleObject.top=top+'px';
       this.data=menuData.menu;
       this.getMenus();
+      this.getDate=menuData.menu;
+    },
+    mounted() {
+      window.addEventListener('click',this.hideSearch);
     },
     methods:{
       getMenus(){
@@ -128,7 +141,47 @@
             }
           }
         }
+      },search(txt)
+      {
+        //txt
+        if(txt)
+        {
+          this.seaShow=true;
+          var list=[];
+          for(var i=0;i<this.getDate.length;i++){
+            if(this.getDate[i].pid!="0"&&this.getDate[i].name.indexOf(txt)>=0)
+            {
+              list.push(this.getDate[i]);
+            }
+          }
+          this.searchList=list;
+        }
+        else
+        {
+          this.seaShow=false;
+//          this.data=menuData.menu;
+        }
       },
+      changeFocus(a){
+        this.isFocus=true;
+        if(a.currentTarget.value)
+        {
+          this.seaShow=true;
+        }
+      },
+      changeBlur(){
+        this.isFocus=false;
+      },
+      clickItem(id,name){
+        console.log(name);
+        console.log(id);
+      },
+      hideSearch(){
+        if(!this.isFocus)
+        {
+          this.seaShow=false;
+        }
+      }
     }
   }
 </script>
@@ -218,14 +271,38 @@
     width: 240px;
   .hcl-search {
     height: 55px;
-  .search {
     position: relative;
-    margin-top: 45px;
-    color: #a1afc2;
-    font-size: 14px;
-    height: 55px;
-    padding-left: 24px;
-    border-left: 1px solid #dddee1;
+    margin-top: 43px;
+  .hcl-search-list{
+    background-color: #ffffff;
+    border: 1px solid #dfe2e5;
+    height: auto;
+    z-index: 999;
+    position: absolute;
+    box-shadow: #dfe2e5 0px 0px 3px;
+    width: 100%;
+  ul{
+    margin: 5px;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    list-style: none;
+  }
+  li{
+    line-height:25px;
+    height: 25px;
+  a{
+    color: #728093;
+  }
+  a:hover
+  {
+    color: #65aef5;
+  }
+  }
+  }
+  input{
+    border:none;
+    background-color: #f9f9f9;
+    font-size: 15px;
   }
   }
   .leftMenu{
