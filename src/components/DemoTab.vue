@@ -5,55 +5,35 @@
           <slot name="sample"></slot>
         </Tab-pane>
         <Tab-pane label="代码" ref="codeBox">
-          <pre>
-            <code>
-              <slot name="code"></slot>
+          <pre v-highlight>
+            <code class="html" v-html="code">
             </code>
           </pre>
         </Tab-pane>
-        <a slot="extra" @click.prevent="copyCode"><Icon type="ios-copy-outline"></Icon><span>复制</span></a>
+        <a slot="extra" 
+        v-clipboard:copy="copyCode"
+        v-clipboard:success="onCopy"
+        v-clipboard:error="onError"><Icon type="ios-copy-outline"></Icon><span>复制</span></a>
     </Tabs>
   </div>
 </template>
 <script>
 export default {
   name: 'demoTab',
-  data () {
-    return {
-      
-    }
-  },
+  props: ['code'],
   methods: {
-    copyCode () {
-      let content = this.$refs.codeBox.$el.querySelector('code')
-      console.log(content)
-      try{
-        content.select()
-        document.execCommand("Copy")
-        alert("已复制好，可贴粘。")
-      } catch (error) {
-        console.log(error)
-      } 
-      
+    onCopy: function (e) {
+      alert('code copied')
+      this.$Message.success('Code copied')
     },
-    syntaxHighLight (data) {
-      data = data.replace(/"(.*?)"/g, '<span class="code-cd">"$1"</span>')
-      // data = data.replace(/#(.*?)/g, '<span class="code-selector-id">#$1</span>')
-      // data = data.replace(/&lt;(.*?)&gt;/g, "<span class='code-ele'>&lt;$1&gt;</span>")
-      data = data.replace(/\/\*(.*?)\*\//g, "<span class='code-comment'>/*$1*/;</span>")
-      data = data.replace(/^\s.+|.+\s$/g, "")
-      return data
+    onError: function (e) {
+      alert('something wrong')
     }
   },
-  // computed: {
-  //     codeContent () {
-  //       return this.code.replace(/\</g,)
-  //     }
-  // },
-  mounted () {
-    let _this = this
-    let codex = this.$refs.codeBox.$el.querySelector('code')
-    codex.innerHTML = _this.syntaxHighLight(codex.innerHTML)
+  computed: {
+    copyCode () {
+      return this.code.replace(/&lt;/g, "<")
+    }
   }
 }
 </script>
@@ -118,6 +98,11 @@ export default {
     padding: 0px;
   }
   pre {
+    margin: 0px;
+  }
+  pre code {
+    font-size: 1.2em;
+    padding: 0px;
     margin: 0px;
   }
 }

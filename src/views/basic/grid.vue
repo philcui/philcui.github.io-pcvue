@@ -20,32 +20,6 @@
             <Col span="6">col-6</Col>
         </Row>
       </div>
-      <div slot="code">
-        &lt;template>
-            &lt;Row>
-                &lt;Col span="12">col-12&lt;/Col>
-                &lt;Col span="12">col-12&lt;/Col>
-            &lt;/Row>
-            &lt;br>
-            &lt;Row>
-                &lt;Col span="8">col-8&lt;/Col>
-                &lt;Col span="8">col-8&lt;/Col>
-                &lt;Col span="8">col-8&lt;/Col>
-            &lt;/Row>
-            &lt;br>
-            &lt;Row>
-                &lt;Col span="6">col-6&lt;/Col>
-                &lt;Col span="6">col-6&lt;/Col>
-                &lt;Col span="6">col-6&lt;/Col>
-                &lt;Col span="6">col-6&lt;/Col>
-            &lt;/Row>
-        &lt;/template>
-        &lt;script>
-            export default {
-                
-            }
-        &lt;/script>
-      </div>
     </demoTab>
   </div>
 </template>
@@ -57,7 +31,32 @@ export default {
 	},
   data () {
     return {
-      "gridCode": ''
+      "gridCode": `
+&lt;template>
+    &lt;Row>
+        &lt;Col span="12">col-12&lt;/Col>
+        &lt;Col span="12">col-12&lt;/Col>
+    &lt;/Row>
+    &lt;br>
+    &lt;Row>
+        &lt;Col span="8">col-8&lt;/Col>
+        &lt;Col span="8">col-8&lt;/Col>
+        &lt;Col span="8">col-8&lt;/Col>
+    &lt;/Row>
+    &lt;br>
+    &lt;Row>
+        &lt;Col span="6">col-6&lt;/Col>
+        &lt;Col span="6">col-6&lt;/Col>
+        &lt;Col span="6">col-6&lt;/Col>
+        &lt;Col span="6">col-6&lt;/Col>
+    &lt;/Row>
+&lt;/template>
+&lt;script>
+    export default {
+        
+    }
+&lt;/script>
+`
     }
   }
 }
