@@ -3,6 +3,10 @@
     <Tabs type="card">
         <Tab-pane label="示例">
           <slot name="sample"></slot>
+          <div class="describe-title" v-if="describeTitle&&describeTitle.length>0">
+           <span>{{describeTitle}}</span><span class="line"></span>
+          </div>
+          <slot name="describe-content" class="describeContent"></slot>
         </Tab-pane>
         <Tab-pane label="代码" ref="codeBox">
           <pre v-highlight>
@@ -20,14 +24,21 @@
 <script>
 export default {
   name: 'demoTab',
-  props: ['code'],
+  props: {
+    // code 要显示的代码内容
+    code: String,
+    // describeTitle 示例框中下部分的标题
+    describeTitle: {
+      type: String,
+      default:''
+    }
+  },
   methods: {
-    onCopy: function (e) {
-      alert('code copied')
+    onCopy (e) {
       this.$Message.success('Code copied')
     },
-    onError: function (e) {
-      alert('something wrong')
+    onError (e){
+      this.$Message.success('something wrong')
     }
   },
   computed: {
@@ -43,6 +54,9 @@ export default {
   border: 1px solid #dfe2e5;
   border-radius: 3px;
   overflow: hidden;
+  &:hover{
+    box-shadow: 1px 1px 5px #ccc;
+  }
   .ivu-tabs-cardnav{
     border: none;
     border-bottom: 1px solid #dfe2e5;
@@ -104,6 +118,35 @@ export default {
     font-size: 1.2em;
     padding: 0px;
     margin: 0px;
+  }
+  .describe-title{
+    line-height: 50px;
+    font-size: 26px;
+    margin: 15px 0px;
+    position: relative;
+    height: 50px;
+    span{
+      display: inline-block;
+      position: absolute;
+      color: #3e4752;
+    }
+    span:first-child{
+      z-index: 10;
+      background-color: #fff;
+      padding-right: 20px;
+    }
+    span.line{
+      z-index: 0;
+      width: 100%;
+      height: 0px;
+      border-top:1px solid #dfe2e5;
+      top: 25px;
+    }
+  }
+  .describeContent{
+    font-size: 14px;
+    color: #728093;
+    margin-top: 10px;
   }
 }
 </style>

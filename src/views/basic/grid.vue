@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <demoTab :code="gridCode">
+    <demoTab :code="gridCode" :describeTitle="describeTitle">
       <div slot="sample">
         <Row>
           <Col span="12">col-12</Col>
@@ -20,6 +20,9 @@
             <Col span="6">col-6</Col>
         </Row>
       </div>
+      <div slot="describe-content">
+         除客户指定外，产品建议使用商务蓝作为主色调。
+      </div>
     </demoTab>
   </div>
 </template>
@@ -31,6 +34,7 @@ export default {
 	},
   data () {
     return {
+      "describeTitle": "品牌色",
       "gridCode": `
 &lt;template>
     &lt;Row>
