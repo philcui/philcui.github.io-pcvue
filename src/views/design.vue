@@ -132,6 +132,7 @@
     height: 55px;
     position: relative;
     margin-top: 43px;
+    border-left: 1px solid #dddee1 ;
     .hcl-search-list{
       background-color: #ffffff;
       border: 1px solid #dfe2e5;
@@ -218,5 +219,10 @@
     width: 960px;
     min-height: 200px;
   }
+  }
+  .ivu-input:focus {
+    border-color: #35a0da;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
   }
 </style>
