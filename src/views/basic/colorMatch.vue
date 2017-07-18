@@ -14,7 +14,6 @@ export default {
     },
   methods:{
       goAnchor(selector){
-          debugger
         var anchor = this.$el.querySelector(selector)
         debugger
         document.body.scrollTop = anchor.offsetTop

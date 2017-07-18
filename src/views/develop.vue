@@ -27,8 +27,8 @@
         </div>
       </div>
       <div class="leftMenu">
-        <Menu 　ref="leftMenu"　active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
-          <Submenu v-for="item in leftMenu" :name="item.code"  :key="item.id">
+        <Menu 　ref="leftMenu"　active-name="1"  @on-select="getRouter" width="auto" :open-names="['1-1']" accordion>
+          <Submenu v-for="item in leftMenu" :name="item.id"  :key="item.id">
             <template slot="title">
               {{item.name}}
             </template>

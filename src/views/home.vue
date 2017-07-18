@@ -11,7 +11,7 @@
         </ul>
       </div>
     </div>
-    <div :style="homeContent">
+    <div :style="{ minHeight: height }">
       <router-view></router-view>
     </div>
   </div>
@@ -21,10 +21,7 @@
   export default {
     data() {
       return {
-        homeContent: {
-          width:'100%',
-          height:'',
-        },
+        height:'',
         menus: [
           { title: '首页', url: '/', selected: false },
           { title: '设计', url: '/design', selected: false },
@@ -35,7 +32,7 @@
     },
     mounted: function () {
       const wh=window.innerHeight;
-      this.homeContent.height=( wh - 80 ) +'px';
+      this.height=( wh - 80 ) +'px';
       const where = window.location.href
       const menuTitle = where.slice(where.lastIndexOf('/'))
       const selectedMenu = this.menus.find(m => m.url === menuTitle);
