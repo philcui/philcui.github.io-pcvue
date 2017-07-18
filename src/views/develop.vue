@@ -1,7 +1,7 @@
 <template>
   <div class="develop-wrap">
     <div class="catalog">
-      <div class="catalogInfo" @click="showCatalogList">目录</div>
+      <div class="catalogInfo" @click="showCatalogList('',true)">目录</div>
     </div>
     <div class="catalog2">
       <div class="catalogList" v-show="catalogModel">
@@ -88,7 +88,7 @@
       },
       getRouter(url){
         this.$router.push(url);
-        this.showCatalogList(url);
+        this.showCatalogList(url,false);
       },
       goAnchor(selector){
         var anchor=document.getElementById(selector);
@@ -101,10 +101,10 @@
             this.catalogModel=true;
           }
       },
-      showCatalogList(param){
+      showCatalogList(param,bool){
         var url = "";
         var that = this;
-        this.catalogModel = true;
+        this.catalogModel = bool;
         if(param){
           url=param;
         }else {
