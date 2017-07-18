@@ -267,6 +267,9 @@
     left: 0;
     z-index: 1;
   }
+  .ivu-menu-light.ivu-menu-vertical .ivu-menu-item {
+     border-right: 0 !important;
+  }
   }
   }
   .hc-right {
