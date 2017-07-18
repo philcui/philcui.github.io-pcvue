@@ -60,7 +60,7 @@
     width: 100%;
     height: 100%;
   .home-top-menu {
-    z-index: 9999;
+    z-index: 9;
     background-color: #ffffff;
     position: fixed;
     width: 100%;
