@@ -1,38 +1,26 @@
 var data = [
   {
-    title: '安装',
+    title: '首页',
     id: '0',
-    cls:'',
-    url:'/leftTopMenu/install'
+    cls:false,
+    url:'/'
   },
   {
-    title: '快速上手',
+    title: '设计',
     id: '1',
-    cls:'',
-    url:'/leftTopMenu/quickStart'
+    cls:true,
+    url:'/design'
   },
   {
-    title: '国际化',
+    title: '开发',
     id: '2',
-    cls:'',
-    url:'/leftTopMenu/international'
+    cls:false,
+    url:'/develop'
   },
   {
-    title: '订制主题',
+    title: '资源',
     id: '3',
-    cls:'',
-    url:'/leftTopMenu/theme'
-  },
-  {
-    title: '概览',
-    id: '4',
-    cls:'',
-    url:'/leftTopMenu/overview'
-  },
-  {
-    title: '更新日志',
-    id: '5',
-    cls:'',
-    url:'/leftTopMenu/updateLog'
+    cls:false,
+    url:'/'
   }]
 exports.data=data;

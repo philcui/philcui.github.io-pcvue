@@ -1,15 +1,17 @@
 <template>
   <div class="ind-wrap">
     <div class="ind-top-menu" :class="{blue:actColor}">
-      <span class="top-title">
-              UTRY DESIGN
-            </span>
-      <ul class="top-menu">
-        <li @click="changeAct(1)">首页 <a :class="{active:index,activeA:aIndex}"></a></li>
-        <li @click="changeAct(2)">设计 <a :class="{active:des,activeA:aDes}" ></a></li>
-        <li @click="changeAct(3)">开发 <a :class="{active:dep,activeA:aDep}" ></a></li>
-        <li @click="changeAct(4)">资源 <a :class="{active:res,activeA:aRes}" ></a></li>
-      </ul>
+      <div>
+        <span class="top-title">
+                UTRY DESIGN
+              </span>
+        <ul class="top-menu">
+          <li @click="changeAct(1)">首页 <a :class="{active:index,activeA:aIndex}"></a></li>
+          <li @click="changeAct(2)">设计 <a :class="{active:des,activeA:aDes}" ></a></li>
+          <li @click="changeAct(3)">开发 <a :class="{active:dep,activeA:aDep}" ></a></li>
+          <li @click="changeAct(4)">资源 <a :class="{active:res,activeA:aRes}" ></a></li>
+        </ul>
+      </div>
     </div>
     <div class="ind-content">
       <div class="ind-top">
@@ -29,24 +31,24 @@
       <div class="ind-center">
         <div class="ind-center-top-content">
           <div class="top-content-left">
-              <div class="font-content">
-                <span class="fc-title">起于实践，终于解决问题 </span>
-                <div class="fc-describe">
-                  Utry Design来源于远传内部设计与开发实践，针对设计与开发脱节，生产力待提高，沟通协作低效等问题， 希望在这套设计语言的驱动下,
-                  工程师与产品经理能够对设计理念有更深刻的理解，同事指导设计师提供明确的交互方案与视觉样式，加强项目各方沟通。
-                </div>
+            <div class="font-content">
+              <span class="fc-title">起于实践，终于解决问题 </span>
+              <div class="fc-describe">
+                Utry Design来源于远传内部设计与开发实践，针对设计与开发脱节，生产力待提高，沟通协作低效等问题， 希望在这套设计语言的驱动下,
+                工程师与产品经理能够对设计理念有更深刻的理解，同事指导设计师提供明确的交互方案与视觉样式，加强项目各方沟通。
               </div>
+            </div>
           </div>
           <div class="top-content-right" >
-              <div class="cr-img"></div>
-              <transition name="ue">
-                <img v-model="showAnimation" v-show="show" :class="{crImgUeOut : out}" class="cr-img-ue" src="../assets/ue.png" />
-              </transition>
+            <div class="cr-img"></div>
+            <transition name="ue">
+              <img v-model="showAnimation" v-show="show" :class="{crImgUeOut : out}" class="cr-img-ue" src="../assets/ue.png" />
+            </transition>
             <transition name="pm">
-                <img v-show="show" class="cr-img-pm" :class="{crImgPmOut : out}" src="../assets/pm.png" />
+              <img v-show="show" class="cr-img-pm" :class="{crImgPmOut : out}" src="../assets/pm.png" />
             </transition>
             <transition name="dlp">
-                <img v-show="show" class="cr-img-dlp" :class="{crImgDlpOut : out}" src="../assets/dlp.png" />
+              <img v-show="show" class="cr-img-dlp" :class="{crImgDlpOut : out}" src="../assets/dlp.png" />
             </transition>
           </div>
         </div>
@@ -54,19 +56,19 @@
           <div class="bot-content-left">
             <div class="cl-img" />
             <transition name="pen">
-            <img class="img-pen" src="../assets/pen.png"/>
+              <img class="img-pen" src="../assets/pen.png"/>
             </transition>
             <transition name="pencil">
-            <img class="img-pencil" src="../assets/pencil.png"/>
+              <img class="img-pencil" src="../assets/pencil.png"/>
             </transition>
             <transition name="rule">
-            <img class="img-rule" src="../assets/rule.png"/>
+              <img class="img-rule" src="../assets/rule.png"/>
             </transition>
             <transition name="search">
-            <img class="img-search" src="../assets/search.png"/>
+              <img class="img-search" src="../assets/search.png"/>
             </transition>
             <transition name="download">
-            <img class="img-download" src="../assets/download.png"/>
+              <img class="img-download" src="../assets/download.png"/>
             </transition>
           </div>
           <div class="bot-content-right">
@@ -89,96 +91,96 @@
 </template>
 <script>
   export  default {
-      data(){
-          return {
-            index:true,
-            des:false,
-            dep:false,
-            res:false,
-            show:false,
-            out:false,
-            aIndex:false,
-            aDes:false,
-            aDep:false,
-            aRes:false,
-            actColor:false,
+    data(){
+      return {
+        index:true,
+        des:false,
+        dep:false,
+        res:false,
+        show:false,
+        out:false,
+        aIndex:false,
+        aDes:false,
+        aDep:false,
+        aRes:false,
+        actColor:false,
+      }
+    },
+    methods:{
+      showAnimation(){
+        let winH = window.innerHeight;
+        let topH = document.body.scrollTop;
+        let scH = winH * winH / 1700;
+        //动画显示隐藏
+        if((scH + topH ) > 800){
+          this.show = true;
+          this.out = false;
+        }else {
+          this.out = true;
+          this.show = false;
+        }
+        //顶部菜单颜色变化
+        // topH>722px => a == white
+        if(topH >= 722){
+          this.aIndex = false;
+          this.aDes = false;
+          this.aDep = false;
+          this.aRes = false;
+          if (this.index) {
+            this.aIndex = true;
+          } else if (this.des) {
+            this.aDes = true;
+          } else if (this.dep) {
+            this.aDep = true;
+          } else if (this.res) {
+            this.aRes = true;
+          } else {
+            this.aIndex = true;
           }
+        }else {
+          this.aIndex = false;
+          this.aDes = false;
+          this.aDep = false;
+          this.aRes = false;
+        }
+        // topH > 773px  => menu color == blue
+        if(topH > 773){
+          this.actColor = true;
+        }else {
+          this.actColor = false;
+        }
       },
-      methods:{
-        showAnimation(){
-          let winH = window.innerHeight;
-          let topH = document.body.scrollTop;
-          let scH = winH * winH / 1700;
-          //动画显示隐藏
-          if((scH + topH ) > 800){
-            this.show = true;
-            this.out = false;
-          }else {
-            this.out = true;
-            this.show = false;
-          }
-          //顶部菜单颜色变化
-          // topH>722px => a == white
-          if(topH >= 722){
-            this.aIndex = false;
-            this.aDes = false;
-            this.aDep = false;
-            this.aRes = false;
-            if (this.index) {
-              this.aIndex = true;
-            } else if (this.des) {
-              this.aDes = true;
-            } else if (this.dep) {
-              this.aDep = true;
-            } else if (this.res) {
-              this.aRes = true;
-            } else {
-              this.aIndex = true;
-            }
-          }else {
-            this.aIndex = false;
-            this.aDes = false;
-            this.aDep = false;
-            this.aRes = false;
-          }
-          // topH > 773px  => menu color == blue
-          if(topH > 773){
-            this.actColor = true;
-          }else {
-            this.actColor = false;
-          }
-        },
-        changeAct(val){
-          this.index = false;
-          this.des = false;
-          this.dep = false;
-          this.res = false;
-          switch(val){
-            case 1:
-              this.index = true;
-              this.$router.push("/");
-              break;
-            case 2:
-              this.des = true;
-              this.$router.push("/design");
-              break;
-            case 3:
-              this.dep = true;
-              this.$router.push("/develop");
-              break;
-            case 4:
-              this.res = true;
-              this.$router.push("/");
-              break;
-            default:
-              this.$router.push("/");
-          }
-          this.showAnimation();
-        },
-        goHome(){
-          this.$router.push("/home");
-        },
+      changeAct(val){
+        this.index = false;
+        this.des = false;
+        this.dep = false;
+        this.res = false;
+        switch(val){
+          case 1:
+            this.index = true;
+            this.$router.push("/");
+            break;
+          case 2:
+            this.des = true;
+            this.$router.push("/design");
+            break;
+          case 3:
+            this.dep = true;
+            this.$router.push("/develop");
+            break;
+          case 4:
+            this.res = true;
+            this.$router.push("/");
+            break;
+          default:
+            this.$router.push("/");
+        }
+        this.showAnimation();
       },
+      goHome(){
+        this.$router.push("/home");
+      },
+    },
     mounted() {
       window.addEventListener('scroll', this.showAnimation)
     },
@@ -198,11 +200,16 @@
     background-image: url("../assets/topMenu.bg.png");
     position: fixed;
     width: 100%;
+    height: 80px;
+  div {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    height: 80px;
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+  }
   .top-title {
     font-size: 24px;
   }
@@ -219,9 +226,6 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    &:hover{
-      cursor: pointer;
-    }
   a {
     border:2px solid  rgba(200,200,200,0);
     border-radius: 3px;
@@ -239,123 +243,123 @@
   .blue {
     color: #1156bf;
   }
-    .ind-content {
-      width: 1200px;
-      margin:0 auto;
-      .ind-top {
-        height: 800px;
-        width: 100%;
-        color: #ffffff;
+  .ind-content {
+    width: 1200px;
+    margin:0 auto;
+  .ind-top {
+    height: 800px;
+    width: 100%;
+    color: #ffffff;
 
-        .ind-top-banner {
-          height: 720px;
-          width: 100%;
-          .banner-title {
-            width: 100%;
-            height: 100%;
-            padding-bottom: 65px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            .title-top {
-              font-size: 48px;
-              padding-bottom: 30px;
-            }
-            .title-bot {
-              font-size: 24px;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
-              align-items: flex-end;
-            }
-          }
-        }
-      }
-      .ind-center {
-         width: 100%;
-         height: 800px;
-        .ind-center-top-content, .ind-center-bot-content {
-          width: 100%;
-          height: 400px;
-          display: flex;
-          justify-content: space-between;
-            .top-content-left , .bot-content-right{
-              height: 100%;
-              width: 665px;
-              .font-content {
-                padding-top: 155px;
-                  .fc-title {
-                    font-size: 26px;
-                    color: #23282e;
-                  }
-                  .fc-describe {
-                    padding-top: 30px;
-                    font-size: 14px;
-                    color: #728093;
-                  }
+  .ind-top-banner {
+    height: 720px;
+    width: 100%;
+  .banner-title {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  .title-top {
+    font-size: 48px;
+    padding-bottom: 30px;
+  }
+  .title-bot {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  }
+  }
+  }
+  .ind-center {
+    width: 100%;
+    height: 800px;
+  .ind-center-top-content, .ind-center-bot-content {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+  .top-content-left , .bot-content-right{
+    height: 100%;
+    width: 665px;
+  .font-content {
+    padding-top: 155px;
+  .fc-title {
+    font-size: 26px;
+    color: #23282e;
+  }
+  .fc-describe {
+    padding-top: 30px;
+    font-size: 14px;
+    color: #728093;
+  }
 
-              }
-            }
-            .top-content-right , .bot-content-left{
-              position: relative;
-              width: 380px;
-              height:100%;
-                .cr-img{
-                  width: 230px;
-                  height: 230px;
-                  margin-top: 132px;
-                  margin-left: 92px;
-                  background-image: url("../assets/bg-right.png");
-                  background-repeat:no-repeat;
-                }
-                .cl-img {
-                  width: 230px;
-                  height: 230px;
-                  margin-top: 77px;
-                  margin-left: 70px;
-                  background-image: url("../assets/bg-left.png");
-                  background-repeat:no-repeat;
-                }
-                .cr-img-ue {
-                  position: absolute;
-                  top: 170px;
-                }
-                .cr-img-pm {
-                  position: absolute;
-                  right: 0;
-                  top: 265px;
-                }
-                .cr-img-dlp {
-                  position: absolute;
-                  top: 80px;
-                  right: 75px;
-                }
-                .img-pen ,.img-pencil ,.img-rule ,.img-search ,.img-download{
-                  position: absolute;
-                  top: 150px;
-                  left: 170px;
-                }
-               .img-rule {
-                 position: absolute;
-                 top: 150px;
-                 left: 130px;
-               }
-            }
-        }
-      }
-      .ind-bottom {
-        height: 100px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        span {
-          font-size: 24px;
-          color: #728093;
-        }
-      }
-    }
+  }
+  }
+  .top-content-right , .bot-content-left{
+    position: relative;
+    width: 380px;
+    height:100%;
+  .cr-img{
+    width: 230px;
+    height: 230px;
+    margin-top: 132px;
+    margin-left: 92px;
+    background-image: url("../assets/bg-right.png");
+    background-repeat:no-repeat;
+  }
+  .cl-img {
+    width: 230px;
+    height: 230px;
+    margin-top: 77px;
+    margin-left: 70px;
+    background-image: url("../assets/bg-left.png");
+    background-repeat:no-repeat;
+  }
+  .cr-img-ue {
+    position: absolute;
+    top: 170px;
+  }
+  .cr-img-pm {
+    position: absolute;
+    right: 0;
+    top: 265px;
+  }
+  .cr-img-dlp {
+    position: absolute;
+    top: 80px;
+    right: 75px;
+  }
+  .img-pen ,.img-pencil ,.img-rule ,.img-search ,.img-download{
+    position: absolute;
+    top: 150px;
+    left: 170px;
+  }
+  .img-rule {
+    position: absolute;
+    top: 150px;
+    left: 130px;
+  }
+  }
+  }
+  }
+  .ind-bottom {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  span {
+    font-size: 24px;
+    color: #728093;
+  }
+  }
+  }
   }
 
   .cr-img-ue {
@@ -500,15 +504,15 @@
     to {transform: rotate(288deg) translate(120px) rotate(-288deg);}
   }
   @keyframes movePencil {
-     from { transform: rotate(0deg)  translate(120px) rotate(0deg);}
-     to {transform: rotate(360deg) translate(120px) rotate(-360deg);}
+    from { transform: rotate(0deg)  translate(120px) rotate(0deg);}
+    to {transform: rotate(360deg) translate(120px) rotate(-360deg);}
   }
   @keyframes moveRule {
     from {transform: rotate(-216deg)  translate(120px) rotate(216deg);}
     to { transform: rotate(144deg) translate(120px) rotate(-144deg);}
   }
   @keyframes moveDownload {
-     from {transform: rotate(-288deg)  translate(120px) rotate(288deg);}
-     to {transform: rotate(72deg) translate(120px) rotate(-72deg);}
+    from {transform: rotate(-288deg)  translate(120px) rotate(288deg);}
+    to {transform: rotate(72deg) translate(120px) rotate(-72deg);}
   }
 </style>

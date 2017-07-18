@@ -1,11 +1,27 @@
 <template>
   <div class="develop-wrap">
+    <div class="catalog">
+      <div class="catalogInfo" @click="showCatalogList">目录</div>
+    </div>
+    <div class="catalog2">
+      <div class="catalogList" v-show="catalogModel">
+        <span class="title pl10 pt10" @click="showCata">目录</span>
+        <ul>
+          <li class="pl10 pb10"  :title="i.name" v-for="i in rightMenu">
+            <a href="javascript:void(0)" @click="goAnchor(i.id)"> {{i.name}} </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="qq" :style="styleObject" >
+      <div class="qqInfo"></div>
+    </div>
     <div class="hc-left">
       <div class="hcl-search">
         <div class="search">在此处搜索组件...</div>
       </div>
       <div class="leftMenu">
-        <Menu active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
+        <Menu 　ref="leftMenu"　active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
           <Submenu v-for="item in leftMenu" :name="item.code"  :key="item.id">
             <template slot="title">
               {{item.name}}
@@ -22,14 +38,26 @@
 </template>
 <script>
   import menuData from '../../server/mock/leftMenu.js'
+  const wh = window.innerHeight;
+  const　top = wh - 180 ;
   export  default {
     data(){
       return {
         data:[],
         leftMenu:[],
+        rightMenu:[],
+        catalogModel:false,
+        styleObject:{
+          position: 'relative',
+          height: '0',
+          margin: '0 auto',
+          left:'1230px',
+          top:'0',
+        }
       }
     },
     created(){
+      this.styleObject.top=top+'px';
       this.data=menuData.menu;
       this.getMenus();
     },
@@ -43,6 +71,7 @@
           children:[],
           url:menu.url,
           code:1,
+          menus:menu.children,
         }))
         const root = []
         nodes.forEach(node => {
@@ -59,6 +88,46 @@
       },
       getRouter(url){
         this.$router.push(url);
+        this.showCatalogList(url);
+      },
+      goAnchor(selector){
+        var anchor=document.getElementById(selector);
+        document.body.scrollTop = anchor.offsetTop
+      },
+      showCata(){
+        if( this.catalogModel){
+            this.catalogModel=false;
+          }else {
+            this.catalogModel=true;
+          }
+      },
+      showCatalogList(param){
+        var url = "";
+        var that = this;
+        this.catalogModel = true;
+        if(param){
+          url=param;
+        }else {
+          let children = this.$refs.leftMenu.$children;
+          for (var i = 0; i < children.length; i++) {
+            var newChildren = children[i].$children;
+            for (var j = 0; j < newChildren.length; j++) {
+              if (newChildren[j].active) {
+                url = newChildren[j].$router.currentRoute.path;
+                break;
+              }
+            }
+          }
+        }
+        for (var n = 0; n < that.leftMenu.length; n++) {
+          var newLeftChildren = that.leftMenu[n].children;
+          for (var m = 0; m < newLeftChildren.length; m++) {
+            if (newLeftChildren[m].url == url) {
+              that.rightMenu = newLeftChildren[m].menus;
+              break;
+            }
+          }
+        }
       },
     }
   }
@@ -71,6 +140,80 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
+  .catalog {
+    position: relative;
+    left: 1250px;
+    top: 50px;
+    z-index: 9999;
+    height: 0;
+    color: #32363c;
+  .catalogInfo{
+    border-radius: 3px;
+    font-size: 12px;
+    position: fixed;
+    z-index: 9999;
+    width: 34px;
+    height: 60px;
+    border: 1px solid #dfe2e5;
+    box-shadow: 0 0 6px #dfe2e5;
+    background-color: #ffffff;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 12px;
+    padding-left: 4px;
+    cursor: pointer;
+  }
+  }
+  .catalog2 {
+    position: relative;
+    left: 1180px;
+    top: 50px;
+    z-index: 9999;
+    height: 0px;
+    color: rgb(50, 54, 60);
+  .catalogList {
+    width: 104px;
+    min-height: 250px;
+    position: fixed;
+    z-index: 99999;
+    border: 1px solid #dfe2e5;
+    box-shadow: 0 0 6px #dfe2e5;
+    background-color: #ffffff;
+  span {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+  }
+  .title {
+    font-size: 12px;
+    color: #23282e;
+    cursor: pointer;
+  }
+  ul li {
+    color: #728093;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  &:hover {
+     color: #2196f3;
+   }
+  a {
+    color: #728093;
+  &:hover {
+     color: #2196f3;
+   }
+  }
+  }
+  }
+  }
+  .qq {
+  .qqInfo {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-image: url("../assets/qq.png");
+  }
+  }
   .hc-left {
     width: 240px;
   .hcl-search {
@@ -131,4 +274,11 @@
     min-height: 200px;
   }
   }
+  .pl10 {
+    padding-left: 10px;
+  }
+  .pb10 {
+    padding-bottom: 10px;
+  }
+
 </style>

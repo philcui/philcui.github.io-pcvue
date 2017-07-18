@@ -1,8 +1,7 @@
 <template>
-  <div class="a">
+  <div class="colorM-Wrap">
     <div>
-      <div><a href="javascript:void(0)" @click="goAnchor('#anchor-'+index)" v-for="index in 20"> {{index}} </a></div>
-      <div :id="'anchor-'+index" class="item" v-for="index in 20">{{index}}</div>
+      <div :id="'111'+index" class="item" v-for="index in 20">{{index}}</div>
     </div>
   </div>
 </template>
@@ -15,6 +14,7 @@ export default {
     },
   methods:{
       goAnchor(selector){
+          debugger
         var anchor = this.$el.querySelector(selector)
         debugger
         document.body.scrollTop = anchor.offsetTop
