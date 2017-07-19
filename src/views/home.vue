@@ -21,21 +21,45 @@
   export default {
     data() {
       return {
-        height:'',
+        height: '',
         menus: [
-          { title: '首页', url: '/', selected: false },
-          { title: '设计', url: '/design', selected: false },
-          { title: '开发', url: '/develop', selected: false },
-          { title: '资源', url: '/resource', selected: false }
+          {title: '首页', url: '/', selected: false},
+          {title: '设计', url: '/design', selected: false},
+          {title: '开发', url: '/develop', selected: false},
+          {title: '资源', url: '/resource', selected: false}
         ]
       }
     },
     mounted: function () {
-      const wh=window.innerHeight;
-      this.height=( wh - 80 ) +'px';
+      const wh = window.innerHeight;
+      this.height = (wh - 80) + 'px';
+      const findMenu = path => {
+        const explicitMatch = this.menus.find(m => m.url === path)
+        if (explicitMatch) {
+          return explicitMatch;
+        } else {
+          return findMenuByChildren(path);
+        }
+      }
+      const findMenuByChildren = path => {
+        const routes = this.$router.options.routes;
+        let parent = null;
+        const recurMatch = route => {
+          let children = route.children;
+          while (children && children.some(c => c.path === path)) {
+            parent = route.path;
+            return true;
+          }
+          return children && children.some(recurMatch);
+        }
+        routes.some(recurMatch);
+        if (parent)
+          return findMenu(parent);
+        return null
+      }
       const where = window.location.href
-      const menuTitle = where.slice(where.lastIndexOf('/'))
-      const selectedMenu = this.menus.find(m => m.url === menuTitle);
+      const menuTitle = where.slice(where.indexOf('/#') + 2)
+      const selectedMenu = findMenu(menuTitle)
       if (selectedMenu) {
         selectedMenu.selected = true
       }
@@ -56,6 +80,7 @@
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+
   .home-top-menu {
     z-index: 9;
     background-color: #ffffff;
@@ -63,6 +88,7 @@
     width: 100%;
     height: 80px;
     box-shadow: 0 0 13px #e2e2e2;
+
   div {
     display: flex;
     align-items: center;
@@ -72,12 +98,15 @@
     width: 1200px;
     margin: 0 auto;
   }
+
   .home-title {
     color: #2196f3;
     font-size: 24px;
   }
+
   .home-menu {
     font-size: 14px;
+
   li {
     color: #7b889a;
     margin-left: 45px;
@@ -90,18 +119,22 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+
   a {
     border: 2px solid rgba(200, 200, 200, 0);
     border-radius: 3px;
     width: 40px;
   }
+
   .active {
     border: 2px solid #2196f3;
   }
+
   }
   .actColor {
     color: #2196f3 !important;
   }
+
   }
   }
   }

@@ -35,7 +35,8 @@
         leftMenu:[],
         searchList:[],
         seaShow:false,
-        isFocus:false
+        isFocus:false,
+        isOpen: false
       }
     },
     created(){
@@ -45,7 +46,25 @@
 
     },
     mounted() {
-      window.addEventListener('click', this.hideSearch)
+      window.addEventListener('click', this.hideSearch);
+      const where = window.location.href;
+      const menuName = where.slice(where.indexOf('/#') + 2);
+      const children = this.$refs.leftMenu.$children;
+      for (var i = 0; i < children.length; i++) {
+        var newChildren = children[i].$children;
+        for (var j = 0; j < newChildren.length; j++) {
+          if (newChildren[j].name == menuName) {
+            this.isOpen = true;
+            newChildren[j].active = true;
+            this.$refs.leftMenu.openNames[0] = children[i].name;
+            this.$refs.leftMenu.updateOpened();
+          }
+        }
+      }
+      if (!this.isOpen) {
+        this.$refs.leftMenu.openNames[0] = "7C43A10FE0BF47148DC9E513E021FCD5";
+        this.$refs.leftMenu.updateOpened();
+      }
     },
     methods:{
       getMenus(){

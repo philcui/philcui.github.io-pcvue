@@ -71,9 +71,9 @@ export default new Router({
         {path: '/design',component: design},
         {path: '/develop',component: develop,
           children:[
-            {path: '/topMenu/footRack',component:footRack},
+            /*{path: '/topMenu/footRack',component:footRack},
             {path: '/topMenu/guide',component:guide},
-            {path: '/topMenu/assembly',component:assembly},
+            {path: '/topMenu/assembly',component:assembly},*/
             {path: '/basic/grid', component: grid},
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},
