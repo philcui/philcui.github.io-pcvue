@@ -388,7 +388,10 @@
     left: 0;
     z-index: 1;
   }
-
+  .ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    background: #03a9f4;
+    color: white !important;
+  }
   .ivu-menu-light.ivu-menu-vertical .ivu-menu-item {
     border-right: 0 !important;
   }
