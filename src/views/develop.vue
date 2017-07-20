@@ -8,7 +8,7 @@
         <span class="title pl10 pt10" @click="showCata">目录</span>
         <ul>
           <li class="pl10 pb10" :title="i.name" v-for="i in rightMenu">
-            <a href="javascript:void(0)" @click="goAnchor(i.id)"> {{i.name}} </a>
+            <a :class="{actColor:i.isAct}" href="javascript:void(0)" @click="goAnchor(i)"> {{i.name}} </a>
           </li>
         </ul>
       </div>
@@ -123,7 +123,11 @@
         this.showCatalogList(url, false);
       },
       goAnchor(selector){
-        var anchor = document.getElementById(selector);
+        this.rightMenu.forEach(function(i){
+            i.isAct=false;
+        })
+        selector.isAct=true;
+        var anchor = document.getElementById(selector.id);
         document.body.scrollTop = anchor.offsetTop
       },
       showCata(){
@@ -416,5 +420,7 @@
     outline: 0;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
   }
-
+  .actColor{
+    color: #65aef5 !important;
+  }
 </style>

@@ -18,16 +18,19 @@ var data=[
                 "id": "1111",
                 "pid": "1-1-1",
                 "name": "颜色搭配2",
+                "isAct":false,
               },
               {
                 "id": "1112",
                 "pid": "1-1-1",
                 "name": "颜色搭配3",
+                "isAct":false,
               },
               {
                 "id": "1113",
                 "pid": "1-1-1",
                 "name": "颜色搭配4",
+                "isAct":false,
               }]
   },
   {
