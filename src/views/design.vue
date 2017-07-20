@@ -11,8 +11,8 @@
         </div>
       </div>
       <div class="leftMenu">
-        <Menu active-name="1"  @on-select="getRouter" width="auto" :open-names="['1']" accordion>
-          <Submenu v-for="item in leftMenu" :name="item.code"  :key="item.id">
+        <Menu ref="designLeftMenu" active-name="1"  @on-select="getRouter" width="auto"  accordion>
+          <Submenu  v-for="item in leftMenu" :name="item.id"  :key="item.id">
             <template slot="title">
               {{item.name}}
             </template>
@@ -49,21 +49,21 @@
       window.addEventListener('click', this.hideSearch);
       const where = window.location.href;
       const menuName = where.slice(where.indexOf('/#') + 2);
-      const children = this.$refs.leftMenu.$children;
+      const children = this.$refs.designLeftMenu.$children;
       for (var i = 0; i < children.length; i++) {
         var newChildren = children[i].$children;
         for (var j = 0; j < newChildren.length; j++) {
           if (newChildren[j].name == menuName) {
             this.isOpen = true;
             newChildren[j].active = true;
-            this.$refs.leftMenu.openNames[0] = children[i].name;
-            this.$refs.leftMenu.updateOpened();
+            this.$refs.designLeftMenu.openNames[0] = children[i].name;
+            this.$refs.designLeftMenu.updateOpened();
           }
         }
       }
       if (!this.isOpen) {
-        this.$refs.leftMenu.openNames[0] = "7C43A10FE0BF47148DC9E513E021FCD5";
-        this.$refs.leftMenu.updateOpened();
+        this.$refs.designLeftMenu.openNames[0] = "5566";
+        this.$refs.designLeftMenu.updateOpened();
       }
     },
     methods:{
@@ -111,7 +111,6 @@
         else
         {
           this.seaShow=false;
-//          this.data=menuData.menu;
         }
       },
       changeFocus(a){
@@ -162,8 +161,6 @@
       width: 100%;
       ul{
         margin: 5px;
-        /*margin: 0;*/
-        /*padding: 0;*/
         list-style: none;
       }
       li{
@@ -183,15 +180,6 @@
       background-color: #f9f9f9;
       font-size: 15px;
     }
-  /*.search {*/
-    /*position: relative;*/
-    /*margin-top: 45px;*/
-    /*color: #a1afc2;*/
-    /*font-size: 14px;*/
-    /*height: 55px;*/
-    /*padding-left: 24px;*/
-    /*border-left: 1px solid #dddee1;*/
-  /*}*/
   }
   .leftMenu{
     border-left: 1px solid #dddee1;

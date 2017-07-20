@@ -68,12 +68,15 @@ export default new Router({
     {path: '/',component: index},
     {path: '/home',component: home,
       children:[
-        {path: '/design',component: design},
+        {path: '/design',component: design,
+          children:[
+            {path: '/topMenu/footRack',component:footRack},
+            {path: '/topMenu/guide',component:guide},
+            {path: '/topMenu/assembly',component:assembly}
+          ]
+        },
         {path: '/develop',component: develop,
           children:[
-            /*{path: '/topMenu/footRack',component:footRack},
-            {path: '/topMenu/guide',component:guide},
-            {path: '/topMenu/assembly',component:assembly},*/
             {path: '/basic/grid', component: grid},
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},

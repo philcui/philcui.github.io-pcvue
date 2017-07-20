@@ -178,7 +178,7 @@
         this.showAnimation();
       },
       goHome(){
-        this.$router.push("/home");
+        this.$router.push("/develop");
       },
     },
     mounted() {

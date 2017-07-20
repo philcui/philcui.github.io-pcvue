@@ -20,7 +20,6 @@
       <div class="hcl-search">
         <Input style="border: none;width: 100%" @on-focus="changeFocus" @on-blur="changeBlur" @input="search"
                placeholder="在此处搜索组件..."/>
-        <!--<div class="search"></div>-->
         <div class="hcl-search-list" v-show="seaShow">
           <ul>
             <li v-for="item in searchList"><a @click="clickItem(item.id,item.name,item.url)">{{item.name}}</a></li>
