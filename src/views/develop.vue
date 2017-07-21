@@ -270,7 +270,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
+    cursor: pointer;
   &
   :hover {
     color: #2196f3;

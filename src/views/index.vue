@@ -1,15 +1,15 @@
 <template>
   <div class="ind-wrap">
-    <div class="ind-top-menu" :class="{blue:actColor}">
+    <div class="ind-top-menu" :class="{'itm-background':actColor}">
       <div>
-        <span class="top-title">
-                UTRY DESIGN
-              </span>
+        <a class="aHref top-title" href="#" >
+          UTRY DESIGN
+       </a>
         <ul class="top-menu">
-          <li @click="changeAct(1)">首页 <a :class="{active:index,activeA:aIndex}"></a></li>
-          <li @click="changeAct(2)">设计 <a :class="{active:des,activeA:aDes}" ></a></li>
-          <li @click="changeAct(3)">开发 <a :class="{active:dep,activeA:aDep}" ></a></li>
-          <li @click="changeAct(4)">资源 <a :class="{active:res,activeA:aRes}" ></a></li>
+          <li @click="changeAct(1)">首页 <a :class="{active:index}"></a></li>
+          <li @click="changeAct(2)">设计 <a :class="{active:des}" ></a></li>
+          <li @click="changeAct(3)">开发 <a :class="{active:dep}" ></a></li>
+          <li @click="changeAct(4)">资源 <a :class="{active:res}" ></a></li>
         </ul>
       </div>
     </div>
@@ -99,10 +99,6 @@
         res:false,
         show:false,
         out:false,
-        aIndex:false,
-        aDes:false,
-        aDep:false,
-        aRes:false,
         actColor:false,
       }
     },
@@ -119,32 +115,7 @@
           this.out = true;
           this.show = false;
         }
-        //顶部菜单颜色变化
-        // topH>722px => a == white
-        if(topH >= 722){
-          this.aIndex = false;
-          this.aDes = false;
-          this.aDep = false;
-          this.aRes = false;
-          if (this.index) {
-            this.aIndex = true;
-          } else if (this.des) {
-            this.aDes = true;
-          } else if (this.dep) {
-            this.aDep = true;
-          } else if (this.res) {
-            this.aRes = true;
-          } else {
-            this.aIndex = true;
-          }
-        }else {
-          this.aIndex = false;
-          this.aDes = false;
-          this.aDep = false;
-          this.aRes = false;
-        }
-        // topH > 773px  => menu color == blue
-        if(topH > 773){
+        if(topH > 722){
           this.actColor = true;
         }else {
           this.actColor = false;
@@ -194,10 +165,15 @@
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+  .itm-background {
+    background-image: url("../assets/menu2.png") !important;
+    /* background: rgba(255,255,255,0.05) !important;
+     background: rgba(19, 76, 179,1) !important;*/
+  }
   .ind-top-menu {
     z-index: 9999;
     color: white;
-    background-image: url("../assets/topMenu.bg.png");
+    background: rgba(255,255,255,0.05);
     position: fixed;
     width: 100%;
     height: 80px;
@@ -209,9 +185,13 @@
     height: 100%;
     width: 1200px;
     margin: 0 auto;
-  }
-  .top-title {
+  .aHref {
+    color: white !important;
     font-size: 24px;
+  &:hover {
+    color: #dddddd !important;
+   }
+  }
   }
   .top-menu {
     font-size: 14px;
@@ -226,6 +206,10 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    cursor: pointer;
+  &:hover a {
+     border: 2px solid white ;
+   }
   a {
     border:2px solid  rgba(200,200,200,0);
     border-radius: 3px;
@@ -233,9 +217,6 @@
   }
   .active {
     border: 2px solid white ;
-  }
-  .activeA {
-    border: 2px solid #1156bf !important;
   }
   }
   }

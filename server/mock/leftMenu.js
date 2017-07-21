@@ -33,18 +33,18 @@ var data=[
                 "isAct":false,
               }]
   },
-  {
+ /* {
     "id": "1-1-2",
     "pid": "1-1",
     "name": "页面布局",
-    "url": "/basic/grid"
-  },
-  {
+    "url": ""
+  },*/
+ /* {
     "id": "1-1-3",
     "pid": "1-1",
     "name": "文字字体",
-    "url": "/basic/grid"
-  },
+    "url": "1"
+  },*/
   {
     "id": "7C43A10FE0BF47148DC9E513E021FCD5",
     "pid": "V1.0.0",

@@ -2,7 +2,10 @@
   <div class="home-wrap">
     <div class="home-top-menu">
       <div>
-        <span class="home-title"> UTRY DESIGN</span>
+        <a class="home-title" href="/" >
+          UTRY DESIGN
+        </a>
+        <!--<span class="home-title"> UTRY DESIGN</span>-->
         <ul class="home-menu">
           <li v-for="menu in menus" @click="gotoThat(menu)" :class="{actColor:menu.selected}">
             {{menu.title}}
@@ -102,6 +105,10 @@
   .home-title {
     color: #2196f3;
     font-size: 24px;
+    cursor: pointer;
+    &:hover {
+       color: #56AFF6 !important;
+     }
   }
 
   .home-menu {
@@ -119,7 +126,9 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-
+    &:hover a{
+     border: 2px solid #2196f3;
+   }
   a {
     border: 2px solid rgba(200, 200, 200, 0);
     border-radius: 3px;
