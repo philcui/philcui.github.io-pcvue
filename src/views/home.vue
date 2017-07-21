@@ -5,7 +5,6 @@
         <a class="home-title" href="/" >
           UTRY DESIGN
         </a>
-        <!--<span class="home-title"> UTRY DESIGN</span>-->
         <ul class="home-menu">
           <li v-for="menu in menus" @click="gotoThat(menu)" :class="{actColor:menu.selected}">
             {{menu.title}}
@@ -126,6 +125,10 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    cursor: pointer;
+    &:hover {
+       color: #2196f3 !important;
+     }
     &:hover a{
      border: 2px solid #2196f3;
    }

@@ -167,8 +167,6 @@
     height: 100%;
   .itm-background {
     background-image: url("../assets/menu2.png") !important;
-    /* background: rgba(255,255,255,0.05) !important;
-     background: rgba(19, 76, 179,1) !important;*/
   }
   .ind-top-menu {
     z-index: 9999;
