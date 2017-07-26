@@ -6,7 +6,9 @@
           <div class="describe-title" v-if="describeTitle&&describeTitle.length>0">
            <span>{{describeTitle}}</span><span class="line"></span>
           </div>
-          <slot name="describe-content" class="describeContent"></slot>
+          <div class="describeContent">
+            <slot name="describe-content"></slot>
+          </div>
         </Tab-pane>
         <Tab-pane label="代码" ref="codeBox">
           <pre v-highlight>
@@ -121,7 +123,7 @@ export default {
   }
   .describe-title{
     line-height: 50px;
-    font-size: 26px;
+    font-size: 20px;
     margin: 15px 0px;
     position: relative;
     height: 50px;
