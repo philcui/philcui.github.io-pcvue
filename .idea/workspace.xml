@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d89fbe5-04f1-4ad1-bcbc-0f276f192bfe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/view/notice.vue" afterPath="$PROJECT_DIR$/src/views/view/notice.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/view/noticeModel.vue" afterPath="$PROJECT_DIR$/src/views/view/noticeModel.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,17 +30,17 @@
         <entry file="file://$PROJECT_DIR$/src/views/view/alert.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="39" />
+              <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notice.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="notice.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/view/notice.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="131" column="27" lean-forward="true" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
+            <state relative-caret-position="230">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#146#152#0" expanded="true" />
                 <element signature="e#152#158#0" expanded="true" />
@@ -79,6 +79,43 @@
                 <marker date="1501060182498" expanded="false" signature="3555:3559" ph="&lt;" />
                 <marker date="1501060182498" expanded="false" signature="3579:3583" ph="&lt;" />
                 <marker date="1501060182498" expanded="false" signature="3961:3965" ph="&lt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="noticeModel.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/view/noticeModel.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding>
+                <element signature="e#143#149#0" expanded="true" />
+                <element signature="e#149#155#0" expanded="true" />
+                <element signature="e#155#161#0" expanded="true" />
+                <element signature="e#161#167#0" expanded="true" />
+                <element signature="e#167#173#0" expanded="true" />
+                <element signature="e#173#179#0" expanded="true" />
+                <element signature="e#179#185#0" expanded="true" />
+                <element signature="e#185#191#0" expanded="true" />
+                <element signature="e#212#218#0" expanded="true" />
+                <element signature="e#218#224#0" expanded="true" />
+                <element signature="e#224#230#0" expanded="true" />
+                <element signature="e#230#236#0" expanded="true" />
+                <element signature="e#236#242#0" expanded="true" />
+                <element signature="e#242#248#0" expanded="true" />
+                <element signature="e#248#254#0" expanded="true" />
+                <element signature="e#254#260#0" expanded="true" />
+                <marker date="1501060777836" expanded="true" signature="1245:1249" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1264:1268" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1283:1287" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1346:1350" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1369:1373" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1488:2196" ph="..." />
+                <marker date="1501060777836" expanded="true" signature="1494:1498" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1506:1510" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="1531:1535" ph="&lt;" />
+                <marker date="1501060777836" expanded="true" signature="2172:2176" ph="&lt;" />
               </folding>
             </state>
           </provider>
@@ -184,13 +221,13 @@
         <option value="$PROJECT_DIR$/src/views/home.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/views/view/noticeModel.vue" />
         <option value="$PROJECT_DIR$/src/views/view/table.vue" />
         <option value="$PROJECT_DIR$/server/mock/leftMenu.js" />
         <option value="$PROJECT_DIR$/src/views/form/radio.vue" />
         <option value="$PROJECT_DIR$/src/views/form/checkbox.vue" />
         <option value="$PROJECT_DIR$/src/views/form/switchMark.vue" />
         <option value="$PROJECT_DIR$/src/views/view/notice.vue" />
+        <option value="$PROJECT_DIR$/src/views/view/noticeModel.vue" />
       </list>
     </option>
   </component>
@@ -451,12 +488,12 @@
       <workItem from="1500598978447" duration="6441000" />
       <workItem from="1500613521579" duration="583000" />
       <workItem from="1500618642723" duration="811000" />
-      <workItem from="1501034583522" duration="14151000" />
+      <workItem from="1501034583522" duration="14719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221424000" />
+    <option name="totallyTimeSpent" value="221992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -760,25 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/view/noticeModel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <marker date="1501054716898" expanded="true" signature="834:838" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="853:857" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="872:876" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="935:939" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="958:962" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="1077:1785" ph="..." />
-            <marker date="1501054716898" expanded="true" signature="1083:1087" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="1095:1099" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="1120:1124" ph="&lt;" />
-            <marker date="1501054716898" expanded="true" signature="1761:1765" ph="&lt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/view/table.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -888,15 +906,15 @@
     <entry file="file://$PROJECT_DIR$/src/views/view/alert.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="39" />
+          <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/view/notice.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="131" column="27" lean-forward="true" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
+        <state relative-caret-position="230">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#146#152#0" expanded="true" />
             <element signature="e#152#158#0" expanded="true" />
@@ -935,6 +953,41 @@
             <marker date="1501060182498" expanded="false" signature="3555:3559" ph="&lt;" />
             <marker date="1501060182498" expanded="false" signature="3579:3583" ph="&lt;" />
             <marker date="1501060182498" expanded="false" signature="3961:3965" ph="&lt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/view/noticeModel.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="e#143#149#0" expanded="true" />
+            <element signature="e#149#155#0" expanded="true" />
+            <element signature="e#155#161#0" expanded="true" />
+            <element signature="e#161#167#0" expanded="true" />
+            <element signature="e#167#173#0" expanded="true" />
+            <element signature="e#173#179#0" expanded="true" />
+            <element signature="e#179#185#0" expanded="true" />
+            <element signature="e#185#191#0" expanded="true" />
+            <element signature="e#212#218#0" expanded="true" />
+            <element signature="e#218#224#0" expanded="true" />
+            <element signature="e#224#230#0" expanded="true" />
+            <element signature="e#230#236#0" expanded="true" />
+            <element signature="e#236#242#0" expanded="true" />
+            <element signature="e#242#248#0" expanded="true" />
+            <element signature="e#248#254#0" expanded="true" />
+            <element signature="e#254#260#0" expanded="true" />
+            <marker date="1501060777836" expanded="true" signature="1245:1249" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1264:1268" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1283:1287" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1346:1350" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1369:1373" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1488:2196" ph="..." />
+            <marker date="1501060777836" expanded="true" signature="1494:1498" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1506:1510" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="1531:1535" ph="&lt;" />
+            <marker date="1501060777836" expanded="true" signature="2172:2176" ph="&lt;" />
           </folding>
         </state>
       </provider>
