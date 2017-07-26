@@ -89,7 +89,7 @@ var data=[
   {
     "id": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "pid": "V1.0.0",
-    "name": "Form"
+    "name": "表单类"
   },
   {
     "id": "doc_14F8F434F31B6B953B21310A83CF5",
@@ -233,6 +233,12 @@ var data=[
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Notice 通知提醒",
     "url": "/view/notice"
+  },
+  {
+    "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+    "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
+    "name": "NoticeModel 通知提醒",
+    "url": "/view/noticeModel"
   },
   {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
