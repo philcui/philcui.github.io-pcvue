@@ -116,12 +116,6 @@ var data=[
     "url": "/form/switchMark"
   },
   {
-    "id": "api_ACA475D5A3EB49AF70D6B5E63D273",
-    "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
-    "name": "Table 表格",
-    "url": "/form/table"
-  },
-  {
     "id": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Select 选择器",
@@ -184,7 +178,7 @@ var data=[
   {
     "id": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "pid": "V1.0.0",
-    "name": "View"
+    "name": "视图类"
   },
   {
     "id": "doc_0A19C2634C4F4A35B7936EF859FFC093",
@@ -263,6 +257,12 @@ var data=[
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Carousel 走马灯",
     "url": "/view/carousel"
+  },
+  {
+    "id": "api_ACA475D5A3EB49AF70D6B5E63D273",
+    "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
+    "name": "Table 表格",
+    "url": "/view/table"
   },
   {
     "id": "doc_F499C9631DCF446AB2633327336",

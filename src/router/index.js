@@ -22,7 +22,6 @@ const rate = resolve => require(['../views/form/rate.vue'],resolve)
 const select = resolve => require(['../views/form/select.vue'],resolve)
 const slider = resolve => require(['../views/form/slider.vue'],resolve)
 const switchMark = resolve => require(['../views/form/switchMark.vue'],resolve)
-const table = resolve => require(['../views/form/table.vue'],resolve)
 const timePicker = resolve => require(['../views/form/timePicker.vue'],resolve)
 const transfer = resolve => require(['../views/form/transfer.vue'],resolve)
 const upload = resolve => require(['../views/form/upload.vue'],resolve)
@@ -39,6 +38,7 @@ const progress = resolve => require(['../views/view/progress.vue'],resolve)
 const tag = resolve => require(['../views/view/tag.vue'],resolve)
 const timeLine = resolve => require(['../views/view/timeLine.vue'],resolve)
 const toolTip = resolve => require(['../views/view/toolTip.vue'],resolve)
+const table = resolve => require(['../views/view/table.vue'],resolve)
 const tree = resolve => require(['../views/view/tree.vue'],resolve)
 const breadcrumb = resolve => require(['../views/navigation/breadcrumb.vue'],resolve)
 const dropDown = resolve => require(['../views/navigation/dropDown.vue'],resolve)
@@ -95,7 +95,6 @@ export default new Router({
             {path: '/form/select', component: select},
             {path: '/form/slider', component: slider},
             {path: '/form/switchMark', component: switchMark},
-            {path: '/form/table', component: table},
             {path: '/form/timePicker', component: timePicker},
             {path: '/form/transfer', component: transfer},
             {path: '/form/upload', component: upload},
@@ -112,6 +111,7 @@ export default new Router({
             {path: '/view/tag', component:tag},
             {path: '/view/timeLine', component:timeLine},
             {path: '/view/toolTip', component:toolTip},
+            {path: '/view/table', component: table},
             {path: '/view/tree', component:tree},
             {path: '/navigation/breadcrumb', component:breadcrumb},
             {path: '/navigation/dropDown', component:dropDown},
