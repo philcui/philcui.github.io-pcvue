@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <demoTab :code="gridCode" :describeTitle="describeTitle">
+  <div>
+    <demoTab :code="noticeCode" :describeTitle="describeTitle">
       <div slot="sample">
         <p class="fs">点击按钮 显示notice</p><br>
         <Button @click="info(false)">消息</Button>
@@ -25,7 +25,7 @@
       data(){
           return {
             "describeTitle":'notice',
-            "gridCode":
+            "noticeCode":
               `&lt;template>
      &lt;div>
              &lt;Button @click="info">消息 &lt;/Button>

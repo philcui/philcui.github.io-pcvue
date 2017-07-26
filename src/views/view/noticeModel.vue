@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <demoTab :code="gridCode" :describeTitle="describeTitle">
+  <div>
+    <demoTab :code="noticeModelCode" :describeTitle="describeTitle">
       <div slot="sample">
           <div class="noticeHeight">
             <Button type="primary" @click="showNoticeModel">noticeModel</Button>
@@ -26,7 +26,7 @@
             placement:'bottom',
             content:'点击按钮控制显示隐藏',
             "describeTitle":'noticeModel',
-            "gridCode":
+            "noticeModelCode":
               `&lt;template>
      &lt;div>
           &lt;Button type="primary" @click="showNoticeModel">noticeModel &lt;/Button>
