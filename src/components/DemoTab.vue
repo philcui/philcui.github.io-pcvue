@@ -50,7 +50,6 @@ export default {
 </script>
 <style lang="less">
 .demoTabContainer {
-  margin: 10px;
   border: 1px solid #dfe2e5;
   border-radius: 3px;
   overflow: hidden;
