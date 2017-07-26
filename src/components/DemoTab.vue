@@ -15,9 +15,10 @@
             <code class="html" v-html="code">
             </code>
           </pre>
-          <!--<div class="example-code-more">
-            111
-          </div>-->
+          <div class="example-code-more" v-if="hasmore" @click="toggleMore">
+            <a v-if="ishide"><Icon type="ios-arrow-down"></Icon>show code</a>
+            <a v-else><Icon type="ios-arrow-up"></Icon>hide code</a>
+          </div>
         </Tab-pane>
         <a slot="extra" 
         v-clipboard:copy="copyCode"
@@ -38,12 +39,22 @@ export default {
       default:''
     }
   },
+  data () {
+    return {
+      "hasmore": true,
+      "ishide": true
+    }
+  },
   methods: {
     onCopy (e) {
       this.$Message.success('Code copied')
     },
     onError (e){
       this.$Message.success('something wrong')
+    },
+    toggleMore () {
+      this.ishide = !this.ishide
+      // 改变高度
     }
   },
   computed: {
@@ -77,7 +88,7 @@ export default {
     margin-left: -1px;
   }
   .ivu-tabs-tabpane{
-    padding: 30px 30px 5px;
+    padding: 30px 30px 15px;
     background-color: #fff;
     overflow: hidden;
     position: relative;
@@ -155,9 +166,26 @@ export default {
     margin-top: 10px;
   }
   .example-code-more{
-    border: 1px solid red;
     position: absolute;
     bottom: 5px;
+    left:0px;
+    right: 0px;
+    text-align: center;
+    a{
+      display: block;
+      text-decoration: none;
+      color:#495060;
+      opacity: 0.6;
+      i{
+        vertical-align: middle;
+        margin-right: 5px;
+        font-size: 10px;
+      }
+      &:hover{
+        opacity: 0.9;
+      }
+    }
+    
   }
 }
 </style>
