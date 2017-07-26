@@ -205,6 +205,12 @@ var data=[
     "url": "/view/notice"
   },
   {
+    "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+    "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
+    "name": "NoticeModel 通知提醒",
+    "url": "/view/noticeModel"
+  },
+  {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Modal 对话框",
