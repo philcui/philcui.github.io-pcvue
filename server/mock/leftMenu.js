@@ -184,7 +184,37 @@ var data=[
     "id": "doc_0A19C2634C4F4A35B7936EF859FFC093",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Alert 警告提示",
-    "url": "/view/alert"
+    "url": "/view/alert",
+    "children":[{
+                "id": "basic",
+                "pid": "1-1-1",
+                "name": "基础用法",
+                "isAct":false,
+              },
+              {
+                "id": "describe",
+                "pid": "1-1-1",
+                "name": "含描述信息",
+                "isAct":false,
+              },
+              {
+                "id": "icon",
+                "pid": "1-1-1",
+                "name": "图标",
+                "isAct":false,
+              },
+              {
+                "id": "close",
+                "pid": "1-1-1",
+                "name": "可关闭",
+                "isAct":false,
+              },
+              {
+                "id": "api",
+                "pid": "1-1-1",
+                "name": "API",
+                "isAct":false,
+              }]
   },
   {
     "id": "doc_72AC50CBCD994385AE4F96181BABFC0D",

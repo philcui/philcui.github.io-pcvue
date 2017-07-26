@@ -15,6 +15,9 @@
             <code class="html" v-html="code">
             </code>
           </pre>
+          <!--<div class="example-code-more">
+            111
+          </div>-->
         </Tab-pane>
         <a slot="extra" 
         v-clipboard:copy="copyCode"
@@ -74,9 +77,10 @@ export default {
     margin-left: -1px;
   }
   .ivu-tabs-tabpane{
-    padding: 30px;
+    padding: 30px 30px 5px;
     background-color: #fff;
     overflow: hidden;
+    position: relative;
   }
   .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
     transition: all 0s;
@@ -117,7 +121,7 @@ export default {
     margin-bottom: -20px;
   }
   pre code {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0px;
     margin: 0px;
   }
@@ -149,6 +153,11 @@ export default {
     font-size: 14px;
     color: #728093;
     margin-top: 10px;
+  }
+  .example-code-more{
+    border: 1px solid red;
+    position: absolute;
+    bottom: 5px;
   }
 }
 </style>
