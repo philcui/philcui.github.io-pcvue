@@ -1,16 +1,32 @@
 <template>
-  <div class="">
+  <article class="doc-alert-container">
+    <h1>Table 表格</h1>
+    <h2>概述</h2>
+    <p>
+      主要用于展示大量结构化数据。
+      <br>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。
+    </p>
+    <h2>示例代码</h2>
+    <section class="demo">
     <demoTab :code="checkBoxTableCode" :describeTitle="describeTitle">
       <div slot="sample">
         <Table highlight-row border :columns="columns4" :data="data1"></Table>
       </div>
       <div slot="describe-content">
-        全选 半选
+        全选 半选<br>
+        通过设置属性 highlight-row，可以选中某一行。
+        通过给 columns 数据设置一项，指定 type: 'selection'，即可自动开启多选功能。<br>
+        给 data 项设置特殊 key _checked: true 可以默认选中当前项。<br>
+        给 data 项设置特殊 key _disabled: true 可以禁止选择当前项。<br>
+        正确使用好以下事件，可以达到需要的效果：<br>
+        @on-select，选中某一项触发，返回值为 selection 和 row，分别为已选项和刚选择的项。<br>
+        @on-select-all，点击全选时触发，返回值为 selection，已选项。<br>
+        @on-selection-change，只要选中项发生变化时就会触发，返回值为 selection，已选项。<br>
       </div>
     </demoTab>
-    <br>
-    <br>
-    <demoTab :code="btnScrollCode" :describeTitle="describeTitle">
+    </section>
+    <section class="demo">
+    <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
       <div slot="sample">
         <Table :columns="columns8" :data="data3" size="small" ref="table"></Table>
       </div>
@@ -18,9 +34,9 @@
         滚动条 （排序图标未换）
       </div>
     </demoTab>
-    <br>
-    <br>
-    <demoTab :code="editTableCode"  :describeTitle="describeTitle">
+    </section>
+    <section class="demo">
+    <demoTab :code="editTableCode"  :describeTitle="describeTitle3">
       <div slot="sample">
         <h3>可编辑表格</h3>
         <Table @on-row-click="rowClick" @on-current-change="rowChange"
@@ -38,7 +54,7 @@
         </p>
       </div>
     </demoTab>
-
+    </section>
    <!-- <demoTab :code="rightScrollCode" :describeTitle="describeTitle">
       <div slot="sample">
         <h3>右侧滚动条</h3>
@@ -48,7 +64,7 @@
 
       </div>
     </demoTab>-->
-  </div>
+  </article>
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
@@ -56,7 +72,9 @@
     components: { demoTab },
     data () {
       return {
-        "describeTitle":'table',
+        describeTitle:'多选',
+        describeTitle2:'固定列',
+        describeTitle3:'可编辑表格',
         "editTableCode": `&lt;template>
       &lt;div>
           &lt;Table @on-row-click="rowClick" @on-current-change="rowChange"
