@@ -15,10 +15,12 @@
             <code class="html" v-html="code">
             </code>
           </pre>
-          <div class="example-code-more" v-if="hasmore" @click="toggleMore">
-            <a v-if="ishide"><Icon type="ios-arrow-down"></Icon>show code</a>
-            <a v-else><Icon type="ios-arrow-up"></Icon>hide code</a>
-          </div>
+          <transition>
+            <div class="example-code-more" v-if="hasmore" @click="toggleMore">
+              <a v-if="ishide"><Icon type="ios-arrow-down"></Icon>show code</a>
+              <a v-else><Icon type="ios-arrow-up"></Icon>hide code</a>
+            </div>
+          </transition>
         </Tab-pane>
         <a slot="extra" 
         v-clipboard:copy="copyCode"
@@ -41,8 +43,10 @@ export default {
   },
   data () {
     return {
-      "hasmore": true,
-      "ishide": true
+      "hasmore": false,
+      "ishide": true,
+      "exampleHeight": 80,
+      "codeHeight":80
     }
   },
   methods: {
@@ -54,13 +58,33 @@ export default {
     },
     toggleMore () {
       this.ishide = !this.ishide
-      // 改变高度
+      if(this.ishide){
+        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.exampleHeight + "px"
+      } else {
+        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.codeHeight + "px"
+      }
     }
   },
   computed: {
     copyCode () {
       return this.code.replace(/&lt;/g, "<")
     }
+  },
+  mounted () {
+     let _this = this
+     setTimeout(function(){
+      //  let containers = document.querySelectorAll(".ivu-tabs-content")
+         let container = _this.$el
+         let first = container.querySelector('.ivu-tabs-tabpane')
+         first.querySelectorAll('.ivu-tabs-tabpane > div').forEach(function(element) {
+           _this.exampleHeight += element.clientHeight
+         })
+         _this.codeHeight = container.querySelectorAll('.ivu-tabs-tabpane')[1].clientHeight
+         if(_this.codeHeight>_this.exampleHeight){
+           _this.hasmore = true;
+           container.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = _this.exampleHeight + 'px';
+         }
+     },0)
   }
 }
 </script>
@@ -92,6 +116,7 @@ export default {
     background-color: #fff;
     overflow: hidden;
     position: relative;
+    overflow:hidden;
   }
   .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
     transition: all 0s;
@@ -176,6 +201,7 @@ export default {
       text-decoration: none;
       color:#495060;
       opacity: 0.6;
+      background-color: #fff;
       i{
         vertical-align: middle;
         margin-right: 5px;
