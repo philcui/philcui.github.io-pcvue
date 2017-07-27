@@ -236,13 +236,13 @@ var data=[
     "children":[{
         "id": "notice1",
         "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "概述",
+        "name": "基础用法",
         "isAct":false,
       },
       {
         "id": "notice2",
         "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "示例代码",
+        "name": "提醒类型",
         "isAct":false,
       },
       {
@@ -260,17 +260,10 @@ var data=[
     "children":[{
       "id": "noticeModal1",
       "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-      "name": "概述",
+      "name": "基础用法",
       "isAct":false,
-    },
-      {
+    },{
         "id": "noticeModal2",
-        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "示例代码",
-        "isAct":false,
-      },
-      {
-        "id": "noticeModal3",
         "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
         "name": "API",
         "isAct":false,
@@ -338,21 +331,29 @@ var data=[
     "children":[{
       "id": "table1",
       "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-      "name": "概述",
+      "name": "多选",
       "isAct":false,
-    },
-      {
+    },{
         "id": "table2",
         "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "示例代码",
+        "name": "可展开",
         "isAct":false,
-      },
-      {
+    },{
         "id": "table3",
+        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+        "name": "固定列",
+        "isAct":false,
+    },{
+        "id": "table4",
+        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+        "name": "可编辑表格",
+        "isAct":false,
+    },{
+        "id": "table5",
         "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
         "name": "API",
         "isAct":false,
-      }]
+    }]
   },
   {
     "id": "doc_F499C9631DCF446AB2633327336",

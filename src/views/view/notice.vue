@@ -1,15 +1,27 @@
 <template>
   <article class="doc-alert-container">
     <h1>Notice 通知提醒</h1>
-    <h2 id="notice1">概述</h2>
+    <h2>概述</h2>
     <p>
       在界面右上角显示可关闭的全局通知，常用于以下场景：
           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通知内容带有描述信息
           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统主动推送
     </p>
-    <h2 id="notice2">示例代码</h2>
-    <section class="demo">
-    <demoTab :code="noticeCode" :describeTitle="describeTitle">
+    <h2>示例代码</h2>
+    <section class="demo"  id="notice1">
+      <demoTab :code="noticeCode2" :describeTitle="describeTitle">
+        <div slot="sample">
+          <Button type="primary" @click="open">打开提醒</Button>
+        </div>
+        <div slot="describe-content">
+          基本用法，默认在 4.5秒后关闭。如果 desc 参数为空或不填，则自动应用仅标题模式下的样式。
+          建议标题言简意赅，例如"删除成功"，更详细的内容可以放在描述信息里。
+          自定义时长，为 0 则不自动关闭。
+        </div>
+      </demoTab>
+    </section>
+    <section class="demo" id="notice2">
+    <demoTab :code="noticeCode" :describeTitle="describeTitle3">
       <div slot="sample">
         <p class="fs">点击按钮 显示notice</p><br>
         <Button @click="info(false)">消息</Button>
@@ -22,28 +34,6 @@
       </div>
     </demoTab>
     </section>
-    <section class="demo">
-      <demoTab :code="noticeCode2" :describeTitle="describeTitle">
-        <div slot="sample">
-          <Button type="primary" @click="open">打开提醒</Button>
-        </div>
-        <div slot="describe-content">
-          基本用法，默认在 4.5秒后关闭。如果 desc 参数为空或不填，则自动应用仅标题模式下的样式。
-          建议标题言简意赅，例如"删除成功"，更详细的内容可以放在描述信息里。
-        </div>
-      </demoTab>
-    </section>
-    <section class="demo">
-      <demoTab :code="noticeCode3" :describeTitle="describeTitle">
-        <div slot="sample">
-          <Button type="primary" @click="time">打开提醒</Button>
-        </div>
-        <div slot="describe-content">
-          自定义时长，为 0 则不自动关闭。
-        </div>
-      </demoTab>
-    </section>
-
     <h2 id="notice3">API</h2>
     <h3>Notice instance</h3>
     <h3>
@@ -96,7 +86,9 @@
     },
       data(){
           return {
-            describeTitle:'notice',
+            describeTitle:'基础用法',
+            describeTitle2:'自定义时长',
+            describeTitle3:'提醒类型',
             propsColumns:[
               {
                 title: '属性',

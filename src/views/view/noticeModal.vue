@@ -1,14 +1,14 @@
 <template>
   <article class="doc-alert-container">
     <h1>NoticeModel 通知提醒</h1>
-    <h2 id="noticeModal1">概述</h2>
+    <h2 >概述</h2>
     <p>
       在指定dom上的全局通知，常用于以下场景：
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通知内容带有描述信息
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统主动推送
     </p>
-    <h2 id="noticeModal2">示例代码</h2>
-    <section class="demo">
+    <h2 >示例代码</h2>
+    <section class="demo" id="noticeModal1">
     <demoTab :code="noticeModelCode" :describeTitle="describeTitle">
       <div slot="sample">
           <div class="noticeHeight">
@@ -22,7 +22,7 @@
       </div>
     </demoTab>
     </section>
-    <h2 id="noticeModal3">API</h2>
+    <h2 id="noticeModal2">API</h2>
     <h3>NoticeModel props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -79,7 +79,7 @@
               type:"Boolean",
               default:"false"
             }],
-            describeTitle:'NoticeModel',
+            describeTitle:'基础用法',
             noticeModelCode:
               `&lt;template>
      &lt;div>

@@ -1,13 +1,13 @@
 <template>
   <article class="doc-alert-container">
     <h1>Table 表格</h1>
-    <h2 id="table1">概述</h2>
+    <h2 >概述</h2>
     <p>
       主要用于展示大量结构化数据。
       <br>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。
     </p>
-    <h2 id="table2">示例代码</h2>
-    <section class="demo">
+    <h2>示例代码</h2>
+    <section class="demo" id="table1">
     <demoTab :code="checkBoxTableCode" :describeTitle="describeTitle">
       <div slot="sample">
         <Table highlight-row border :columns="columns4" :data="data1"></Table>
@@ -26,7 +26,7 @@
     </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="table2">
       <demoTab :code="expandedCode" :describeTitle="expandedTitle">
         <div slot="sample">
           <Table :columns="columns10" expanded :data="data56"></Table>
@@ -40,7 +40,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="table3">
     <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
       <div slot="sample">
         <Table :columns="columns8" :data="data3" size="small" ref="table"></Table>
@@ -50,7 +50,7 @@
       </div>
     </demoTab>
     </section>
-    <section class="demo">
+    <section class="demo" id="table4">
     <demoTab :code="editTableCode"  :describeTitle="describeTitle3">
       <div slot="sample">
         <h3>可编辑表格</h3>
@@ -79,7 +79,7 @@
 
       </div>
     </demoTab>-->
-    <h2 id="table3">API</h2>
+    <h2 id="table5">API</h2>
     <h3>Table props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
