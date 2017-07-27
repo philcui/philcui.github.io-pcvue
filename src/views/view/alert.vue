@@ -229,7 +229,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
 `,
@@ -256,7 +256,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -294,7 +294,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -312,7 +312,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `

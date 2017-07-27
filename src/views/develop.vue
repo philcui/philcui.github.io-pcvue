@@ -263,6 +263,9 @@
     font-size: 12px;
     color: #23282e;
     cursor: pointer;
+    &:hover {
+        color: #000000;
+     }
   }
 
   ul li {

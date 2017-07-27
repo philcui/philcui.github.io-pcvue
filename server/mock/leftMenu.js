@@ -232,7 +232,25 @@ var data=[
     "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Notice 通知提醒",
-    "url": "/view/notice"
+    "url": "/view/notice",
+    "children":[{
+        "id": "notice1",
+        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+        "name": "概述",
+        "isAct":false,
+      },
+      {
+        "id": "notice2",
+        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+        "name": "示例代码",
+        "isAct":false,
+      },
+      {
+        "id": "notice3",
+        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",

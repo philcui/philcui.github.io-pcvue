@@ -25,6 +25,21 @@
       </div>
     </demoTab>
     </section>
+
+    <section class="demo">
+      <demoTab :code="expandedCode" :describeTitle="expandedTitle">
+        <div slot="sample">
+          <Table :columns="columns10" expanded :data="data56"></Table>
+        </div>
+        <div slot="describe-content">
+          当表格内容较多不能一次性完全展示时使用。<br>
+          通过给 columns 数据设置一项，指定 type: 'expand'，即可开启扩展功能。<br>
+          给行数据 data 的某项设置 _expanded 为 true，可以默认展开当前行，设置 _disableExpand 可以禁用当前行的展开功能。<br>
+          渲染展开区域与自定义列模板方法类似，使用 render 函数。当内容较复杂时，可拆分为组件或使用 JSX<br>
+        </div>
+      </demoTab>
+    </section>
+
     <section class="demo">
     <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
       <div slot="sample">
@@ -68,14 +83,16 @@
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
+  import expandRow from './table-expand.vue';
   export default {
-    components: { demoTab },
+    components: { demoTab ,expandRow},
     data () {
       return {
         describeTitle:'多选',
+        expandedTitle:'可展开',
         describeTitle2:'固定列',
         describeTitle3:'可编辑表格',
-        "editTableCode": `&lt;template>
+        editTableCode: `&lt;template>
       &lt;div>
           &lt;Table @on-row-click="rowClick" @on-current-change="rowChange"
               border   :columns="columns6"   :data="data9"> &lt;/Table>
@@ -247,7 +264,7 @@
         }
     }
 &lt;/script>`,*/
-       "checkBoxTableCode":` &lt;template>
+       checkBoxTableCode:` &lt;template>
       &lt;Table highlight-row border :columns="columns4" :data="data1">&lt;/Table>
 &lt;/template>
 &lt;script>
@@ -299,7 +316,7 @@
         }
     }
 &lt;/script>`,
-        "btnScrollCode":` &lt;template>
+        btnScrollCode:` &lt;template>
        &lt;Table :columns="columns8" :data="data3" size="small" ref="table"> &lt;/Table>
 &lt;/template>
 &lt;script>
@@ -550,6 +567,136 @@
             "month": 5811
           }
         ]
+            }
+        }
+    }
+&lt;/script>`,
+        expandedCode:`
+    //table-expand.vue
+     &lt;style scoped>
+      .expand-row{
+          margin-bottom: 16px;
+      }
+    &lt;/style>
+    &lt;template>
+      &lt;div>
+        &lt;Row class="expand-row">
+            &lt;Col span="8">
+            &lt;span class="expand-key">职业：&lt;/span>
+            &lt;span class="expand-value">{{ row.job }}&lt;/span>
+            &lt;/Col>
+            &lt;Col span="8">
+            &lt;span class="expand-key">兴趣：&lt;/span>
+            &lt;span class="expand-value">{{ row.interest }}&lt;/span>
+            &lt;/Col>
+            &lt;Col span="8">
+            &lt;span class="expand-key">生日：&lt;/span>
+            &lt;span class="expand-value">{{ row.birthday }}&lt;/span>
+            &lt;/Col>
+        &lt;/Row>
+        &lt;Row>
+            &lt;Col span="8">
+            &lt;span class="expand-key">最喜欢的书：&lt;/span>
+            &lt;span class="expand-value">《{{ row.book }}》&lt;/span>
+            &lt;/Col>
+            &lt;Col span="8">
+            &lt;span class="expand-key">最喜欢的电影：&lt;/span>
+            &lt;span class="expand-value">{{ row.movie }}&lt;/span>
+            &lt;/Col>
+            &lt;Col span="8">
+            &lt;span class="expand-key">最喜欢的音乐：&lt;/span>
+            &lt;span class="expand-value">{{ row.music }}&lt;/span>
+            &lt;/Col>
+        &lt;/Row>
+      &lt;/div>
+    &lt;/template>
+    &lt;script>
+        export default {
+          props: {
+              row: Object
+              }
+        }
+    &lt;/script>
+ //table.vue
+&lt;template>
+      &lt;Table :columns="columns10" expanded :data="data56">&lt;/Table>
+&lt;/template>
+    &lt;script>
+    import expandRow from './table-expand.vue';
+    export default {
+        components: { expandRow },
+        data () {
+            return {
+                columns10: [
+                    {
+                        type: 'expand',
+                        width: 50,
+                        render: (h, params) => {
+                            return h(expandRow, {
+                                props: {
+                                    row: params.row
+                                }
+                            })
+                        }
+                    },
+                    {
+                        title: '姓名',
+                        key: 'name'
+                    },
+                    {
+                        title: '年龄',
+                        key: 'age'
+                    },
+                    {
+                        title: '地址',
+                        key: 'address'
+                    }
+                ], data56: [
+                    {
+                        name: '王小明',
+                        age: 18,
+                        address: '北京市朝阳区芍药居',
+                        job: '数据工程师',
+                        interest: '羽毛球',
+                        birthday: '1991-05-14',
+                        book: '乔布斯传',
+                        movie: '致命魔术',
+                        music: 'I Cry'
+                    },
+                    {
+                        name: '张小刚',
+                        age: 25,
+                        address: '北京市海淀区西二旗',
+                        job: '数据科学家',
+                        interest: '排球',
+                        birthday: '1989-03-18',
+                        book: '我的奋斗',
+                        movie: '罗马假日',
+                        music: 'My Heart Will Go On'
+                    },
+                    {
+                        name: '李小红',
+                        age: 30,
+                        address: '上海市浦东新区世纪大道',
+                        job: '数据产品经理',
+                        interest: '网球',
+                        birthday: '1992-01-31',
+                        book: '赢',
+                        movie: '乔布斯',
+                        music: 'Don’t Cry'
+                    },
+                    {
+                        name: '周小伟',
+                        age: 26,
+                        address: '深圳市南山区深南大道',
+                        job: '数据分析师',
+                        interest: '桌球，跑步',
+                        birthday: '1988-7-25',
+                        book: '红楼梦',
+                        movie: '倩女幽魂',
+                        music: '演员'
+                    }
+                ]
             }
         }
     }
@@ -1144,6 +1291,75 @@
             "day": 9768,
             "week": 2864,
             "month": 5811
+          }
+        ], columns10: [
+          {
+            type: 'expand',
+            width: 50,
+            render: (h, params) => {
+              return h(expandRow, {
+                props: {
+                  row: params.row
+                }
+              })
+            }
+          },
+          {
+            title: '姓名',
+            key: 'name'
+          },
+          {
+            title: '年龄',
+            key: 'age'
+          },
+          {
+            title: '地址',
+            key: 'address'
+          }
+        ], data56: [
+          {
+            name: '王小明',
+            age: 18,
+            address: '北京市朝阳区芍药居',
+            job: '数据工程师',
+            interest: '羽毛球',
+            birthday: '1991-05-14',
+            book: '乔布斯传',
+            movie: '致命魔术',
+            music: 'I Cry'
+          },
+          {
+            name: '张小刚',
+            age: 25,
+            address: '北京市海淀区西二旗',
+            job: '数据科学家',
+            interest: '排球',
+            birthday: '1989-03-18',
+            book: '我的奋斗',
+            movie: '罗马假日',
+            music: 'My Heart Will Go On'
+          },
+          {
+            name: '李小红',
+            age: 30,
+            address: '上海市浦东新区世纪大道',
+            job: '数据产品经理',
+            interest: '网球',
+            birthday: '1992-01-31',
+            book: '赢',
+            movie: '乔布斯',
+            music: 'Don’t Cry'
+          },
+          {
+            name: '周小伟',
+            age: 26,
+            address: '深圳市南山区深南大道',
+            job: '数据分析师',
+            interest: '桌球，跑步',
+            birthday: '1988-7-25',
+            book: '红楼梦',
+            movie: '倩女幽魂',
+            music: '演员'
           }
         ]
       }
