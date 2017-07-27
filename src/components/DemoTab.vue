@@ -192,7 +192,7 @@ export default {
   }
   .example-code-more{
     position: absolute;
-    bottom: 5px;
+    bottom: 1px;
     left:0px;
     right: 0px;
     text-align: center;
