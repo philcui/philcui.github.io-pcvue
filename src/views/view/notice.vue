@@ -1,13 +1,13 @@
 <template>
   <article class="doc-alert-container">
     <h1>Notice 通知提醒</h1>
-    <h2>概述</h2>
+    <h2 id="notice1">概述</h2>
     <p>
       在界面右上角显示可关闭的全局通知，常用于以下场景：
           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通知内容带有描述信息
           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统主动推送
     </p>
-    <h2>示例代码</h2>
+    <h2 id="notice2">示例代码</h2>
     <section class="demo">
     <demoTab :code="noticeCode" :describeTitle="describeTitle">
       <div slot="sample">
@@ -43,6 +43,49 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="notice3">API</h2>
+    <h3>Notice instance</h3>
+    <h3>
+      通过直接调用以下方法来使用组件：
+      <ul>
+        <li>
+          this.$Notice.open(config)
+        </li>
+        <li>
+          this.$Notice.info(config)
+        </li>
+        <li>
+          this.$Notice.success(config)
+        </li>
+        <li>
+          this.$Notice.warning(config)
+        </li>
+        <li>
+          this.$Notice.error(config)
+        </li>
+        <li>以上方法隐式地创建及维护Vue组件。参数 config 为对象，具体说明如下：</li>
+      </ul>
+    </h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>另外提供了全局配置、全局关闭某个通知和全局销毁的方法：</h3>
+    <h3><ul>
+      <li>this.$Notice.config(options)</li>
+      <li>this.$Notice.close(key)</li>
+      <li>this.$Notice.destroy()</li>
+    </ul>
+    </h3>
+    <div class="code">
+            this.$Notice.config({<br>
+      &ensp;&ensp;top: 50,<br>
+      &ensp;&ensp;duration: 3<br>
+            });
+    </div>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData2"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -53,8 +96,66 @@
     },
       data(){
           return {
-            "describeTitle":'notice',
-            "noticeCode":
+            describeTitle:'notice',
+            propsColumns:[
+              {
+                title: '属性',
+                key: 'attribute',
+              },
+              {
+                title: '说明',
+                key: 'describe',
+                width:'350px'
+              },
+              {
+                title: '类型',
+                key: 'type',
+              },
+              {
+                title: '默认值',
+                key: 'default'
+              }
+            ],
+            propsData:[{
+              attribute: 'title',
+              describe:'通知提醒的标题',
+              type:"String",
+              default:"-"
+            },{
+              attribute: 'desc',
+              describe:'	通知提醒的内容，为空或不填时，自动应用仅标题模式下的样式',
+              type:"String",
+              default:"-"
+            },{
+              attribute: 'duration',
+              describe:'	自动关闭的延时，单位秒，不关闭可以写 0',
+              type:"	Number",
+              default:"4.5"
+            },{
+              attribute: 'key',
+              describe:'	当前通知的唯一标识',
+              type:"String",
+              default:"自动"
+            },{
+              attribute: 'onClose',
+              describe:'关闭时的回调',
+              type:"Function",
+              default:"-"
+            }],
+            propsData2:[
+              {
+                attribute: 'top',
+                describe:'通知组件距离顶端的距离，单位像素',
+                type:"Number",
+                default:"24"
+              },{
+                attribute: 'duration',
+                describe:'默认自动关闭的延时，单位秒',
+                type:"Number",
+                default:"4.5"
+              }
+            ],
+            noticeCode:
               `&lt;template>
      &lt;div>
              &lt;Button @click="info">消息 &lt;/Button>
@@ -98,7 +199,7 @@
             }
         &lt;/script>
         `,
-            "noticeCode2":`&lt;template>
+            noticeCode2:`&lt;template>
      &lt;div>
              &lt;Button type="primary" @click="open">打开提醒 &lt;/Button>
      &lt;/div>
@@ -116,7 +217,7 @@
             }
         &lt;/script>
         `,
-            "noticeCode3":`&lt;template>
+            noticeCode3:`&lt;template>
      &lt;div>
              &lt;Button  type="primary" @click="time">打开提醒 &lt;/Button>
      &lt;/div>
@@ -185,5 +286,12 @@
 <style>
 .fs {
   font-size: 14px;
+}
+.code {
+  min-height: 100px;
+  background-color: white;
+  border: 1px solid #b4c1c9;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 </style>
