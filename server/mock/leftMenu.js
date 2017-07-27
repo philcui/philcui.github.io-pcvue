@@ -255,8 +255,26 @@ var data=[
   {
     "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
-    "name": "NoticeModel 通知提醒",
-    "url": "/view/noticeModel"
+    "name": "NoticeModal 通知提醒",
+    "url": "/view/NoticeModal",
+    "children":[{
+      "id": "noticeModal1",
+      "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+      "name": "概述",
+      "isAct":false,
+    },
+      {
+        "id": "noticeModal2",
+        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+        "name": "示例代码",
+        "isAct":false,
+      },
+      {
+        "id": "noticeModal3",
+        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
@@ -316,7 +334,25 @@ var data=[
     "id": "api_ACA475D5A3EB49AF70D6B5E63D273",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Table 表格",
-    "url": "/view/table"
+    "url": "/view/table",
+    "children":[{
+      "id": "table1",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "概述",
+      "isAct":false,
+    },
+      {
+        "id": "table2",
+        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+        "name": "示例代码",
+        "isAct":false,
+      },
+      {
+        "id": "table3",
+        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_F499C9631DCF446AB2633327336",

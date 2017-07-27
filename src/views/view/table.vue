@@ -1,12 +1,12 @@
 <template>
   <article class="doc-alert-container">
     <h1>Table 表格</h1>
-    <h2>概述</h2>
+    <h2 id="table1">概述</h2>
     <p>
       主要用于展示大量结构化数据。
       <br>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。
     </p>
-    <h2>示例代码</h2>
+    <h2 id="table2">示例代码</h2>
     <section class="demo">
     <demoTab :code="checkBoxTableCode" :describeTitle="describeTitle">
       <div slot="sample">
@@ -79,6 +79,19 @@
 
       </div>
     </demoTab>-->
+    <h2 id="table3">API</h2>
+    <h3>Table props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Table events</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns2" :data="propsData2"></Table>
+    </section>
+    <h3>column</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData3"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -92,6 +105,225 @@
         expandedTitle:'可展开',
         describeTitle2:'固定列',
         describeTitle3:'可编辑表格',
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },
+          {
+            title: '类型',
+            key: 'type',
+          },
+          {
+            title: '默认值',
+            key: 'default'
+          }
+        ],
+        propsColumns2:[
+          {
+            title: '事件名',
+            key: 'event',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },
+          {
+            title: '返回值',
+            key: 'returnKey',
+          }
+        ],
+        propsData:[{
+          attribute: 'data',
+          describe:'显示的结构化数据，其中，字段 cellClassName 用于设置任意单元格的样式名称，因此数据不能使用该字段，详见示例特定样式。',
+          type:"Array",
+          default:"[]"
+        },{
+          attribute: 'columns',
+          describe:'表格列的配置描述，具体项见后文',
+          type:"Array",
+          default:"[]"
+        },{
+          attribute: 'stripe',
+          describe:'是否显示间隔斑马纹',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'border',
+          describe:'是否显示纵向边框',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'show-header',
+          describe:'是否显示表头',
+          type:"Boolean",
+          default:"true"
+        },{
+          attribute: 'width',
+          describe:'表格宽度，单位 px',
+          type:"Number | String",
+          default:"自动"
+        },{
+          attribute: 'height',
+          describe:'表格高度，单位 px，设置后，如果表格内容大于此值，会固定表头',
+          type:"Number | String",
+          default:"-"
+        },{
+          attribute: 'disabled-hover',
+          describe:'禁用鼠标悬停时的高亮',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'highlight-row',
+          describe:'是否支持高亮选中的行，即单选',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'row-class-name',
+          describe:'行的 className 的回调方法，传入参数：row：当前行数据index：当前行的索引',
+          type:"Function",
+          default:"-"
+        },{
+          attribute: 'size',
+          describe:'表格尺寸，可选值为 large、small、default 或者不填',
+          type:"String",
+          default:"-"
+        },{
+          attribute: 'no-data-text',
+          describe:'数据为空时显示的提示内容',
+          type:"String",
+          default:"暂无数据"
+        },{
+          attribute: 'no-filtered-data-text',
+          describe:'筛选数据为空时显示的提示内容',
+          type:"String",
+          default:"暂无筛选结果"
+        }],
+        propsData2:[{
+          event:'on-current-change',
+          describe:'开启 highlight-row 后有效，当表格的当前行发生变化的时候会触发',
+          returnKey:'currentRow：当前高亮行的数据 <br> oldCurrentRow：上一次高亮的数据'
+        },{
+          event:'on-select',
+          describe:'在多选模式下有效，选中某一项时触发',
+          returnKey:'currentRow：当前高亮行的数据 <br> oldCurrentRow：上一次高亮的数据'
+        },{
+          event:'on-select-cancel',
+          describe:'在多选模式下有效，取消选中某一项时触发',
+          returnKey:'selection：已选项数据<br>row：取消选择的项数据'
+        },{
+          event:'on-select-all',
+          describe:'在多选模式下有效，点击全选时触发',
+          returnKey:'selection：已选项数据'
+        },{
+          event:'on-selection-change',
+          describe:'在多选模式下有效，只要选中项发生变化时就会触发',
+          returnKey:'selection：已选项数据'
+        },{
+          event:'on-sort-change',
+          describe:'排序时有效，当点击排序时触发',
+          returnKey:'column：当前列数据<br>key：排序依据的指标<br>order：排序的顺序，值为 asc 或 desc'
+        },{
+          event:'on-row-click',
+          describe:'单击某一行时触发',
+          returnKey:'当前行的数据'
+        },{
+          event:'on-row-dblclick',
+          describe:'双击某一行时触发',
+          returnKey:'	当前行的数据'
+        },{
+          event:'on-expand',
+          describe:'展开或收起某一行时触发',
+          returnKey:'row：当前行的数据<br>status：当前的状态'
+        }],
+        propsData3:[
+        {
+          attribute: 'title',
+          describe:'列头显示文字',
+          type:"String",
+          default:""
+        },{
+          attribute: 'key',
+          describe:'对应列内容的字段名',
+          type:"String",
+          default:"-"
+        },{
+          attribute: 'width',
+          describe:'列宽',
+          type:"Number",
+          default:"-"
+        },{
+          attribute: 'align',
+          describe:'对齐方式，可选值为 left 左对齐、right 右对齐和 center 居中对齐',
+          type:"	String	",
+          default:"left"
+        },{
+          attribute: 'className',
+          describe:'列的样式名称',
+          type:"String",
+          default:"-"
+        },{
+          attribute: 'fixed',
+          describe:'列是否固定在左侧或者右侧，可选值为 left 左侧和 right 右侧',
+          type:"String",
+          default:"-"
+        },{
+          attribute: 'ellipsis',
+          describe:'开启后，文本将不换行，超出部分显示为省略号',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'render',
+          describe:'自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引',
+          type:"Function",
+          default:"-"
+        },{
+            attribute: 'renderHeader',
+            describe:'自定义列头显示内容，传入参数有两个，column 和 index，分别为当前列数据和当前列索引，不支持渲染自定义组件',
+            type:"Function",
+            default:"-"
+          },{
+            attribute: 'sortable',
+            describe:'对应列是否可以排序，如果设置为 custom，则代表用户希望远程排序，需要监听 Table 的 on-sort-change 事件',
+            type:"Boolean",
+            default:"false"
+          },{
+            attribute: 'sortMethod',
+            describe:'自定义排序使用的方法，接收三个参数 a 、 b 和 type，当设置 sortable: true 时有效。type 值为 asc 和 desc',
+            type:"Function",
+            default:"-"
+          },{
+            attribute: 'filters',
+            describe:'过滤数据的选项，格式为数组，数组中每项包含 label 和 value 属性，使用过滤，必须同时配置 filterMethod',
+            type:"Array",
+            default:"-"
+          },{
+            attribute: 'filterMethod',
+            describe:'数据过滤使用的方法，如果是多选的筛选项，对每一条数据会执行多次，任意一次返回 true 就会显示',
+            type:"Function",
+            default:"-"
+          },{
+            attribute: 'filterMultiple',
+            describe:'数据过滤的选项是否多选',
+            type:"Boolean",
+            default:"true"
+          },{
+            attribute: 'filteredValue',
+            describe:'在初始化时使用过滤，数组，值为需要过滤的 value 集合',
+            type:"Array",
+            default:"-"
+          },{
+            attribute: 'filterRemote',
+            describe:'使用远程过滤',
+            type:"Function",
+            default:"-"
+          }],
         editTableCode: `&lt;template>
       &lt;div>
           &lt;Table @on-row-click="rowClick" @on-current-change="rowChange"
