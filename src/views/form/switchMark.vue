@@ -1,5 +1,12 @@
 <template>
-  <div >
+  <article class="doc-alert-container">
+    <h1>Switch 开关</h1>
+    <h2>概述</h2>
+    <p>
+      在两种状态间切换时用到的开关选择器。
+    </p>
+    <h2>示例代码</h2>
+    <section class="demo">
     <demoTab :code="checkBoxCode" :describeTitle="describeTitle">
       <div slot="sample">
         <div class="flex">
@@ -16,10 +23,12 @@
         </div>
       </div>
       <div slot="describe-content">
-        基本组件-多选框。主要用于一组可选项多项选择，或者单独用于标记切换某种状态。
+        基本用法，状态切换时会触发事件。<br>
+        disabled:禁用开关,默认为false。
       </div>
     </demoTab>
-  </div>
+    </section>
+  </article>
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
@@ -29,7 +38,7 @@
     },
     data(){
       return {
-        "describeTitle":'notice',
+        "describeTitle":'基本+禁用',
         m1: false,
         disabled:true,
         "checkBoxCode": `  &lt;template>

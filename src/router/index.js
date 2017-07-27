@@ -33,7 +33,7 @@ const collapse = resolve => require(['../views/view/collapse.vue'],resolve)
 const message = resolve => require(['../views/view/message.vue'],resolve)
 const modal = resolve => require(['../views/view/modal.vue'],resolve)
 const notice = resolve => require(['../views/view/notice.vue'],resolve)
-const noticeModel = resolve => require(['../views/view/noticeModel.vue'],resolve)
+const noticeModal = resolve => require(['../views/view/noticeModal.vue'],resolve)
 const popTip = resolve => require(['../views/view/popTip.vue'],resolve)
 const progress = resolve => require(['../views/view/progress.vue'],resolve)
 const tag = resolve => require(['../views/view/tag.vue'],resolve)
@@ -107,7 +107,7 @@ export default new Router({
             {path: '/view/message', component:message},
             {path: '/view/modal', component:modal},
             {path: '/view/notice', component:notice},
-            {path: '/view/noticeModel', component:noticeModel},
+            {path: '/view/noticeModal', component:noticeModal},
             {path: '/view/popTip', component:popTip},
             {path: '/view/progress', component:progress},
             {path: '/view/tag', component:tag},
