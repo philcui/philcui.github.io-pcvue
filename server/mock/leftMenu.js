@@ -107,13 +107,50 @@ var data=[
     "id": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Checkbox 多选框",
-    "url": "/form/checkbox"
+    "url": "/form/checkbox",
+    "children":[{
+      "id": "checkbox1",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "全选",
+      "isAct":false,
+    },{
+        "id": "checkbox2",
+        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+        "name": "不可用",
+        "isAct":false,
+      },{
+        "id": "checkbox3",
+        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+        "name": "组合使用",
+        "isAct":false,
+      },{
+        "id": "checkbox4",
+        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Switch 开关",
-    "url": "/form/switchMark"
+    "url": "/form/switchMark",
+    "children":[{
+      "id": "switch1",
+      "pid": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
+      "name": "基本",
+      "isAct":false,
+    },{
+      "id": "switch2",
+      "pid": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
+      "name": "禁用",
+      "isAct":false,
+    },{
+      "id": "switch3",
+      "pid": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",

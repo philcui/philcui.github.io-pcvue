@@ -6,7 +6,7 @@
       基本组件-多选框。主要用于一组可选项多项选择，或者单独用于标记切换某种状态。
     </p>
     <h2>示例代码</h2>
-    <section class="demo">
+    <section class="demo" id="checkbox1">
       <demoTab :code="indeterminateCode" :describeTitle="indeterminateTitle">
         <div slot="sample">
           <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
@@ -28,7 +28,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="checkbox2">
       <demoTab :code="checkBoxCode" :describeTitle="describeTitle">
         <div slot="sample">
           <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
@@ -44,7 +44,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section class="demo" id="checkbox3">
       <demoTab :code="moreCheckBoxCode" :describeTitle="moreTitle">
         <div slot="sample">
           <Checkbox-group v-model="social">
@@ -77,6 +77,24 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="checkbox4">API</h2>
+    <h3>Checkbox props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Checkbox events</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns2" :data="propsData2"></Table>
+    </section>
+    <h3>CheckboxGroup props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData4"></Table>
+    </section>
+    <h3>CheckboxGroup events</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns2" :data="propsData3"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -97,6 +115,76 @@
         disabledGroup: ['苹果'],
         social: ['facebook', 'github'],
         fruit: ['苹果'],
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },
+          {
+            title: '类型',
+            key: 'type',
+          },
+          {
+            title: '默认值',
+            key: 'default'
+          }],
+        propsColumns2:[
+          {
+            title: '事件名',
+            key: 'event',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },
+          {
+            title: '返回值',
+            key: 'returnKey',
+          }
+        ],
+        propsData:[{
+          attribute: 'value',
+          describe:'只在单独使用时有效。可以使用 v-model 双向绑定数据',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'label',
+          describe:'只在组合使用时有效。指定当前选项的 value 值，组合会自动判断是否选中',
+          type:"String | Number | Boolean",
+          default:"-"
+        },{
+          attribute: 'disabled',
+          describe:'是否禁用当前项',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'indeterminate',
+          describe:'设置 indeterminate 状态，只负责样式控制',
+          type:"Boolean",
+          default:"false"
+        }],
+        propsData2:[{
+          event:'on-change',
+          describe:'只在单独使用时有效。在选项状态发生改变时触发，通过修改外部的数据改变时不会触发',
+          returnKey:'true | false'
+        }],
+        propsData3:[{
+          event:'on-change',
+          describe:'在选项状态发生改变时触发，返回已选中的数组。通过修改外部的数据改变时不会触发',
+          returnKey:'[...]'
+        }],
+        propsData4:[{
+          attribute: 'value',
+          describe:'指定选中项目的集合，可以使用 v-model 双向绑定数据',
+          type:"Array",
+          default:"[]"
+        }],
         indeterminateCode:`  &lt;template>
             &lt;div>
               &lt;div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
