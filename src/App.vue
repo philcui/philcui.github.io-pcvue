@@ -20,6 +20,24 @@
   html, body, #app{
   // height: 100%;
   }
+  article {
+    padding-left: 30px;
+    font-size: 14px;
+  h1, h2, h3{
+    margin:12px 0px;
+    font-weight: normal;
+  }
+  h1{
+    margin-top: 40px;
+    font-size: 26px;
+  }
+  h2{
+    font-size:20px;
+  }
+  section.demo{
+    margin: 20px 0px;
+  }
+  }
   /*滚动条样式*/
   ::-webkit-scrollbar {
     width: 7px;
