@@ -114,9 +114,7 @@ export default {
   .ivu-tabs-tabpane{
     padding: 30px 30px 15px;
     background-color: #fff;
-    overflow: hidden;
     position: relative;
-    overflow:hidden;
   }
   .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
     transition: all 0s;
