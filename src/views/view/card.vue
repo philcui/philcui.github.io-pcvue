@@ -122,6 +122,16 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="switch3">API</h2>
+    <h3>Card  props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Card  slot</h3>
+    <section class="demo">
+      <Table border :columns="slotColumns" :data="slotData"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -185,6 +195,63 @@
           }
         ],
         randomMovieList: [],
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        propsData:[{
+          attribute: 'bordered',
+          describe:'是否显示边框，建议在灰色背景下使用',
+          type:"Boolean",
+          default:"true"
+        },{
+          attribute: 'dis-hover',
+          describe:'禁用鼠标悬停显示阴影',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'shadow',
+          describe:'卡片阴影，建议在灰色背景下使用',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'padding',
+          describe:'卡片内部间距，单位 px',
+          type:"Number",
+          default:"16"
+        }],
+        slotColumns:[
+          {
+            title: '名称',
+            key: 'name',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          }],
+        slotData:[{
+          name: 'title',
+          describe:'自定义卡片标题，如果是简单文字，可以使用&lt;p>标签包裹'
+        },{
+          name: 'extra',
+          describe:'额外显示的内容，默认位置在右上角'
+        },{
+          name: '无',
+          describe:'卡片主体内容'
+        }],
         "subTitle1": "基本用法",
         "cardCode": `
         &lt;template>

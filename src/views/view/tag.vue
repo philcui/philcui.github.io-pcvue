@@ -70,6 +70,16 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="switch3">API</h2>
+    <h3>Tag props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Tag events</h3>
+    <section class="demo">
+      <Table border :columns="eventsColumns" :data="eventsData"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -80,6 +90,61 @@ export default {
 	},
   data () {
     return {
+      propsColumns:[
+        {
+          title: '属性',
+          key: 'attribute',
+        },
+        {
+          title: '说明',
+          key: 'describe',
+          width:'350px'
+        },{
+          title: '类型',
+          key: 'type',
+        },{
+          title: '默认值',
+          key: 'default',
+        }],
+      propsData:[{
+        attribute: 'closable',
+        describe:'标签是否可以关闭',
+        type:"Boolean",
+        default:"false"
+      },{
+        attribute: 'type',
+        describe:'标签的样式类型，可选值为 border、dot或不填',
+        type:"String",
+        default:"-"
+      },{
+        attribute: 'color',
+        describe:'标签颜色，可选值为blue、green、red、yellow',
+        type:"String",
+        default:"-"
+      },{
+        attribute: 'name',
+        describe:'当前标签的名称，使用 v-for，并支持关闭时，会比较有用',
+        type:"String | Number",
+        default:"-"
+      }],
+      eventsColumns:[
+        {
+          title: '事件名',
+          key: 'eventsName',
+        },
+        {
+          title: '说明',
+          key: 'describe',
+          width:'450px'
+        },{
+          title: '返回值',
+          key: 'return',
+        }],
+      eventsData:[{
+        eventsName: 'on-close',
+        describe:'关闭时触发',
+        return:"event, name"
+      }],
       "subTitle1": "基本用法",
       "tagCode": `
         &lt;template>

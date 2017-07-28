@@ -89,6 +89,24 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="switch3">API</h2>
+    <h3>Collapse props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Collapse events</h3>
+    <section class="demo">
+      <Table border :columns="eventsColumns" :data="eventsData"></Table>
+    </section>
+    <h3>Panel props</h3>
+    <section class="demo">
+      <Table border :columns="panelPropsColumns" :data="panelPropsData"></Table>
+    </section>
+    <h3>Panel  slot</h3>
+    <section class="demo">
+      <Table border :columns="slotColumns" :data="slotData"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -104,6 +122,90 @@
         value3: '1',
         value4: '1-1',
         subTitle1:"基础用法 ",
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        propsData:[{
+          attribute: 'value',
+          describe:'当前激活的面板的 name，可以使用 v-model 双向绑定',
+          type:"Array | String",
+          default:"-"
+        },{
+          attribute: 'accordion',
+          describe:'是否开启手风琴模式，开启后每次至多展开一个面板',
+          type:"Boolean",
+          default:"false"
+        }],
+        eventsColumns:[
+          {
+            title: '事件名',
+            key: 'eventsName',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },{
+            title: '返回值',
+            key: 'return',
+          }],
+        eventsData:[{
+          eventsName: 'on-change',
+          describe:'切换面板时触发，返回当前已展开的面板的 key，格式为数组',
+          return:"[ ]"
+        }],
+        panelPropsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        panelPropsData:[{
+          attribute: 'name',
+          describe:'当前面板的 name，与 Collapse的value对应，不填为索引值',
+          type:"String",
+          default:"index"
+        }],
+        slotColumns:[
+          {
+            title: '名称',
+            key: 'name',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          }],
+        slotData:[{
+          name: 'content',
+          describe:'描述内容'
+        },{
+          name: '无',
+          describe:'面板头内容'
+        }],
         collapseCode: `
           &lt;template>
               &lt;Collapse v-model="value1">

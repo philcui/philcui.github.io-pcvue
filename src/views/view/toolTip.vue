@@ -119,6 +119,20 @@
       </div>
     </demoTab>
   </section>
+
+    <h2 id="switch3">API</h2>
+    <h3>Tooltip props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Tooltip events</h3>
+    <section class="demo">
+      <Table border :columns="eventsColumns" :data="eventsData"></Table>
+    </section>
+    <h3>Tooltip  slot</h3>
+    <section class="demo">
+      <Table border :columns="slotColumns" :data="slotData"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -130,6 +144,88 @@
     data () {
       return {
         disabled: false,
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'500px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        propsData:[{
+          attribute: 'content',
+          describe:'显示的内容',
+          type:"String | Number",
+          default:"空"
+        },{
+          attribute: 'placement',
+          describe:'提示框出现的位置，可选值为top top-start top-end bottom bottom-start bottom-end left left-start left-end right right-start right-end',
+          type:"String",
+          default:"bottom"
+        },{
+          attribute: 'disabled',
+          describe:'是否禁用提示框',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'delay',
+          describe:'延迟显示，单位毫秒',
+          type:"Number",
+          default:"0"
+        },{
+          attribute: 'always',
+          describe:'是否总是可见',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'transfer',
+          describe:'是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果',
+          type:"Boolean",
+          default:"false"
+        }],
+        eventsColumns:[
+          {
+            title: '事件名',
+            key: 'eventsName',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },{
+            title: '返回值',
+            key: 'return',
+          }],
+        eventsData:[{
+          eventsName: 'on-popper-hide',
+          describe:'在提示框消失时触发',
+          return:"无"
+        }],
+        slotColumns:[
+          {
+            title: '名称',
+            key: 'name',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          }],
+        slotData:[{
+          name: 'content',
+          describe:'提示框的内容，定义此 slot 时，会覆盖 props content。'
+        },{
+          name: '无',
+          describe:'主体内容'
+        }],
         "describeTitle": "基础用法",
         "toolTipCode": `
           &lt;template>
