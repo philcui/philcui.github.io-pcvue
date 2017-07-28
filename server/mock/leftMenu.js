@@ -331,7 +331,62 @@ var data=[
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Modal 对话框",
-    "url": "/view/modal"
+    "url": "/view/modal",
+    "children":[{
+      "id": "basic",
+      "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+      "name": "基础用法",
+      "isAct":false,
+    },
+    {
+        "id": "custom",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "自定义样式",
+        "isAct":false,
+    },
+    {
+        "id": "asyn",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "异步关闭",
+        "isAct":false,
+    },
+    {
+        "id": "disable",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "禁用关闭",
+        "isAct":false,
+    },
+    {
+        "id": "customposition",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "自定义位置",
+        "isAct":false,
+    },
+    {
+        "id": "instance",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "实例化基本用法",
+        "isAct":false,
+    },
+    {
+        "id": "confirm",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "确认对话框",
+        "isAct":false,
+    },
+    {
+        "id": "custominstance",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "自定义内容",
+        "isAct":false,
+    },
+    {
+        "id": "api",
+        "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
+        "name": "API",
+        "isAct":false,
+    }
+    ]
   },
   {
     "id": "doc_F49A64AB2627336",
