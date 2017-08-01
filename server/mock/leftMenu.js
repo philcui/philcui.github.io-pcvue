@@ -225,7 +225,39 @@ var data=[
     "id": "api_ACA475D5A3EB492FFsss70D6B33e",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Upload 上传",
-    "url": "/form/upload"
+    "url": "/form/upload",
+    "children":[
+      {
+        "id": "upload1",
+        "pid": "1-1-1",
+        "name": "点击上传",
+        "isAct":false
+      },
+      {
+        "id": "upload2",
+        "pid": "1-1-1",
+        "name": "多选",
+        "isAct":false
+      },
+      {
+        "id": "upload3",
+        "pid": "1-1-1",
+        "name": "手动上传",
+        "isAct":false
+      },
+      {
+        "id": "upload4",
+        "pid": "1-1-1",
+        "name": "拖拽上传",
+        "isAct":false
+      },
+      {
+        "id": "uploadAPI",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false
+      }
+    ]
   },
   {
     "id": "api_ACA475ddEB492FFsss70D6B33e",
