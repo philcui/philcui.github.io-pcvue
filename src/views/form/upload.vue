@@ -1,20 +1,20 @@
 <template>
   <article class="doc-alert-container">
-    <h1>Upload ÉÏ´«</h1>
-    <h2>¸ÅÊö</h2>
+    <h1>Upload ä¸Šä¼ </h1>
+    <h2>æ¦‚è¿°</h2>
     <p>
-      ÎÄ¼şÑ¡ÔñÉÏ´«ºÍÍÏ×§ÉÏ´«¿Ø¼ş¡£
+      æ–‡ä»¶é€‰æ‹©ä¸Šä¼ å’Œæ‹–æ‹½ä¸Šä¼ æ§ä»¶ã€‚
     </p>
-    <h2>Ê¾Àı´úÂë</h2>
+    <h2>ç¤ºä¾‹ä»£ç </h2>
     <section class="demo" id="upload1">
       <demoTab :code="uploadCode" :describeTitle="describeTitle">
         <div slot="sample">
           <Upload action="//jsonplaceholder.typicode.com/posts/">
-            <Button type="primary" icon="ios-cloud-upload-outline">ÉÏ´«</Button>
+            <Button type="primary" icon="ios-cloud-upload-outline">ä¸Šä¼ </Button>
           </Upload>
         </div>
         <div slot="describe-content">
-          ×î»ù±¾ÓÃ·¨£¬µã»÷ÉÏ´«£¬Ò»´ÎÑ¡ÔñÒ»¸öÎÄ¼ş¡£
+          æœ€åŸºæœ¬ç”¨æ³•ï¼Œç‚¹å‡»ä¸Šä¼ ï¼Œä¸€æ¬¡é€‰æ‹©ä¸€ä¸ªæ–‡ä»¶ã€‚
         </div>
       </demoTab>
     </section>
@@ -22,11 +22,11 @@
       <demoTab :code="uploadCode2" :describeTitle="describeTitle2">
         <div slot="sample">
           <Upload multiple action="//jsonplaceholder.typicode.com/posts/">
-            <Button type="primary" icon="ios-cloud-upload-outline">ÉÏ´«</Button>
+            <Button type="primary" icon="ios-cloud-upload-outline">ä¸Šä¼ </Button>
           </Upload>
         </div>
         <div slot="describe-content">
-          ÉèÖÃÊôĞÔ multiple£¬¿ÉÒÔÑ¡Ôñ¶à¸öÎÄ¼ş¡£
+          è®¾ç½®å±æ€§ multipleï¼Œå¯ä»¥é€‰æ‹©å¤šä¸ªæ–‡ä»¶ã€‚
         </div>
       </demoTab>
     </section>
@@ -34,15 +34,15 @@
       <demoTab :code="uploadCode3" :describeTitle="describeTitle3">
         <div slot="sample">
           <Upload :before-upload="handleUpload3"
-            action="//jsonplaceholder.typicode.com/posts/">
-            <Button type="primary" icon="ios-cloud-upload-outline">Ñ¡ÔñÒªÉÏ´«ÎÄ¼şµÄÎÄ¼ş</Button>
+                  action="//jsonplaceholder.typicode.com/posts/">
+            <Button type="primary" icon="ios-cloud-upload-outline">é€‰æ‹©è¦ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶</Button>
           </Upload>
-          <div v-if="uploadFile3 !== null">´ıÉÏ´«ÎÄ¼ş£º{{ uploadFile3.name }}
-            <Button type="text" @click="upload3" :loading="loadingStatus3">{{ loadingStatus3 ? 'ÉÏ´«ÖĞ' : 'µã»÷ÉÏ´«' }}</Button>
+          <div v-if="uploadFile3 !== null">å¾…ä¸Šä¼ æ–‡ä»¶ï¼š{{ uploadFile3.name }}
+            <Button type="text" @click="upload3" :loading="loadingStatus3">{{ loadingStatus3 ? 'ä¸Šä¼ ä¸­' : 'ç‚¹å‡»ä¸Šä¼ ' }}</Button>
           </div>
         </div>
         <div slot="describe-content">
-          °ó¶¨ before-upload£¬²¢·µ»Øfalse£¬¿ÉÒÔ×èÖ¹Ä¬ÈÏÉÏ´«Á÷³Ì£¬ÊÖ¶¯¿ØÖÆÎÄ¼şÉÏ´«¡£
+          ç»‘å®š before-uploadï¼Œå¹¶è¿”å›falseï¼Œå¯ä»¥é˜»æ­¢é»˜è®¤ä¸Šä¼ æµç¨‹ï¼Œæ‰‹åŠ¨æ§åˆ¶æ–‡ä»¶ä¸Šä¼ ã€‚
         </div>
       </demoTab>
     </section>
@@ -52,12 +52,12 @@
           <Upload multiple type="drag" action="//jsonplaceholder.typicode.com/posts/">
             <div style="padding: 20px 0">
               <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
-              <p>µã»÷»ò½«ÎÄ¼şÍÏ×§µ½ÕâÀïÉÏ´«</p>
+              <p>ç‚¹å‡»æˆ–å°†æ–‡ä»¶æ‹–æ‹½åˆ°è¿™é‡Œä¸Šä¼ </p>
             </div>
           </Upload>
         </div>
         <div slot="describe-content">
-          ÉèÖÃÊôĞÔ type Îª drag£¬¿ÉÒÔÍÏ×§ÉÏ´«¡£
+          è®¾ç½®å±æ€§ type ä¸º dragï¼Œå¯ä»¥æ‹–æ‹½ä¸Šä¼ ã€‚
         </div>
       </demoTab>
     </section>
@@ -84,16 +84,16 @@
     },
     data(){
       return {
-        describeTitle: 'µã»÷ÉÏ´«',
-        describeTitle2: '¶àÑ¡',
-        describeTitle3:'ÊÖ¶¯ÉÏ´«',
-        describeTitle4:'ÍÏ×§ÉÏ´«',
+        describeTitle: 'ç‚¹å‡»ä¸Šä¼ ',
+        describeTitle2: 'å¤šé€‰',
+        describeTitle3:'æ‰‹åŠ¨ä¸Šä¼ ',
+        describeTitle4:'æ‹–æ‹½ä¸Šä¼ ',
         uploadFile3: null,
         loadingStatus: false,
         uploadCode: `&lt;template>
         &lt;div>
              &lt;Upload action="//jsonplaceholder.typicode.com/posts/">
-               &lt;Button type="primary" icon="ios-cloud-upload-outline">ÉÏ´«&lt;/Button>
+               &lt;Button type="primary" icon="ios-cloud-upload-outline">ä¸Šä¼ &lt;/Button>
              &lt;/Upload>
         &lt;/div>
   &lt;/template>
@@ -106,7 +106,7 @@
         uploadCode2: `&lt;template>
         &lt;div>
              &lt;Upload multiple action="//jsonplaceholder.typicode.com/posts/">
-               &lt;Button type="primary" icon="ios-cloud-upload-outline">ÉÏ´«&lt;/Button>
+               &lt;Button type="primary" icon="ios-cloud-upload-outline">ä¸Šä¼ &lt;/Button>
              &lt;/Upload>
         &lt;/div>
   &lt;/template>
@@ -120,10 +120,10 @@
         &lt;div>
              &lt;Upload :before-upload="handleUpload3"
              action="//jsonplaceholder.typicode.com/posts/">
-               &lt;Button type="primary" icon="ios-cloud-upload-outline">Ñ¡ÔñÒªÉÏ´«ÎÄ¼şµÄÎÄ¼ş&lt;/Button>
+               &lt;Button type="primary" icon="ios-cloud-upload-outline">é€‰æ‹©è¦ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶&lt;/Button>
              &lt;/Upload>
-             &lt;div v-if="uploadFile3 !== null">´ıÉÏ´«ÎÄ¼ş£º{{ uploadFile3.name }}
-                 &lt;Button type="text" @click="upload3" :loading="loadingStatus3">{{ loadingStatus3 ? 'ÉÏ´«ÖĞ' : 'µã»÷ÉÏ´«' }}&lt;/Button>
+             &lt;div v-if="uploadFile3 !== null">å¾…ä¸Šä¼ æ–‡ä»¶ï¼š{{ uploadFile3.name }}
+                 &lt;Button type="text" @click="upload3" :loading="loadingStatus3">{{ loadingStatus3 ? 'ä¸Šä¼ ä¸­' : 'ç‚¹å‡»ä¸Šä¼ ' }}&lt;/Button>
              &lt;/div>
         &lt;/div>
   &lt;/template>
@@ -145,7 +145,7 @@
                 setTimeout(() =&lt; {
                     this.file = null;
                     this.loadingStatus = false;
-                    this.$Message.success('ÉÏ´«³É¹¦')
+                    this.$Message.success('ä¸Šä¼ æˆåŠŸ')
                 }, 1500);
             }
          }
@@ -157,7 +157,7 @@
              &lt;Upload multiple type="drag" action="//jsonplaceholder.typicode.com/posts/">
                &lt;div style="padding:20px 0px">
                   &lt;Icon type="ios-cloud-upload" size="52" style="color: #3399ff">&lt;/Icon>
-                  &lt:p>µã»÷»ò½«ÎÄ¼şÍÏ×§µ½ÕâÀïÉÏ´«&lt:/p>
+                  &lt:p>ç‚¹å‡»æˆ–å°†æ–‡ä»¶æ‹–æ‹½åˆ°è¿™é‡Œä¸Šä¼ &lt:/p>
                &lt:/div>
              &lt;/Upload>
         &lt;/div>
@@ -170,141 +170,141 @@
         `,
         propsColumns:[
           {
-            title: 'ÊôĞÔ',
+            title: 'å±æ€§',
             key: 'attribute',
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe',
             width:'450px'
           },
           {
-            title: 'ÀàĞÍ',
+            title: 'ç±»å‹',
             key: 'type',
           },
           {
-            title: 'Ä¬ÈÏÖµ',
+            title: 'é»˜è®¤å€¼',
             key: 'default'
           }
         ],
         propsData:[
           {
             attribute: 'action',
-            describe:'ÉÏ´«µÄµØÖ·£¬±ØÌî',
+            describe:'ä¸Šä¼ çš„åœ°å€ï¼Œå¿…å¡«',
             type:"String",
             default:"-"
           },
           {
             attribute: 'headers',
-            describe:'ÉèÖÃÉÏ´«µÄÇëÇóÍ·²¿',
+            describe:'è®¾ç½®ä¸Šä¼ çš„è¯·æ±‚å¤´éƒ¨',
             type:"Object",
             default:"{}"
           },
           {
             attribute: 'multiple',
-            describe:'ÊÇ·ñÖ§³Ö¶àÑ¡ÎÄ¼ş',
+            describe:'æ˜¯å¦æ”¯æŒå¤šé€‰æ–‡ä»¶',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'data',
-            describe:'ÉÏ´«Ê±¸½´øµÄ¶îÍâ²ÎÊı',
+            describe:'ä¸Šä¼ æ—¶é™„å¸¦çš„é¢å¤–å‚æ•°',
             type:"Object",
             default:"-"
           },
           {
             attribute: 'name',
-            describe:'ÉÏ´«µÄÎÄ¼ş×Ö¶ÎÃû',
+            describe:'ä¸Šä¼ çš„æ–‡ä»¶å­—æ®µå',
             type:"String",
             default:"file"
           },
           {
             attribute: 'with-credentials',
-            describe:'Ö§³Ö·¢ËÍ cookie Æ¾Ö¤ĞÅÏ¢',
+            describe:'æ”¯æŒå‘é€ cookie å‡­è¯ä¿¡æ¯',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'show-upload-list',
-            describe:'ÊÇ·ñÏÔÊ¾ÒÑÉÏ´«ÎÄ¼şÁĞ±í',
+            describe:'æ˜¯å¦æ˜¾ç¤ºå·²ä¸Šä¼ æ–‡ä»¶åˆ—è¡¨',
             type:"Boolean",
             default:"true"
           },
           {
             attribute: 'type',
-            describe:'ÉÏ´«¿Ø¼şµÄÀàĞÍ£¬¿ÉÑ¡ÖµÎª select£¨µã»÷Ñ¡Ôñ£©£¬drag£¨Ö§³ÖÍÏ×§',
+            describe:'ä¸Šä¼ æ§ä»¶çš„ç±»å‹ï¼Œå¯é€‰å€¼ä¸º selectï¼ˆç‚¹å‡»é€‰æ‹©ï¼‰ï¼Œdragï¼ˆæ”¯æŒæ‹–æ‹½',
             type:"String",
             default:"select"
           },
           {
             attribute: 'accept',
-            describe:'½ÓÊÜÉÏ´«µÄÎÄ¼şÀàĞÍ',
+            describe:'æ¥å—ä¸Šä¼ çš„æ–‡ä»¶ç±»å‹',
             type:"String",
             default:"-"
           },
           {
             attribute: 'format',
-            describe:'Ö§³ÖµÄÎÄ¼şÀàĞÍ£¬Óë accept ²»Í¬µÄÊÇ£¬format ÊÇÊ¶±ğÎÄ¼şµÄºó×ºÃû£¬accept Îª input ±êÇ©Ô­ÉúµÄ accept ÊôĞÔ£¬»áÔÚÑ¡ÔñÎÄ¼şÊ±¹ıÂË£¬¿ÉÒÔÁ½Õß½áºÏÊ¹ÓÃ',
+            describe:'æ”¯æŒçš„æ–‡ä»¶ç±»å‹ï¼Œä¸ accept ä¸åŒçš„æ˜¯ï¼Œformat æ˜¯è¯†åˆ«æ–‡ä»¶çš„åç¼€åï¼Œaccept ä¸º input æ ‡ç­¾åŸç”Ÿçš„ accept å±æ€§ï¼Œä¼šåœ¨é€‰æ‹©æ–‡ä»¶æ—¶è¿‡æ»¤ï¼Œå¯ä»¥ä¸¤è€…ç»“åˆä½¿ç”¨',
             type:"Array",
             default:"[]"
           },
           {
             attribute: 'max-size',
-            describe:'ÎÄ¼ş´óĞ¡ÏŞÖÆ£¬µ¥Î» kb',
+            describe:'æ–‡ä»¶å¤§å°é™åˆ¶ï¼Œå•ä½ kb',
             type:"Number",
             default:"-"
           },
           {
             attribute: 'max-before-upload',
-            describe:'ÉÏ´«ÎÄ¼şÖ®Ç°µÄ¹³×Ó£¬²ÎÊıÎªÉÏ´«µÄÎÄ¼ş£¬Èô·µ»Ø false »òÕß Promise ÔòÍ£Ö¹ÉÏ´«',
+            describe:'ä¸Šä¼ æ–‡ä»¶ä¹‹å‰çš„é’©å­ï¼Œå‚æ•°ä¸ºä¸Šä¼ çš„æ–‡ä»¶ï¼Œè‹¥è¿”å› false æˆ–è€… Promise åˆ™åœæ­¢ä¸Šä¼ ',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-progress',
-            describe:'ÎÄ¼şÉÏ´«Ê±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª event, file, fileList',
+            describe:'æ–‡ä»¶ä¸Šä¼ æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º event, file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-success',
-            describe:'ÎÄ¼şÉÏ´«³É¹¦Ê±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª response, file, fileList',
+            describe:'æ–‡ä»¶ä¸Šä¼ æˆåŠŸæ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º response, file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-error',
-            describe:'ÎÄ¼şÉÏ´«Ê§°ÜÊ±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª error, file, fileList',
+            describe:'æ–‡ä»¶ä¸Šä¼ å¤±è´¥æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º error, file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-preview',
-            describe:'µã»÷ÒÑÉÏ´«µÄÎÄ¼şÁ´½ÓÊ±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª file£¬ ¿ÉÒÔÍ¨¹ı file.response ÄÃµ½·şÎñ¶Ë·µ»ØÊı¾İ',
+            describe:'ç‚¹å‡»å·²ä¸Šä¼ çš„æ–‡ä»¶é“¾æ¥æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º fileï¼Œ å¯ä»¥é€šè¿‡ file.response æ‹¿åˆ°æœåŠ¡ç«¯è¿”å›æ•°æ®',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-remove',
-            describe:'ÎÄ¼şÁĞ±íÒÆ³ıÎÄ¼şÊ±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª file, fileList',
+            describe:'æ–‡ä»¶åˆ—è¡¨ç§»é™¤æ–‡ä»¶æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-format-error',
-            describe:'ÎÄ¼ş¸ñÊ½ÑéÖ¤Ê§°ÜÊ±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª file, fileList',
+            describe:'æ–‡ä»¶æ ¼å¼éªŒè¯å¤±è´¥æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'on-exceeded-size',
-            describe:'ÎÄ¼ş³¬³öÖ¸¶¨´óĞ¡ÏŞÖÆÊ±µÄ¹³×Ó£¬·µ»Ø×Ö¶ÎÎª file, fileList',
+            describe:'æ–‡ä»¶è¶…å‡ºæŒ‡å®šå¤§å°é™åˆ¶æ—¶çš„é’©å­ï¼Œè¿”å›å­—æ®µä¸º file, fileList',
             type:"Function",
             default:"-"
           },
           {
             attribute: 'default-file-list',
-            describe:"Ä¬ÈÏÒÑÉÏ´«µÄÎÄ¼şÁĞ±í£¬ÀıÈç£º<br/>" +
+            describe:"é»˜è®¤å·²ä¸Šä¼ çš„æ–‡ä»¶åˆ—è¡¨ï¼Œä¾‹å¦‚ï¼š<br/>" +
             "[<br/>"+
             "&nbsp;&nbsp;{<br/>"+
             "&nbsp;&nbsp;&nbsp;&nbsp;name: 'img1.jpg',<br/>"+
@@ -321,45 +321,45 @@
         ],
         methodsColumns:[
           {
-            title: '·½·¨Ãû',
+            title: 'æ–¹æ³•å',
             key: 'methodsName',
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe',
             width:'450px'
           },
           {
-            title: '²ÎÊı',
+            title: 'å‚æ•°',
             key: 'params'
           }
         ],
         methodsData:[
           {
             methodsName:'clearFiles',
-            describe:'Çå¿ÕÒÑÉÏ´«µÄÎÄ¼şÁĞ±í',
-            params:'ÎŞ'
+            describe:'æ¸…ç©ºå·²ä¸Šä¼ çš„æ–‡ä»¶åˆ—è¡¨',
+            params:'æ— '
           }
         ],
         slotColumns:[
           {
-            title: 'Ãû³Æ',
+            title: 'åç§°',
             key: 'slotName',
             width: '200px'
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe'
           }
         ],
         slotData:[
           {
-            slotName:'ÎŞ',
-            describe:'´¥·¢ÉÏ´«×é¼şµÄ¿Ø¼ş'
+            slotName:'æ— ',
+            describe:'è§¦å‘ä¸Šä¼ ç»„ä»¶çš„æ§ä»¶'
           },
           {
             slotName:'tip',
-            describe:'¸¨ÖúÌáÊ¾ÄÚÈİ'
+            describe:'è¾…åŠ©æç¤ºå†…å®¹'
           }
         ]
       }
@@ -374,7 +374,7 @@
         setTimeout(() => {
           this.uploadFile3 = null;
           this.loadingStatus3 = false;
-          this.$Message.success('ÉÏ´«³É¹¦')
+          this.$Message.success('ä¸Šä¼ æˆåŠŸ')
         }, 1500);
       }
     }
