@@ -11,7 +11,7 @@ const layout = resolve => require(['../views/basic/layout.vue'],resolve)
 const icon = resolve => require(['../views/basic/icon.vue'],resolve)
 const button = resolve => require(['../views/basic/button.vue'],resolve)
 const colorMatch = resolve => require(['../views/basic/colorMatch.vue'],resolve)
-const cascsder = resolve => require(['../views/form/cascsder.vue'],resolve)
+const cascader = resolve => require(['../views/form/cascader.vue'],resolve)
 const checkbox = resolve => require(['../views/form/checkbox.vue'],resolve)
 const datePicker = resolve => require(['../views/form/datePicker.vue'],resolve)
 const form = resolve => require(['../views/form/form.vue'],resolve)
@@ -83,9 +83,9 @@ export default new Router({
             {path: '/basic/color', component: color},
             {path: '/basic/layout', component: layout},
             {path: '/basic/icon', component: color},
-            {path: '/basic/button', component: layout},
+            {path: '/basic/button', component: button},
             {path: '/basic/colorMatch',component : colorMatch},
-            {path: '/form/cascsder', component: cascsder},
+            {path: '/form/cascader', component: cascader},
             {path: '/form/checkbox', component: checkbox},
             {path: '/form/datePicker', component: datePicker},
             {path: '/form/form', component: form},
