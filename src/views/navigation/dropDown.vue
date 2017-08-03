@@ -16,7 +16,6 @@
             </a>
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
-              <Dropdown-item>炸酱面</Dropdown-item>
               <Dropdown-item disabled>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item divided>北京烤鸭</Dropdown-item>
@@ -53,7 +52,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
@@ -66,7 +64,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
@@ -102,8 +99,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -115,8 +110,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -128,8 +121,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -150,8 +141,6 @@
             </a>
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
-              <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown placement="right-start">
                 <Dropdown-item>
                   北京烤鸭
@@ -193,7 +182,6 @@
              &lt;/a>
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
-                 &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
                  &lt;Dropdown-item disabled>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item divided>北京烤鸭&lt;/Dropdown-item>
@@ -245,7 +233,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
@@ -258,7 +245,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
@@ -305,8 +291,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -318,8 +302,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -331,8 +313,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -352,8 +332,6 @@
              &lt;/a>
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
-                 &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown placement="right-start">
                      &lt;Dropdown-item>
                          北京烤鸭
