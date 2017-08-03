@@ -158,7 +158,7 @@ export default {
               checked: true,
               icon: "android-document",
               children: [{
-                  title: '<span style="color: red">leaf</span>',
+                  title: 'leaf',
                   icon: "android-document"
               }]
           }]
@@ -211,6 +211,12 @@ export default {
           'describe':'是否可搜索',
           'type':"Boolean",
           'default':"false"
+        },
+        {
+          'attribute': 'draggable',
+          'describe':'是否可拖拽',
+          'type':"Boolean",
+          'default':"false"
         }
       ],
        "eventcolumns":[
@@ -242,6 +248,11 @@ export default {
           'event': 'on-toggle-expand',
           'describe':'展开和收起子列表时触发',
           'return':"当前节点的数组"
+        },
+        {
+          'event': 'on-changed',
+          'describe':'拖动树中的节点导致树的结构发生变化时触发',
+          'return':"当前节点的数组"
         }
       ],
        "methodscolumns":[
@@ -254,7 +265,7 @@ export default {
             'key': 'describe'
         },
         {
-            'title': '返回值',
+            'title': '参数',
             'key':'return'
         }
       ],
@@ -346,7 +357,7 @@ export default {
                         expand: true,
                         checked: true,
                         children: [{
-                            title: '&lt;span style="color: red">leaf&lt;/span>',
+                            title: 'leaf',
                         }]
                     }]
                 }]
@@ -381,7 +392,7 @@ export default {
                         expand: true,
                         checked: true,
                         children: [{
-                            title: '&lt;span style="color: red">leaf&lt;/span>',
+                            title: 'leaf',
                         }]
                     }]
                 }]
@@ -416,7 +427,7 @@ export default {
                         expand: true,
                         checked: true,
                         children: [{
-                            title: '&lt;span style="color: red">leaf&lt;/span>',
+                            title: 'leaf',
                         }]
                     }]
                 }]
