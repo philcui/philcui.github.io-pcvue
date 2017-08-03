@@ -1,21 +1,21 @@
 <template>
   <article class="doc-alert-container">
-    <h1>Font ×ÖÌå</h1>
-    <h2>¸ÅÊö</h2>
+    <h1>Font å­—ä½“</h1>
+    <h2>æ¦‚è¿°</h2>
     <p>
-      ÍÆ¼öÊ¹ÓÃÒÔÏÂ×ÖÌåÀàĞÍ¡¢´óĞ¡¡¢ÑÕÉ«×÷ÎªÉè¼ÆºÍ¿ª·¢¹æ·¶£¬ÒÔ±£Ö¤Ò³ÃæºÍ×é¼şÖ®¼äµÄÊÓ¾õÒ»ÖÂ¡£
+      æ¨èä½¿ç”¨ä»¥ä¸‹å­—ä½“ç±»å‹ã€å¤§å°ã€é¢œè‰²ä½œä¸ºè®¾è®¡å’Œå¼€å‘è§„èŒƒï¼Œä»¥ä¿è¯é¡µé¢å’Œç»„ä»¶ä¹‹é—´çš„è§†è§‰ä¸€è‡´ã€‚
     </p>
-    <h2>×ÖÌå´úÂë</h2>
+    <h2>å­—ä½“ä»£ç </h2>
     <section class="demo" id="font1">
       <demoTab :code="fontCode" :describeTitle="describeTitle">
         <div slot="sample">
         </div>
         <div slot="describe-content">
-          font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Î¢ÈíÑÅºÚ",Arial,sans-serif;
+          font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","å¾®è½¯é›…é»‘",Arial,sans-serif;
         </div>
       </demoTab>
     </section>
-    <h2>×ÖÌåÊ¹ÓÃ¹æ·¶</h2>
+    <h2>å­—ä½“ä½¿ç”¨è§„èŒƒ</h2>
     <section class="demo">
       <Table border :columns="fontColumns" :data="fontData"></Table>
     </section>
@@ -25,63 +25,63 @@
   export  default {
     data(){
       return{
-        describeTitle:'×ÖÌå´úÂë',
+        describeTitle:'å­—ä½“ä»£ç ',
         fontCode:'',
         fontColumns:[
           {
-            title: 'ÀàĞÍ',
+            title: 'ç±»å‹',
             key: 'fontType',
           },
           {
-            title: 'Ê¾Àı',
+            title: 'ç¤ºä¾‹',
             key: 'fontDemo'
           },
           {
-            title: '´ÖÏ¸',
+            title: 'ç²—ç»†',
             key: 'fontBold',
           },
           {
-            title: 'ÑÕÉ«',
+            title: 'é¢œè‰²',
             key: 'fontColor'
           },
           {
-            title: '×ÖºÅ',
+            title: 'å­—å·',
             key: 'fontSize'
           }
         ],
         fontData:[
           {
-            fontType: 'Ö÷±êÌâ',
-            fontDemo:'<span style="font-size: 16px; color: #4d4d4d; font-weight: bold;">Ö÷±êÌâCSS</span>',
-            fontBold:"¼Ó´Ö",
+            fontType: 'ä¸»æ ‡é¢˜',
+            fontDemo:'<span style="font-size: 16px; color: #4d4d4d; font-weight: bold;">ä¸»æ ‡é¢˜CSS</span>',
+            fontBold:"åŠ ç²—",
             fontColor:"#4d4d4d",
             fontSize:"16px"
           },
           {
-            fontType: '±êÌâ',
-            fontDemo:'<span style="font-size: 14px; color: #4d4d4d; font-weight: bold;">±êÌâCSS</span>',
-            fontBold:"¼Ó´Ö",
+            fontType: 'æ ‡é¢˜',
+            fontDemo:'<span style="font-size: 14px; color: #4d4d4d; font-weight: bold;">æ ‡é¢˜CSS</span>',
+            fontBold:"åŠ ç²—",
             fontColor:"#4d4d4d",
             fontSize:"14px"
           },
           {
-            fontType: 'Ğ¡±êÌâ',
-            fontDemo:'<span style="font-size: 12px; color: #4d4d4d; font-weight: bold;">Ğ¡±êÌâCSS</span>',
-            fontBold:"¼Ó´Ö",
+            fontType: 'å°æ ‡é¢˜',
+            fontDemo:'<span style="font-size: 12px; color: #4d4d4d; font-weight: bold;">å°æ ‡é¢˜CSS</span>',
+            fontBold:"åŠ ç²—",
             fontColor:"#4d4d4d",
             fontSize:"12px"
           },
           {
-            fontType: 'ÕıÎÄ',
-            fontDemo:'<span style="font-size: 12px; color: #4d4d4d;">ÕıÎÄCSS</span>',
-            fontBold:"³£¹æ",
+            fontType: 'æ­£æ–‡',
+            fontDemo:'<span style="font-size: 12px; color: #4d4d4d;">æ­£æ–‡CSS</span>',
+            fontBold:"å¸¸è§„",
             fontColor:"#4d4d4d",
             fontSize:"12px"
           },
           {
-            fontType: '¸¨ÖúÎÄ×Ö',
-            fontDemo:'<span style="font-size: 12px; color: #9fa9b2; ">¸¨ÖúÎÄ×ÖCSS</span>',
-            fontBold:"³£¹æ",
+            fontType: 'è¾…åŠ©æ–‡å­—',
+            fontDemo:'<span style="font-size: 12px; color: #9fa9b2; ">è¾…åŠ©æ–‡å­—CSS</span>',
+            fontBold:"å¸¸è§„",
             fontColor:"#9fa9b2",
             fontSize:"12px"
           }
