@@ -14,6 +14,7 @@
             <Form-item label="输入框" prop="input">
               <Input v-model="formItem.input" placeholder="请输入"></Input>
             </Form-item>
+            <br/>
             <Form-item label="选择器" prop="city">
               <Select v-model="formItem.city" style="width: 200px" placeholder="请选择所在地">
                 <Option value="beijing">北京市</Option>
@@ -21,6 +22,7 @@
                 <Option value="shenzhen">深圳市</Option>
               </Select>
             </Form-item>
+            <br/>
             <Form-item label="日期控件">
               <Row>
                 <Col span="6">
@@ -32,12 +34,14 @@
                 </Col>
               </Row>
             </Form-item>
+            <br/>
             <Form-item label="单选框" >
               <Radio-group v-model="formItem.radio">
                 <Radio label="male">男</Radio>
                 <Radio label="female">女</Radio>
               </Radio-group>
             </Form-item>
+            <br/>
             <Form-item label="多选框" prop="checkbox">
               <Checkbox-group v-model="formItem.checkbox">
                 <Checkbox label="吃饭"></Checkbox>
@@ -46,18 +50,22 @@
                 <Checkbox label="看电影"></Checkbox>
               </Checkbox-group>
             </Form-item>
+            <br/>
             <Form-item label="开关" prop="switch">
               <i-Switch v-model="formItem.switch" size="large">
                 <span slot="open">开启</span>
                 <span slot="close">关闭</span>
               </i-Switch>
             </Form-item>
+            <br/>
             <Form-item label="滑块" prop="slider">
               <Slider v-model="formItem.slider" range></Slider>
             </Form-item>
+            <br/>
             <Form-item label="文本域" prop="desc" >
               <Input v-model="formItem.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
             </Form-item>
+            <br/>
             <Form-item>
               <Button type="primary">提交</Button>
               <Button type="ghost" style="margin-left: 8px">取消</Button>
@@ -77,31 +85,39 @@
           <Form-item label="标题">
             <Input v-model="formLeft.input1"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称">
             <Input v-model="formLeft.input2"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formLeft.input3"></Input>
           </Form-item>
+          <br/>
         </i-Form>
         <i-Form :model="formRight" label-position="right" :label-width="100">
           <Form-item label="标题">
             <Input v-model="formRight.input1"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称">
             <Input v-model="formRight.input2"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formRight.input3"></Input>
           </Form-item>
+          <br/>
         </i-Form>
         <i-Form :model="formTop" label-position="top">
           <Form-item label="标题">
             <Input v-model="formTop.input1"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称">
             <Input v-model="formTop.input2"></Input>
           </Form-item>
+          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formTop.input3"></Input>
           </Form-item>
@@ -113,6 +129,75 @@
         </div>
       </demoTab>
     </section>
+    <section class="demo">
+      <demoTab :code="inputCode3" :describeTitle="subTitle3">
+        <div slot="sample">
+          <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+            <Form-item label="姓名" prop="name">
+              <Input v-model="formValidate.name" placeholder="请输入姓名"></Input>
+            </Form-item>
+            <br/>
+            <Form-item label="邮箱" prop="mail">
+              <Input v-model="formValidate.mail" placeholder="请输入邮箱"></Input>
+            </Form-item>
+            <br/>
+            <Form-item label="城市" prop="city">
+              <Select v-model="formValidate.city" style="width: 200px" placeholder="请选择所在地">
+                <Option value="beijing">北京市</Option>
+                <Option value="shanghai">上海市</Option>
+                <Option value="shenzhen">深圳市</Option>
+              </Select>
+            </Form-item>
+            <br/>
+            <Form-item label="选择日期">
+              <Row>
+                <Col span="6">
+                <Form-item prop="date">
+                  <Date-picker type="date" placeholder="选择日期" v-model="formValidate.date"></Date-picker>
+                </Form-item>
+                </Col>
+                <Col span="2" style="text-align: center">-</Col>
+                <Col span="6">
+                <Form-item prop="time">
+                  <Time-picker type="time" placeholder="选择时间" v-model="formValidate.time"></Time-picker>
+                </Form-item>
+                </Col>
+              </Row>
+            </Form-item>
+            <br/>
+            <Form-item label="性别" prop="gender">
+              <Radio-group v-model="formValidate.gender">
+                <Radio label="male">男</Radio>
+                <Radio label="female">女</Radio>
+              </Radio-group>
+            </Form-item>
+            <br/>
+            <Form-item label="爱好" prop="interest">
+              <Checkbox-group v-model="formValidate.interest">
+                <Checkbox label="吃饭"></Checkbox>
+                <Checkbox label="睡觉"></Checkbox>
+                <Checkbox label="跑步"></Checkbox>
+                <Checkbox label="看电影"></Checkbox>
+              </Checkbox-group>
+            </Form-item>
+            <br/>
+            <Form-item label="介绍" prop="desc">
+              <Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+            </Form-item>
+            <br/>
+            <Form-item>
+              <Button type="primary" @click="handleSubmit('formValidate')">提交</Button>
+              <Button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置</Button>
+            </Form-item>
+          </Form>
+        </div>
+        <div slot="describe-content">
+          Form 组件基于  async-validator 实现的数据验证，给 Form 设置属性 <code>rules</code>，<br/>
+          同时给需要验证的 Form-item 设置属性 <code>prop</code> 指向对应字段即可。<br/>
+          完整的验证规则请参照开源项目 async-validator。
+        </div>
+      </demoTab>
+    </section>
   </article>
 </template>
 <script>
@@ -121,8 +206,62 @@
     components: {
       demoTab
     },
+    methods: {
+      handleSubmit (name) {
+        this.$refs[name].validate((valid) => {
+          if (valid) {
+            this.$Message.success('提交成功!');
+          } else {
+            this.$Message.error('表单验证失败!');
+          }
+        })
+      },
+      handleReset (name) {
+        this.$refs[name].resetFields();
+      }
+    },
     data(){
       return{
+        formValidate: {
+          name: '',
+          mail: '',
+          city: '',
+          gender: '',
+          interest: [],
+          date: '',
+          time: '',
+          desc: ''
+        },
+        ruleValidate: {
+          name: [
+            { required: true, message: '姓名不能为空', trigger: 'blur' }
+          ],
+          mail: [
+            { required: true, message: '邮箱不能为空', trigger: 'blur' },
+            { type: 'email', message: '邮箱格式不正确', trigger: 'blur' }
+          ],
+          city: [
+            { required: true, message: '请选择城市', trigger: 'change' }
+          ],
+          gender: [
+            { required: true, message: '请选择性别', trigger: 'change' }
+          ],
+          interest: [
+            { required: true, type: 'array', min: 1, message: '至少选择一个爱好', trigger: 'change' },
+            { type: 'array', max: 2, message: '最多选择两个爱好', trigger: 'change' }
+          ],
+          date: [
+            { required: true, type: 'date', message: '请选择日期', trigger: 'change' }
+          ],
+          time: [
+            { required: true, type: 'date', message: '请选择时间', trigger: 'change' }
+          ],
+          desc: [
+            { required: true, message: '请输入个人介绍', trigger: 'blur' },
+            { type: 'string', min: 20, message: '介绍不能少于20字', trigger: 'blur' }
+          ]
+        },
+        subTitle3:'表单验证',
         formLeft: {
           input1: '',
           input2: '',
@@ -150,6 +289,66 @@
           slider:[20, 50]
         },
         subTitle2:'对齐方式',
+        "inputCode3":`&lt;template>
+&lt;Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+            &lt;Form-item label="姓名" prop="name">
+              &lt;Input v-model="formValidate.name" placeholder="请输入姓名">&lt;/Input>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="邮箱" prop="mail">
+              &lt;Input v-model="formValidate.mail" placeholder="请输入邮箱">&lt;/Input>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="城市" prop="city">
+             &lt;Select v-model="formValidate.city" placeholder="请选择所在地">
+                &lt;Option value="beijing">北京市&lt;/Option>
+                &lt;Option value="shanghai">上海市&lt;/Option>
+                &lt;Option value="shenzhen">深圳市&lt;/Option>
+              &lt;/Select>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="选择日期">
+              &lt;Row>
+                &lt;Col span="6">
+                &lt;Form-item prop="date">
+                  &lt;Date-picker type="date" placeholder="选择日期" v-model="formValidate.date">&lt;/Date-picker>
+                &lt;/Form-item>
+                &lt;/Col>
+                &lt;Col span="2" style="text-align: center">-&lt;/Col>
+                &lt;Col span="6">
+                &lt;Form-item prop="time">
+                  &lt;Time-picker type="time" placeholder="选择时间" v-model="formValidate.time">&lt;/Time-picker>
+                &lt;/Form-item>
+                &lt;/Col>
+              &lt;/Row>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="性别" prop="gender">
+              &lt;Radio-group v-model="formValidate.gender">
+                &lt;Radio label="male">男&lt;/Radio>
+                &lt;Radio label="female">女&lt;/Radio>
+              &lt;/Radio-group>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="爱好" prop="interest">
+              &lt;Checkbox-group v-model="formValidate.interest">
+                &lt;Checkbox label="吃饭">&lt;/Checkbox>
+                &lt;Checkbox label="睡觉">&lt;/Checkbox>
+                &lt;Checkbox label="跑步">&lt;/Checkbox>
+                &lt;Checkbox label="看电影">&lt;/Checkbox>
+              &lt;/Checkbox-group>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item label="介绍" prop="desc">
+              &lt;Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入...">&lt;/Input>
+            &lt;/Form-item>
+            &lt;br/>
+            &lt;Form-item>
+              &lt;Button type="primary" @click="handleSubmit('formValidate')">提交&lt;/Button>
+              &lt;Button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置&lt;/Button>
+            &lt;/Form-item>
+          &lt;/Form>
+&lt;/template>`,
         "inputCode2":`&lt;template>
         &lt;Form :model="formLeft" label-position="left" :label-width="100">
           &lt;Form-item label="标题">
