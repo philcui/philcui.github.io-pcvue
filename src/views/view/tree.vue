@@ -56,10 +56,21 @@
     <section class="demo" id="icon">
       <demoTab :code="searchableTree" :describeTitle="subTitlesearchable">
         <div slot="sample">
-           <Tree :data="iconData" show-checkbox multiple searchable></Tree>
+           <Tree :data="baseData" show-checkbox multiple searchable></Tree>
         </div>
         <div slot="describe-content">
            显示搜索框，且可搜索
+        </div>
+      </demoTab>
+    </section>
+
+    <section class="demo" id="drag">
+      <demoTab :code="draggableTree" :describeTitle="subTitledraggable">
+        <div slot="sample">
+           <Tree :data="baseData" show-checkbox multiple draggable></Tree>
+        </div>
+        <div slot="describe-content">
+           可拖拽
         </div>
       </demoTab>
     </section>
@@ -101,6 +112,7 @@ export default {
       "subTitleicon": "图标",
       "subTitlecloseable": "可关闭",
       "subTitlesearchable": "可搜索",
+      "subTitledraggable":"可拖拽",
       "baseData": [{
           expand: true,
           title: 'parent 1',
@@ -424,28 +436,28 @@ export default {
                 baseData: [{
                 expand: true,
                 title: 'parent 1',
-                icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                icon: "android-document",
                 children: [{
                     title: 'parent 1-0',
                     expand: true,
                     disabled: true,
-                    icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                    icon: "android-document",
                     children: [{
                         title: 'leaf',
                         disableCheckbox: true,
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }, {
                         title: 'leaf',
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }]
                 }, {
                     title: 'parent 1-1',
                     expand: true,
                     checked: true,
-                    icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                    icon: "android-document",
                     children: [{
                         title: '<span style="color: red">leaf</span>',
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }]
                 }]
             }]
@@ -465,28 +477,28 @@ export default {
                 baseData: [{
                 expand: true,
                 title: 'parent 1',
-                icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                icon: "android-document",
                 children: [{
                     title: 'parent 1-0',
                     expand: true,
                     disabled: true,
-                    icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                    icon: "android-document",
                     children: [{
                         title: 'leaf',
                         disableCheckbox: true,
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }, {
                         title: 'leaf',
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }]
                 }, {
                     title: 'parent 1-1',
                     expand: true,
                     checked: true,
-                    icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png",
+                    icon: "android-document",
                     children: [{
                         title: 'leaf',
-                        icon: "http://10.0.2.135:8090/oam/icons/smallIcon/searchPage.png"
+                        icon: "android-document"
                     }]
                 }]
             }]
@@ -494,7 +506,48 @@ export default {
         }
     }
 &lt;/script>
-`
+`,
+      "draggableTree":`
+&lt;template>
+    &lt;Tree :data="baseData" show-checkbox multiple draggable>&lt;/Tree>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                baseData: [{
+                expand: true,
+                title: 'parent 1',
+                icon: "android-document",
+                children: [{
+                    title: 'parent 1-0',
+                    expand: true,
+                    disabled: true,
+                    icon: "android-document",
+                    children: [{
+                        title: 'leaf',
+                        disableCheckbox: true,
+                        icon: "android-document"
+                    }, {
+                        title: 'leaf',
+                        icon: "android-document"
+                    }]
+                }, {
+                    title: 'parent 1-1',
+                    expand: true,
+                    checked: true,
+                    icon: "android-document",
+                    children: [{
+                        title: 'leaf',
+                        icon: "android-document"
+                    }]
+                }]
+            }]
+            }
+        }
+    }
+&lt;/script>
+      `
     }
   }
 }

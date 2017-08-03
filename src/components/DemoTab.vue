@@ -129,22 +129,10 @@ export default {
       margin-left: 10px;
     }
   }
-  .code{
+
+  .ivu-tabs-tabpane:last-child code{
+    border:none;
     overflow: hidden;
-  }
-  .code-ele { color: greenyellow;}
-  .code-comment { color: gray; }
-  .code-cd { color: #42b983; }
-  .code-selector-id { color: cyan; }
-  .code-selector-class { color: lightcoral;}
-  .code-attribut {
-    color: #e96900;
-  }
-  .code-value {
-    color: #42b983;
-  }
-  .code-keyWord {
-    color: #e96900;
   }
   .code > div{
     margin-top: -30px;
