@@ -272,7 +272,7 @@
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
     </section>
-    <h3>Input methods</h3>
+    <h3>Form methods</h3>
     <section class="demo">
       <Table border :columns="propsColumns02" :data="propsData02"></Table>
     </section>
