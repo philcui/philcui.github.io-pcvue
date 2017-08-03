@@ -472,7 +472,33 @@ var data=[
     "id": "doc_F499C9631DCF446AB2633327336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tree 树形控件",
-    "url": "/view/tree"
+    "url": "/view/tree",
+     "children":[{
+      "id": "basic",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "基础用法",
+      "isAct":false,
+    },{
+        "id": "checkbox",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "显示checkbox",
+        "isAct":false,
+      },{
+        "id": "multiple",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "多选",
+        "isAct":false,
+      },{
+        "id": "icon",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "图标",
+        "isAct":false,
+      },{
+        "id": "api",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "86E9DF2F94694A44AF7A2F4EBCE97443",
