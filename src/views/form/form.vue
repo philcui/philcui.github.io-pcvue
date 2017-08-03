@@ -11,36 +11,35 @@
       <demoTab :code="inputCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Form :model="formItem" :label-width="80">
-            <Form-item label="输入框" prop="name">
+            <Form-item label="输入框" prop="input">
               <Input v-model="formItem.input" placeholder="请输入"></Input>
             </Form-item>
-            <Form-item label="邮箱" prop="mail" style="margin-top: 20px">
-              <Input v-model="formItem.mail" error placeholder="请输入邮箱"></Input>
-            </Form-item>
-            <Form-item label="城市" prop="city" style="margin-top: 20px">
+            <Form-item label="选择器" prop="city">
               <Select v-model="formItem.city" style="width: 200px" placeholder="请选择所在地">
                 <Option value="beijing">北京市</Option>
                 <Option value="shanghai">上海市</Option>
                 <Option value="shenzhen">深圳市</Option>
               </Select>
             </Form-item>
-            <Form-item label="选择日期" style="margin-top: 20px">
+            <Form-item label="日期控件">
               <Row>
                 <Col span="6">
-                <Form-item prop="date">
-                  <Date-picker type="date" placeholder="选择日期" v-model="formItem.date"></Date-picker>
-                </Form-item>
+                <Date-picker type="date" placeholder="选择日期" v-model="formItem.date"></Date-picker>
+                </Col>
+                <Col span="2" style="text-align: center">-</Col>
+                <Col span="5">
+                <Time-picker type="time" placeholder="选择时间" v-model="formItem.time"></Time-picker>
                 </Col>
               </Row>
             </Form-item>
-            <Form-item label="单选框" style="margin-top: 20px">
+            <Form-item label="单选框" >
               <Radio-group v-model="formItem.radio">
                 <Radio label="male">男</Radio>
                 <Radio label="female">女</Radio>
               </Radio-group>
             </Form-item>
-            <Form-item label="爱好" prop="interest" style="margin-top: 20px">
-              <Checkbox-group v-model="formItem.interest">
+            <Form-item label="多选框" prop="checkbox">
+              <Checkbox-group v-model="formItem.checkbox">
                 <Checkbox label="吃饭"></Checkbox>
                 <Checkbox label="睡觉"></Checkbox>
                 <Checkbox label="跑步"></Checkbox>
@@ -56,14 +55,61 @@
             <Form-item label="滑块" prop="slider">
               <Slider v-model="formItem.slider" range></Slider>
             </Form-item>
-            <Form-item label="介绍" prop="desc" style="margin-top: 20px">
+            <Form-item label="文本域" prop="desc" >
               <Input v-model="formItem.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+            </Form-item>
+            <Form-item>
+              <Button type="primary">提交</Button>
+              <Button type="ghost" style="margin-left: 8px">取消</Button>
             </Form-item>
           </Form>
         </div>
         <div slot="describe-content">
           在 <code>Form</code> 内，每个表单域由 <code>Form-item</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload。
           给 <code>Form-item</code> 设置属性 <code>label</code> 可以显示表单域的标签，需要给 Form 设置 <code>label-width</code>。
+        </div>
+      </demoTab>
+    </section>
+    <section class="demo">
+      <demoTab :code="inputCode2" :describeTitle="subTitle2">
+        <div slot="sample">
+        <i-Form :model="formLeft" label-position="left" :label-width="100">
+          <Form-item label="标题">
+            <Input v-model="formLeft.input1"></Input>
+          </Form-item>
+          <Form-item label="标题名称">
+            <Input v-model="formLeft.input2"></Input>
+          </Form-item>
+          <Form-item label="标题名称对齐">
+            <Input v-model="formLeft.input3"></Input>
+          </Form-item>
+        </i-Form>
+        <i-Form :model="formRight" label-position="right" :label-width="100">
+          <Form-item label="标题">
+            <Input v-model="formRight.input1"></Input>
+          </Form-item>
+          <Form-item label="标题名称">
+            <Input v-model="formRight.input2"></Input>
+          </Form-item>
+          <Form-item label="标题名称对齐">
+            <Input v-model="formRight.input3"></Input>
+          </Form-item>
+        </i-Form>
+        <i-Form :model="formTop" label-position="top">
+          <Form-item label="标题">
+            <Input v-model="formTop.input1"></Input>
+          </Form-item>
+          <Form-item label="标题名称">
+            <Input v-model="formTop.input2"></Input>
+          </Form-item>
+          <Form-item label="标题名称对齐">
+            <Input v-model="formTop.input3"></Input>
+          </Form-item>
+        </i-Form>
+        </div>
+        <div slot="describe-content">
+          设置属性 <code>label-position</code>，可以改变表单域标签的位置，<br/>
+          left 为左对齐，right 为右对齐，top 会置于表单域顶部。
         </div>
       </demoTab>
     </section>
@@ -77,17 +123,68 @@
     },
     data(){
       return{
+        formLeft: {
+          input1: '',
+          input2: '',
+          input3: ''
+        },
+        formRight: {
+          input1: '',
+          input2: '',
+          input3: ''
+        },
+        formTop: {
+          input1: '',
+          input2: '',
+          input3: ''
+        },
         formItem:{
-            name:'',
+          input:'',
           city:'',
-          mail:'',
-          date:'',
+          date: '',
+          time: '',
           radio: 'male',
-          interest:'',
+          checkbox: [],
           desc:'',
           switch:true,
           slider:[20, 50]
         },
+        subTitle2:'对齐方式',
+        "inputCode2":`&lt;template>
+        &lt;Form :model="formLeft" label-position="left" :label-width="100">
+          &lt;Form-item label="标题">
+            &lt;Input v-model="formLeft.input1">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称">
+            &lt;Input v-model="formLeft.input2">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称对齐">
+            &lt;Input v-model="formLeft.input3">&lt;/Input>
+          &lt;/Form-item>
+        &lt;/Form>
+        &lt;Form :model="formRight" label-position="right" :label-width="100">
+          &lt;Form-item label="标题">
+            &lt;Input v-model="formRight.input1">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称">
+            &lt;Input v-model="formRight.input2">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称对齐">
+            &lt;Input v-model="formRight.input3">&lt;/Input>
+          &lt;/Form-item>
+        &lt;/Form>
+        &lt;Form :model="formTop" label-position="top">
+          &lt;Form-item label="标题">
+            &lt;Input v-model="formTop.input1">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称">
+            &lt;Input v-model="formTop.input2">&lt;/Input>
+          &lt;/Form-item>
+          &lt;Form-item label="标题名称对齐">
+            &lt;Input v-model="formTop.input3">&lt;/Input>
+          &lt;/Form-item>
+        &lt;/Form>
+        &lt;/template>`,
         subTitle1:'基础用法',
         "inputCode": `
             &lt;template>
