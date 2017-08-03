@@ -81,6 +81,10 @@ devMiddleware.waitUntilValid(() => {
   _resolve()
 })
 
+app.post('/file_upload', function (req, res) {
+  res.json(req.data);
+});
+
 var server = app.listen(port)
 
 module.exports = {

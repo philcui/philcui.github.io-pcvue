@@ -9,7 +9,7 @@
     <section class="demo" id="upload1">
       <demoTab :code="uploadCode" :describeTitle="describeTitle">
         <div slot="sample">
-          <Upload action="//jsonplaceholder.typicode.com/posts/">
+          <Upload action="/file_upload">
             <Button type="primary" icon="ios-cloud-upload-outline">上传</Button>
           </Upload>
         </div>
@@ -21,7 +21,7 @@
     <section class="demo" id="upload2">
       <demoTab :code="uploadCode2" :describeTitle="describeTitle2">
         <div slot="sample">
-          <Upload multiple action="//jsonplaceholder.typicode.com/posts/">
+          <Upload multiple action="/file_upload">
             <Button type="primary" icon="ios-cloud-upload-outline">上传</Button>
           </Upload>
         </div>
@@ -34,7 +34,7 @@
       <demoTab :code="uploadCode3" :describeTitle="describeTitle3">
         <div slot="sample">
           <Upload :before-upload="handleUpload3"
-                  action="//jsonplaceholder.typicode.com/posts/">
+                  action="/file_upload">
             <Button type="primary" icon="ios-cloud-upload-outline">选择要上传文件的文件</Button>
           </Upload>
           <div v-if="uploadFile3 !== null">待上传文件：{{ uploadFile3.name }}
@@ -49,7 +49,7 @@
     <section class="demo" id="upload4">
       <demoTab :code="uploadCode4" :describeTitle="describeTitle4">
         <div slot="sample">
-          <Upload multiple type="drag" action="//jsonplaceholder.typicode.com/posts/">
+          <Upload multiple type="drag" action="/file_upload">
             <div style="padding: 20px 0">
               <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
               <p>点击或将文件拖拽到这里上传</p>
@@ -92,7 +92,7 @@
         loadingStatus: false,
         uploadCode: `&lt;template>
         &lt;div>
-             &lt;Upload action="//jsonplaceholder.typicode.com/posts/">
+             &lt;Upload action="/file_upload">
                &lt;Button type="primary" icon="ios-cloud-upload-outline">上传&lt;/Button>
              &lt;/Upload>
         &lt;/div>
@@ -105,7 +105,7 @@
         `,
         uploadCode2: `&lt;template>
         &lt;div>
-             &lt;Upload multiple action="//jsonplaceholder.typicode.com/posts/">
+             &lt;Upload multiple action="/file_upload">
                &lt;Button type="primary" icon="ios-cloud-upload-outline">上传&lt;/Button>
              &lt;/Upload>
         &lt;/div>
@@ -119,7 +119,7 @@
         uploadCode3:`&lt;template>
         &lt;div>
              &lt;Upload :before-upload="handleUpload3"
-             action="//jsonplaceholder.typicode.com/posts/">
+             action="/file_upload">
                &lt;Button type="primary" icon="ios-cloud-upload-outline">选择要上传文件的文件&lt;/Button>
              &lt;/Upload>
              &lt;div v-if="uploadFile3 !== null">待上传文件：{{ uploadFile3.name }}
@@ -154,7 +154,7 @@
         `,
         uploadCode4:`&lt;template>
         &lt;div>
-             &lt;Upload multiple type="drag" action="//jsonplaceholder.typicode.com/posts/">
+             &lt;Upload multiple type="drag" action="/file_upload">
                &lt;div style="padding:20px 0px">
                   &lt;Icon type="ios-cloud-upload" size="52" style="color: #3399ff">&lt;/Icon>
                   &lt:p>点击或将文件拖拽到这里上传&lt:/p>
