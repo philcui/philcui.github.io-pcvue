@@ -16,7 +16,6 @@
             </a>
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
-              <Dropdown-item>炸酱面</Dropdown-item>
               <Dropdown-item disabled>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item divided>北京烤鸭</Dropdown-item>
@@ -53,7 +52,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
@@ -66,7 +64,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
@@ -102,8 +99,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -115,8 +110,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -128,8 +121,6 @@
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
               <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
-              <Dropdown-item>冰糖葫芦</Dropdown-item>
               <Dropdown-item>北京烤鸭</Dropdown-item>
             </Dropdown-menu>
           </Dropdown>
@@ -150,8 +141,6 @@
             </a>
             <Dropdown-menu slot="list">
               <Dropdown-item>驴打滚</Dropdown-item>
-              <Dropdown-item>炸酱面</Dropdown-item>
-              <Dropdown-item>豆汁儿</Dropdown-item>
               <Dropdown placement="right-start">
                 <Dropdown-item>
                   北京烤鸭
@@ -171,6 +160,24 @@
         </div>
       </demoTab>
     </section>
+
+    <h2 id="switch3">API</h2>
+    <h3>Dropdown props</h3>
+    <section class="demo">
+      <Table border :columns="propsColumns" :data="propsData"></Table>
+    </section>
+    <h3>Dropdown events</h3>
+    <section class="demo">
+      <Table border :columns="eventsColumns" :data="eventsData"></Table>
+    </section>
+    <h3>Dropdown slot</h3>
+    <section class="demo">
+      <Table border :columns="slotColumns" :data="slotData"></Table>
+    </section>
+    <h3>Dropdown-item props</h3>
+    <section class="demo">
+      <Table border :columns="itemColumns" :data="itemData"></Table>
+    </section>
   </article>
 </template>
 <script>
@@ -183,6 +190,119 @@
       return {
         icon:"ios-arrow-down",
         visible: false,
+        propsColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        propsData:[{
+          attribute: 'trigger',
+          describe:'触发方式，可选值为 hover（悬停）click（点击）custom（自定义），使用 custom 时，需配合 visible 一起使用',
+          type:"String",
+          default:"hover"
+        },{
+          attribute: 'visible',
+          describe:'手动控制下拉框的显示，在 trigger = "custom" 时使用',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'placement',
+          describe:'下拉菜单出现的位置，可选值为toptop-starttop-endbottombottom-startbottom-endleftleft-startleft-endrightright-startright-end',
+          type:"String",
+          default:"bottom"
+        },{
+          attribute: 'transfer',
+          describe:'是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果',
+          type:"Boolean",
+          default:"false"
+        }],
+        eventsColumns:[
+          {
+            title: '事件名',
+            key: 'eventsName',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          },{
+            title: '返回值',
+            key: 'return',
+          }],
+        eventsData:[{
+          eventsName: 'on-click',
+          describe:'点击菜单项时触发',
+          return:"Dropdown-item 的 name 值"
+        },{
+          eventsName: 'on-visible-change',
+          describe:'菜单显示状态改变时调用',
+          return:"visible"
+        }],
+        slotColumns:[
+          {
+            title: '名称',
+            key: 'name',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'450px'
+          }],
+        slotData:[{
+          name: '无',
+          describe:'主体内容'
+        },{
+          name: 'list',
+          describe:'列表内容，一般由 Dropdown-menu 承担'
+        }],
+        itemColumns:[
+          {
+            title: '属性',
+            key: 'attribute',
+          },
+          {
+            title: '说明',
+            key: 'describe',
+            width:'350px'
+          },{
+            title: '类型',
+            key: 'type',
+          },{
+            title: '默认值',
+            key: 'default',
+          }],
+        itemData:[{
+          attribute: 'name',
+          describe:'用来标识这一项',
+          type:"String",
+          default:"-"
+        },{
+          attribute: 'disabled',
+          describe:'禁用该项',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'divided',
+          describe:'显示分割线',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'selected',
+          describe:'标记该项为选中状态',
+          type:"Boolean",
+          default:"false"
+        }],
         "subTitle1": "基本用法",
         "dropdownCode": `
         &lt;template>
@@ -193,7 +313,6 @@
              &lt;/a>
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
-                 &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
                  &lt;Dropdown-item disabled>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item divided>北京烤鸭&lt;/Dropdown-item>
@@ -245,7 +364,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
@@ -258,7 +376,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
@@ -305,8 +422,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -318,8 +433,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -331,8 +444,6 @@
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
                  &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
-                 &lt;Dropdown-item>冰糖葫芦&lt;/Dropdown-item>
                  &lt;Dropdown-item>北京烤鸭&lt;/Dropdown-item>
              &lt;/Dropdown-menu>
            &lt;/Dropdown>
@@ -352,8 +463,6 @@
              &lt;/a>
              &lt;Dropdown-menu slot="list">
                  &lt;Dropdown-item>驴打滚&lt;/Dropdown-item>
-                 &lt;Dropdown-item>炸酱面&lt;/Dropdown-item>
-                 &lt;Dropdown-item>豆汁儿&lt;/Dropdown-item>
                  &lt;Dropdown placement="right-start">
                      &lt;Dropdown-item>
                          北京烤鸭
