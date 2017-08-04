@@ -53,7 +53,7 @@
       </demoTab>
     </section>
 
-    <section class="demo" id="icon">
+    <section class="demo" id="searchable">
       <demoTab :code="searchableTree" :describeTitle="subTitlesearchable">
         <div slot="sample">
            <Tree :data="baseData" show-checkbox multiple searchable></Tree>
@@ -64,7 +64,7 @@
       </demoTab>
     </section>
 
-    <section class="demo" id="drag">
+    <section class="demo" id="draggable">
       <demoTab :code="draggableTree" :describeTitle="subTitledraggable">
         <div slot="sample">
            <Tree :data="baseData" show-checkbox multiple draggable></Tree>

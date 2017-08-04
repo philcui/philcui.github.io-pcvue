@@ -526,6 +526,16 @@ var data=[
         "name": "图标",
         "isAct":false,
       },{
+        "id": "searchable",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "可搜索",
+        "isAct":false,
+      },{
+        "id": "draggable",
+        "pid": "doc_F499C9631DCF446AB2633327336",
+        "name": "可拖拽",
+        "isAct":false,
+      },{
         "id": "api",
         "pid": "doc_F499C9631DCF446AB2633327336",
         "name": "API",
