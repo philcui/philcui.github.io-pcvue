@@ -208,7 +208,7 @@
           }],
         propsData:[{
           attribute: 'trigger',
-          describe:'触发方式，可选值为 hover（悬停）click（点击）custom（自定义），使用 custom 时，需配合 visible 一起使用',
+          describe:'触发方式，可选值为 <code>hover</code>（悬停）<code>click</code>（点击）<code>custom</code>（自定义），使用 custom 时，需配合 visible 一起使用',
           type:"String",
           default:"hover"
         },{
@@ -218,7 +218,7 @@
           default:"false"
         },{
           attribute: 'placement',
-          describe:'下拉菜单出现的位置，可选值为toptop-starttop-endbottombottom-startbottom-endleftleft-startleft-endrightright-startright-end',
+          describe:'下拉菜单出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code>',
           type:"String",
           default:"bottom"
         },{
@@ -257,14 +257,14 @@
           {
             title: '说明',
             key: 'describe',
-            width:'450px'
+            width:'500px'
           }],
         slotData:[{
           name: '无',
           describe:'主体内容'
         },{
           name: 'list',
-          describe:'列表内容，一般由 Dropdown-menu 承担'
+          describe:'列表内容，一般由 <code>Dropdown-menu</code> 承担'
         }],
         itemColumns:[
           {
