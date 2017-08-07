@@ -87,7 +87,8 @@
           </Tabs>
         </div>
         <div slot="describe-content">
-           设置属性 type 为 card 可以显示卡片样式，常用于容器顶部。
+           通过设置属性 closable 可以关闭某一项，仅在 type 为 card 时有效。<br/>
+           需结合 @on-tab-remove 事件手动关闭标签页。
         </div>
       </demoTab>
     </section>

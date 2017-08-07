@@ -59,9 +59,9 @@ export default {
     toggleMore () {
       this.ishide = !this.ishide
       if(this.ishide){
-        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.exampleHeight + "px"
+        this.$el.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = this.exampleHeight + "px"
       } else {
-        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.codeHeight + "px"
+        this.$el.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = this.codeHeight + "px"
       }
     }
   },
@@ -76,12 +76,10 @@ export default {
       //  let containers = document.querySelectorAll(".ivu-tabs-content")
          let container = _this.$el
          let first = container.querySelector('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')
-         debugger
          first.querySelectorAll('.ivu-tabs-tabpane > div').forEach(function(element) {
            _this.exampleHeight += element.clientHeight
          })
          _this.codeHeight = container.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].clientHeight
-        debugger
          if(_this.codeHeight>_this.exampleHeight){
            _this.hasmore = true;
            container.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = _this.exampleHeight + 'px';
