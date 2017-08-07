@@ -557,7 +557,56 @@ var data=[
     "id": "doc_4CADAD6AD3634AE99591025BF457F2ED",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Tabs 标签页",
-    "url": "/navigation/tabs"
+    "url": "/navigation/tabs",
+    "children":[{
+        "id": "basic",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "disabled",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "禁用",
+        "isAct":false,
+      },
+      {
+        "id": "icon",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "图标",
+        "isAct":false,
+      },
+      {
+        "id": "small",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "迷你型",
+        "isAct":false,
+      },
+      {
+        "id": "card",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "卡片样式",
+        "isAct":false,
+      },
+       {
+        "id": "closable",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "可关闭",
+        "isAct":false,
+      },
+      {
+        "id": "noanimate",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "禁用动画",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_77368258DBB441A6A9E1966C4D214D84",

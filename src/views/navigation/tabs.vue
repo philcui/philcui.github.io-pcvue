@@ -92,22 +92,42 @@
         </div>
       </demoTab>
     </section>
-      
+
+    <section class="demo" id="noanimate">
+      <demoTab :code="noanimateTab" :describeTitle="subTitlenoanimate">
+        <div slot="sample">
+          <Tabs :animated="false">
+              <Tab-pane label="标签一">标签一的内容</Tab-pane>
+              <Tab-pane label="标签二">标签二的内容</Tab-pane>
+              <Tab-pane label="标签三">标签三的内容</Tab-pane>
+          </Tabs>
+        </div>
+        <div slot="describe-content">
+           通过设置属性 animated 为 false 可以禁用动画。
+        </div>
+      </demoTab>
+    </section>
+
     <h2 id="api">API</h2>
 
-    <h3>Alert props</h3>
+    <h3>Tabs props</h3>
     <section class="demo">
      <Table border :columns="propscolumns" :data="propsdata"></Table>
     </section>
 
-    <h3>Alert events</h3>
+    <h3>Tabs events</h3>
     <section class="demo">
      <Table border :columns="eventcolumns" :data="eventdata"></Table>
     </section>
 
-    <h3>Alert slot</h3>
+    <h3>Tabs slot</h3>
     <section class="demo">
      <Table border :columns="slotcolumns" :data="slotdata"></Table>
+    </section>
+
+    <h3>TabPane props</h3>
+    <section class="demo">
+     <Table border :columns="propscolumns" :data="TabPanePropsdata"></Table>
     </section>
   </article>
 </template>
@@ -125,6 +145,7 @@ export default {
       "subTitlesmall": "迷你型",
       "subTitlecard": "卡片样式",
       "subTitleclosable": "可关闭",
+      "subTitlenoanimate":"禁用动画",
       "tab0": true,
       "tab1": true,
       "tab2": true,
@@ -148,22 +169,34 @@ export default {
       ],
       "propsdata":[
         {
-          'attribute': 'type',
-          'describe':'警告提示样式，可选值为info、success、warning、error',
+          'attribute': 'value',
+          'describe':'当前激活 tab 面板的 name，可以使用 v-model 双向绑定数据',
           'type':"String",
-          'default':"info"
+          'default':"默认为第一项的 name"
+        },
+        {
+          'attribute': 'type',
+          'describe':'页签的基本样式，可选值为 line 和 card',
+          'type':"String",
+          'default':"line"
+        },
+        {
+          'attribute': 'size',
+          'describe':'尺寸，可选值为 default 和 small，仅在 type="line" 时有效',
+          'type':"String",
+          'default':"default"
         },
         {
           'attribute': 'closable',
-          'describe':'是否可关闭',
+          'describe':'是否可以关闭页签，仅在 type="card" 时有效',
           'type':"Boolean",
           'default':"false"
         },
         {
-          'attribute': 'show-icon',
-          'describe':'是否显示图标',
+          'attribute': 'animated',
+          'describe':'是否使用 CSS3 动画',
           'type':"Boolean",
-          'default':"false"
+          'default':"true"
         }
       ],
        "eventcolumns":[
@@ -182,9 +215,14 @@ export default {
       ],
       "eventdata":[
         {
-          'event': 'on-close',
-          'describe':'关闭时触发',
-          'return':"event"
+          'event': 'on-click',
+          'describe':'tab 被点击时触发',
+          'return':"name"
+        },
+        {
+          'event': 'on-tab-remove',
+          'describe':'tab 被关闭时触发',
+          'return':"name"
         }
       ],
        "slotcolumns":[
@@ -199,21 +237,35 @@ export default {
       ],
       "slotdata":[
         {
-          "name": "无",
-          "describe":"警告提示内容"
+          "name": "extra",
+          "describe":"附加内容"
+        }
+      ],
+      'TabPanePropsdata':[
+        {
+          'attribute': 'name',
+          'describe':'用于标识当前面板，对应 value，默认为其索引值',
+          'type':"String | Number",
+          'default':"-"
         },
         {
-          "name": "desc",
-          "describe":"警告提示辅助性文字介绍"
+          'attribute': 'icon',
+          'describe':'选项卡图标',
+          'type':"String",
+          'default':"-"
         },
         {
-          "name": "icon",
-          "describe":"自定义图标内容"
+          'attribute': 'disabled',
+          'describe':'是否禁用该选项卡',
+          'type':"Boolean",
+          'default':"false"
         },
         {
-          "name": "close",
-          "describe":"自定义关闭内容"
-        },
+          'attribute': 'closable',
+          'describe':'是否可以关闭页签，仅在 type="card" 时有效',
+          'type':"Boolean",
+          'default':"null"
+        }
       ],
       "basicTab": `
 &lt;template>
@@ -309,6 +361,20 @@ export default {
         }
     }
 &lt;/script>
+      `,
+      "noanimateTab":`
+&lt;template>
+    &lt;Tabs :animated="false">
+        &lt;Tab-pane label="标签一">标签一的内容&lt;/Tab-pane>
+        &lt;Tab-pane label="标签二">标签二的内容&lt;/Tab-pane>
+        &lt;Tab-pane label="标签三">标签三的内容&lt;/Tab-pane>
+    &lt;/Tabs>
+&lt;/template>
+&lt;script>
+    export default {
+        
+    }
+&lt;/script>
       `
     }
   },
@@ -337,5 +403,40 @@ article {
   section.demo{
     margin: 20px 0px;
   }
+  .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-content {
+        height: 120px;
+        margin-top: -16px;
+    }
+
+    .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-content > .ivu-tabs-tabpane {
+        background: #fff;
+        padding: 16px;
+    }
+
+    .demo-tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab {
+        border-color: transparent;
+    }
+
+    .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active {
+        border-color: #fff;
+    }
+    .demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+        border-radius: 0;
+        background: #fff;
+    }
+    .demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
+        border-top: 1px solid #3399ff;
+    }
+    .demo-tabs-style2 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #3399ff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
+
 </style>
