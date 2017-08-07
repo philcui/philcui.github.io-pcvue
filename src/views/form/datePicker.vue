@@ -327,7 +327,7 @@
           default:"date"
         },{
           attribute: 'value',
-          describe:'日期，可以是 JavaScript 的 Date，例如 new Date()，也可以是标准的日期格式，点击右边查看<br/>注意：value 使用 v-model 时，值是 Date 类型，可以配合 @on-change 使用 ',
+          describe:'日期，可以是 JavaScript 的 Date，例如 new Date()，也可以是标准的日期格式，具体用法查看底部<code>常见的日期和时间格式</code><br/>注意：value 使用 v-model 时，值是 Date 类型，可以配合 @on-change 使用 ',
           type:"Date",
           default:"-"
         },{
