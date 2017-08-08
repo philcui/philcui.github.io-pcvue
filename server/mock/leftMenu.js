@@ -5,50 +5,9 @@ var data=[
     "name": "V1.0.0"
   },
   {
-    "id": "1-1",
-    "pid": "V1.0.0",
-    "name": "基础"
-  },
-  {
-    "id": "1-1-1",
-    "pid": "1-1",
-    "name": "颜色搭配",
-    "url": "/basic/colorMatch",
-    "children":[{
-                "id": "1111",
-                "pid": "1-1-1",
-                "name": "颜色搭配2",
-                "isAct":false,
-              },
-              {
-                "id": "1112",
-                "pid": "1-1-1",
-                "name": "颜色搭配3",
-                "isAct":false,
-              },
-              {
-                "id": "1113",
-                "pid": "1-1-1",
-                "name": "颜色搭配4",
-                "isAct":false,
-              }]
-  },
- /* {
-    "id": "1-1-2",
-    "pid": "1-1",
-    "name": "页面布局",
-    "url": ""
-  },*/
- /* {
-    "id": "1-1-3",
-    "pid": "1-1",
-    "name": "文字字体",
-    "url": "1"
-  },*/
-  {
     "id": "7C43A10FE0BF47148DC9E513E021FCD5",
     "pid": "V1.0.0",
-    "name": "Basic"
+    "name": "通用类"
   },
   {
     "id": "doc_69D6349B3C4E42519FB569B7CED20E99",
@@ -135,21 +94,21 @@ var data=[
       "name": "全选",
       "isAct":false,
     },{
-        "id": "checkbox2",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "不可用",
-        "isAct":false,
-      },{
-        "id": "checkbox3",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "组合使用",
-        "isAct":false,
-      },{
-        "id": "checkbox4",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "checkbox2",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "不可用",
+      "isAct":false,
+    },{
+      "id": "checkbox3",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "组合使用",
+      "isAct":false,
+    },{
+      "id": "checkbox4",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
@@ -266,6 +225,12 @@ var data=[
     "url": "/form/form"
   },
   {
+    "id": "doc_7D5EF512649C465081E8BF3805522024",
+    "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
+    "name": "loading 加载",
+    "url": "/form/loading"
+  },
+  {
     "id": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "pid": "V1.0.0",
     "name": "视图类"
@@ -276,35 +241,35 @@ var data=[
     "name": "Alert 警告提示",
     "url": "/view/alert",
     "children":[{
-                "id": "basic",
-                "pid": "1-1-1",
-                "name": "基础用法",
-                "isAct":false,
-              },
-              {
-                "id": "describe",
-                "pid": "1-1-1",
-                "name": "含描述信息",
-                "isAct":false,
-              },
-              {
-                "id": "icon",
-                "pid": "1-1-1",
-                "name": "图标",
-                "isAct":false,
-              },
-              {
-                "id": "close",
-                "pid": "1-1-1",
-                "name": "可关闭",
-                "isAct":false,
-              },
-              {
-                "id": "api",
-                "pid": "1-1-1",
-                "name": "API",
-                "isAct":false,
-              }]
+      "id": "basic",
+      "pid": "1-1-1",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "describe",
+        "pid": "1-1-1",
+        "name": "含描述信息",
+        "isAct":false,
+      },
+      {
+        "id": "icon",
+        "pid": "1-1-1",
+        "name": "图标",
+        "isAct":false,
+      },
+      {
+        "id": "close",
+        "pid": "1-1-1",
+        "name": "可关闭",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_72AC50CBCD994385AE4F96181BABFC0D",
@@ -324,11 +289,11 @@ var data=[
     "name": "Notice 通知提醒",
     "url": "/view/notice",
     "children":[{
-        "id": "notice1",
-        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "基础用法",
-        "isAct":false,
-      },
+      "id": "notice1",
+      "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+      "name": "基础用法",
+      "isAct":false,
+    },
       {
         "id": "notice2",
         "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
@@ -353,11 +318,11 @@ var data=[
       "name": "基础用法",
       "isAct":false,
     },{
-        "id": "noticeModal2",
-        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "noticeModal2",
+      "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
@@ -370,62 +335,57 @@ var data=[
       "name": "基础用法",
       "isAct":false,
     },
-    {
+      {
         "id": "custom",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义样式",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "asyn",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "异步关闭",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "disable",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "禁用关闭",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "customposition",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义位置",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "instance",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "实例化基本用法",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "confirm",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "确认对话框",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "custominstance",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义内容",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "api",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "API",
         "isAct":false,
-    }
+      }
     ]
   },
-  {
-    "id": "doc_F49A64AB2627336",
-    "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
-    "name": "Progress 进度条",
-    "url": "/view/progress"
-  },
+
   {
     "id": "doc_F499C9631DCF6B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
@@ -479,25 +439,25 @@ var data=[
       "name": "多选",
       "isAct":false,
     },{
-        "id": "table2",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "可展开",
-        "isAct":false,
+      "id": "table2",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "可展开",
+      "isAct":false,
     },{
-        "id": "table3",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "固定列",
-        "isAct":false,
+      "id": "table3",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "固定列",
+      "isAct":false,
     },{
-        "id": "table4",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "可编辑表格",
-        "isAct":false,
+      "id": "table4",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "可编辑表格",
+      "isAct":false,
     },{
-        "id": "table5",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "API",
-        "isAct":false,
+      "id": "table5",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "API",
+      "isAct":false,
     }]
   },
   {
@@ -505,42 +465,32 @@ var data=[
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tree 树形控件",
     "url": "/view/tree",
-     "children":[{
+    "children":[{
       "id": "basic",
       "pid": "doc_F499C9631DCF446AB2633327336",
       "name": "基础用法",
       "isAct":false,
     },{
-        "id": "checkbox",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "显示checkbox",
-        "isAct":false,
-      },{
-        "id": "multiple",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "多选",
-        "isAct":false,
-      },{
-        "id": "icon",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "图标",
-        "isAct":false,
-      },{
-        "id": "searchable",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "可搜索",
-        "isAct":false,
-      },{
-        "id": "draggable",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "可拖拽",
-        "isAct":false,
-      },{
-        "id": "api",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "checkbox",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "显示checkbox",
+      "isAct":false,
+    },{
+      "id": "multiple",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "多选",
+      "isAct":false,
+    },{
+      "id": "icon",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "图标",
+      "isAct":false,
+    },{
+      "id": "api",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "86E9DF2F94694A44AF7A2F4EBCE97443",
@@ -557,62 +507,7 @@ var data=[
     "id": "doc_4CADAD6AD3634AE99591025BF457F2ED",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Tabs 标签页",
-    "url": "/navigation/tabs",
-    "children":[{
-        "id": "basic",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "基础用法",
-        "isAct":false,
-      },
-      {
-        "id": "disabled",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "禁用",
-        "isAct":false,
-      },
-      {
-        "id": "icon",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "图标",
-        "isAct":false,
-      },
-      {
-        "id": "small",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "迷你型",
-        "isAct":false,
-      },
-      {
-        "id": "render",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "自定义标签页",
-        "isAct":false,
-      },
-      {
-        "id": "card",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "卡片样式",
-        "isAct":false,
-      },
-       {
-        "id": "closable",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "可关闭",
-        "isAct":false,
-      },
-      {
-        "id": "noanimate",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "禁用动画",
-        "isAct":false,
-      },
-      {
-        "id": "api",
-        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
-        "name": "API",
-        "isAct":false,
-      }
-    ]
+    "url": "/navigation/tabs"
   },
   {
     "id": "doc_77368258DBB441A6A9E1966C4D214D84",
@@ -643,17 +538,6 @@ var data=[
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "LoadingBar 加载进度条",
     "url": "/navigation/loadingBar"
-  },
-  {
-    "id": "3CC4B2C730C94DA8AAC48333A38F7ww489",
-    "pid": "V1.0.0",
-    "name": "Chart"
-  },
-  {
-    "id": "doc_7D5EF512649C465081E8BF3805522024",
-    "pid": "3CC4B2C730C94DA8AAC48333A38F7ww489",
-    "name": "Circle 进度环",
-    "url": "/chart/circle"
   },
   {
     "id": "3CC4B2C730C94DA8AAC48333A38F7489",

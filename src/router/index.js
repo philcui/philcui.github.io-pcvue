@@ -21,6 +21,7 @@ const radio = resolve => require(['../views/form/radio.vue'],resolve)
 const rate = resolve => require(['../views/form/rate.vue'],resolve)
 const select = resolve => require(['../views/form/select.vue'],resolve)
 const slider = resolve => require(['../views/form/slider.vue'],resolve)
+const loading = resolve => require(['../views/form/loading.vue'],resolve)
 const switchMark = resolve => require(['../views/form/switchMark.vue'],resolve)
 const timePicker = resolve => require(['../views/form/timePicker.vue'],resolve)
 const transfer = resolve => require(['../views/form/transfer.vue'],resolve)
@@ -35,7 +36,6 @@ const modal = resolve => require(['../views/view/modal.vue'],resolve)
 const notice = resolve => require(['../views/view/notice.vue'],resolve)
 const noticeModal = resolve => require(['../views/view/noticeModal.vue'],resolve)
 const popTip = resolve => require(['../views/view/popTip.vue'],resolve)
-const progress = resolve => require(['../views/view/progress.vue'],resolve)
 const tag = resolve => require(['../views/view/tag.vue'],resolve)
 const timeLine = resolve => require(['../views/view/timeLine.vue'],resolve)
 const toolTip = resolve => require(['../views/view/toolTip.vue'],resolve)
@@ -48,7 +48,6 @@ const menu = resolve => require(['../views/navigation/menu.vue'],resolve)
 const page = resolve => require(['../views/navigation/page.vue'],resolve)
 const steps = resolve => require(['../views/navigation/steps.vue'],resolve)
 const tabs = resolve => require(['../views/navigation/tabs.vue'],resolve)
-const circle = resolve => require(['../views/chart/circle.vue'],resolve)
 const affix = resolve => require(['../views/other/affix.vue'],resolve)
 const backTop = resolve => require(['../views/other/backTop.vue'],resolve)
 const spin = resolve => require(['../views/other/spin.vue'],resolve)
@@ -99,6 +98,7 @@ export default new Router({
             {path: '/form/timePicker', component: timePicker},
             {path: '/form/transfer', component: transfer},
             {path: '/form/upload', component: upload},
+            {path: '/form/loading', component:loading},
             {path: '/view/alert', component:alert},
             {path: '/view/badge', component:badge},
             {path: '/view/card', component:card},
@@ -109,7 +109,6 @@ export default new Router({
             {path: '/view/notice', component:notice},
             {path: '/view/noticeModal', component:noticeModal},
             {path: '/view/popTip', component:popTip},
-            {path: '/view/progress', component:progress},
             {path: '/view/tag', component:tag},
             {path: '/view/timeLine', component:timeLine},
             {path: '/view/toolTip', component:toolTip},
@@ -122,7 +121,6 @@ export default new Router({
             {path: '/navigation/page', component:page},
             {path: '/navigation/steps', component:steps},
             {path: '/navigation/tabs', component:tabs},
-            {path: '/chart/circle', component:circle},
             {path: '/other/affix', component:affix},
             {path: '/other/backTop', component:backTop},
             {path: '/other/spin', component:spin},
