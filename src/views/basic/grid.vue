@@ -57,7 +57,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
 `
@@ -65,7 +65,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scope>
 .ivu-col{
   color: #fff;
   text-align: center;
