@@ -62,6 +62,20 @@
         </div>
       </demoTab>
     </section>
+    <section class="demo" id="render">
+      <demoTab :code="renderTab" :describeTitle="subTitlerender">
+        <div slot="sample">
+          <Tabs>
+              <Tab-pane :label="label" name="name1">标签一的内容</Tab-pane>
+              <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
+              <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+          </Tabs>
+        </div>
+        <div slot="describe-content">
+           设置 label 为 Render 函数后，可以自定义标签页的内容。
+        </div>
+      </demoTab>
+    </section>
     <section class="demo" id="card">
       <demoTab :code="cardTab" :describeTitle="subTitlecard">
         <div slot="sample">
@@ -146,9 +160,20 @@ export default {
       "subTitlecard": "卡片样式",
       "subTitleclosable": "可关闭",
       "subTitlenoanimate":"禁用动画",
+      "subTitlerender":"自定义标签页",
       "tab0": true,
       "tab1": true,
       "tab2": true,
+      "label": (h) => {
+                    return h('div', [
+                        h('span', '标签一'),
+                        h('Badge', {
+                            props: {
+                                count: 3
+                            }
+                        })
+                    ])
+                },
       "propscolumns":[
         {
             'title': '属性',
@@ -247,6 +272,12 @@ export default {
           'describe':'用于标识当前面板，对应 value，默认为其索引值',
           'type':"String | Number",
           'default':"-"
+        },
+        {
+          'attribute': 'label',
+          'describe':'选项卡头显示文字，支持 Render 函数。',
+          'type':"String | Function",
+          'default':"空"
         },
         {
           'attribute': 'icon',
@@ -373,6 +404,33 @@ export default {
 &lt;script>
     export default {
         
+    }
+&lt;/script>
+      `,
+      "renderTab":`
+&lt;template>
+    &lt;Tabs>
+        &lt;Tab-pane :label="label" name="name1">标签一的内容&lt;/Tab-pane>
+        &lt;Tab-pane label="标签二" name="name2">标签二的内容&lt;/Tab-pane>
+        &lt;Tab-pane label="标签三" name="name3">标签三的内容&lt;/Tab-pane>
+    &lt;/Tabs>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                label: (h) => {
+                    return h('div', [
+                        h('span', '标签一'),
+                        h('Badge', {
+                            props: {
+                                count: 3
+                            }
+                        })
+                    ])
+                }
+            }
+        }
     }
 &lt;/script>
       `

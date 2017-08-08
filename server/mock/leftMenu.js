@@ -583,6 +583,12 @@ var data=[
         "isAct":false,
       },
       {
+        "id": "render",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "自定义标签页",
+        "isAct":false,
+      },
+      {
         "id": "card",
         "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
         "name": "卡片样式",
