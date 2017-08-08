@@ -182,7 +182,11 @@
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
+  import clickoutside from 'utvue/src/directives/clickoutside'
   export default {
+    directives:{
+      clickoutside
+    },
     components: {
       demoTab
     },
