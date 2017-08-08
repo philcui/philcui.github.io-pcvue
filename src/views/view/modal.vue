@@ -979,7 +979,7 @@ article {
   }
 }
 </style>
-<style lang="less">
+<style lang="less" scoped>
  .vertical-center-modal{
     display: flex;
     align-items: center;
