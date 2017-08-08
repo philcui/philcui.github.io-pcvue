@@ -984,7 +984,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   article blockquote {
     padding: 5px 5px 3px 10px;
     line-height: 1.5;

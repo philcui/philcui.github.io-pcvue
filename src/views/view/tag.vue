@@ -257,7 +257,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   article {
     padding-left: 30px;
     font-size: 14px;

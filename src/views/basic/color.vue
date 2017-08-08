@@ -44,7 +44,7 @@
 <script>
 
 </script>
-<style lang="less">
+<style lang="less" scoped>
   .ivu-col{
     color: #fff;
     padding: 10px 0;
