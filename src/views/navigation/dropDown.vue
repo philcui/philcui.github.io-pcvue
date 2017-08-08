@@ -6,7 +6,7 @@
       展示一组折叠的下拉菜单。
     </p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="dropDown1">
       <demoTab :code="dropdownCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Dropdown>
@@ -41,7 +41,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown2">
       <demoTab :code="dropdownCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <Dropdown>
@@ -88,7 +88,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown3">
       <demoTab :code="dropdownCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Dropdown placement="bottom-start">
@@ -131,7 +131,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown4">
       <demoTab :code="dropdownCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Dropdown>
@@ -161,7 +161,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="dropDown5">API</h2>
     <h3>Dropdown props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -182,7 +182,11 @@
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
+  import clickoutside from 'utvue/src/directives/clickoutside'
   export default {
+    directives:{
+      clickoutside
+    },
     components: {
       demoTab
     },

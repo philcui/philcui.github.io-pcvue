@@ -5,7 +5,7 @@
     <p>
       推荐使用以下调色板的颜色作为设计和开发规范，以保证页面和组件之间的视觉一致。。
     </p>
-    <h2>主色</h2>
+    <h2 id="color1">主色</h2>
     <p>
       使用较为安全的深蓝色作为主色调，其中#5584cc常用于 hover。
     </p>
@@ -16,7 +16,7 @@
       <Col span="6"><div style="background-color:#e8f3fc;color:#4d4d4d;">表单划入色<br/>#e8f3fc</div></Col>
     </Row>
     <br/>
-    <h2>辅助色</h2>
+    <h2 id="color2">辅助色</h2>
     <p>
       辅助色是具有代表性的颜色，常用于信息提示，比如成功、警告和失败。
     </p>
@@ -26,7 +26,7 @@
       <Col span="8"><div style="background-color:#fb5044;">错误<br/>#fb5044</div></Col>
     </Row>
     <br/>
-    <h2>中性色</h2>
+    <h2 id="color3">中性色</h2>
     <p>
       中性色常用于文本、背景、边框、阴影等，可以体现出页面的层次结构。
     </p>

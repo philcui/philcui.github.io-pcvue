@@ -7,7 +7,7 @@
     </p>
     <h2>代码示例</h2>
 
-    <section class="demo">
+    <section class="demo" id="date1">
       <demoTab :code="datePickerCode" :describeTitle="subTitle">
         <div slot="sample" class="example">
           <Row>
@@ -26,7 +26,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date2">
       <demoTab :code="datePickerCode2" :describeTitle="subTitle2">
         <div slot="sample" class="example">
           <Row>
@@ -46,7 +46,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date3">
       <demoTab :code="datePickerCode3" :describeTitle="subTitle3">
         <div slot="sample" class="example">
           <Row>
@@ -65,7 +65,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date4">
     <demoTab :code="datePickerCode4" :describeTitle="subTitle4">
       <div slot="sample" class="example2">
         <Date-picker type="datetime" placeholder="选择日期和时间" style="width: 200px"></Date-picker>
@@ -83,7 +83,7 @@
     </demoTab>
   </section>
 
-    <section class="demo">
+    <section class="demo" id="date5">
       <demoTab :code="datePickerCode5" :describeTitle="subTitle5">
         <div slot="sample" class="example">
           <Row>
@@ -101,7 +101,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date6">
       <demoTab :code="datePickerCode6" :describeTitle="subTitle6">
         <div slot="sample" class="example">
           <Row>
@@ -120,7 +120,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date7">
       <demoTab :code="datePickerCode7" :describeTitle="subTitle7">
         <div slot="sample" class="example3">
           <Row>
@@ -139,7 +139,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date8">
       <demoTab :code="datePickerCode8" :describeTitle="subTitle8">
         <div slot="sample" class="example3">
           <Date-picker
@@ -163,7 +163,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="date9">
       <demoTab :code="datePickerCode9" :describeTitle="subTitle9">
         <div slot="sample" class="example">
           <Row>
@@ -184,7 +184,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="date10">API</h2>
     <h3>DatePicker props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -202,7 +202,7 @@
       <Table border :columns="slotColumns" :data="slotData"></Table>
     </section>
 
-    <h3>常见的日期和时间格式</h3>
+    <h3 id="date11">常见的日期和时间格式</h3>
     <section class="demo">
       <Table border :columns="dateformatColumns" :data="dateformatData"></Table>
     </section>

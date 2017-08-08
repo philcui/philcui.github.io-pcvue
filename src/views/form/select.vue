@@ -8,7 +8,7 @@
     </p>
     <blockquote>注意：非 template/render 模式下，需使用<code>i-select</code>、<code>i-option</code>。</blockquote>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="select1">
       <demoTab :code="selectCode" :describeTitle="subTitle">
         <div slot="sample">
           <Select v-model="model1" style="width:200px">
@@ -24,7 +24,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select2">
       <demoTab :code="selectCode2" :describeTitle="subTitle2">
         <div slot="sample" class="example">
           <Select v-model="model2" size="small" style="width:100px">
@@ -43,7 +43,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select3">
       <demoTab :code="selectCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Select v-model="model5" disabled style="width:200px">
@@ -62,7 +62,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select4">
       <demoTab :code="selectCode4" :describeTitle="subTitle4">
         <div slot="sample" class="example">
           <Select v-model="model7" clearable style="width:200px">
@@ -75,7 +75,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select5">
       <demoTab :code="selectCode5" :describeTitle="subTitle5">
         <div slot="sample" class="example">
           <Select v-model="model8" style="width:200px">
@@ -93,7 +93,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select6">
       <demoTab :code="selectCode6" :describeTitle="subTitle6">
         <div slot="sample">
           <Select v-model="model9" style="width:200px">
@@ -118,7 +118,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select7">
       <demoTab :code="selectCode7" :describeTitle="subTitle7">
         <div slot="sample" class="example">
           <Select v-model="model10" multiple style="width:260px">
@@ -131,7 +131,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select8">
       <demoTab :code="selectCode8" :describeTitle="subTitle8">
         <div slot="sample" class="example">
           <Row>
@@ -153,7 +153,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="select9">
       <demoTab :code="selectCode9" :describeTitle="subTitle9">
         <div slot="sample">
           <Row>
@@ -189,7 +189,7 @@
       </demoTab>
     </section>
 
-    <h2>API</h2>
+    <h2 id="select10">API</h2>
     <h3>Select props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>

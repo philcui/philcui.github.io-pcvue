@@ -11,7 +11,7 @@
     </p>
     <h2>代码示例</h2>
 
-    <section class="demo">
+    <section class="demo" id="backTop1">
       <demoTab :code="backTopCode" :describeTitle="subTitle">
         <div slot="sample">
           <p>向下滚动页面，圆形按钮为默认效果。</p>
@@ -22,7 +22,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="backTop2">
       <demoTab :code="backTopCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <p>向下滚动页面，蓝色的按钮为自定义效果。</p>
@@ -33,7 +33,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="backTop3">API</h2>
     <h3>BackTop props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
