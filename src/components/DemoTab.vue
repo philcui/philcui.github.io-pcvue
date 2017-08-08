@@ -93,6 +93,7 @@ export default {
   border: 1px solid #dfe2e5;
   border-radius: 3px;
   overflow: hidden;
+  background-color: #fff;
   &:hover{
     box-shadow: 1px 1px 5px #ccc;
   }
