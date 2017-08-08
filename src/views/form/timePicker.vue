@@ -7,7 +7,7 @@
     </p>
     <h2>代码示例</h2>
 
-    <section class="demo">
+    <section class="demo" id="time1">
       <demoTab :code="timePickerCode" :describeTitle="subTitle">
         <div slot="sample" class="example">
           <Row>
@@ -26,7 +26,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time2">
       <demoTab :code="timePickerCode2" :describeTitle="subTitle2">
         <div slot="sample" class="example">
           <Row>
@@ -45,7 +45,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time3">
       <demoTab :code="timePickerCode3" :describeTitle="subTitle3">
         <div slot="sample" class="example">
           <Row>
@@ -63,7 +63,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time4">
       <demoTab :code="timePickerCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Row>
@@ -91,7 +91,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time5">
       <demoTab :code="timePickerCode5" :describeTitle="subTitle5">
         <div slot="sample" class="example">
           <Row>
@@ -110,7 +110,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time6">
       <demoTab :code="timePickerCode6" :describeTitle="subTitle6">
         <div slot="sample" class="example">
           <Time-picker
@@ -133,7 +133,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="time7">
       <demoTab :code="timePickerCode7" :describeTitle="subTitle7">
         <div slot="sample" class="example">
           <Row>
@@ -154,7 +154,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="time8">API</h2>
     <h3>TimePicker props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>

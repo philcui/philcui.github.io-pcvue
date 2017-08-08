@@ -6,7 +6,7 @@
       将内容区域折叠/展开。
     </p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="collapse1">
       <demoTab :code="collapseCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Collapse v-model="value1">
@@ -30,7 +30,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="collapse2">
       <demoTab :code="collapseCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <Collapse v-model="value2" accordion>
@@ -54,7 +54,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="collapse3">
       <demoTab :code="collapseCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Collapse accordion v-model="value3">
@@ -90,7 +90,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="collapse4">API</h2>
     <h3>Collapse props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>

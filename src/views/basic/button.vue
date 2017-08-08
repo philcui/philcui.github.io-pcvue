@@ -5,7 +5,7 @@
     <blockquote>注意：非 template/render 模式下，需使用<code>i-button</code>。</blockquote>
     <br/>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="button1">
       <demoTab :code="buttonCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Button>Default</Button>
@@ -26,7 +26,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button2">
       <demoTab :code="buttonCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <Button type="primary" shape="circle" icon="ios-search"></Button>
@@ -46,7 +46,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button3">
       <demoTab :code="buttonCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Button type="primary" size="large">Large</Button>
@@ -64,7 +64,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button4">
       <demoTab :code="buttonCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Button type="success" long>确认提交</Button>
@@ -78,7 +78,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button5">
       <demoTab :code="buttonCode5" :describeTitle="subTitle5">
         <div slot="sample">
           <Button>Default</Button>
@@ -102,7 +102,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button6">
       <demoTab :code="buttonCode6" :describeTitle="subTitle6">
         <div slot="sample">
           <Button type="primary" loading>Loading...</Button>
@@ -121,7 +121,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button7">
       <demoTab :code="buttonCode7" :describeTitle="subTitle7">
         <div slot="sample">
           <h4>基本</h4>
@@ -224,7 +224,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="button8">
       <demoTab :code="buttonCode8" :describeTitle="subTitle8">
         <div slot="sample">
           <Button-group vertical>
@@ -240,7 +240,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="button9">API</h2>
     <h3>Button props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
