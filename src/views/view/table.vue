@@ -50,6 +50,7 @@
       </div>
     </demoTab>
     </section>
+
     <section class="demo" id="table4">
     <demoTab :code="editTableCode"  :describeTitle="describeTitle3">
       <div slot="sample">
@@ -70,7 +71,8 @@
       </div>
     </demoTab>
     </section>
-   <!-- <demoTab :code="rightScrollCode" :describeTitle="describeTitle">
+    <section class="demo" id="table5">
+    <demoTab :code="rightScrollCode" :describeTitle="describeTitle">
       <div slot="sample">
         <h3>右侧滚动条</h3>
         <Table height="200" :columns="columns1" :data="data2"></Table>
@@ -78,8 +80,19 @@
       <div slot="describe-content">
 
       </div>
-    </demoTab>-->
-    <h2 id="table5">API</h2>
+    </demoTab>
+    </section>
+    <section class="demo" id="table6">
+      <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
+        <div slot="sample">
+          <Table :columns="columns8" :data="data3" size="small" ref="table"></Table>
+        </div>
+        <div slot="describe-content">
+          滚动条 （排序图标未换）
+        </div>
+      </demoTab>
+    </section>
+    <h2 id="table7">API</h2>
     <h3>Table props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -429,7 +442,7 @@
                 }
            }
         &lt;/script>`,
-       /* rightScrollCode:` &lt;template>
+        rightScrollCode:` &lt;template>
       &lt;Table height="200" :columns="columns1" :data="data2"></Table>
 &lt;/template>
 &lt;script>
@@ -495,7 +508,7 @@
             }
         }
     }
-&lt;/script>`,*/
+&lt;/script>`,
        checkBoxTableCode:` &lt;template>
       &lt;Table highlight-row border :columns="columns4" :data="data1">&lt;/Table>
 &lt;/template>

@@ -89,7 +89,7 @@
         }
       }
       if (!this.isOpen) {
-        this.$refs.leftMenu.openNames[0] = "1-1";
+        this.$refs.leftMenu.openNames[0] = "7C43A10FE0BF47148DC9E513E021FCD5";
         this.$refs.leftMenu.updateOpened();
       }
     },
