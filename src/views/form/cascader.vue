@@ -1065,7 +1065,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   code {
     display: inline-block;
     background: #f7f7f7;
