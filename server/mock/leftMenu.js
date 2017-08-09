@@ -320,7 +320,45 @@ var data=[
     "id": "api_qq475D5A3EB492F9AF70D6B5E63D273",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Slider 滑块",
-    "url": "/form/slider"
+    "url": "/form/slider",
+    "children":[
+      {
+        "id": "slider1",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "slider2",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "离散值",
+        "isAct":false,
+      },
+      {
+        "id": "slider3",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "显示间断点",
+        "isAct":false,
+      },
+      {
+        "id": "slider4",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "带有输入框",
+        "isAct":false,
+      },
+      {
+        "id": "slider5",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "自定义提示",
+        "isAct":false,
+      },
+      {
+        "id": "slider6",
+        "pid": "api_qq475D5A3EB492F9AF70D6B5E63D273",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A370D6B5E63D273",
