@@ -7,7 +7,7 @@
     </p>
     <blockquote>注意：非 template/render 模式下，需使用 i-form。</blockquote>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="form1">
       <demoTab :code="inputCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Form :model="formItem" :label-width="80">
@@ -78,7 +78,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="form2" class="demo">
       <demoTab :code="inputCode2" :describeTitle="subTitle2">
         <div slot="sample">
         <i-Form :model="formLeft" label-position="left" :label-width="100">
@@ -129,7 +129,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="form3" class="demo">
       <demoTab :code="inputCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
@@ -198,7 +198,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="form4" class="demo">
       <demoTab :code="inputCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="80">
@@ -226,7 +226,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="form5" class="demo">
       <demoTab :code="inputCode5" :describeTitle="subTitle5">
         <div slot="sample">
           <Form ref="formDynamic" :model="formDynamic" :label-width="80">
@@ -267,7 +267,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="form6" class="demo">
       <demoTab :code="inputCode6" :describeTitle="subTitle6">
         <div slot="sample">
           <Form ref="formLogin" :model="formLogin" :label-width="80">
@@ -292,7 +292,7 @@
     </section>
     <h2 id="switch3">API</h2>
     <h3>Form  props</h3>
-    <section class="demo">
+    <section class="demo" id="api">
       <Table border :columns="propsColumns" :data="propsData"></Table>
     </section>
     <h3>Form methods</h3>

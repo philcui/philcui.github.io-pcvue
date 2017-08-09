@@ -128,7 +128,50 @@ var data=[
     "id": "doc_14F8F434F31B6B953B21310A83CF5",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Input 输入框",
-    "url": "/form/input"
+    "url": "/form/input",
+    "children":[{
+      "id": "input1",
+      "pid": "1-1-1",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "input2",
+        "pid": "1-1-1",
+        "name": "带Icon的输入框",
+        "isAct":false,
+      },
+      {
+        "id": "input3",
+        "pid": "1-1-1",
+        "name": "文本域",
+        "isAct":false,
+      },
+      {
+        "id": "input4",
+        "pid": "1-1-1",
+        "name": "适应文本高度的文本域",
+        "isAct":false,
+      },
+      {
+        "id": "input5",
+        "pid": "1-1-1",
+        "name": "禁用状态",
+        "isAct":false,
+      },
+      {
+        "id": "input6",
+        "pid": "1-1-1",
+        "name": "复合型输入框",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false,
+      }]
+
   },
   {
     "id": "doc_D354EF883A174451A3382BF4B6B97317",
@@ -542,7 +585,49 @@ var data=[
     "id": "api_ACA475ddEB492FFsss70D6B33e",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": " Form 表单",
-    "url": "/form/form"
+    "url": "/form/form",
+    "children":[{
+      "id": "form1",
+      "pid": "1-1-1",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "form2",
+        "pid": "1-1-1",
+        "name": "对齐方式",
+        "isAct":false,
+      },
+      {
+        "id": "form3",
+        "pid": "1-1-1",
+        "name": "表单验证",
+        "isAct":false,
+      },
+      {
+        "id": "form4",
+        "pid": "1-1-1",
+        "name": "自定义验证",
+        "isAct":false,
+      },
+      {
+        "id": "form5",
+        "pid": "1-1-1",
+        "name": "动态增减表单项",
+        "isAct":false,
+      },
+      {
+        "id": "form6",
+        "pid": "1-1-1",
+        "name": "登录",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_7D5EF512649C465081E8BF3805522024",
@@ -748,7 +833,39 @@ var data=[
     "id": "doc_F499C9631DCF6B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Badge 徽标数",
-    "url": "/view/badge"
+    "url": "/view/badge",
+    "children":[{
+      "id": "badge1",
+      "pid": "1-1-1",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "badge2",
+        "pid": "1-1-1",
+        "name": "小红点",
+        "isAct":false,
+      },
+      {
+        "id": "badge3",
+        "pid": "1-1-1",
+        "name": "封顶数字",
+        "isAct":false,
+      },
+      {
+        "id": "badge4",
+        "pid": "1-1-1",
+        "name": "独立使用及自定义样式 ",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false,
+      }]
+
+
   },
   {
     "id": "doc_F499C9631DCF446B89FFA642627336",

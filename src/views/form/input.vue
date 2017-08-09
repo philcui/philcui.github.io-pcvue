@@ -7,7 +7,7 @@
     </p>
     <blockquote>注意：非 template/render 模式下，需使用 <code>i-input</code>。</blockquote>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section id="input1" class="demo">
       <demoTab :code="inputCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Input v-model="value" placeholder="请输入..."></Input>
@@ -18,7 +18,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="input2" class="demo">
       <demoTab :code="inputCode02" :describeTitle="subTitle02">
         <div slot="sample">
           <Input v-model="value01"  icon="ios-clock-outline" placeholder="请输入..."></Input>
@@ -31,7 +31,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="input3" class="demo">
       <demoTab :code="inputCode03" :describeTitle="subTitle03">
         <div slot="sample">
           <Input v-model="value5" type="textarea" :rows="2" placeholder="请输入..."></Input>
@@ -43,7 +43,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="input4" class="demo">
       <demoTab :code="inputCode04" :describeTitle="subTitle04">
         <div slot="sample">
           <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
@@ -55,7 +55,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="input5" class="demo">
       <demoTab :code="inputCode05" :describeTitle="subTitle05">
         <div slot="sample">
           <Input v-model="value9" disabled placeholder="请输入..."></Input>
@@ -66,7 +66,7 @@
         </div>
       </demoTab>
     </section>
-    <section class="demo">
+    <section id="input6" class="demo">
       <demoTab :code="inputCode06" :describeTitle="subTitle06">
         <div slot="sample">
           <Input v-model="value11">
@@ -101,7 +101,7 @@
     </section>
     <h2 id="switch3">API</h2>
     <h3>Input props</h3>
-    <section class="demo">
+    <section class="demo" id="api">
       <Table border :columns="propsColumns" :data="propsData"></Table>
     </section>
     <h3>Input events</h3>

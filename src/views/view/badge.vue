@@ -4,7 +4,7 @@
     <h2>概述</h2>
     <p>主要用于通知未读数的角标，提醒用户点击。</p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="badge1">
       <demoTab :code="inputCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Badge count="3">
@@ -17,7 +17,26 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="badge2">
+      <demoTab :code="inputCode2" :describeTitle="subTitle2">
+        <div slot="sample">
+          <Badge dot>
+            <a href="#" class="demo-badge"></a>
+          </Badge>
+          <Badge dot style="margin-left: 30px;">
+            <Icon type="ios-bell-outline" size="26"></Icon>
+          </Badge>
+          <Badge dot style="margin-left: 30px;">
+            <a href="#">可以是一个链接</a>
+          </Badge>
+        </div>
+        <div slot="describe-content">
+          强迫症患者慎用！
+        </div>
+      </demoTab>
+    </section>
+
+    <section class="demo" id="badge3">
       <demoTab :code="inputCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Badge count="100">
@@ -34,24 +53,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
-      <demoTab :code="inputCode3" :describeTitle="subTitle3">
-        <div slot="sample">
-          <Badge count="100">
-            <a href="#" class="demo-badge"></a>
-          </Badge>
-          <Badge count="1000" overflow-count="999">
-            <a href="#" class="demo-badge"></a>
-          </Badge>
-        </div>
-        <div slot="describe-content">
-          通过设置<code>overflow-count</code>属性设置一个封顶值，<br/>当超过时，
-          会显示<code>${overflowCount}+</code>
-        </div>
-      </demoTab>
-    </section>
-
-    <section class="demo">
+    <section class="demo" id="badge4">
       <demoTab :code="inputCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Badge count="10"></Badge>
@@ -64,7 +66,7 @@
     </section>
     <h2 id="switch3">API</h2>
     <h3>Badge   props</h3>
-    <section class="demo">
+    <section class="demo" id="api">
       <Table border :columns="propsColumns" :data="propsData"></Table>
     </section>
   </article>
@@ -77,6 +79,18 @@
     },
       data(){
           return{
+            subTitle2:'小红点',
+            "inputCode2":`&lt;template>
+&lt;Badge dot>
+            &lt;a href="#" class="demo-badge">&lt;/a>
+          &lt;/Badge>
+          &lt;Badge dot>
+            &lt;Icon type="ios-bell-outline" size="26">&lt;/Icon>
+          &lt;/Badge>
+          &lt;Badge dot>
+            &lt;a href="#">可以是一个链接&lt;/a>
+          &lt;/Badge>
+&lt;/template>`,
             propsData:[{
               attribute: 'count',
               describe:'显示的数字，大于overflowCount时，显示${overflowCount}+，为 0 时隐藏',
