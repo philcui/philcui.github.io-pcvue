@@ -1,5 +1,5 @@
 <template>
-  <article class="doc-rate-container">
+  <article class="doc-slider-container">
     <h1>Slider 滑块</h1>
     <h2>概述</h2>
     <p>

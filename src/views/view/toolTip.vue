@@ -3,7 +3,7 @@
     <h1>Tooltip 文字提示</h1>
     <h2>概述</h2>
     <p>
-      文字提示气泡框，在鼠标悬停时显示，代替了系统的<Tag color="grey">title</Tag>提示。
+      文字提示气泡框，在鼠标悬停时显示，代替了系统的<code>title</code>提示。
     </p>
     <h2>代码示例</h2>
   <section class="demo" id="toolTip1">
@@ -16,7 +16,7 @@
       <div slot="describe-content">
         最简单的用法。
 
-        注意 Tooltip 内的文本使用了<Tag color="grey">white-space: nowrap;</Tag>，即不自动换行，如需展示很多内容并自动换行时，建议给内容 slot 增加样式<Tag color="grey">white-space: normal;</Tag>。
+        注意 Tooltip 内的文本使用了<code>white-space: nowrap;</code>，即不自动换行，如需展示很多内容并自动换行时，建议给内容 slot 增加样式<code>white-space: normal;</code>。
       </div>
     </demoTab>
   </section>
@@ -29,7 +29,7 @@
         </Tooltip>
       </div>
       <div slot="describe-content">
-        通过设置属性<Tag color="grey">delay</Tag>可以延时显示文字提示，单位毫秒。
+        通过设置属性<code>delay</code>可以延时显示文字提示，单位毫秒。
       </div>
     </demoTab>
   </section>
@@ -115,7 +115,7 @@
         </Tooltip>
       </div>
       <div slot="describe-content">
-        通过设置属性<Tag color="grey">disabled</Tag>可以禁用文字提示。
+        通过设置属性<code>disabled</code>可以禁用文字提示。
       </div>
     </demoTab>
   </section>
@@ -167,7 +167,7 @@
           default:"空"
         },{
           attribute: 'placement',
-          describe:'提示框出现的位置，可选值为top top-start top-end bottom bottom-start bottom-end left left-start left-end right right-start right-end',
+          describe:'提示框出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code>',
           type:"String",
           default:"bottom"
         },{
@@ -388,5 +388,15 @@
   }
   .center-right{
     float: right;
+  }
+  code {
+    display: inline-block;
+    background: #f7f7f7;
+    font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    margin: 0 3px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #666;
+    border: 1px solid #eee;
   }
 </style>

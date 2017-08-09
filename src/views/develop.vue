@@ -445,5 +445,16 @@ article {
   section.demo{
     margin: 20px 0px;
   }
+
+  td span code {
+    display: inline-block;
+    background: #f7f7f7;
+    font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    margin: 0 3px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #666;
+    border: 1px solid #eee;
+  }
 }
 </style>
