@@ -1133,6 +1133,26 @@ var data=[
       "name": "可编辑表格",
       "isAct":false,
     },{
+      "id": "tableTree",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "表格树(一)",
+      "isAct":false,
+    },{
+      "id": "tableTree1",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "表格树(二)",
+      "isAct":false,
+    },{
+      "id": "tableTree2",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "表格树(三)",
+      "isAct":false,
+    },{
+      "id": "tableTree3",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "表格树(四)",
+      "isAct":false,
+    },{
       "id": "table5",
       "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
       "name": "API",

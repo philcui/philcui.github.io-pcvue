@@ -83,15 +83,16 @@
     </demoTab>
     </section>
     <section class="demo" id="table6">
-      <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
-        <div slot="sample">
-          <Table :columns="columns8" :data="data3" size="small" ref="table"></Table>
-        </div>
-        <div slot="describe-content">
-          滚动条 （排序图标未换）
-        </div>
-      </demoTab>
-    </section>
+    <demoTab :code="btnScrollCode" :describeTitle="describeTitle2">
+      <div slot="sample">
+        <Table :columns="columns8" :data="data3" size="small" ref="table"></Table>
+      </div>
+      <div slot="describe-content">
+        滚动条 （排序图标未换）
+      </div>
+    </demoTab>
+  </section>
+<TableTree></TableTree>
     <h2 id="table7">API</h2>
     <h3>Table props</h3>
     <section class="demo">
@@ -110,8 +111,9 @@
 <script>
   import demoTab from '@/components/DemoTab'
   import expandRow from './table-expand.vue';
+  import TableTree from './table-tree.vue';
   export default {
-    components: { demoTab ,expandRow},
+    components: { demoTab ,expandRow,TableTree},
     data () {
       return {
         describeTitle:'多选',
@@ -217,7 +219,28 @@
           describe:'筛选数据为空时显示的提示内容',
           type:"String",
           default:"暂无筛选结果"
-        }],
+        },{
+          attribute: 'treeTable',
+          describe:'是否是表格树，默认false',
+          type:"Boolean",
+          default:"false"
+        },{
+          attribute: 'expandLevel',
+          describe:'节点展开层级，默认为0(即不展开);在treeTable为true时使用',
+          type:"Number",
+          default:"0"
+        },{
+          attribute: 'treeDataType',
+          describe:'数据源数据结构，支持的值：tree - 树形结构数据（默认），list - 列表数据;在treeTable为true时使用',
+          type:"string",
+          default:"tree"
+        },{
+          attribute: 'fields',
+          describe:'当数据源信息中的标识列名称不是id、pid、childNodes时，对数据列信息进行对应配置;在treeTable为true时使用',
+          type:"Array",
+          default:"[]"
+        }
+        ],
         propsData2:[{
           event:'on-current-change',
           describe:'开启 highlight-row 后有效，当表格的当前行发生变化的时候会触发',
@@ -266,7 +289,12 @@
           describe:'对应列内容的字段名',
           type:"String",
           default:"-"
-        },{
+        }, {
+            attribute: 'type',
+            describe: '对应列的显示方式，可选值为index 序列,selection checkbox选择列,normal 常规列,hidden 隐藏列,treetable 树结构列,expand 信息展开列',
+            type: "String",
+            default: "normal"
+          },{
           attribute: 'width',
           describe:'列宽',
           type:"Number",
