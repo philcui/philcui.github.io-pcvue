@@ -794,7 +794,38 @@ var data=[
     "id": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Message 全局提示",
-    "url": "/view/message"
+    "url": "/view/message",
+    "children":[{
+      "id": "basic",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "普通提示",
+      "isAct":false,
+    },{
+      "id": "type",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "提示类型",
+      "isAct":false,
+    },{
+      "id": "loading",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "加载中",
+      "isAct":false,
+    },{
+      "id": "duration",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "自定义时长",
+      "isAct":false,
+    },{
+      "id": "closable",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "可关闭",
+      "isAct":false,
+    },{
+      "id": "api",
+      "pid": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
