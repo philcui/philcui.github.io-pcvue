@@ -1061,7 +1061,45 @@ var data=[
     "id": "doc_F499C9631DCF446AB24627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Poptip 气泡提示",
-    "url": "/view/popTip"
+    "url": "/view/popTip",
+    "children":[
+      {
+        "id": "poptip1",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "poptip2",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "位置",
+        "isAct":false,
+      },
+      {
+        "id": "poptip3",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "从浮层内关闭",
+        "isAct":false,
+      },
+      {
+        "id": "poptip4",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "嵌套复杂内容",
+        "isAct":false,
+      },
+      {
+        "id": "poptip5",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "确认框",
+        "isAct":false,
+      },
+      {
+        "id": "poptip6",
+        "pid": "doc_F499C9631DCF446AB24627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_F499C9631DCF446AB332627336",
