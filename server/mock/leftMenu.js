@@ -541,7 +541,39 @@ var data=[
     "id": "api_ACA475D5A3EB492F9AFsss70D6B33de",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": " Rate 评分",
-    "url": "/form/rate"
+    "url": "/form/rate",
+    "children":[
+      {
+        "id": "rate1",
+        "pid": "api_ACA475D5A3EB492F9AFsss70D6B33de",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "rate2",
+        "pid": "api_ACA475D5A3EB492F9AFsss70D6B33de",
+        "name": "半星",
+        "isAct":false,
+      },
+      {
+        "id": "rate3",
+        "pid": "api_ACA475D5A3EB492F9AFsss70D6B33de",
+        "name": "显示提示",
+        "isAct":false,
+      },
+      {
+        "id": "rate4",
+        "pid": "api_ACA475D5A3EB492F9AFsss70D6B33de",
+        "name": "只读",
+        "isAct":false,
+      },
+      {
+        "id": "rate5",
+        "pid": "api_ACA475D5A3EB492F9AFsss70D6B33de",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A3EB492FFsss70D6B33e",
