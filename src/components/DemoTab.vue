@@ -11,10 +11,7 @@
           </div>
         </Tab-pane>
         <Tab-pane label="代码" ref="codeBox">
-          <pre v-highlight>
-            <code class="html" v-html="code">
-            </code>
-          </pre>
+          <pre v-highlight><code class="html" v-html="code"></code></pre>
           <transition>
             <div class="example-code-more" v-if="hasmore" @click="toggleMore">
               <a v-if="ishide"><Icon type="ios-arrow-down"></Icon>show code</a>
@@ -113,12 +110,15 @@ export default {
     margin-left: -1px;
   }
   & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-content > .ivu-tabs-tabpane{
-    padding: 30px 30px 15px;
+    padding: 0px 30px 15px;
     background-color: #fff;
     position: relative;
     &:last-child code{
       border:none;
       overflow: hidden;
+    }
+    &:first-child{
+      padding-top: 30px;
     }
   }
   & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
@@ -133,10 +133,6 @@ export default {
     span{
       margin-left: 10px;
     }
-  }
-  pre {
-    margin-top: -40px;
-    margin-bottom: -20px;
   }
   pre code {
     font-size: 1em;
