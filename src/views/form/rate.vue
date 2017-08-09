@@ -220,7 +220,7 @@
     }
   }
 </script>
-<style lang ="less" scope>
+<style lang ="less" scoped>
   code {
     display: inline-block;
     background: #f7f7f7;
