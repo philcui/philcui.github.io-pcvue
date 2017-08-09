@@ -6,7 +6,7 @@
       基础容器，用来显示文字、列表、图文等内容，也可以配合其它组件一起使用。
     </p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="card1">
       <demoTab :code="cardCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Card style="width:350px">
@@ -35,7 +35,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="card2">
       <demoTab :code="cardCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <div style="background:#eee;padding: 20px">
@@ -51,7 +51,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="card3">
       <demoTab :code="cardCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Row>
@@ -79,7 +79,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="card4">
       <demoTab :code="cardCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Row style="background:#eee;padding:20px">
@@ -107,7 +107,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="card5">
       <demoTab :code="cardCode5" :describeTitle="subTitle5">
         <div slot="sample">
           <Card style="width:320px">
@@ -123,7 +123,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="card6">API</h2>
     <h3>Card  props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -474,7 +474,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   article {
     padding-left: 30px;
     font-size: 14px;

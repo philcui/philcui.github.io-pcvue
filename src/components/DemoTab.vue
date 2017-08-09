@@ -59,9 +59,9 @@ export default {
     toggleMore () {
       this.ishide = !this.ishide
       if(this.ishide){
-        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.exampleHeight + "px"
+        this.$el.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = this.exampleHeight + "px"
       } else {
-        this.$el.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = this.codeHeight + "px"
+        this.$el.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = this.codeHeight + "px"
       }
     }
   },
@@ -75,14 +75,14 @@ export default {
      setTimeout(function(){
       //  let containers = document.querySelectorAll(".ivu-tabs-content")
          let container = _this.$el
-         let first = container.querySelector('.ivu-tabs-tabpane')
+         let first = container.querySelector('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')
          first.querySelectorAll('.ivu-tabs-tabpane > div').forEach(function(element) {
            _this.exampleHeight += element.clientHeight
          })
-         _this.codeHeight = container.querySelectorAll('.ivu-tabs-tabpane')[1].clientHeight
+         _this.codeHeight = container.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].clientHeight
          if(_this.codeHeight>_this.exampleHeight){
            _this.hasmore = true;
-           container.querySelectorAll('.ivu-tabs-tabpane')[1].style.height = _this.exampleHeight + 'px';
+           container.querySelectorAll('.demoTabContainer > .ivu-tabs > .ivu-tabs-content >.ivu-tabs-tabpane')[1].style.height = _this.exampleHeight + 'px';
          }
      },0)
   }
@@ -93,33 +93,38 @@ export default {
   border: 1px solid #dfe2e5;
   border-radius: 3px;
   overflow: hidden;
+  background-color: #fff;
   &:hover{
     box-shadow: 1px 1px 5px #ccc;
   }
-  .ivu-tabs-cardnav{
+   & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-cardnav{
     border: none;
     border-bottom: 1px solid #dfe2e5;
   }
-  .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
+  & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active:before{
     display: none;
   }
-  .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+  & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
     border: none;
   }
-  .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
+  & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active{
     border-right: 1px solid #dfe2e5;
     border-left: 1px solid #dfe2e5;
     margin-left: -1px;
   }
-  .ivu-tabs-tabpane{
+  & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-content > .ivu-tabs-tabpane{
     padding: 30px 30px 15px;
     background-color: #fff;
     position: relative;
+    &:last-child code{
+      border:none;
+      overflow: hidden;
+    }
   }
-  .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
+  & > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab{
     transition: all 0s;
   }
-  .ivu-tabs-nav-right{
+  & > .ivu-tabs.ivu-tabs-card .ivu-tabs-nav-right{
     position: relative;
     top:-38px;
     display: inline-block;
@@ -128,15 +133,6 @@ export default {
     span{
       margin-left: 10px;
     }
-  }
-
-  .ivu-tabs-tabpane:last-child code{
-    border:none;
-    overflow: hidden;
-  }
-  .code > div{
-    margin-top: -30px;
-    padding: 0px;
   }
   pre {
     margin-top: -40px;

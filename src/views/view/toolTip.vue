@@ -6,7 +6,7 @@
       文字提示气泡框，在鼠标悬停时显示，代替了系统的<Tag color="grey">title</Tag>提示。
     </p>
     <h2>代码示例</h2>
-  <section class="demo">
+  <section class="demo" id="toolTip1">
     <demoTab :code="toolTipCode" :describeTitle="describeTitle">
       <div slot="sample">
         <Tooltip content="这里是提示文字">
@@ -21,7 +21,7 @@
     </demoTab>
   </section>
 
-  <section class="demo">
+  <section class="demo" id="toolTip2">
     <demoTab :code="toolTipCode2" :describeTitle="describeTitle2">
       <div slot="sample">
         <Tooltip placement="top" content="Tooltip 文字提示" :delay="1000">
@@ -34,7 +34,7 @@
     </demoTab>
   </section>
 
-  <section class="demo">
+  <section class="demo" id="toolTip3">
     <demoTab :code="toolTipCode3" :describeTitle="describeTitle3">
       <div slot="sample">
         <div class="top">
@@ -90,7 +90,7 @@
     </demoTab>
   </section>
 
-  <section class="demo">
+  <section class="demo" id="toolTip4">
     <demoTab :code="toolTipCode4" :describeTitle="describeTitle4">
       <div slot="sample">
         <Tooltip placement="top">
@@ -107,7 +107,7 @@
     </demoTab>
   </section>
 
-  <section class="demo">
+  <section class="demo" id="toolTip5">
     <demoTab :code="toolTipCode5" :describeTitle="describeTitle5">
       <div slot="sample">
         <Tooltip placement="top" content="可以禁用文字提示" :disabled="disabled">
@@ -120,7 +120,7 @@
     </demoTab>
   </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="toolTip6">API</h2>
     <h3>Tooltip props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -356,7 +356,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   article {
     padding-left: 30px;
     font-size: 14px;

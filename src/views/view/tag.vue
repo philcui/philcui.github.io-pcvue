@@ -6,7 +6,7 @@
       对不同维度进行简单的标记和分类。
     </p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="tag1">
     <demoTab :code="tagCode" :describeTitle="subTitle1">
       <div slot="sample">
          <Tag>tag1</Tag>
@@ -21,7 +21,7 @@
     </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="tag2">
       <demoTab :code="tagCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <Tag type="border">标签三</Tag>
@@ -35,7 +35,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="tag3">
       <demoTab :code="tagCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Tag closable color="blue">标签一</Tag>
@@ -59,7 +59,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="tag4">
       <demoTab :code="tagCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Tag v-for="item in count" :key="item" :name="item" closable @on-close="handleClose2">标签{{ item + 1 }}</Tag>
@@ -71,7 +71,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="tag5">API</h2>
     <h3>Tag props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -257,7 +257,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   article {
     padding-left: 30px;
     font-size: 14px;

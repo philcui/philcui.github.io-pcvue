@@ -89,7 +89,7 @@
         }
       }
       if (!this.isOpen) {
-        this.$refs.leftMenu.openNames[0] = "1-1";
+        this.$refs.leftMenu.openNames[0] = "7C43A10FE0BF47148DC9E513E021FCD5";
         this.$refs.leftMenu.updateOpened();
       }
     },
@@ -426,4 +426,24 @@
   .actColor{
     color: #65aef5 !important;
   }
+</style>
+<style lang="less">
+article {
+  padding-left: 30px;
+  font-size: 14px;
+  h1, h2, h3{
+    margin:12px 0px;
+    font-weight: normal;
+  }
+  h1{
+    margin-top: 40px;
+    font-size: 26px;
+  }
+  h2{
+    font-size:20px;
+  }
+  section.demo{
+    margin: 20px 0px;
+  }
+}
 </style>

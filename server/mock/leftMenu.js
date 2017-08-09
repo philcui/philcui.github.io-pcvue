@@ -5,50 +5,9 @@ var data=[
     "name": "V1.0.0"
   },
   {
-    "id": "1-1",
-    "pid": "V1.0.0",
-    "name": "基础"
-  },
-  {
-    "id": "1-1-1",
-    "pid": "1-1",
-    "name": "颜色搭配",
-    "url": "/basic/colorMatch",
-    "children":[{
-                "id": "1111",
-                "pid": "1-1-1",
-                "name": "颜色搭配2",
-                "isAct":false,
-              },
-              {
-                "id": "1112",
-                "pid": "1-1-1",
-                "name": "颜色搭配3",
-                "isAct":false,
-              },
-              {
-                "id": "1113",
-                "pid": "1-1-1",
-                "name": "颜色搭配4",
-                "isAct":false,
-              }]
-  },
- /* {
-    "id": "1-1-2",
-    "pid": "1-1",
-    "name": "页面布局",
-    "url": ""
-  },*/
- /* {
-    "id": "1-1-3",
-    "pid": "1-1",
-    "name": "文字字体",
-    "url": "1"
-  },*/
-  {
     "id": "7C43A10FE0BF47148DC9E513E021FCD5",
     "pid": "V1.0.0",
-    "name": "Basic"
+    "name": "通用类"
   },
   {
     "id": "doc_69D6349B3C4E42519FB569B7CED20E99",
@@ -66,7 +25,26 @@ var data=[
     "id": "doc_AEA62097439B9E5AE8ED600",
     "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
     "name": "Color 色彩",
-    "url": "/basic/color"
+    "url": "/basic/color",
+    "children":[
+      {
+        "id": "color1",
+        "pid": "doc_AEA62097439B9E5AE8ED600",
+        "name": "主色",
+        "isAct":false
+      },
+      {
+        "id": "color2",
+        "pid": "doc_AEA62097439B9E5AE8ED600",
+        "name": "辅助色",
+        "isAct":false
+      },
+      {
+        "id": "color3",
+        "pid": "doc_AEA62097439B9E5AE8ED600",
+        "name": "中性色",
+        "isAct":false
+      }]
   },
   {
     "id": "doc_F77B609050634455AD5B470E1DD4E",
@@ -78,7 +56,62 @@ var data=[
     "id": "doc_F77B60904455AD5B4BA570E1DD4E",
     "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
     "name": " Button 按钮",
-    "url": "/basic/button"
+    "url": "/basic/button",
+    "children":[
+      {
+        "id": "button1",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "按钮类型",
+        "isAct":false
+      },
+      {
+        "id": "button2",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "图标按钮及按钮形状",
+        "isAct":false
+      },
+      {
+        "id": "button3",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "按钮尺寸",
+        "isAct":false
+      },
+      {
+        "id": "button4",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "长按钮",
+        "isAct":false
+      },
+      {
+        "id": "button5",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "不可用状态",
+        "isAct":false
+      },
+      {
+        "id": "button6",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "加载中状态",
+        "isAct":false
+      },
+      {
+        "id": "button7",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "按钮组合",
+        "isAct":false
+      },
+      {
+        "id": "button8",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "按钮组纵向排列",
+        "isAct":false
+      },
+      {
+        "id": "button9",
+        "pid": "doc_F77B60904455AD5B4BA570E1DD4E",
+        "name": "API",
+        "isAct":false
+      }]
   },
   {
     "id": "doc_F77B609050634455AB4BA570E1DD4E",
@@ -135,21 +168,21 @@ var data=[
       "name": "全选",
       "isAct":false,
     },{
-        "id": "checkbox2",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "不可用",
-        "isAct":false,
-      },{
-        "id": "checkbox3",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "组合使用",
-        "isAct":false,
-      },{
-        "id": "checkbox4",
-        "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "checkbox2",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "不可用",
+      "isAct":false,
+    },{
+      "id": "checkbox3",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "组合使用",
+      "isAct":false,
+    },{
+      "id": "checkbox4",
+      "pid": "doc_D5C8FF29C1C74B52B7BBE3C1B4E436DE",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "doc_E72C5BAEA0A34083B76D190C7A59E9CF",
@@ -177,7 +210,68 @@ var data=[
     "id": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Select 选择器",
-    "url": "/form/select"
+    "url": "/form/select",
+    "children":[
+      {
+        "id": "select1",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "基础用法",
+        "isAct":false
+      },
+      {
+        "id": "select2",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "尺寸",
+        "isAct":false
+      },
+      {
+        "id": "select3",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "禁用",
+        "isAct":false
+      },
+      {
+        "id": "select4",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "可清空",
+        "isAct":false
+      },
+      {
+        "id": "select5",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "分组",
+        "isAct":false
+      },
+      {
+        "id": "select6",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "自定义模板",
+        "isAct":false
+      },
+      {
+        "id": "select7",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "多选",
+        "isAct":false
+      },
+      {
+        "id": "select8",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "可搜索",
+        "isAct":false
+      },
+      {
+        "id": "select9",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "远程搜索",
+        "isAct":false
+      },
+      {
+        "id": "select10",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63D273",
+        "name": "API",
+        "isAct":false
+      }]
   },
   {
     "id": "api_qq475D5A3EB492F9AF70D6B5E63D273",
@@ -189,19 +283,204 @@ var data=[
     "id": "api_ACA475D5A370D6B5E63D273",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "DatePicker 日期选择器",
-    "url": "/form/datePicker"
+    "url": "/form/datePicker",
+    "children":[
+      {
+        "id": "date1",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "基础用法",
+        "isAct":false
+      },
+      {
+        "id": "date2",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "快捷方式",
+        "isAct":false
+      },
+      {
+        "id": "date3",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "日期格式",
+        "isAct":false
+      },
+      {
+        "id": "date4",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "日期时间选择",
+        "isAct":false
+      },
+      {
+        "id": "date5",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "年和月",
+        "isAct":false
+      },
+      {
+        "id": "date6",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "不可选日期",
+        "isAct":false
+      },
+      {
+        "id": "date7",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "带有确认操作",
+        "isAct":false
+      },
+      {
+        "id": "date8",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "手动控制组件",
+        "isAct":false
+      },
+      {
+        "id": "date9",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "尺寸",
+        "isAct":false
+      },
+      {
+        "id": "date10",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "API",
+        "isAct":false
+      },
+      {
+        "id": "date11",
+        "pid": "api_ACA475D5A370D6B5E63D273",
+        "name": "常见的日期和时间格式",
+        "isAct":false
+      }]
   },
   {
     "id": "api_ACA475D5A3EB492F9AF70D6B5E63",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "TimePicker 时间选择器",
-    "url": "/form/timePicker"
+    "url": "/form/timePicker",
+    "children":[
+      {
+        "id": "time1",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "基础用法",
+        "isAct":false
+      },
+      {
+        "id": "time2",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "时间格式",
+        "isAct":false
+      },
+      {
+        "id": "time3",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "选择时分",
+        "isAct":false
+      },
+      {
+        "id": "time4",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "不可选时间",
+        "isAct":false
+      },
+      {
+        "id": "time5",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "带有确认操作",
+        "isAct":false
+      },
+      {
+        "id": "time6",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "手动控制组件",
+        "isAct":false
+      },
+      {
+        "id": "time7",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "尺寸",
+        "isAct":false
+      },
+      {
+        "id": "time8",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B5E63",
+        "name": "API",
+        "isAct":false
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A3EB492F9AF70D6B33",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Cascader 级联选择",
-    "url": "/form/cascader"
+    "url": "/form/cascader",
+    "children":[
+      {
+        "id": "cascader1",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "基础用法",
+        "isAct":false
+      },
+      {
+        "id": "cascader2",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "默认值",
+        "isAct":false
+      },
+      {
+        "id": "cascader3",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "移入展开",
+        "isAct":false
+      },
+      {
+        "id": "cascader4",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "自定义显示",
+        "isAct":false
+      },
+      {
+        "id": "cascader5",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "禁用",
+        "isAct":false
+      },
+      {
+        "id": "cascader6",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "选择即改变",
+        "isAct":false
+      },
+      {
+        "id": "cascader7",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "自定义已选项",
+        "isAct":false
+      },
+      {
+        "id": "cascader8",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "尺寸",
+        "isAct":false
+      },
+      {
+        "id": "cascader9",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "动态加载选项",
+        "isAct":false
+      },
+      /*{
+        "id": "cascader10",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "搜索",
+        "isAct":false
+      },*/
+      {
+        "id": "cascader11",
+        "pid": "api_ACA475D5A3EB492F9AF70D6B33",
+        "name": "API",
+        "isAct":false
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A3EB492F9AFsss70D6B33e",
@@ -266,6 +545,12 @@ var data=[
     "url": "/form/form"
   },
   {
+    "id": "doc_7D5EF512649C465081E8BF3805522024",
+    "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
+    "name": "loading 加载",
+    "url": "/form/loading"
+  },
+  {
     "id": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "pid": "V1.0.0",
     "name": "视图类"
@@ -276,41 +561,79 @@ var data=[
     "name": "Alert 警告提示",
     "url": "/view/alert",
     "children":[{
-                "id": "basic",
-                "pid": "1-1-1",
-                "name": "基础用法",
-                "isAct":false,
-              },
-              {
-                "id": "describe",
-                "pid": "1-1-1",
-                "name": "含描述信息",
-                "isAct":false,
-              },
-              {
-                "id": "icon",
-                "pid": "1-1-1",
-                "name": "图标",
-                "isAct":false,
-              },
-              {
-                "id": "close",
-                "pid": "1-1-1",
-                "name": "可关闭",
-                "isAct":false,
-              },
-              {
-                "id": "api",
-                "pid": "1-1-1",
-                "name": "API",
-                "isAct":false,
-              }]
+      "id": "basic",
+      "pid": "1-1-1",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "describe",
+        "pid": "1-1-1",
+        "name": "含描述信息",
+        "isAct":false,
+      },
+      {
+        "id": "icon",
+        "pid": "1-1-1",
+        "name": "图标",
+        "isAct":false,
+      },
+      {
+        "id": "close",
+        "pid": "1-1-1",
+        "name": "可关闭",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "1-1-1",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_72AC50CBCD994385AE4F96181BABFC0D",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Card 卡片",
-    "url": "/view/card"
+    "url": "/view/card",
+    "children":[
+      {
+        "id": "card1",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "card2",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "无边框",
+        "isAct":false,
+      },
+      {
+        "id": "card3",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "禁用悬停阴影",
+        "isAct":false,
+      },
+      {
+        "id": "card4",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "卡片阴影",
+        "isAct":false,
+      },
+      {
+        "id": "card5",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "简洁卡片",
+        "isAct":false,
+      },
+      {
+        "id": "card6",
+        "pid": "doc_72AC50CBCD994385AE4F96181BABFC0D",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_8A4FD09AEDBF454C9A4F5B2E0D13B154",
@@ -324,11 +647,11 @@ var data=[
     "name": "Notice 通知提醒",
     "url": "/view/notice",
     "children":[{
-        "id": "notice1",
-        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "基础用法",
-        "isAct":false,
-      },
+      "id": "notice1",
+      "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+      "name": "基础用法",
+      "isAct":false,
+    },
       {
         "id": "notice2",
         "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
@@ -353,11 +676,11 @@ var data=[
       "name": "基础用法",
       "isAct":false,
     },{
-        "id": "noticeModal2",
-        "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "noticeModal2",
+      "pid": "doc_C59C51FB5DF644ACB8B4D5B4D9AF0704",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "doc_F499C9631DCF446B89FFA64AB2627336",
@@ -370,62 +693,57 @@ var data=[
       "name": "基础用法",
       "isAct":false,
     },
-    {
+      {
         "id": "custom",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义样式",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "asyn",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "异步关闭",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "disable",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "禁用关闭",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "customposition",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义位置",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "instance",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "实例化基本用法",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "confirm",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "确认对话框",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "custominstance",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "自定义内容",
         "isAct":false,
-    },
-    {
+      },
+      {
         "id": "api",
         "pid": "doc_F499C9631DCF446B89FFA64AB2627336",
         "name": "API",
         "isAct":false,
-    }
+      }
     ]
   },
-  {
-    "id": "doc_F49A64AB2627336",
-    "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
-    "name": "Progress 进度条",
-    "url": "/view/progress"
-  },
+
   {
     "id": "doc_F499C9631DCF6B89FFA64AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
@@ -436,7 +754,33 @@ var data=[
     "id": "doc_F499C9631DCF446B89FFA642627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Collapse 折叠面板",
-    "url": "/view/collapse"
+    "url": "/view/collapse",
+    "children":[
+      {
+        "id": "collapse1",
+        "pid": "doc_F499C9631DCF446B89FFA642627336",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "collapse2",
+        "pid": "doc_F499C9631DCF446B89FFA642627336",
+        "name": "手风琴",
+        "isAct":false,
+      },
+      {
+        "id": "collapse3",
+        "pid": "doc_F499C9631DCF446B89FFA642627336",
+        "name": "面板嵌套",
+        "isAct":false,
+      },
+      {
+        "id": "collapse4",
+        "pid": "doc_F499C9631DCF446B89FFA642627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_F499C9631DCF446AB2627336",
@@ -448,13 +792,83 @@ var data=[
     "id": "doc_F499C9631DCF4346AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tag 标签",
-    "url": "/view/tag"
+    "url": "/view/tag",
+    "children":[
+      {
+        "id": "tag1",
+        "pid": "doc_F499C9631DCF4346AB2627336",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "tag2",
+        "pid": "doc_F499C9631DCF4346AB2627336",
+        "name": "样式类型",
+        "isAct":false,
+      },
+      {
+        "id": "tag3",
+        "pid": "doc_F499C9631DCF4346AB2627336",
+        "name": "各种颜色",
+        "isAct":false,
+      },
+      {
+        "id": "tag4",
+        "pid": "doc_F499C9631DCF4346AB2627336",
+        "name": "动态添加和删除",
+        "isAct":false,
+      },
+      {
+        "id": "tag5",
+        "pid": "doc_F499C9631DCF4346AB2627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_F499C9631DCF4464AB2627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tooltip 文字提示",
-    "url": "/view/toolTip"
+    "url": "/view/toolTip",
+    "children":[
+      {
+        "id": "toolTip1",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "toolTip2",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "延时",
+        "isAct":false,
+      },
+      {
+        "id": "toolTip3",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "位置",
+        "isAct":false,
+      },
+      {
+        "id": "toolTip4",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "自定义内容",
+        "isAct":false,
+      },
+      {
+        "id": "toolTip5",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "禁用",
+        "isAct":false,
+      },
+      {
+        "id": "toolTip6",
+        "pid": "doc_F499C9631DCF4464AB2627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_F499C9631DCF446AB24627336",
@@ -479,25 +893,25 @@ var data=[
       "name": "多选",
       "isAct":false,
     },{
-        "id": "table2",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "可展开",
-        "isAct":false,
+      "id": "table2",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "可展开",
+      "isAct":false,
     },{
-        "id": "table3",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "固定列",
-        "isAct":false,
+      "id": "table3",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "固定列",
+      "isAct":false,
     },{
-        "id": "table4",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "可编辑表格",
-        "isAct":false,
+      "id": "table4",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "可编辑表格",
+      "isAct":false,
     },{
-        "id": "table5",
-        "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
-        "name": "API",
-        "isAct":false,
+      "id": "table5",
+      "pid": "api_ACA475D5A3EB49AF70D6B5E63D273",
+      "name": "API",
+      "isAct":false,
     }]
   },
   {
@@ -505,32 +919,32 @@ var data=[
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Tree 树形控件",
     "url": "/view/tree",
-     "children":[{
+    "children":[{
       "id": "basic",
       "pid": "doc_F499C9631DCF446AB2633327336",
       "name": "基础用法",
       "isAct":false,
     },{
-        "id": "checkbox",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "显示checkbox",
-        "isAct":false,
-      },{
-        "id": "multiple",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "多选",
-        "isAct":false,
-      },{
-        "id": "icon",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "图标",
-        "isAct":false,
-      },{
-        "id": "api",
-        "pid": "doc_F499C9631DCF446AB2633327336",
-        "name": "API",
-        "isAct":false,
-      }]
+      "id": "checkbox",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "显示checkbox",
+      "isAct":false,
+    },{
+      "id": "multiple",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "多选",
+      "isAct":false,
+    },{
+      "id": "icon",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "图标",
+      "isAct":false,
+    },{
+      "id": "api",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "API",
+      "isAct":false,
+    }]
   },
   {
     "id": "86E9DF2F94694A44AF7A2F4EBCE97443",
@@ -553,7 +967,39 @@ var data=[
     "id": "doc_77368258DBB441A6A9E1966C4D214D84",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Dropdown 下拉菜单",
-    "url": "/navigation/dropDown"
+    "url": "/navigation/dropDown",
+    "children":[
+      {
+        "id": "dropDown1",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "dropDown2",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "触发方式",
+        "isAct":false,
+      },
+      {
+        "id": "dropDown3",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "对齐方向",
+        "isAct":false,
+      },
+      {
+        "id": "dropDown4",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "嵌套用法",
+        "isAct":false,
+      },
+      {
+        "id": "dropDown5",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
@@ -580,17 +1026,6 @@ var data=[
     "url": "/navigation/loadingBar"
   },
   {
-    "id": "3CC4B2C730C94DA8AAC48333A38F7ww489",
-    "pid": "V1.0.0",
-    "name": "Chart"
-  },
-  {
-    "id": "doc_7D5EF512649C465081E8BF3805522024",
-    "pid": "3CC4B2C730C94DA8AAC48333A38F7ww489",
-    "name": "Circle 进度环",
-    "url": "/chart/circle"
-  },
-  {
     "id": "3CC4B2C730C94DA8AAC48333A38F7489",
     "pid": "V1.0.0",
     "name": "Other"
@@ -605,7 +1040,27 @@ var data=[
     "id": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "BackTop 返回顶部",
-    "url": "/other/backTop"
+    "url": "/other/backTop",
+    "children":[
+      {
+        "id": "backTop1",
+        "pid": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "backTop2",
+        "pid": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
+        "name": "自定义样式",
+        "isAct":false,
+      },
+      {
+        "id": "backTop3",
+        "pid": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_F729475453FD4A3E8D45C1B19173F2D3",

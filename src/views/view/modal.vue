@@ -12,15 +12,6 @@
       <demoTab :code="basicModal" :describeTitle="subTitle">
         <div slot="sample">
            <Button type="primary" @click="modal1 = true">显示对话框</Button>
-           <Modal
-              v-model="modal1"
-              title="普通的Modal对话框标题"
-              @on-ok="ok"
-              @on-cancel="cancel">
-              <p>对话框内容</p>
-              <p>对话框内容</p>
-              <p>对话框内容</p>
-          </Modal>
         </div>
         <div slot="describe-content">
            最简单的使用方法，通过控制属性visible来显示 / 隐藏对话框。<br/>
@@ -34,43 +25,13 @@
       <demoTab :code="customModal" :describeTitle="subTitlecustom">
         <div slot="sample">
            <Button @click="modal2 = true">自定义页头和页脚</Button>
-           <Modal v-model="modal2" width="360">
-               <p slot="header" style="color:#f60;text-align:center">
-                   <Icon type="information-circled"></Icon>
-                   <span>删除确认</span>
-               </p>
-               <div style="text-align:center">
-                   <p>此任务删除后，下游 10 个任务将无法执行。</p>
-                   <p>是否继续删除？</p>
-               </div>
-               <div slot="footer">
-                   <Button type="error" size="large" long :loading="modal_loading" @click="del">删除</Button>
-               </div>
-           </Modal>
+           
            <Button @click="modal3 = true">不带标题栏</Button>
-           <Modal v-model="modal3">
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-           </Modal>
+           
            <Button @click="modal4 = true">国际化</Button>
-           <Modal
-               v-model="modal4"
-               title="Modal Title"
-               ok-text="OK"
-               cancel-text="Cancel">
-               <p>Something...</p>
-               <p>Something...</p>
-               <p>Something...</p>
-           </Modal>
+           
            <Button @click="modal5 = true">设置宽度</Button>
-           <Modal
-               v-model="modal5"
-               title="自定义宽度"
-               width="300">
-               <p>自定义宽度，单位 px，默认 520px。</p>
-               <p>对话框的宽度是响应式的，当屏幕尺寸小于 768px 时，宽度会变为自动<code>auto</code>。</p>
-           </Modal>
+           
         </div>
         <div slot="describe-content">
            Modal 组件提供了灵活的自定义样式 API 和 Slot，可以自由控制整个 Modal 的各个组成部分，比如页头、页脚、关闭按钮。<br>
@@ -83,13 +44,7 @@
       <demoTab :code="asynModal" :describeTitle="subTitleasyn">
         <div slot="sample">
            <Button type="primary" @click="modal6 = true">显示对话框</Button>
-           <Modal
-               v-model="modal6"
-               title="对话框标题"
-               :loading="loading"
-               @on-ok="asyncOK">
-               <p>点击确定后，对话框将在 2秒 后关闭。</p>
-           </Modal>
+           
         </div>
         <div slot="describe-content">
            Modal 组件提供了灵活的自定义样式 API 和 Slot，可以自由控制整个 Modal 的各个组成部分，比如页头、页脚、关闭按钮。<br>
@@ -102,23 +57,9 @@
       <demoTab :code="disableModal" :describeTitle="subTitledisable">
         <div slot="sample">
            <Button @click="modal7 = true">禁用右上角关闭（含Esc键）</Button>
-           <Modal
-               title="对话框标题"
-               v-model="modal7"
-               :closable="false">
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-           </Modal>
+          
            <Button @click="modal8 = true">禁用遮罩层关闭</Button>
-           <Modal
-               title="对话框标题"
-               v-model="modal8"
-               :mask-closable="false">
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-           </Modal>
+           
         </div>
         <div slot="describe-content">
            Modal 组件提供了灵活的自定义样式 API 和 Slot，可以自由控制整个 Modal 的各个组成部分，比如页头、页脚、关闭按钮。<br>
@@ -131,23 +72,9 @@
       <demoTab :code="custompositionModal" :describeTitle="subTitlecustomposition">
         <div slot="sample">
            <Button @click="modal9 = true">距离顶部 20px</Button>
-           <Modal
-               title="对话框标题"
-               v-model="modal9"
-               :styles="{top: '20px'}">
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-           </Modal>
+           
            <Button @click="modal10 = true">垂直居中</Button>
-           <Modal
-               title="对话框标题"
-               v-model="modal10"
-               class-name="vertical-center-modal">
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-               <p>对话框内容</p>
-           </Modal>
+           
         </div>
         <div slot="describe-content">
            Modal 组件提供了灵活的自定义样式 API 和 Slot，可以自由控制整个 Modal 的各个组成部分，比如页头、页脚、关闭按钮。<br>
@@ -164,15 +91,7 @@
            <Button @click="instance('success')">成功</Button>
            <Button @click="instance('warning')">警告</Button>
            <Button @click="instance('error')">错误</Button>
-           <Modal
-              v-model="modal1"
-              title="普通的Modal对话框标题"
-              @on-ok="ok"
-              @on-cancel="cancel">
-              <p>对话框内容</p>
-              <p>对话框内容</p>
-              <p>对话框内容</p>
-          </Modal>
+           
         </div>
         <div slot="describe-content">
            除了上述通过标准组件的使用方法，iView 还精心封装了一些实例方法，用来创建一次性的轻量级对话框。<br/>
@@ -261,7 +180,99 @@
             <code>this.$Modal.remove()</code>
         </li>
     </ul>
+    <Modal
+        v-model="modal1"
+        title="普通的Modal对话框标题"
+        @on-ok="ok"
+        @on-cancel="cancel">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal v-model="modal2" width="360">
+        <p slot="header" style="color:#f60;text-align:center">
+            <Icon type="information-circled"></Icon>
+            <span>删除确认</span>
+        </p>
+        <div style="text-align:center">
+            <p>此任务删除后，下游 10 个任务将无法执行。</p>
+            <p>是否继续删除？</p>
+        </div>
+        <div slot="footer">
+            <Button type="error" size="large" long :loading="modal_loading" @click="del">删除</Button>
+        </div>
+    </Modal>
+    <Modal v-model="modal3">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal
+        v-model="modal4"
+        title="Modal Title"
+        ok-text="OK"
+        cancel-text="Cancel">
+        <p>Something...</p>
+        <p>Something...</p>
+        <p>Something...</p>
+    </Modal>
+    <Modal
+        v-model="modal5"
+        title="自定义宽度"
+        width="300">
+        <p>自定义宽度，单位 px，默认 520px。</p>
+        <p>对话框的宽度是响应式的，当屏幕尺寸小于 768px 时，宽度会变为自动<code>auto</code>。</p>
+    </Modal>
+    <Modal
+        v-model="modal6"
+        title="对话框标题"
+        :loading="loading"
+        @on-ok="asyncOK">
+        <p>点击确定后，对话框将在 2秒 后关闭。</p>
+    </Modal>
+     <Modal
+        title="对话框标题"
+        v-model="modal7"
+        :closable="false">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal
+        title="对话框标题"
+        v-model="modal8"
+        :mask-closable="false">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal
+        title="对话框标题"
+        v-model="modal9"
+        :styles="{top: '20px'}">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal
+        title="对话框标题"
+        v-model="modal10"
+        class-name="vertical-center-modal">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    <Modal
+       v-model="modal1"
+       title="普通的Modal对话框标题"
+       @on-ok="ok"
+       @on-cancel="cancel">
+       <p>对话框内容</p>
+       <p>对话框内容</p>
+       <p>对话框内容</p>
+    </Modal>
   </article>
+  
 </template>
 <script>
 import demoTab from '@/components/DemoTab'
@@ -978,13 +989,15 @@ article {
       }
   }
 }
-.vertical-center-modal{
+</style>
+<style lang="less" scoped>
+ .vertical-center-modal{
     display: flex;
     align-items: center;
     justify-content: center;
     .ivu-modal{
         top: 0;
     }
-}
+  }
 </style>
 

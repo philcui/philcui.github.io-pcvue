@@ -53,7 +53,7 @@
       </demoTab>
     </section>
 
-    <section class="demo" id="icon">
+    <section class="demo" id="searchable">
       <demoTab :code="searchableTree" :describeTitle="subTitlesearchable">
         <div slot="sample">
            <Tree :data="baseData" show-checkbox multiple searchable></Tree>
@@ -64,7 +64,7 @@
       </demoTab>
     </section>
 
-    <section class="demo" id="drag">
+    <section class="demo" id="draggable">
       <demoTab :code="draggableTree" :describeTitle="subTitledraggable">
         <div slot="sample">
            <Tree :data="baseData" show-checkbox multiple draggable></Tree>
@@ -563,23 +563,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-article {
-  padding-left: 30px;
-  font-size: 14px;
-  h1, h2, h3{
-    margin:12px 0px;
-    font-weight: normal;
-  }
-  h1{
-    margin-top: 40px;
-    font-size: 26px;
-  }
-  h2{
-    font-size:20px;
-  }
-  section.demo{
-    margin: 20px 0px;
-  }
-}
-</style>

@@ -6,7 +6,7 @@
       展示一组折叠的下拉菜单。
     </p>
     <h2>代码示例</h2>
-    <section class="demo">
+    <section class="demo" id="dropDown1">
       <demoTab :code="dropdownCode" :describeTitle="subTitle1">
         <div slot="sample">
           <Dropdown>
@@ -41,7 +41,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown2">
       <demoTab :code="dropdownCode2" :describeTitle="subTitle2">
         <div slot="sample">
           <Dropdown>
@@ -88,7 +88,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown3">
       <demoTab :code="dropdownCode3" :describeTitle="subTitle3">
         <div slot="sample">
           <Dropdown placement="bottom-start">
@@ -131,7 +131,7 @@
       </demoTab>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="dropDown4">
       <demoTab :code="dropdownCode4" :describeTitle="subTitle4">
         <div slot="sample">
           <Dropdown>
@@ -161,7 +161,7 @@
       </demoTab>
     </section>
 
-    <h2 id="switch3">API</h2>
+    <h2 id="dropDown5">API</h2>
     <h3>Dropdown props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -182,7 +182,11 @@
 </template>
 <script>
   import demoTab from '@/components/DemoTab'
+  import clickoutside from 'utvue/src/directives/clickoutside'
   export default {
+    directives:{
+      clickoutside
+    },
     components: {
       demoTab
     },
@@ -208,7 +212,7 @@
           }],
         propsData:[{
           attribute: 'trigger',
-          describe:'触发方式，可选值为 hover（悬停）click（点击）custom（自定义），使用 custom 时，需配合 visible 一起使用',
+          describe:'触发方式，可选值为 <code>hover</code>（悬停）<code>click</code>（点击）<code>custom</code>（自定义），使用 custom 时，需配合 visible 一起使用',
           type:"String",
           default:"hover"
         },{
@@ -218,7 +222,7 @@
           default:"false"
         },{
           attribute: 'placement',
-          describe:'下拉菜单出现的位置，可选值为toptop-starttop-endbottombottom-startbottom-endleftleft-startleft-endrightright-startright-end',
+          describe:'下拉菜单出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code>',
           type:"String",
           default:"bottom"
         },{
@@ -257,14 +261,14 @@
           {
             title: '说明',
             key: 'describe',
-            width:'450px'
+            width:'500px'
           }],
         slotData:[{
           name: '无',
           describe:'主体内容'
         },{
           name: 'list',
-          describe:'列表内容，一般由 Dropdown-menu 承担'
+          describe:'列表内容，一般由 <code>Dropdown-menu</code> 承担'
         }],
         itemColumns:[
           {
@@ -506,7 +510,7 @@
 
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   code {
     display: inline-block;
     background: #f7f7f7;
