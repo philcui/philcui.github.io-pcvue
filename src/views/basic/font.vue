@@ -1,6 +1,6 @@
 <template>
   <article class="doc-alert-container">
-    <h1>Font 字体</h1>
+    <h1 id="Font_1">Font 字体</h1>
     <h2>概述</h2>
     <p>
       推荐使用以下字体类型、大小、颜色作为设计和开发规范，以保证页面和组件之间的视觉一致。

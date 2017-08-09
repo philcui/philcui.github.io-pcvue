@@ -119,6 +119,7 @@
         this.leftMenu = root[0].children;
       },
       getRouter(url){
+
         this.$router.push(url);
         this.showCatalogList(url, false);
       },
@@ -189,7 +190,39 @@
       changeBlur(){
         this.isFocus = false;
       },
-      clickItem(id, name){
+      clickItem(id, name,url){
+//        this.getMenus();
+        this.$router.push(url);
+        this.showCatalogList(url, false);
+        var isSelsct=false;
+        const children = this.$refs.leftMenu.$children;
+        for (var i = 0; i < children.length; i++) {
+          var newChildren = children[i].$children;
+          isSelsct=false;
+          for (var j = 0; j < newChildren.length; j++) {
+            if (newChildren[j].name == url) {
+//              this.isOpen = true;
+              newChildren[j].active = true;
+              this.$refs.leftMenu.openNames[0] = children[i].name;
+              isSelsct=true;
+            }
+            else
+            {
+//              this.isOpen = false;
+              newChildren[j].active = false;
+            }
+            if(isSelsct)
+            {
+              children[i].opened=true;
+            }
+            else
+            {
+              children[i].opened=false;
+            }
+          }
+        }
+        this.$refs.leftMenu.updateOpened();
+
         console.log(name);
         console.log(id);
       },
