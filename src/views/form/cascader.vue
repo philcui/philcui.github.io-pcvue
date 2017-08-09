@@ -380,12 +380,12 @@
           describe:'动态获取数据，数据源需标识 loading',
           type:"Function",
           default:"-"
-        },{
+        }/*,{
           attribute: 'filterable',
           describe:'是否支持搜索',
           type:"Boolean",
           default:"false"
-        },{
+        }*/,{
           attribute: 'not-found-text',
           describe:'当搜索列表为空时显示的内容',
           type:"String",
