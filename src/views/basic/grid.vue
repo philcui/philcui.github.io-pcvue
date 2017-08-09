@@ -1,5 +1,6 @@
 <template>
-  <div class="">
+  <article class="doc-alert-container">
+    <h2 id="Grid_1">代码示例</h2>
     <demoTab :code="gridCode" :describeTitle="describeTitle">
       <div slot="sample">
         <Row>
@@ -24,7 +25,7 @@
          除客户指定外，产品建议使用商务蓝作为主色调。
       </div>
     </demoTab>
-  </div>
+  </article>
 </template>
 <script>
 import demoTab from '@/components/DemoTab'
