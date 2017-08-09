@@ -267,6 +267,29 @@
         </div>
       </demoTab>
     </section>
+    <section class="demo">
+      <demoTab :code="inputCode6" :describeTitle="subTitle6">
+        <div slot="sample">
+          <Form ref="formLogin" :model="formLogin" :label-width="80">
+            <Form-item label="" prop="name">
+              <Input placeholder="请输入用户名" class="ivu-icon-left" icon="ios-person-outline" v-model="formLogin.name"></Input>
+            </Form-item><br/>
+            <Form-item label="" prop="pass">
+              <Input placeholder="请输入密码" class="ivu-icon-left" type="password" icon="ios-locked-outline" v-model="formLogin.pass"></Input>
+            </Form-item><br/>
+            <Form-item>
+              <div class="ivu-login-pwd" style="width:196px">
+                <label> <Checkbox v-model="single">记住密码</Checkbox></label>
+                <a class="ivu-login-a">忘记密码</a>
+              </div>
+            </Form-item>
+            <Form-item label="">
+              <Button type="primary" style="width: 200px">登录</Button>
+            </Form-item>
+          </Form>
+        </div>
+      </demoTab>
+    </section>
     <h2 id="switch3">API</h2>
     <h3>Form  props</h3>
     <section class="demo">
@@ -353,6 +376,12 @@
         }, 1000);
       };
       return{
+        single: false,
+        subTitle6:'登录',
+        formLogin:{
+          name:'',
+          pass:''
+        },
         propsColumns04:[
           {
             title: '名称',
@@ -494,6 +523,26 @@
             }
           ]
         },
+        "inputCode6":`
+&lt;template>
+&lt;Form ref="formLogin" :model="formLogin" :label-width="80">
+            &lt;Form-item label="" prop="name">
+              &lt;Input class="ivu-icon-left" icon="ios-person-outline" v-model="formLogin.name">&lt;/Input>
+            &lt;/Form-item>&lt;br/>
+            &lt;Form-item label="" prop="pass">
+              &lt;Input class="ivu-icon-left" type="password" icon="ios-locked-outline" v-model="formLogin.pass">&lt;/Input>
+           &lt;/Form-item>&lt;br/>
+            &lt;Form-item>
+              &lt;div class="ivu-login-pwd" style="width:196px">
+                &lt;label> &lt;Checkbox v-model="single">记住密码&lt;/Checkbox>&lt;/label>
+                &lt;a class="ivu-login-a">忘记密码&lt;/a>
+              &lt;/div>
+            &lt;/Form-item>
+            &lt;Form-item label="">
+              &lt;Button type="primary" style="width: 200px">登录&lt;/Button>
+            &lt;/Form-item>
+          &lt;/Form>
+&lt;/template>`,
         subTitle5:'动态增减表单项',
         formCustom: {
           passwd: '',
@@ -807,5 +856,15 @@
     border-radius: 3px;
     color: #666;
     border: 1px solid #eee;
+  }
+  .ivu-login-pwd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    color: #4d4d4d;
+  }
+  .ivu-login-a {
+    color: #abb5bf !important;
   }
 </style>
