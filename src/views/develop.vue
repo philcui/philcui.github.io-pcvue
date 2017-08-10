@@ -22,7 +22,7 @@
                placeholder="在此处搜索组件..."/>
         <div class="hcl-search-list" v-show="seaShow">
           <ul>
-            <li v-for="item in searchList"><a @click="clickItem(item.id,item.name,item.url)">{{item.name}}</a></li>
+            <li v-for="item in searchList" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
           </ul>
         </div>
       </div>
@@ -353,23 +353,23 @@
     width: 100%;
 
   ul {
-    margin: 5px;
+    /*margin: 5px;*/
     /*margin: 0;*/
     /*padding: 0;*/
     list-style: none;
   }
 
-  li {
-    line-height: 25px;
+  li{
+    line-height:25px;
     height: 25px;
-
-  a {
     color: #728093;
+    padding-left: 5px;
+    cursor:pointer;
   }
-
-  a:hover {
-    color: #65aef5;
-  }
+  li:hover
+  {
+    background-color: #65aef5;
+    color: #FFFFFF;
 
   }
   }

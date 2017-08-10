@@ -6,7 +6,7 @@
         <!--<div class="search"></div>-->
         <div class="hcl-search-list" v-show="seaShow">
           <ul>
-            <li v-for="item in searchList"><a @click="clickItem(item.id,item.name,item.url)">{{item.name}}</a></li>
+            <li v-for="item in searchList" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
           </ul>
         </div>
       </div>
@@ -188,20 +188,22 @@
       box-shadow: #dfe2e5 0px 0px 3px;
       width: 100%;
       ul{
-        margin: 5px;
+        /*margin: 5px;*/
         list-style: none;
       }
       li{
         line-height:25px;
         height: 25px;
-        a{
           color: #728093;
-        }
-        a:hover
-         {
-            color: #65aef5;
-         }
+        padding-left: 5px;
+        cursor:pointer
       }
+  li:hover
+  {
+    background-color: #65aef5;
+    color: #FFFFFF;
+
+  }
     }
     input{
       border:none;
