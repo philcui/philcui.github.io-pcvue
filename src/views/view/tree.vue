@@ -70,7 +70,9 @@
            <Tree :data="baseData" show-checkbox multiple draggable></Tree>
         </div>
         <div slot="describe-content">
-           可拖拽
+           可拖拽。拖动源节点到目标元素上面，则源节点作为目标节点的子节点。
+           拖动源节点到目标节点上方，则源节点插入到目标节点之前，
+           拖动源节点到目标节点下面，则源节点插入到目标节点之后。
         </div>
       </demoTab>
     </section>

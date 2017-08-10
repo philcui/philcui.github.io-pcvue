@@ -93,48 +93,48 @@
         describeTitleTree: "表格树(一)",
         dataTree1: [
           {
-            menuid: 1, text: '菜单一', pid: null, child: [
+            menuid: 'A1', text: '菜单一', pid: null, child: [
             {
-              menuid: 3, text: '菜单一一', pid: 1, child: [
-              {menuid: 10, text: '三级菜单一', pid: 3},
+              menuid: 'A3', text: '菜单一一', pid: 1, child: [
+              {menuid: 'A10', text: '三级菜单一', pid: 3},
               {
-                menuid: 11, text: '三级菜单二', pid: 3, child: [{menuid: 13, text: '四级菜单', pid: 11}]
+                menuid: 'A11', text: '三级菜单二', pid: 3, child: [{menuid: 'A13', text: '四级菜单', pid: 11}]
               }
             ]
             },
             {
-              menuid: 4, text: '菜单一二', pid: 1, child: [
-              {menuid: 12, text: '三级菜单三', pid: 4}
+              menuid: 'A4', text: '菜单一二', pid: 1, child: [
+              {menuid: 'A12', text: '三级菜单三', pid: 4}
             ]
             },
-            {menuid: 6, text: '菜单一三', pid: 1}
+            {menuid: 'A6', text: '菜单一三', pid: 1}
           ]
           },
-          {menuid: 9, text: '菜单二', pid: null}
+          {menuid: 'A9', text: '菜单二', pid: null}
         ],
         fieldsList1: [{field: "menuid", map: "id"}, {field: "child", map: "childNodes"}],
         describeTitleTree1: "表格树(二)",
         dataTree2: [
-          {id: 1, text: '菜单一', pid: null},
-          {id: 3, text: '菜单一一', pid: 1},
-          {id: 10, text: '三级菜单一', pid: 3},
-          {id: 11, text: '三级菜单二', pid: 3},
-          {id: 13, text: '四级菜单', pid: 11},
-          {id: 4, text: '菜单一二', pid: 1},
-          {id: 12, text: '三级菜单三', pid: 4},
-          {id: 6, text: '菜单一三', pid: 1},
-          {id: 9, text: '菜单二', pid: null}],
+          {id: 'B1', text: '菜单一', pid: null},
+          {id: 'B3', text: '菜单一一', pid: 'B1'},
+          {id: 'B10', text: '三级菜单一', pid: 'B3'},
+          {id: 'B11', text: '三级菜单二', pid: 'B3'},
+          {id: 'B13', text: '四级菜单', pid:  'B11'},
+          {id: 'B4', text: '菜单一二', pid: 'B1'},
+          {id: 'B12', text: '三级菜单三', pid: 'B4'},
+          {id: 'B6', text: '菜单一三', pid: 'B1'},
+          {id: 'B9', text: '菜单二', pid: null}],
         describeTitleTree2: "表格树(三)",
         dataTree3: [
-          {menuid: 1, text: '菜单一', pid: null},
-          {menuid: 3, text: '菜单一一', pid: 1},
-          {menuid: 10, text: '三级菜单一', pid: 3},
-          {menuid: 11, text: '三级菜单二', pid: 3},
-          {menuid: 13, text: '四级菜单', pid: 11},
-          {menuid: 4, text: '菜单一二', pid: 1},
-          {menuid: 12, text: '三级菜单三', pid: 4},
-          {menuid: 6, text: '菜单一三', pid: 1},
-          {menuid: 9, text: '菜单二', pid: null}],
+          {menuid: 'C1', text: '菜单一', pid: null},
+          {menuid: 'C3', text: '菜单一一', pid: 'C1'},
+          {menuid: 'C10', text: '三级菜单一', pid: 'C3'},
+          {menuid: 'C11', text: '三级菜单二', pid: 'C3'},
+          {menuid: 'C13', text: '四级菜单', pid: 'C11'},
+          {menuid: 'C4', text: '菜单一二', pid: 'C1'},
+          {menuid: 'C12', text: '三级菜单三', pid: 'C4'},
+          {menuid: 'C6', text: '菜单一三', pid: 'C1'},
+          {menuid: 'C9', text: '菜单二', pid: null}],
         describeTitleTree3: "表格树(四)",
         fieldsList3: [{field: "menuid", map: "id"}],
         tableTreeCode: `&lt;template>
@@ -179,15 +179,18 @@
                           ],
                           fieldsList:[{field: "menuid", map: "id"},{field: "child", map: "childNodes"}],
                           dataTree: [
-                          {menuid: 1, text: '菜单一', pid: null, child: [
-                                  {menuid: 3, text: '菜单一一', pid: 1, child: [
-                                     {menuid: 10, text: '三级菜单一', pid: 3},
-                                     {menuid: 11, text: '三级菜单二', pid: 3, child: [
-                                           {menuid: 13, text: '四级菜单', pid: 11}] }] },
-                                  {menuid: 4, text: '菜单一二', pid: 1, child: [
-                                      {menuid: 12, text: '三级菜单三', pid: 4}]},
-                                  {menuid: 6, text: '菜单一三', pid: 1}]},
-                          {menuid: 9, text: '菜单二', pid: null}]
+                          {
+                            menuid: 'A1', text: '菜单一', pid: null, child: [
+                              {menuid: 'A3', text: '菜单一一', pid: 'A1', child: [
+                                 {menuid: 'A10', text: '三级菜单一', pid: 'A3'},
+                                 {menuid: 'A11', text: '三级菜单二', pid: 'A3', child: [
+                                    {menuid: 'A13', text: '四级菜单', pid: 'A11'}] }]},
+                              {menuid: 'A4', text: '菜单一二', pid:'A1', child: [
+                                 {menuid: 'A12', text: '三级菜单三', pid: 'A4'}] },
+                                 {menuid: 'A6', text: '菜单一三', pid:'A1'} ]
+                           },
+                           {menuid: 'A9', text: '菜单二', pid: null}
+                          ]
                     }
                 }
            }
@@ -206,15 +209,15 @@
                           {title: '菜单名称',key: 'text'}
                           ],
                           dataTree: [
-                           {id: 1, text: '菜单一', pid: null},
-                           {id: 3, text: '菜单一一', pid: 1},
-                           {id: 10, text: '三级菜单一', pid: 3},
-                           {id: 11, text: '三级菜单二', pid: 3},
-                           {id: 13, text: '四级菜单', pid: 11},
-                           {id: 4, text: '菜单一二', pid: 1},
-                           {id: 12, text: '三级菜单三', pid: 4},
-                           {id: 6, text: '菜单一三', pid: 1},
-                           {id: 9, text: '菜单二', pid: null}]
+                           {id: 'B1', text: '菜单一', pid: null},
+                           {id: 'B3', text: '菜单一一', pid: 'B1'},
+                           {id: 'B10', text: '三级菜单一', pid: 'B3'},
+                           {id: 'B11', text: '三级菜单二', pid: 'B3'},
+                           {id: 'B13', text: '四级菜单', pid:  'B11'},
+                           {id: 'B4', text: '菜单一二', pid: 'B1'},
+                           {id: 'B12', text: '三级菜单三', pid: 'B4'},
+                           {id: 'B6', text: '菜单一三', pid: 'B1'},
+                           {id: 'B9', text: '菜单二', pid: null}]
                     }
                 }
            }
@@ -234,15 +237,15 @@
                           ],
                           fieldsList: [{field: "menuid", map: "id"}],
                           dataTree: [
-                           {menuid: 1, text: '菜单一', pid: null},
-                           {menuid: 3, text: '菜单一一', pid: 1},
-                           {menuid: 10, text: '三级菜单一', pid: 3},
-                           {menuid: 11, text: '三级菜单二', pid: 3},
-                           {menuid: 13, text: '四级菜单', pid: 11},
-                           {menuid: 4, text: '菜单一二', pid: 1},
-                           {menuid: 12, text: '三级菜单三', pid: 4},
-                           {menuid: 6, text: '菜单一三', pid: 1},
-                           {menuid: 9, text: '菜单二', pid: null}]
+                           {menuid: 'C1', text: '菜单一', pid: null},
+                           {menuid: 'C3', text: '菜单一一', pid: 'C1'},
+                           {menuid: 'C10', text: '三级菜单一', pid: 'C3'},
+                           {menuid: 'C11', text: '三级菜单二', pid: 'C3'},
+                           {menuid: 'C13', text: '四级菜单', pid: 'C11'},
+                           {menuid: 'C4', text: '菜单一二', pid: 'C1'},
+                           {menuid: 'C12', text: '三级菜单三', pid: 'C4'},
+                           {menuid: 'C6', text: '菜单一三', pid: 'C1'},
+                           {menuid: 'C9', text: '菜单二', pid: null}]
                     }
                 }
            }
