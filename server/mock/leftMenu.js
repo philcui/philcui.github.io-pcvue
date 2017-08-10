@@ -762,7 +762,56 @@ var data=[
     "id": "doc_7D5EF512649C465081E8BF3805522024",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "loading 加载",
-    "url": "/form/loading"
+    "url": "/form/loading",
+    "children":[{
+      "id": "progress1",
+      "pid": "1-1-1",
+      "name": "自定义更多样式",
+      "isAct":false,
+    },
+      {
+        "id": "progress2",
+        "pid": "1-1-1",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "progress3",
+        "pid": "1-1-1",
+        "name": "垂直方向",
+        "isAct":false,
+      },
+      {
+        "id": "Progressapi",
+        "pid": "1-1-1",
+        "name": "进度条API",
+        "isAct":false,
+      },
+      {
+        "id": "progress4",
+        "pid": "1-1-1",
+        "name": "进度环基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "progress5",
+        "pid": "1-1-1",
+        "name": "配合外部组件使用",
+        "isAct":false,
+      },
+      {
+        "id": "progress6",
+        "pid": "1-1-1",
+        "name": "自定义更多样式",
+        "isAct":false,
+      },
+      {
+        "id": "Circleapi",
+        "pid": "1-1-1",
+        "name": "进度环API",
+        "isAct":false,
+      }]
+
   },
   {
     "id": "74F7727FF79B4DFBAF4EE308FCCE35DA",
@@ -1569,7 +1618,27 @@ var data=[
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "LoadingBar 加载进度条",
-    "url": "/navigation/loadingBar"
+    "url": "/navigation/loadingBar",
+    "children":[
+      {
+        "id": "loadingBar1",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "api",
+        "isAct":false,
+      },
+      {
+        "id": "api02",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "全局配置API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "3CC4B2C730C94DA8AAC48333A38F7489",
