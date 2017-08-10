@@ -1,6 +1,6 @@
 <template>
   <div class="demoTabContainer">
-    <Tabs type="card">
+    <Tabs type="card" :animated="animated">
         <Tab-pane label="示例">
           <slot name="sample"></slot>
           <div class="describe-title" v-if="describeTitle&&describeTitle.length>0">
@@ -19,7 +19,7 @@
             </div>
           </transition>
         </Tab-pane>
-        <a slot="extra" 
+        <a slot="extra"
         v-clipboard:copy="copyCode"
         v-clipboard:success="onCopy"
         v-clipboard:error="onError"><Icon type="ios-copy-outline"></Icon><span>复制</span></a>
@@ -36,6 +36,10 @@ export default {
     describeTitle: {
       type: String,
       default:''
+    },
+    animated:{
+      type:Boolean,
+      default:true
     }
   },
   data () {
@@ -189,7 +193,7 @@ export default {
         opacity: 0.9;
       }
     }
-    
+
   }
 }
 </style>

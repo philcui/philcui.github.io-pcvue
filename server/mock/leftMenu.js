@@ -1654,7 +1654,39 @@ var data=[
     "id": "doc_7D5EF512649C465081E8BF3805522024",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "Affix 图钉",
-    "url": "/other/affix"
+    "url": "/other/affix",
+    "children":[
+      {
+        "id": "affix1",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "affix2",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "偏移",
+        "isAct":false,
+      },
+      {
+        "id": "affix3",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "固定在底部",
+        "isAct":false,
+      },
+      {
+        "id": "affix4",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "固定状态改变时的回调",
+        "isAct":false,
+      },
+      {
+        "id": "affix5",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",
