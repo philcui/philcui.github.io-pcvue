@@ -1429,6 +1429,11 @@ var data=[
         "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
         "name": "自定义标签页",
         "isAct":false,
+      },{
+        "id": "extra",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "附加内容",
+        "isAct":false,
       }, {
         "id": "card",
         "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",

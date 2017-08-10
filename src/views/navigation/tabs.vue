@@ -76,6 +76,19 @@
         </div>
       </demoTab>
     </section>
+    <section class="demo" id="extra">
+      <demoTab :code="extraTab" :describeTitle="subTitleextra">
+        <div slot="sample">
+           <Tabs type="card">
+               <Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</Tab-pane>
+               <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加</Button>
+           </Tabs>
+        </div>
+        <div slot="describe-content">
+           设置 slot extra 可以在页签右边添加附加操作。
+        </div>
+      </demoTab>
+    </section>
     <section class="demo" id="card">
       <demoTab :code="cardTab" :describeTitle="subTitlecard">
         <div slot="sample">
@@ -161,9 +174,11 @@ export default {
       "subTitleclosable": "可关闭",
       "subTitlenoanimate":"禁用动画",
       "subTitlerender":"自定义标签页",
+      "subTitleextra":"附加内容",
       "tab0": true,
       "tab1": true,
       "tab2": true,
+      "tabs": 2,
       "label": (h) => {
                     return h('div', [
                         h('span', '标签一'),
@@ -433,13 +448,38 @@ export default {
         }
     }
 &lt;/script>
+      `,
+       "extraTab":`
+&lt;template>
+    &lt;Tabs type="card">
+        &lt;Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}&lt;/Tab-pane>
+        &lt;Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加&lt;/Button>
+    &lt;/Tabs>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                tabs: 2
+            }
+        },
+        methods: {
+            handleTabsAdd () {
+                this.tabs ++;
+            }
+        }
+    }
+&lt;/script>
       `
     }
   },
   methods: {
       handleTabRemove (name) {
           this['tab' + name] = false;
-      }
+      },
+    handleTabsAdd () {
+         this.tabs ++;
+     }
   }
 }
 </script>
