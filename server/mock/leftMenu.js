@@ -31,6 +31,11 @@ var data=[
         "name": "栅格顺序(Flex)",
         "isAct":false
       },{
+        "id": "sort",
+        "pid": "doc_69D6349B3C4E42519FB569B7CED20E99",
+        "name": "栅格排序",
+        "isAct":false
+      },{
         "id": "offset",
         "pid": "doc_69D6349B3C4E42519FB569B7CED20E99",
         "name": "栅格顺序(左右偏移)",

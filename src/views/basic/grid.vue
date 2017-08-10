@@ -83,8 +83,7 @@
             </Row>
           </div>
           <div slot="describe-content">
-             水平排列的布局。<br/>
-             col必须放在row里面。
+            通过给 row 添加 gutter 属性，可以给下属的 col 添加间距，推荐使用 (16+8n)px 作为栅格间隔。
           </div>
         </demoTab>
     </section>
@@ -264,6 +263,7 @@ export default {
       "describeTitle": "基础用法",
       "describeTitlegutter":"区块间隔",
       "describeTitleorder":"栅格顺序(Flex)",
+      "describeTitlesort":"栅格排序",
       "describeTitleoffset":"栅格顺序(左右偏移)",
       "describeTitleflex":"Flex布局",
       "describeTitlealign":"Flex对齐",
@@ -549,12 +549,28 @@ export default {
         
     }
 &lt;/script>
+`,
+"sortgridCode":`
+&lt;template>
+    &lt;Row>
+        &lt;Col span="18" push="6">col-18 | push-6&lt;/Col>
+        &lt;Col span="6" pull="18">col-6 | pull-18&lt;/Col>
+    &lt;/Row>
+&lt;/template>
+&lt;script>
+    export default {
+        
+    }
+&lt;/script>
 `
     }
   }
 }
 </script>
 <style lang="less" scoped>
+.demo{
+  background-color: #fff;
+}
 .ivu-col{
   color: #fff;
   text-align: center;
@@ -565,7 +581,7 @@ export default {
   background-color: rgba(0,153,229,.7);
 }
 .ivu-col:nth-child(2n){
-  background-color: rgba(0,153,229,.9);
+  background-color: rgba(0,153,229,.5);
 }
 .demo-row{
   margin-bottom:5px;
