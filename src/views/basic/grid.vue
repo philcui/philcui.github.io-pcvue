@@ -308,8 +308,8 @@ export default {
             default:"-"
           },{
             attribute: 'class-name',
-            describe:'布局模式，可选值为flex或不选，在现代浏览器下有效',
-            type:"自定义的class名称",
+            describe:'自定义的class名称',
+            type:"String",
             default:"-"
           }],
       "colpropsData":[{
