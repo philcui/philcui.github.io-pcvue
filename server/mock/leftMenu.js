@@ -1339,7 +1339,51 @@ var data=[
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Steps 步骤条",
-    "url": "/navigation/steps"
+    "url": "/navigation/steps",
+    "children":[
+      {
+        "id": "steps1",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "steps2",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "带图标的步骤条",
+        "isAct":false,
+      },
+      {
+        "id": "steps3",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "迷你版",
+        "isAct":false,
+      },
+      {
+        "id": "steps4",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "切换步骤 ",
+        "isAct":false,
+      },
+      {
+        "id": "steps5",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "垂直方向 ",
+        "isAct":false,
+      },
+      {
+        "id": "steps6",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "步骤运行错误 ",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
