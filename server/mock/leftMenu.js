@@ -1182,7 +1182,32 @@ var data=[
     "id": "doc_F499C9631DCF446AB332627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Carousel 走马灯",
-    "url": "/view/carousel"
+    "url": "/view/carousel",
+    "children":[{
+      "id": "carousel1",
+      "pid": "doc_F499C9631DCF446AB332627336",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "carousel2",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "自动切换",
+        "isAct":false,
+      },
+      {
+        "id": "carousel3",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "综合设置 ",
+        "isAct":false,
+      },
+      {
+        "id": "carousel4",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A3EB49AF70D6B5E63D273",
@@ -1371,13 +1396,82 @@ var data=[
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Breadcrumb 面包屑",
-    "url": "/navigation/breadcrumb"
+    "url": "/navigation/breadcrumb",
+    "children":[{
+      "id": "breadcrumb1",
+      "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "breadcrumb2",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "带图标的",
+        "isAct":false,
+      },
+      {
+        "id": "breadcrumb3",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "分隔符",
+        "isAct":false,
+      },
+      {
+        "id": "breadcrumb4",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Steps 步骤条",
-    "url": "/navigation/steps"
+    "url": "/navigation/steps",
+    "children":[
+      {
+        "id": "steps1",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "steps2",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "带图标的步骤条",
+        "isAct":false,
+      },
+      {
+        "id": "steps3",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "迷你版",
+        "isAct":false,
+      },
+      {
+        "id": "steps4",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "切换步骤 ",
+        "isAct":false,
+      },
+      {
+        "id": "steps5",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "垂直方向 ",
+        "isAct":false,
+      },
+      {
+        "id": "steps6",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "步骤运行错误 ",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
