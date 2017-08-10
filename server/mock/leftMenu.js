@@ -1520,7 +1520,45 @@ var data=[
     "id": "doc_F729475453FD4A3E8D45C1B19173F2D3",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "Spin 加载中",
-    "url": "/other/spin"
+    "url": "/other/spin",
+    "children":[
+      {
+        "id": "spin1",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "spin2",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "各种尺寸",
+        "isAct":false,
+      },
+      {
+        "id": "spin3",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "居中固定",
+        "isAct":false,
+      },
+      {
+        "id": "spin4",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "自定义内容",
+        "isAct":false,
+      },
+      {
+        "id": "spin5",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "状态切换",
+        "isAct":false,
+      },
+      {
+        "id": "spin6",
+        "pid": "doc_F729475453FD4A3E8D45C1B19173F2D3",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   }
 ]
 
