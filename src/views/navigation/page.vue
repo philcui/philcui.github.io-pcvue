@@ -42,7 +42,7 @@
           <Page :total="100" show-total></Page>
         </div>
         <div slot="describe-content">
-          显示总共多少条数据，接受 slot 来自定义内容，默认显示共{{ total }}条。
+          显示总共多少条数据，接受 slot 来自定义内容，默认显示共<span> {{ </span><span>total</span><span> }} </span>条。
         </div>
       </demoTab>
     </section>
