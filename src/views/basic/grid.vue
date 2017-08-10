@@ -66,7 +66,7 @@
     </section>
     <section class="demo" id="gutter">
         <demoTab :code="guttergridCode" :describeTitle="describeTitlegutter">
-          <div slot="sample">
+          <div slot="sample" class="gutter">
             <Row :gutter="16">
                 <Col span="6">
                     <div>col-6</div>
@@ -605,5 +605,16 @@ blockquote.attention{
   margin-bottom: 20px;
   color: #666;
   font-size: 14px;
+}
+.gutter{
+  .ivu-col{
+     background-color: #fff;
+     &:nth-child(2n+1) div{
+       background-color: rgba(0,153,229,.7);
+     }
+     &:nth-child(2n) div{
+       background-color: rgba(0,153,229,.5);
+     }
+  }
 }
 </style>
