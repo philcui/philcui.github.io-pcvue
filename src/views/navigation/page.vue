@@ -1,18 +1,18 @@
 <template>
   <article class="doc-alert-container">
-    <h1>Page ·ÖÒ³</h1>
-    <h2>¸ÅÊö</h2>
+    <h1>Page åˆ†é¡µ</h1>
+    <h2>æ¦‚è¿°</h2>
     <p>
-      µ±Êı¾İÁ¿½Ï¶àÊ±£¬Ê¹ÓÃ·ÖÒ³¿ÉÒÔ¿ìËÙ½øĞĞÊı¾İÇĞ»»¡£
+      å½“æ•°æ®é‡è¾ƒå¤šæ—¶ï¼Œä½¿ç”¨åˆ†é¡µå¯ä»¥å¿«é€Ÿè¿›è¡Œæ•°æ®åˆ‡æ¢ã€‚
     </p>
-    <h2>Ê¾Àı´úÂë</h2>
+    <h2>ç¤ºä¾‹ä»£ç </h2>
     <section class="demo" id="page1">
       <demoTab :code="pageCode" :describeTitle="describeTitle">
         <div slot="sample">
           <Page :total="100"></Page>
         </div>
         <div slot="describe-content">
-          »ù±¾µÄ·ÖÒ³£¬Ò³Êı¹ı¶àÊ±»á×Ô¶¯ÕÛµş¡£
+          åŸºæœ¬çš„åˆ†é¡µï¼Œé¡µæ•°è¿‡å¤šæ—¶ä¼šè‡ªåŠ¨æŠ˜å ã€‚
         </div>
       </demoTab>
     </section>
@@ -22,7 +22,7 @@
           <Page :total="100" show-sizer></Page>
         </div>
         <div slot="describe-content">
-          ¿ÉÒÔÇĞ»»Ã¿Ò³ÏÔÊ¾µÄÊıÁ¿¡£
+          å¯ä»¥åˆ‡æ¢æ¯é¡µæ˜¾ç¤ºçš„æ•°é‡ã€‚
         </div>
       </demoTab>
     </section>
@@ -32,7 +32,7 @@
           <Page :total="100" show-elevator></Page>
         </div>
         <div slot="describe-content">
-          ¿ìËÙÌø×ªµ½Ä³Ò»Ò³¡£
+          å¿«é€Ÿè·³è½¬åˆ°æŸä¸€é¡µã€‚
         </div>
       </demoTab>
     </section>
@@ -42,7 +42,7 @@
           <Page :total="100" show-total></Page>
         </div>
         <div slot="describe-content">
-          ÏÔÊ¾×Ü¹²¶àÉÙÌõÊı¾İ£¬½ÓÊÜ slot À´×Ô¶¨ÒåÄÚÈİ£¬Ä¬ÈÏÏÔÊ¾¹²{{ total }}Ìõ¡£
+          æ˜¾ç¤ºæ€»å…±å¤šå°‘æ¡æ•°æ®ï¼Œæ¥å— slot æ¥è‡ªå®šä¹‰å†…å®¹ï¼Œé»˜è®¤æ˜¾ç¤ºå…±{{ total }}æ¡ã€‚
         </div>
       </demoTab>
     </section>
@@ -52,7 +52,7 @@
           <Page :current="2" :total="50" simple></Page>
         </div>
         <div slot="describe-content">
-          ÉèÖÃsimpleÊôĞÔ¼´¿ÉÊ¹ÓÃ¼ò½à°æµÄ·ÖÒ³£¬Í¨¹ıÊäÈëÒ³Âë»Ø³µÇĞ»»£¬»òÊ¹ÓÃÊó±êµã»÷ÇĞ»»Ò³Âë£¬»òÊ¹ÓÃ¼üÅÌµÄÉÏÏÂ¼üÀ´ÇĞ»»¡£¼ò½à·ÖÒ³²»ÄÜÊ¹ÓÃ×ÜÊı¡¢µçÌİºÍÇĞ»»ÊıÁ¿¡£
+          è®¾ç½®simpleå±æ€§å³å¯ä½¿ç”¨ç®€æ´ç‰ˆçš„åˆ†é¡µï¼Œé€šè¿‡è¾“å…¥é¡µç å›è½¦åˆ‡æ¢ï¼Œæˆ–ä½¿ç”¨é¼ æ ‡ç‚¹å‡»åˆ‡æ¢é¡µç ï¼Œæˆ–ä½¿ç”¨é”®ç›˜çš„ä¸Šä¸‹é”®æ¥åˆ‡æ¢ã€‚ç®€æ´åˆ†é¡µä¸èƒ½ä½¿ç”¨æ€»æ•°ã€ç”µæ¢¯å’Œåˆ‡æ¢æ•°é‡ã€‚
         </div>
       </demoTab>
     </section>
@@ -79,11 +79,11 @@
     },
     data(){
       return {
-        describeTitle: '»ù±¾',
-        describeTitle2: 'Ã¿Ò³ÊıÁ¿',
-        describeTitle3: 'µçÌİ',
-        describeTitle4: '×ÜÊı',
-        describeTitle5: '¼ò½à',
+        describeTitle: 'åŸºæœ¬',
+        describeTitle2: 'æ¯é¡µæ•°é‡',
+        describeTitle3: 'ç”µæ¢¯',
+        describeTitle4: 'æ€»æ•°',
+        describeTitle5: 'ç®€æ´',
         pageCode: `&lt;template>
         &lt;div>
              &lt;Page :total="100">&lt;/Page>
@@ -141,133 +141,133 @@
         `,
         propsColumns:[
           {
-            title: 'ÊôĞÔ',
+            title: 'å±æ€§',
             key: 'attribute',
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe',
             width:'450px'
           },
           {
-            title: 'ÀàĞÍ',
+            title: 'ç±»å‹',
             key: 'type',
           },
           {
-            title: 'Ä¬ÈÏÖµ',
+            title: 'é»˜è®¤å€¼',
             key: 'default'
           }
         ],
         propsData:[
           {
             attribute: 'current',
-            describe:'µ±Ç°Ò³Âë',
+            describe:'å½“å‰é¡µç ',
             type:"Number",
             default:"1"
           },
           {
             attribute: 'total',
-            describe:'Êı¾İ×ÜÊı',
+            describe:'æ•°æ®æ€»æ•°',
             type:"Number",
             default:"0"
           },
           {
             attribute: 'page-size',
-            describe:'Ã¿Ò³ÌõÊı',
+            describe:'æ¯é¡µæ¡æ•°',
             type:"Number",
             default:"10"
           },
           {
             attribute: 'page-size-opts',
-            describe:'Ã¿Ò³ÌõÊıÇĞ»»µÄÅäÖÃ',
+            describe:'æ¯é¡µæ¡æ•°åˆ‡æ¢çš„é…ç½®',
             type:"Array",
             default:"[10, 20, 30, 40]"
           },
           {
             attribute: 'placement',
-            describe:'ÌõÊıÇĞ»»µ¯´°µÄÕ¹¿ª·½Ïò£¬¿ÉÑ¡ÖµÎª bottom ºÍ top',
+            describe:'æ¡æ•°åˆ‡æ¢å¼¹çª—çš„å±•å¼€æ–¹å‘ï¼Œå¯é€‰å€¼ä¸º bottom å’Œ top',
             type:"String",
             default:"bottom"
           },
           {
             attribute: 'simple',
-            describe:'¼ò½à°æ',
+            describe:'ç®€æ´ç‰ˆ',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'show-total',
-            describe:'ÏÔÊ¾×ÜÊı',
+            describe:'æ˜¾ç¤ºæ€»æ•°',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'show-elevator',
-            describe:'ÏÔÊ¾µçÌİ£¬¿ÉÒÔ¿ìËÙÇĞ»»µ½Ä³Ò»Ò³',
+            describe:'æ˜¾ç¤ºç”µæ¢¯ï¼Œå¯ä»¥å¿«é€Ÿåˆ‡æ¢åˆ°æŸä¸€é¡µ',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'show-sizer',
-            describe:'ÏÔÊ¾·ÖÒ³£¬ÓÃÀ´¸Ä±äpage-size',
+            describe:'æ˜¾ç¤ºåˆ†é¡µï¼Œç”¨æ¥æ”¹å˜page-size',
             type:"Boolean",
             default:"false"
           },
           {
             attribute: 'class-name',
-            describe:'×Ô¶¨Òå class Ãû³Æ',
+            describe:'è‡ªå®šä¹‰ class åç§°',
             type:"String",
             default:"-"
           },
           {
             attribute: 'styles',
-            describe:'×Ô¶¨Òå style ÑùÊ½',
+            describe:'è‡ªå®šä¹‰ style æ ·å¼',
             type:"Object",
             default:"-"
           }
-      ],
+        ],
         eventsColumns:[
           {
-            title: 'ÊÂ¼şÃû',
+            title: 'äº‹ä»¶å',
             key: 'eventsName',
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe',
             width:'450px'
           },
           {
-            title: '·µ»ØÖµ',
+            title: 'è¿”å›å€¼',
             key: 'returnVal'
           }
         ],
         eventsData:[
           {
             eventsName:'on-change',
-            describe:'Ò³Âë¸Ä±äµÄ»Øµ÷£¬·µ»Ø¸Ä±äºóµÄÒ³Âë',
-            returnVal:'Ò³Âë'
+            describe:'é¡µç æ”¹å˜çš„å›è°ƒï¼Œè¿”å›æ”¹å˜åçš„é¡µç ',
+            returnVal:'é¡µç '
           },
           {
             eventsName:'on-page-size-change',
-            describe:'ÇĞ»»Ã¿Ò³ÌõÊıÊ±µÄ»Øµ÷£¬·µ»ØÇĞ»»ºóµÄÃ¿Ò³ÌõÊı',
+            describe:'åˆ‡æ¢æ¯é¡µæ¡æ•°æ—¶çš„å›è°ƒï¼Œè¿”å›åˆ‡æ¢åçš„æ¯é¡µæ¡æ•°',
             returnVal:'page-size'
           }
         ],
         slotColumns:[
           {
-            title: 'Ãû³Æ',
+            title: 'åç§°',
             key: 'slotName',
             width: '200px'
           },
           {
-            title: 'ËµÃ÷',
+            title: 'è¯´æ˜',
             key: 'describe'
           }
         ],
         slotData:[
           {
-            slotName:'ÎŞ',
-            describe:'×Ô¶¨ÒåÏÔÊ¾×ÜÊıµÄÄÚÈİ'
+            slotName:'æ— ',
+            describe:'è‡ªå®šä¹‰æ˜¾ç¤ºæ€»æ•°çš„å†…å®¹'
           }
         ]
       }
