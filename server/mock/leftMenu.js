@@ -1571,7 +1571,27 @@ var data=[
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "LoadingBar 加载进度条",
-    "url": "/navigation/loadingBar"
+    "url": "/navigation/loadingBar",
+    "children":[
+      {
+        "id": "loadingBar1",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "基本用法",
+        "isAct":false,
+      },
+      {
+        "id": "api",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "api",
+        "isAct":false,
+      },
+      {
+        "id": "api02",
+        "pid": "doc_77368258DBB441A6A9E1966C4D214D84",
+        "name": "全局配置API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "3CC4B2C730C94DA8AAC48333A38F7489",
