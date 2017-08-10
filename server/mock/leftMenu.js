@@ -1396,7 +1396,32 @@ var data=[
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Breadcrumb 面包屑",
-    "url": "/navigation/breadcrumb"
+    "url": "/navigation/breadcrumb",
+    "children":[{
+      "id": "breadcrumb1",
+      "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "breadcrumb2",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "带图标的",
+        "isAct":false,
+      },
+      {
+        "id": "breadcrumb3",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "分隔符",
+        "isAct":false,
+      },
+      {
+        "id": "breadcrumb4",
+        "pid": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
