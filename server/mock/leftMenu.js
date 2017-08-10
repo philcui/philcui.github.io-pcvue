@@ -1327,7 +1327,45 @@ var data=[
     "id": "doc_D21EC53AE80E44439EBFEB1B878C656C",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Page 分页",
-    "url": "/navigation/page"
+    "url": "/navigation/page",
+    "children":[
+      {
+        "id": "page1",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "基本",
+        "isAct":false,
+      },
+      {
+        "id": "page2",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "每页数量",
+        "isAct":false,
+      },
+      {
+        "id": "page3",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "电梯",
+        "isAct":false,
+      },
+      {
+        "id": "page4",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "总数",
+        "isAct":false,
+      },
+      {
+        "id": "page5",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "简洁",
+        "isAct":false,
+      },
+      {
+        "id": "PageAPI",
+        "pid": "doc_D21EC53AE80E44439EBFEB1B878C656C",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_EFC61F81A3CD4BD596EE60A446DCB073",
