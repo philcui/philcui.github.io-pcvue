@@ -1182,7 +1182,32 @@ var data=[
     "id": "doc_F499C9631DCF446AB332627336",
     "pid": "74F7727FF79B4DFBAF4EE308FCCE35DA",
     "name": "Carousel 走马灯",
-    "url": "/view/carousel"
+    "url": "/view/carousel",
+    "children":[{
+      "id": "carousel1",
+      "pid": "doc_F499C9631DCF446AB332627336",
+      "name": "基础用法",
+      "isAct":false,
+    },
+      {
+        "id": "carousel2",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "自动切换",
+        "isAct":false,
+      },
+      {
+        "id": "carousel3",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "综合设置 ",
+        "isAct":false,
+      },
+      {
+        "id": "carousel4",
+        "pid": "doc_F499C9631DCF446AB332627336",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "api_ACA475D5A3EB49AF70D6B5E63D273",
