@@ -7,13 +7,7 @@
     </p>
     <h2>字体代码</h2>
     <section class="demo" id="font1">
-      <demoTab :code="fontCode" :describeTitle="describeTitle">
-        <div slot="sample">
-        </div>
-        <div slot="describe-content">
-          font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-        </div>
-      </demoTab>
+      <code>font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;</code>
     </section>
     <h2>字体使用规范</h2>
     <section class="demo">
