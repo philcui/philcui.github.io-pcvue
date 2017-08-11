@@ -1402,7 +1402,59 @@ var data=[
     "id": "doc_4CADAD6AD3634AE99591025BF457F2ED",
     "pid": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "name": "Tabs 标签页",
-    "url": "/navigation/tabs"
+    "url": "/navigation/tabs",
+    "children":[
+      {
+        "id": "basic",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "基本用法",
+        "isAct":false,
+      }, {
+        "id": "disabled",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "禁用",
+        "isAct":false,
+      }, {
+        "id": "icon",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "图标",
+        "isAct":false,
+      }, {
+        "id": "small",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "迷你型",
+        "isAct":false,
+      }, {
+        "id": "render",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "自定义标签页",
+        "isAct":false,
+      },{
+        "id": "extra",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "附加内容",
+        "isAct":false,
+      }, {
+        "id": "card",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "卡片样式",
+        "isAct":false,
+      }, {
+        "id": "closable",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "可关闭",
+        "isAct":false,
+      }, {
+        "id": "noanimate",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "禁用动画",
+        "isAct":false,
+      }, {
+        "id": "api",
+        "pid": "doc_4CADAD6AD3634AE99591025BF457F2ED",
+        "name": "API",
+        "isAct":false,
+      }]
   },
   {
     "id": "doc_77368258DBB441A6A9E1966C4D214D84",
@@ -1602,7 +1654,39 @@ var data=[
     "id": "doc_7D5EF512649C465081E8BF3805522024",
     "pid": "3CC4B2C730C94DA8AAC48333A38F7489",
     "name": "Affix 图钉",
-    "url": "/other/affix"
+    "url": "/other/affix",
+    "children":[
+      {
+        "id": "affix1",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "基础用法",
+        "isAct":false,
+      },
+      {
+        "id": "affix2",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "偏移",
+        "isAct":false,
+      },
+      {
+        "id": "affix3",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "固定在底部",
+        "isAct":false,
+      },
+      {
+        "id": "affix4",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "固定状态改变时的回调",
+        "isAct":false,
+      },
+      {
+        "id": "affix5",
+        "pid": "doc_7D5EF512649C465081E8BF3805522024",
+        "name": "API",
+        "isAct":false,
+      }
+    ]
   },
   {
     "id": "doc_C2D765A2C10A4CC6A2FFBEB01FFDFA52",

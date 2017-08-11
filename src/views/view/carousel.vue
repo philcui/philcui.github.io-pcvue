@@ -8,7 +8,7 @@
     <h2>代码示例</h2>
 
     <section class="demo" id="carousel1">
-      <demoTab :code="carouselCode" :describeTitle="subTitle">
+      <demoTab :code="carouselCode" :describeTitle="subTitle" :animated="false">
         <div slot="sample" class="example">
           <Carousel v-model="value1">
             <Carousel-item>
@@ -32,7 +32,7 @@
     </section>
 
     <section class="demo" id="carousel2">
-      <demoTab :code="carouselCode2" :describeTitle="subTitle2">
+      <demoTab :code="carouselCode2" :describeTitle="subTitle2" :animated="false">
         <div slot="sample"  class="example">
           <Carousel autoplay v-model="value2">
             <Carousel-item>
@@ -56,7 +56,7 @@
     </section>
 
     <section class="demo" id="carousel3">
-      <demoTab :code="carouselCode3" :describeTitle="subTitle3">
+      <demoTab :code="carouselCode3" :describeTitle="subTitle3" :animated="false">
         <div slot="sample"  class="example2">
           <Form :model="setting" :label-width="100">
             <Form-item label="自动切换">
