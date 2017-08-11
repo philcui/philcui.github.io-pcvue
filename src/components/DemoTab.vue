@@ -22,7 +22,7 @@
         <a slot="extra"
         v-clipboard:copy="copyCode"
         v-clipboard:success="onCopy"
-        v-clipboard:error="onError"><Icon type="ios-copy-outline"></Icon><span>复制</span></a>
+        v-clipboard:error="onError"><Icon type="icon-fuzhi-copy" :size="20"></Icon><span>复制</span></a>
     </Tabs>
   </div>
 </template>
@@ -135,7 +135,7 @@ export default {
     line-height: 38px;
     right:30px;
     span{
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
   pre code {
