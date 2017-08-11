@@ -134,6 +134,9 @@ export default {
     display: inline-block;
     line-height: 38px;
     right:30px;
+    i{
+      vertical-align: middle;
+    }
     span{
       margin-left: 5px;
     }
