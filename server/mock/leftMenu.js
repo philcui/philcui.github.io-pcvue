@@ -71,7 +71,38 @@ var data=[
     "id": "doc_AE8F7F2CE877447F980B546C47D23957",
     "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
     "name": "Layout 布局",
-    "url": "/basic/layout"
+    "url": "/basic/layout",
+    "children":[
+      {
+        "id": "Layout1",
+        "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
+        "name": "顶部导航",
+        "isAct":false
+      },
+      {
+        "id": "Layout2",
+        "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
+        "name": "顶部导航+侧边栏",
+        "isAct":false
+      },
+      {
+        "id": "Layout3",
+        "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
+        "name": "侧边导航",
+        "isAct":false
+      },
+      {
+        "id": "Layout4",
+        "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
+        "name": "吊顶",
+        "isAct":false
+      },
+      {
+        "id": "Layout5",
+        "pid": "7C43A10FE0BF47148DC9E513E021FCD5",
+        "name": "可收起展开的侧边导航",
+        "isAct":false
+      }]
   },
   {
     "id": "doc_AEA62097439B9E5AE8ED600",
