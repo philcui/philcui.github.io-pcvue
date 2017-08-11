@@ -15,7 +15,7 @@ script:
 after_script:
   - cd ./dist
   - git init
-  - echo "utrydesign" > CNAME
+  - echo "utrydesign.top" > CNAME
   - git config user.name "${U_NAME}"
   - git config user.email "${U_EMAIL}"
   - git add .
