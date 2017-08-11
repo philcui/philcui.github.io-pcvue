@@ -81,7 +81,7 @@ export default new Router({
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},
             {path: '/basic/layout', component: layout},
-            {path: '/basic/icon', component: color},
+            {path: '/basic/icon', component: icon},
             {path: '/basic/button', component: button},
             {path: '/basic/colorMatch',component : colorMatch},
             {path: '/form/cascader', component: cascader},
