@@ -110,7 +110,7 @@
 
     <h2>API</h2>
     <h3>Transfer props</h3>
-    <section class="demo">
+    <section class="demo" id="api">
       <Table border :columns="propsColumns" :data="apiData"></Table>
     </section>
 
