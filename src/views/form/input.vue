@@ -196,7 +196,8 @@
               title: '默认值',
               key: 'default',
             }],
-          propsData02:[{
+          propsData02:[
+              {
             attribute: 'on-enter',
             describe:'按下回车键时触发',
             returnKey:'无'
@@ -229,7 +230,8 @@
             describe:'原生的 keypress 事件',
             returnKey:'event'
           }],
-          propsData:[{
+          propsData:[
+              {
             attribute: 'type',
             describe:'输入框类型，可选值为 text、password 或 textarea',
             type:"String",
@@ -296,6 +298,7 @@
             default:"-"
           }],
           value9: '',
+          value:'',
           value10: '',
           subTitle06:'复合型输入框',
           subTitle05:'禁用状态',
@@ -307,6 +310,12 @@
           subTitle03:'文本域',
           value01: '',
           value02: '',
+          value11:'',
+          value12:"",
+          value13:'',
+          select1: 'http',
+          select2: 'com',
+          select3: 'day',
             subTitle02:'带Icon的输入框',
           subTitle1:'基础用法',
           "inputCode": `
