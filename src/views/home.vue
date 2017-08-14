@@ -104,10 +104,20 @@
   .home-title {
     color: #2196f3;
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
     &:hover {
        color: #56AFF6 !important;
      }
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 35px;
+      height: 28px;
+      background-image: url("../assets/logo.png");
+      vertical-align: middle;
+      margin-bottom: 5px;
+    }
   }
 
   .home-menu {
