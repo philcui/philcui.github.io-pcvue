@@ -77,6 +77,7 @@ export default new Router({
         },
         {path: '/develop',component: develop,
           children:[
+            {path: '', redirect: '/basic/grid'},
             {path: '/basic/grid', component: grid},
             {path: '/basic/font', component: font},
             {path: '/basic/color', component: color},
