@@ -34,7 +34,9 @@
       props: {
           resources: {
               type:Array,
-              default: []
+              default () {
+                  return []
+              }
             //   default: function () {
             //       return [{img:'',title:'Axure Components',subTitle:'Axure组件库',url:''},
             //       {img:'',title:'Axure Components',subTitle:'Axure组件库',url:''},
