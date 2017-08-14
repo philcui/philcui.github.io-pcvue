@@ -3,7 +3,10 @@
       <h1>
           资源下载
       </h1>
-      <div class="resource-items">
+      <div v-if="resources.length==0">
+          暂时还没有资源
+      </div>
+      <div class="resource-items" v-else>
           <div class="resource-item">
           </div>
           <div class="resource-item">
@@ -22,11 +25,11 @@
 
           }
       },
-      created () {
-          console.log(123)
-      },
-      mounted () {
-         
+      props: {
+          resources: {
+              type:Array,
+              default: []
+          }
       }
   }
 </script>
