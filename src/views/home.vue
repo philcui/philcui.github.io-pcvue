@@ -27,7 +27,7 @@
         menus: [
           {title: '首页', url: '/', selected: false},
           {title: '设计', url: '/design', selected: false},
-          {title: '开发', url: '/develop', selected: false},
+          {title: '开发', url: '/basic/grid', selected: false},
           {title: '资源', url: '/resource', selected: false}
         ]
       }
@@ -69,8 +69,13 @@
     methods: {
       gotoThat(menu) {
         this.menus.forEach(m => m.selected = false)
-        menu.selected = true
-        this.$router.push(menu.url);
+        menu.selected = true;
+//        debugger
+//        if(menu.url=="/develop"){
+//          this.$router.push('/basic/grid')
+//        }else {
+          this.$router.push(menu.url);
+//        }
       }
     },
   }
