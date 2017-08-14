@@ -141,7 +141,7 @@
             break;
           case 4:
             this.res = true;
-            this.$router.push("/");
+            this.$router.push("/resource");
             break;
           default:
             this.$router.push("/");

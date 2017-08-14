@@ -4,6 +4,7 @@ const index = resolve => require(['../views/index.vue'],resolve)
 const home = resolve => require(['../views/home.vue'],resolve)
 const design = resolve => require(['../views/design.vue'],resolve)
 const develop = resolve => require(['../views/develop.vue'],resolve)
+const resource = resolve => require(['../views/resource.vue'],resolve)
 const grid = resolve => require(['../views/basic/grid.vue'],resolve)
 const font = resolve => require(['../views/basic/font.vue'],resolve)
 const color = resolve => require(['../views/basic/color.vue'],resolve)
@@ -133,6 +134,8 @@ export default new Router({
             {path: '/leftTopMenu/updateLog',component:updateLog},
           ]
         },
+        {path: '/resource', component: resource
+        }
       ]},
   ]
 })
