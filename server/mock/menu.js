@@ -21,6 +21,6 @@ var data = [
     title: '资源',
     id: '3',
     cls:false,
-    url:'/'
+    url:'/resource'
   }]
 exports.data=data;
