@@ -1453,7 +1453,7 @@ var data=[
   {
     "id": "86E9DF2F94694A44AF7A2F4EBCE97443",
     "pid": "V1.0.0",
-    "name": "Navigation"
+    "name": "导航"
   },
   {
     "id": "doc_41469D0A9F734406B2276152B5083994",
@@ -1733,7 +1733,7 @@ var data=[
   {
     "id": "3CC4B2C730C94DA8AAC48333A38F7489",
     "pid": "V1.0.0",
-    "name": "Other"
+    "name": "其它"
   },
   {
     "id": "doc_7D5EF512649C465081E8BF3805522024",
