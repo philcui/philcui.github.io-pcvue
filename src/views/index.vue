@@ -13,6 +13,7 @@
         </ul>
       </div>
     </div>
+
     <div class="ind-content">
       <div class="ind-top">
         <div class="ind-top-banner">
@@ -81,12 +82,17 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="ind-bottom">
-        <span>提升客户体验，解放生产力，从查阅设计语言手册开始</span>
-        <div class="bot-but"><Button @click="goHome" type="primary" style="width: 140px">马上查阅</Button></div>
+        
       </div>
     </div>
+
+    <div class="ind-bottom">
+      <div class="ind-bottom-content">
+          <span>提升客户体验，解放生产力，从查阅设计语言手册开始</span>
+          <div class="bot-but"><Button @click="goHome" type="primary" style="width: 140px">马上查阅</Button></div>
+      </div>
+    </div>
+    
   </div>
 </template>
 <script>
@@ -158,39 +164,58 @@
   }
 </script>
 <style lang="less" scoped>
+  @width: 1200px;
   .ind-wrap {
-    background-image: url("../assets/bg.png") ;
-    background-position: center;
+    background-color: #fff;
+    background-image: url("../assets/index-bg.png");
+    background-position: top center;
     background-repeat:no-repeat;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-  .itm-background {
-    background-image: url("../assets/menu2.png") !important;
-  }
-  .ind-top-menu {
-    z-index: 9999;
-    color: white;
-    background: rgba(255,255,255,0.05);
-    position: fixed;
-    width: 100%;
-    height: 80px;
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    height: 100%;
-    width: 1200px;
-    margin: 0 auto;
-  .aHref {
-    color: white !important;
-    font-size: 24px;
-  &:hover {
-    color: #dddddd !important;
+    .itm-background {
+      background-image: url("../assets/menu2.png") !important;
+    }
+    .ind-bottom{
+        width: 100%;
+        background-color: #f1f8ff;
+        border-top: 2px solid #e6e6e6;
+        .ind-bottom-content {
+            height: 100px;
+            width: @width;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              font-size: 24px;
+              color: #728093;
+            }
+        }
+    }
+    .ind-top-menu {
+      z-index: 9999;
+      color: white;
+      background: rgba(255,255,255,0.05);
+      position: fixed;
+      width: 100%;
+      height: 80px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 100%;
+        width: 1200px;
+        margin: 0 auto;
+      .aHref {
+        color: white !important;
+        font-size: 24px;
+      &:hover {
+        color: #dddddd !important;
+       }
+      }
    }
-  }
-  }
   .top-menu {
     font-size: 14px;
   li {
@@ -327,17 +352,7 @@
   }
   }
   }
-  .ind-bottom {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  span {
-    font-size: 24px;
-    color: #728093;
-  }
-  }
+ 
   }
   }
 
