@@ -200,6 +200,11 @@
           type:"Boolean",
           default:"false"
         },{
+          attribute: 'highlightRowMore',
+          describe:'是否支持高亮多行选中的行，此属性必须在:highlight-row="true"的基础上进行',
+          type:"Boolean",
+          default:"false"
+        },{
           attribute: 'row-class-name',
           describe:'行的 className 的回调方法，传入参数：row：当前行数据index：当前行的索引',
           type:"Function",
