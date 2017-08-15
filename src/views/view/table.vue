@@ -93,7 +93,7 @@
     </demoTab>
   </section>
 <TableTree></TableTree>
-    <h2 id="table7">API</h2>
+    <h2 id="tableAPI">API</h2>
     <h3>Table props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -295,6 +295,11 @@
             type: "String",
             default: "normal"
           },{
+            attribute: 'icon',
+            describe:'当某列的type为treetable时，若数据源中有对应的节点图标地址(如icon:"http://....xx.npg")，则能够在此树的节点前边显示此图标',
+            type:"String",
+            default:"-"
+          }, {
           attribute: 'width',
           describe:'列宽',
           type:"Number",
