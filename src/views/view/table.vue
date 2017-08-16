@@ -93,7 +93,7 @@
     </demoTab>
   </section>
 <TableTree></TableTree>
-    <h2 id="table7">API</h2>
+    <h2 id="tableAPI">API</h2>
     <h3>Table props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
@@ -200,6 +200,11 @@
           type:"Boolean",
           default:"false"
         },{
+          attribute: 'highlightRowMore',
+          describe:'是否支持高亮多行选中的行，此属性必须在:highlight-row="true"的基础上进行',
+          type:"Boolean",
+          default:"false"
+        },{
           attribute: 'row-class-name',
           describe:'行的 className 的回调方法，传入参数：row：当前行数据index：当前行的索引',
           type:"Function",
@@ -295,6 +300,11 @@
             type: "String",
             default: "normal"
           },{
+            attribute: 'icon',
+            describe:'当某列的type为treetable时，若数据源中有对应的节点图标地址(如icon:"http://....xx.npg")，则能够在此树的节点前边显示此图标',
+            type:"String",
+            default:"-"
+          }, {
           attribute: 'width',
           describe:'列宽',
           type:"Number",

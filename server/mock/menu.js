@@ -15,12 +15,12 @@ var data = [
     title: '开发',
     id: '2',
     cls:false,
-    url:'/develop'
+    url:'/basic/grid'
   },
   {
     title: '资源',
     id: '3',
     cls:false,
-    url:'/'
+    url:'/resource'
   }]
 exports.data=data;

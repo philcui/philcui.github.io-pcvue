@@ -20,12 +20,12 @@
       &lt;i class="icon ivu-icon ivu-icon-checkmark">&lt;/i>
       </code></pre>
     </p>
-    <h2>API</h2>
+    <h2 id="icon1">API</h2>
     <h3>Icon props</h3>
     <section class="demo">
       <Table border :columns="propsColumns" :data="propsData"></Table>
     </section>
-    <h2>示例</h2>
+    <h2 id="icon2">示例</h2>
     <p class="search">
       <Input v-model="keyword" placeholder="请输入英文关键词搜索" @on-change="search"></Input>
     </p>

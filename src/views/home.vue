@@ -27,7 +27,7 @@
         menus: [
           {title: '首页', url: '/', selected: false},
           {title: '设计', url: '/design', selected: false},
-          {title: '开发', url: '/develop', selected: false},
+          {title: '开发', url: '/basic/grid', selected: false},
           {title: '资源', url: '/resource', selected: false}
         ]
       }
@@ -69,8 +69,13 @@
     methods: {
       gotoThat(menu) {
         this.menus.forEach(m => m.selected = false)
-        menu.selected = true
-        this.$router.push(menu.url);
+        menu.selected = true;
+//        debugger
+//        if(menu.url=="/develop"){
+//          this.$router.push('/basic/grid')
+//        }else {
+          this.$router.push(menu.url);
+//        }
       }
     },
   }
@@ -104,10 +109,20 @@
   .home-title {
     color: #2196f3;
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
     &:hover {
        color: #56AFF6 !important;
      }
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 35px;
+      height: 28px;
+      background-image: url("../assets/logo.png");
+      vertical-align: middle;
+      margin-bottom: 5px;
+    }
   }
 
   .home-menu {
