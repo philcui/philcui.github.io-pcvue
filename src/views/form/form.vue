@@ -14,7 +14,6 @@
             <Form-item label="输入框" prop="input">
               <Input v-model="formItem.input" placeholder="请输入"></Input>
             </Form-item>
-            <br/>
             <Form-item label="选择器" prop="city">
               <Select v-model="formItem.city" style="width: 200px" placeholder="请选择所在地">
                 <Option value="beijing">北京市</Option>
@@ -22,7 +21,6 @@
                 <Option value="shenzhen">深圳市</Option>
               </Select>
             </Form-item>
-            <br/>
             <Form-item label="日期控件">
               <Row>
                 <Col span="6">
@@ -34,14 +32,12 @@
                 </Col>
               </Row>
             </Form-item>
-            <br/>
             <Form-item label="单选框" >
               <Radio-group v-model="formItem.radio">
                 <Radio label="male">男</Radio>
                 <Radio label="female">女</Radio>
               </Radio-group>
             </Form-item>
-            <br/>
             <Form-item label="多选框" prop="checkbox">
               <Checkbox-group v-model="formItem.checkbox">
                 <Checkbox label="吃饭"></Checkbox>
@@ -50,22 +46,18 @@
                 <Checkbox label="看电影"></Checkbox>
               </Checkbox-group>
             </Form-item>
-            <br/>
             <Form-item label="开关" prop="switch">
               <i-Switch v-model="formItem.switch" size="large">
                 <span slot="open">开启</span>
                 <span slot="close">关闭</span>
               </i-Switch>
             </Form-item>
-            <br/>
             <Form-item label="滑块" prop="slider">
               <Slider v-model="formItem.slider" range></Slider>
             </Form-item>
-            <br/>
             <Form-item label="文本域" prop="desc" >
               <Input v-model="formItem.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
             </Form-item>
-            <br/>
             <Form-item>
               <Button type="primary">提交</Button>
               <Button type="ghost" style="margin-left: 8px">取消</Button>
@@ -85,39 +77,31 @@
           <Form-item label="标题">
             <Input v-model="formLeft.input1"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称">
             <Input v-model="formLeft.input2"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formLeft.input3"></Input>
           </Form-item>
-          <br/>
         </i-Form>
         <i-Form :model="formRight" label-position="right" :label-width="100">
           <Form-item label="标题">
             <Input v-model="formRight.input1"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称">
             <Input v-model="formRight.input2"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formRight.input3"></Input>
           </Form-item>
-          <br/>
         </i-Form>
         <i-Form :model="formTop" label-position="top">
           <Form-item label="标题">
             <Input v-model="formTop.input1"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称">
             <Input v-model="formTop.input2"></Input>
           </Form-item>
-          <br/>
           <Form-item label="标题名称对齐">
             <Input v-model="formTop.input3"></Input>
           </Form-item>
@@ -136,11 +120,9 @@
             <Form-item label="姓名" prop="name">
               <Input v-model="formValidate.name" placeholder="请输入姓名"></Input>
             </Form-item>
-            <br/>
             <Form-item label="邮箱" prop="mail">
               <Input v-model="formValidate.mail" placeholder="请输入邮箱"></Input>
             </Form-item>
-            <br/>
             <Form-item label="城市" prop="city">
               <Select v-model="formValidate.city" style="width: 200px" placeholder="请选择所在地">
                 <Option value="beijing">北京市</Option>
@@ -148,7 +130,6 @@
                 <Option value="shenzhen">深圳市</Option>
               </Select>
             </Form-item>
-            <br/>
             <Form-item label="选择日期">
               <Row>
                 <Col span="6">
@@ -164,14 +145,12 @@
                 </Col>
               </Row>
             </Form-item>
-            <br/>
             <Form-item label="性别" prop="gender">
               <Radio-group v-model="formValidate.gender">
                 <Radio label="male">男</Radio>
                 <Radio label="female">女</Radio>
               </Radio-group>
             </Form-item>
-            <br/>
             <Form-item label="爱好" prop="interest">
               <Checkbox-group v-model="formValidate.interest">
                 <Checkbox label="吃饭"></Checkbox>
@@ -180,11 +159,9 @@
                 <Checkbox label="看电影"></Checkbox>
               </Checkbox-group>
             </Form-item>
-            <br/>
             <Form-item label="介绍" prop="desc">
               <Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
             </Form-item>
-            <br/>
             <Form-item>
               <Button type="primary" @click="handleSubmit('formValidate')">提交</Button>
               <Button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置</Button>
@@ -205,15 +182,12 @@
             <Form-item label="密码" prop="passwd">
               <Input type="password" v-model="formCustom.passwd"></Input>
             </Form-item>
-            <br/>
             <Form-item label="确认密码" prop="passwdCheck">
               <Input type="password" v-model="formCustom.passwdCheck"></Input>
             </Form-item>
-            <br/>
             <Form-item label="年龄" prop="age">
               <Input type="text" v-model="formCustom.age" number></Input>
             </Form-item>
-            <br/>
             <Form-item>
               <Button type="primary" @click="handleSubmit('formCustom')">提交</Button>
               <Button type="ghost" @click="handleReset('formCustom')" style="margin-left: 8px">重置</Button>
@@ -245,7 +219,6 @@
                 </Col>
               </Row>
             </Form-item>
-            <br/>
             <Form-item>
               <Row>
                 <Col span="6">
@@ -253,7 +226,6 @@
                 </Col>
               </Row>
             </Form-item>
-            <br/>
             <Form-item>
               <Button type="primary" @click="handleSubmit('formDynamic')">提交</Button>
               <Button type="ghost" @click="handleReset('formDynamic')" style="margin-left: 8px">重置</Button>
@@ -273,10 +245,10 @@
           <Form ref="formLogin" :model="formLogin" :label-width="80">
             <Form-item label="" prop="name">
               <Input placeholder="请输入用户名" class="ivu-icon-left" icon="ios-person-outline" v-model="formLogin.name"></Input>
-            </Form-item><br/>
+            </Form-item>
             <Form-item label="" prop="pass">
               <Input placeholder="请输入密码" class="ivu-icon-left" type="password" icon="ios-locked-outline" v-model="formLogin.pass"></Input>
-            </Form-item><br/>
+            </Form-item>
             <Form-item>
               <div class="ivu-login-pwd" style="width:196px">
                 <label> <Checkbox v-model="single">记住密码</Checkbox></label>
@@ -528,10 +500,10 @@
 &lt;Form ref="formLogin" :model="formLogin" :label-width="80">
             &lt;Form-item label="" prop="name">
               &lt;Input class="ivu-icon-left" icon="ios-person-outline" v-model="formLogin.name">&lt;/Input>
-            &lt;/Form-item>&lt;br/>
+            &lt;/Form-item>
             &lt;Form-item label="" prop="pass">
               &lt;Input class="ivu-icon-left" type="password" icon="ios-locked-outline" v-model="formLogin.pass">&lt;/Input>
-           &lt;/Form-item>&lt;br/>
+           &lt;/Form-item>
             &lt;Form-item>
               &lt;div class="ivu-login-pwd" style="width:196px">
                 &lt;label> &lt;Checkbox v-model="single">记住密码&lt;/Checkbox>&lt;/label>
@@ -566,7 +538,7 @@
                 &lt;/Col>
               &lt;/Row>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item>
               &lt;Row>
                 &lt;Col span="6">
@@ -574,7 +546,7 @@
                 &lt;/Col>
               &lt;/Row>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item>
               &lt;Button type="primary" @click="handleSubmit('formDynamic')">提交&lt;/Button>
               &lt;Button type="ghost" @click="handleReset('formDynamic')" style="margin-left: 8px">重置&lt;/Button>
@@ -664,15 +636,15 @@
             &lt;Form-item label="密码" prop="passwd">
               &lt;Input type="password" v-model="formCustom.passwd">&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="确认密码" prop="passwdCheck">
               &lt;Input type="password" v-model="formCustom.passwdCheck">&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="年龄" prop="age">
               &lt;Input type="text" v-model="formCustom.age" number>&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item>
               &lt;Button type="primary" @click="handleSubmit('formCustom')">提交&lt;/Button>
               &lt;Button type="ghost" @click="handleReset('formCustom')" style="margin-left: 8px">重置&lt;/Button>
@@ -685,11 +657,11 @@
             &lt;Form-item label="姓名" prop="name">
               &lt;Input v-model="formValidate.name" placeholder="请输入姓名">&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="邮箱" prop="mail">
               &lt;Input v-model="formValidate.mail" placeholder="请输入邮箱">&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="城市" prop="city">
              &lt;Select v-model="formValidate.city" placeholder="请选择所在地">
                 &lt;Option value="beijing">北京市&lt;/Option>
@@ -697,7 +669,6 @@
                 &lt;Option value="shenzhen">深圳市&lt;/Option>
               &lt;/Select>
             &lt;/Form-item>
-            &lt;br/>
             &lt;Form-item label="选择日期">
               &lt;Row>
                 &lt;Col span="6">
@@ -713,14 +684,14 @@
                 &lt;/Col>
               &lt;/Row>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="性别" prop="gender">
               &lt;Radio-group v-model="formValidate.gender">
                 &lt;Radio label="male">男&lt;/Radio>
                 &lt;Radio label="female">女&lt;/Radio>
               &lt;/Radio-group>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="爱好" prop="interest">
               &lt;Checkbox-group v-model="formValidate.interest">
                 &lt;Checkbox label="吃饭">&lt;/Checkbox>
@@ -729,11 +700,11 @@
                 &lt;Checkbox label="看电影">&lt;/Checkbox>
               &lt;/Checkbox-group>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item label="介绍" prop="desc">
               &lt;Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入...">&lt;/Input>
             &lt;/Form-item>
-            &lt;br/>
+
             &lt;Form-item>
               &lt;Button type="primary" @click="handleSubmit('formValidate')">提交&lt;/Button>
               &lt;Button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置&lt;/Button>
@@ -861,7 +832,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6px;
+    /*margin-bottom: 6px;*/
     color: #4d4d4d;
   }
   .ivu-login-a {
