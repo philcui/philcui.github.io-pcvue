@@ -55,7 +55,8 @@ export default {
         "icon-File-system-service","icon-Person-manage","icon-Tenant-manage","icon-Online-file","icon-Standard-code",
         "icon-Report","icon-Report-class","icon-Form","icon-Service","icon-Draft","icon-User","icon-Process-class",
         "icon-Enable","icon-Release","icon-Organizational","icon-Form-class","icon-checkbox-in","icon-shibai","icon-Leftarrows",
-        "icon-Right-arrows","icon-chenggong","icon-lastPage","icon-chuyidong"
+        "icon-Right-arrows","icon-chenggong","icon-lastPage","icon-chuyidong","icon-liucheng","icon-biaodan","icon-yunying","icon-report1",
+        "icon-tiaodu","icon-renyuan","icon-document","icon-xitong"
       ],
       showIcons:[],
        "propsColumns":[
