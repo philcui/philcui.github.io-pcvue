@@ -37,10 +37,22 @@
            <Tree :data="baseData" show-checkbox multiple></Tree>
         </div>
         <div slot="describe-content">
-           展示可多选。
+           展示可多选。多选情况下，默认父节点被选中子节点自动全选。
         </div>
       </demoTab>
     </section>
+
+    <section class="demo" id="childrenChecked">
+      <demoTab :code="childrenCheckedTree" :describeTitle="subTitlechildrenChecked">
+        <div slot="sample">
+           <Tree :data="childrenCheckedData" show-checkbox multiple :widthCheckAll="false"></Tree>
+        </div>
+        <div slot="describe-content">
+           多选状态下设置父节点选中时子节点是否被选中，默认为true，即父节点被选中时子节点默认被选中，为false时父节点选中子节点也不会被选中。
+        </div>
+      </demoTab>
+    </section>
+
 
     <section class="demo" id="icon">
       <demoTab :code="iconTree" :describeTitle="subTitleicon">
@@ -48,7 +60,7 @@
            <Tree :data="iconData" show-checkbox multiple></Tree>
         </div>
         <div slot="describe-content">
-           可展示图标
+           可展示图标,图标如果使用utvue中的图标，则icon的值与ICON组件的type的值相同，如果是自定义图标，则icon的值为图标的url。
         </div>
       </demoTab>
     </section>
@@ -128,6 +140,7 @@ export default {
       "subTitlesearchable": "可搜索",
       "subTitledraggable":"可拖拽",
       "subTitlemap":"字段映射",
+      "subTitlechildrenChecked":"父子节点同步状态设置",
       "fields": [
           {field: "name", map: "title"},  
           {field: "child", map: "children"}
@@ -141,14 +154,34 @@ export default {
               disabled: true,
               children: [{
                   title: 'leaf',
-                  disableCheckbox: true
               }, {
                   title: 'leaf',
+                  checked: true
               }]
           }, {
               title: 'parent 1-1',
               expand: true,
-              checked: true,
+              children: [{
+                  title: 'leaf',
+              }]
+          }]
+      }],
+      "childrenCheckedData": [{
+          expand: true,
+          title: 'parent 1',
+          children: [{
+              title: 'parent 1-0',
+              expand: true,
+              disabled: true,
+              children: [{
+                  title: 'leaf',
+              }, {
+                  title: 'leaf',
+                  checked: true
+              }]
+          }, {
+              title: 'parent 1-1',
+              expand: true,
               children: [{
                   title: 'leaf',
               }]
@@ -240,6 +273,12 @@ export default {
           'describe':'是否支持多选',
           'type':"Boolean",
           'default':"false"
+        },
+        {
+          'attribute': 'widthCheckAll',
+          'describe':'选中父节点子节点是否被选中',
+          'type':"Boolean",
+          'default':"true"
         },
         {
           'attribute': 'show-checkbox',
@@ -380,7 +419,7 @@ export default {
         {
           'attribute': 'icon',
           'describe':'图标类型',
-          'type':"string",
+          'type':"string || url",
           'default':"-"
         }
       ],
@@ -457,6 +496,41 @@ export default {
      "multipleTree": `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple>&lt;/Tree>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                baseData: [{
+                    expand: true,
+                    title: 'parent 1',
+                    children: [{
+                        title: 'parent 1-0',
+                        expand: true,
+                        disabled: true,
+                        children: [{
+                            title: 'leaf',
+                            disableCheckbox: true
+                        }, {
+                            title: 'leaf',
+                        }]
+                    }, {
+                        title: 'parent 1-1',
+                        expand: true,
+                        checked: true,
+                        children: [{
+                            title: 'leaf',
+                        }]
+                    }]
+                }]
+            }
+        }
+    }
+&lt;/script>
+`,
+"childrenCheckedTree": `
+&lt;template>
+    &lt;Tree :data="baseData" show-checkbox multiple :widthCheckAll="false">&lt;/Tree>
 &lt;/template>
 &lt;script>
     export default {
