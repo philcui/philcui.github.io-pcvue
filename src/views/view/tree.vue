@@ -37,10 +37,22 @@
            <Tree :data="baseData" show-checkbox multiple></Tree>
         </div>
         <div slot="describe-content">
-           展示可多选。
+           展示可多选。多选情况下，默认父节点被选中子节点自动全选。
         </div>
       </demoTab>
     </section>
+
+    <section class="demo" id="childrenChecked">
+      <demoTab :code="childrenCheckedTree" :describeTitle="subTitlechildrenChecked">
+        <div slot="sample">
+           <Tree :data="childrenCheckedData" show-checkbox multiple :widthCheckAll="false"></Tree>
+        </div>
+        <div slot="describe-content">
+           多选状态下设置父节点选中时子节点是否被选中，默认为true，即父节点被选中时子节点默认被选中，为false时父节点选中子节点也不会被选中。
+        </div>
+      </demoTab>
+    </section>
+
 
     <section class="demo" id="icon">
       <demoTab :code="iconTree" :describeTitle="subTitleicon">
@@ -48,7 +60,7 @@
            <Tree :data="iconData" show-checkbox multiple></Tree>
         </div>
         <div slot="describe-content">
-           可展示图标
+           可展示图标,图标如果使用utvue中的图标，则icon的值与ICON组件的type的值相同，如果是自定义图标，则icon的值为图标的url。
         </div>
       </demoTab>
     </section>
@@ -73,6 +85,18 @@
            可拖拽。拖动源节点到目标元素上面，则源节点作为目标节点的子节点。
            拖动源节点到目标节点上方，则源节点插入到目标节点之前，
            拖动源节点到目标节点下面，则源节点插入到目标节点之后。
+        </div>
+      </demoTab>
+    </section>
+
+    <section class="demo" id="map">
+      <demoTab :code="mapTree" :describeTitle="subTitlemap">
+        <div slot="sample">
+           <Tree :data="mapData" :fields="fields"></Tree>
+        </div>
+        <div slot="describe-content">
+           通过配置field设置字段映射。fields是一个对象数组，每个对象代表一个映射，每个对象有两个属性，field和map，field值为被映射的字段，
+           map的值是目标字段名称。如[{field: "name", map: "title"}],则将数据中的name字段映射为tree中的title字段。
         </div>
       </demoTab>
     </section>
@@ -115,6 +139,12 @@ export default {
       "subTitlecloseable": "可关闭",
       "subTitlesearchable": "可搜索",
       "subTitledraggable":"可拖拽",
+      "subTitlemap":"字段映射",
+      "subTitlechildrenChecked":"父子节点同步状态设置",
+      "fields": [
+          {field: "name", map: "title"},  
+          {field: "child", map: "children"}
+      ],
       "baseData": [{
           expand: true,
           title: 'parent 1',
@@ -124,14 +154,34 @@ export default {
               disabled: true,
               children: [{
                   title: 'leaf',
-                  disableCheckbox: true
               }, {
                   title: 'leaf',
+                  checked: true
               }]
           }, {
               title: 'parent 1-1',
               expand: true,
-              checked: true,
+              children: [{
+                  title: 'leaf',
+              }]
+          }]
+      }],
+      "childrenCheckedData": [{
+          expand: true,
+          title: 'parent 1',
+          children: [{
+              title: 'parent 1-0',
+              expand: true,
+              disabled: true,
+              children: [{
+                  title: 'leaf',
+              }, {
+                  title: 'leaf',
+                  checked: true
+              }]
+          }, {
+              title: 'parent 1-1',
+              expand: true,
               children: [{
                   title: 'leaf',
               }]
@@ -161,6 +211,34 @@ export default {
               icon: "android-document",
               children: [{
                   title: 'leaf',
+                  icon: "android-document"
+              }]
+          }]
+      }],
+      mapData: [{
+          expand: true,
+          name: 'parent 1',
+          icon: "android-document",
+          child: [{
+              name: 'parent 1-0',
+              expand: true,
+              disabled: true,
+              icon: "android-document",
+              child: [{
+                  name: 'leaf',
+                  disableCheckbox: true,
+                  icon: "android-document"
+              }, {
+                  name: 'leaf',
+                  icon: "android-document"
+              }]
+          }, {
+              name: 'parent 1-1',
+              expand: true,
+              checked: true,
+              icon: "android-document",
+              child: [{
+                  name: 'leaf',
                   icon: "android-document"
               }]
           }]
@@ -197,6 +275,12 @@ export default {
           'default':"false"
         },
         {
+          'attribute': 'widthCheckAll',
+          'describe':'选中父节点子节点是否被选中',
+          'type':"Boolean",
+          'default':"true"
+        },
+        {
           'attribute': 'show-checkbox',
           'describe':'是否显示多选框',
           'type':"Boolean",
@@ -219,6 +303,12 @@ export default {
           'describe':'是否可拖拽',
           'type':"Boolean",
           'default':"false"
+        },
+        {
+          'attribute': 'field',
+          'describe':'配置字段映射',
+          'type':"Object",
+          'default':"-"
         }
       ],
        "eventcolumns":[
@@ -329,7 +419,7 @@ export default {
         {
           'attribute': 'icon',
           'describe':'图标类型',
-          'type':"string",
+          'type':"string || url",
           'default':"-"
         }
       ],
@@ -406,6 +496,41 @@ export default {
      "multipleTree": `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple>&lt;/Tree>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                baseData: [{
+                    expand: true,
+                    title: 'parent 1',
+                    children: [{
+                        title: 'parent 1-0',
+                        expand: true,
+                        disabled: true,
+                        children: [{
+                            title: 'leaf',
+                            disableCheckbox: true
+                        }, {
+                            title: 'leaf',
+                        }]
+                    }, {
+                        title: 'parent 1-1',
+                        expand: true,
+                        checked: true,
+                        children: [{
+                            title: 'leaf',
+                        }]
+                    }]
+                }]
+            }
+        }
+    }
+&lt;/script>
+`,
+"childrenCheckedTree": `
+&lt;template>
+    &lt;Tree :data="baseData" show-checkbox multiple :widthCheckAll="false">&lt;/Tree>
 &lt;/template>
 &lt;script>
     export default {
@@ -560,7 +685,46 @@ export default {
         }
     }
 &lt;/script>
-      `
+      `,
+       "mapTree": `
+&lt;template>
+    &lt;Tree :data="baseData" :fields="fields">&lt;/Tree>
+&lt;/template>
+&lt;script>
+    export default {
+        data () {
+            return {
+                baseData: [{
+                    expand: true,
+                    name: 'parent 1',
+                    child: [{
+                        name: 'parent 1-0',
+                        expand: true,
+                        disabled: true,
+                        child: [{
+                            name: 'leaf',
+                            disableCheckbox: true
+                        }, {
+                            name: 'leaf',
+                        }]
+                    }, {
+                        name: 'parent 1-1',
+                        expand: true,
+                        checked: true,
+                        child: [{
+                            name: 'leaf',
+                        }]
+                    }]
+                }],
+                fields: [
+                    {field: 'name', map: 'title'},  
+                    {field: 'child', map: 'children'}
+                ],
+            }
+        }
+    }
+&lt;/script>
+`
     }
   }
 }
