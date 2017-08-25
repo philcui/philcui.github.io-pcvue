@@ -237,6 +237,12 @@ export default {
           'describe':'是否使用 CSS3 动画',
           'type':"Boolean",
           'default':"true"
+        },
+        {
+          'attribute': 'contextMenu',
+          'describe':'是否使用右键菜单',
+          'type':"Boolean",
+          'default':"false"
         }
       ],
        "eventcolumns":[
@@ -263,7 +269,19 @@ export default {
           'event': 'on-tab-remove',
           'describe':'tab 被关闭时触发',
           'return':"name"
-        }
+        },{
+        'event': 'refresh',
+        'describe':'右键菜单刷新时触发',
+        'return':"name"
+      },{
+        'event': 'closeOthers',
+        'describe':'右键菜单关闭其它时触发',
+        'return':"name"
+      },{
+        'event': 'closeAll',
+        'describe':'右键菜单关闭全部时触发',
+        'return':"-"
+      }
       ],
        "slotcolumns":[
         {
@@ -323,7 +341,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
 `,
@@ -337,7 +355,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -351,7 +369,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -365,7 +383,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -379,7 +397,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
@@ -418,7 +436,7 @@ export default {
 &lt;/template>
 &lt;script>
     export default {
-        
+
     }
 &lt;/script>
       `,
