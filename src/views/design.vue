@@ -6,7 +6,7 @@
         <!--<div class="search"></div>-->
         <div class="hcl-search-list" v-show="seaShow">
           <ul>
-            <li v-for="item in searchList" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
+            <li v-for="(item, index) in searchList" :key="index" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
           </ul>
         </div>
       </div>

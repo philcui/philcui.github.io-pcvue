@@ -5,6 +5,17 @@ var data=[
     "name": "V1.0.0"
   },
   {
+    "id": "all",
+    "pid": "V1.0.0",
+    "name": "总览"
+  },
+  {
+    "id": "update",
+    "pid": "all",
+    "name": "更新日志",
+    'url': '/update'
+  },
+  {
     "id": "7C43A10FE0BF47148DC9E513E021FCD5",
     "pid": "V1.0.0",
     "name": "通用类"
