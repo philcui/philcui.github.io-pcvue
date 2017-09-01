@@ -1510,6 +1510,11 @@ var data=[
       "name": "字段映射",
       "isAct":false,
     },{
+      "id": "editTree",
+      "pid": "doc_F499C9631DCF446AB2633327336",
+      "name": "可编辑",
+      "isAct":false,
+    },{
       "id": "api",
       "pid": "doc_F499C9631DCF446AB2633327336",
       "name": "API",
