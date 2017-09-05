@@ -7,7 +7,7 @@
       <div class="catalogList" v-show="catalogModel">
         <span class="title pl10 pt10" @click="showCata">目录</span>
         <ul>
-          <li class="pl10 pb10" :title="i.name" v-for="i in rightMenu">
+          <li class="pl10 pb10" :title="i.name" v-for="(i, index) in rightMenu" :key="index">
             <a :class="{actColor:i.isAct}" href="javascript:void(0)" @click="goAnchor(i)"> {{i.name}} </a>
           </li>
         </ul>
@@ -22,7 +22,7 @@
                placeholder="在此处搜索组件..."/>
         <div class="hcl-search-list" v-show="seaShow">
           <ul>
-            <li v-for="item in searchList" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
+            <li v-for="(item, index) in searchList" :key="index" @click="clickItem(item.id,item.name,item.url)">{{item.name}}</li>
           </ul>
         </div>
       </div>
@@ -119,7 +119,6 @@
         this.leftMenu = root[0].children;
       },
       getRouter(url){
-
         this.$router.push(url);
         this.showCatalogList(url, false);
       },
@@ -234,7 +233,7 @@
     }
   }
 </script>
-<style lang="less" scpoed>
+<style lang="less" scoped>
   .develop-wrap {
     width: 1200px;
     margin: 80px auto 0;

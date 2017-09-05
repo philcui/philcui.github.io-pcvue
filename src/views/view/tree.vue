@@ -92,11 +92,25 @@
     <section class="demo" id="map">
       <demoTab :code="mapTree" :describeTitle="subTitlemap">
         <div slot="sample">
-           <Tree :data="mapData" :fields="fields"></Tree>
+           <Tree :data="mapData"  :fields="fields"></Tree>
         </div>
         <div slot="describe-content">
            通过配置field设置字段映射。fields是一个对象数组，每个对象代表一个映射，每个对象有两个属性，field和map，field值为被映射的字段，
            map的值是目标字段名称。如[{field: "name", map: "title"}],则将数据中的name字段映射为tree中的title字段。
+        </div>
+      </demoTab>
+    </section>
+
+    <section class="demo" id="editTree">
+      <demoTab :code="editTree" :describeTitle="editDis">
+        <div slot="sample">
+          <div style="width: 80px">
+            <Tree :data="baseData" :contentEditable="true" :onItemTitleChange="onItemTitleChange" :fields="fields"></Tree>
+          </div>
+        </div>
+        <div slot="describe-content">
+          通过配置contentEditable 设置表格是否可编辑。<br>
+          onItemTitleChange通过方法可获取修改之前的对象和修改之后的。
         </div>
       </demoTab>
     </section>
@@ -132,20 +146,21 @@ export default {
 	},
   data () {
     return {
-      "subTitle": "基础用法",
-      "subTitlecheckbox": "显示checkbox",
-      "subTitlemultiple": "多选",
-      "subTitleicon": "图标",
-      "subTitlecloseable": "可关闭",
-      "subTitlesearchable": "可搜索",
-      "subTitledraggable":"可拖拽",
-      "subTitlemap":"字段映射",
-      "subTitlechildrenChecked":"父子节点同步状态设置",
-      "fields": [
-          {field: "name", map: "title"},  
+      subTitle: "基础用法",
+      subTitlecheckbox: "显示checkbox",
+      subTitlemultiple: "多选",
+      subTitleicon: "图标",
+      subTitlecloseable: "可关闭",
+      subTitlesearchable: "可搜索",
+      subTitledraggable:"可拖拽",
+      subTitlemap:"字段映射",
+      subTitlechildrenChecked:"父子节点同步状态设置",
+      editDis:'可编辑',
+      fields: [
+          {field: "name", map: "title"},
           {field: "child", map: "children"}
       ],
-      "baseData": [{
+      baseData: [{
           expand: true,
           title: 'parent 1',
           children: [{
@@ -166,7 +181,7 @@ export default {
               }]
           }]
       }],
-      "childrenCheckedData": [{
+      childrenCheckedData: [{
           expand: true,
           title: 'parent 1',
           children: [{
@@ -243,7 +258,7 @@ export default {
               }]
           }]
       }],
-      "propscolumns":[
+      propscolumns:[
         {
             'title': '属性',
             'key': 'attribute',
@@ -261,7 +276,7 @@ export default {
             'key': 'default'
         }
       ],
-      "propsdata":[
+      propsdata:[
         {
           'attribute': 'data',
           'describe':'可嵌套的节点属性的数组，生成 tree 的数据',
@@ -309,9 +324,15 @@ export default {
           'describe':'配置字段映射',
           'type':"Object",
           'default':"-"
+        },
+        {
+          'attribute': 'contentEditable',
+          'describe':'是否可编辑',
+          'type':"Boolean",
+          'default':"false"
         }
       ],
-       "eventcolumns":[
+      eventcolumns:[
         {
             'title': '事件名',
             'key': 'event',
@@ -325,7 +346,7 @@ export default {
             'key': 'return',
         }
       ],
-      "eventdata":[
+      eventdata:[
         {
           'event': 'on-select-change',
           'describe':'点击树节点时触发',
@@ -345,9 +366,13 @@ export default {
           'event': 'on-changed',
           'describe':'拖动树中的节点导致树的结构发生变化时触发',
           'return':"当前节点的数组"
+        },{
+          'event': 'onItemTitleChange',
+          'describe':'设计可编辑属性后生效,编辑完成之后触发',
+          'return':"编辑之前的对象和编辑之后的对象"
         }
       ],
-       "methodscolumns":[
+      methodscolumns:[
         {
             'title': '方法名称',
             'key': 'name',
@@ -361,7 +386,7 @@ export default {
             'key':'return'
         }
       ],
-      "methodsdata":[
+      methodsdata:[
         {
           "name": "getCheckedNodes",
           "describe":"获取被勾选的节点",
@@ -423,7 +448,7 @@ export default {
           'default':"-"
         }
       ],
-      "basicTree": `
+      basicTree: `
 &lt;template>
     &lt;Tree :data="baseData">&lt;/Tree>
 &lt;/template>
@@ -458,7 +483,7 @@ export default {
     }
 &lt;/script>
 `,
-     "checkboxTree": `
+     checkboxTree: `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox>&lt;/Tree>
 &lt;/template>
@@ -493,7 +518,7 @@ export default {
     }
 &lt;/script>
 `,
-     "multipleTree": `
+     multipleTree: `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple>&lt;/Tree>
 &lt;/template>
@@ -528,7 +553,7 @@ export default {
     }
 &lt;/script>
 `,
-"childrenCheckedTree": `
+childrenCheckedTree: `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple :withCheckAll="false">&lt;/Tree>
 &lt;/template>
@@ -563,7 +588,7 @@ export default {
     }
 &lt;/script>
 `,
-     "iconTree": `
+     iconTree: `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple>&lt;/Tree>
 &lt;/template>
@@ -604,7 +629,7 @@ export default {
     }
 &lt;/script>
 `,
-"searchableTree": `
+searchableTree: `
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple searchable>&lt;/Tree>
 &lt;/template>
@@ -645,7 +670,7 @@ export default {
     }
 &lt;/script>
 `,
-      "draggableTree":`
+      draggableTree:`
 &lt;template>
     &lt;Tree :data="baseData" show-checkbox multiple draggable>&lt;/Tree>
 &lt;/template>
@@ -686,7 +711,7 @@ export default {
     }
 &lt;/script>
       `,
-       "mapTree": `
+       mapTree: `
 &lt;template>
     &lt;Tree :data="baseData" :fields="fields">&lt;/Tree>
 &lt;/template>
@@ -717,14 +742,63 @@ export default {
                     }]
                 }],
                 fields: [
-                    {field: 'name', map: 'title'},  
+                    {field: 'name', map: 'title'},
                     {field: 'child', map: 'children'}
                 ],
             }
         }
     }
 &lt;/script>
-`
+`,
+       editTree: `
+       &lt;template>
+       &lt;Tree :data="baseData" :contentEditable="true" :onItemTitleChange="onItemTitleChange" :fields="fields">&lt;/Tree>
+      &lt;/template>
+      &lt;script>
+    export default {
+      data () {
+        return {
+          baseData: [{
+            expand: true,
+            name: 'parent 1',
+            child: [{
+              name: 'parent 1-0',
+              expand: true,
+              disabled: true,
+              child: [{
+                name: 'leaf',
+                disableCheckbox: true
+              }, {
+                name: 'leaf',
+              }]
+            }, {
+              name: 'parent 1-1',
+              expand: true,
+              checked: true,
+              child: [{
+                name: 'leaf',
+              }]
+            }]
+          }],
+          fields: [
+            {field: 'name', map: 'title'},
+            {field: 'child', map: 'children'}
+          ],
+        }
+      },
+      methods:{
+            onItemTitleChange(oldData,newData){
+               console.log("old:"+oldData.title +" , new:"+newData.title);
+            }
+      }
+    }
+    &lt;/script>
+    `
+    }
+  },
+  methods:{
+    onItemTitleChange(oldData,newData){
+      console.log("old:"+oldData.title +" , new:"+newData.title);
     }
   }
 }
