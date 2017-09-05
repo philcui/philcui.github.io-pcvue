@@ -45,7 +45,7 @@
     <section class="demo" id="childrenChecked">
       <demoTab :code="childrenCheckedTree" :describeTitle="subTitlechildrenChecked">
         <div slot="sample">
-           <Tree :data="childrenCheckedData" show-checkbox multiple :widthCheckAll="false"></Tree>
+           <Tree :data="childrenCheckedData" show-checkbox multiple :withCheckAll="false"></Tree>
         </div>
         <div slot="describe-content">
            多选状态下设置父节点选中时子节点是否被选中，默认为true，即父节点被选中时子节点默认被选中，为false时父节点选中子节点也不会被选中。
@@ -275,7 +275,7 @@ export default {
           'default':"false"
         },
         {
-          'attribute': 'widthCheckAll',
+          'attribute': 'withCheckAll',
           'describe':'选中父节点子节点是否被选中',
           'type':"Boolean",
           'default':"true"
@@ -530,7 +530,7 @@ export default {
 `,
 "childrenCheckedTree": `
 &lt;template>
-    &lt;Tree :data="baseData" show-checkbox multiple :widthCheckAll="false">&lt;/Tree>
+    &lt;Tree :data="baseData" show-checkbox multiple :withCheckAll="false">&lt;/Tree>
 &lt;/template>
 &lt;script>
     export default {
