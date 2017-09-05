@@ -26,7 +26,7 @@
 export default {
   data(){
     return {
-      logs:[
+      updateLogs:[
         {
           version:'V1.0.2',
           time: '2017.8.23',
@@ -53,6 +53,11 @@ export default {
           ]
         }
       ]
+    }
+  },
+  computed: {
+    logs(){
+      return this.updateLogs.reverse();
     }
   },
   methods:{
