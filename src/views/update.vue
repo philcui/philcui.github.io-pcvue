@@ -64,6 +64,13 @@ export default {
             {text:"将tree的widthCheckAll属性改为withCheckAll"},
             {text:"修改tabletree图标样式和图标引入方式"}
           ]
+        },
+        {
+          version:'V1.0.8',
+          time: '2017.9.5',
+          content: [
+            {text:"新增部分字体图标"}
+          ]
         }
       ]
     }
