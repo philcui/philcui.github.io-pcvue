@@ -67,9 +67,17 @@ export default {
         },
         {
           version:'V1.0.8',
-          time: '2017.9.5',
+          time: '2017.9.6',
           content: [
             {text:"新增部分字体图标"}
+          ]
+        },
+        {
+          version:'V1.0.9',
+          time: '2017.9.7',
+          content: [
+            {text:"解决table的高度问题"},
+            {text:"treeSelect加入transfer配置，浮层移动到body内（适用于高度大于父级时，下拉树显示不全）"}
           ]
         }
       ]

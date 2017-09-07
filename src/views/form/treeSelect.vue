@@ -242,6 +242,11 @@
               describe:'data的字段映射，如[{field: "name", map: "title"}],则将数据中的name字段映射为treeselect中的title字段。具体用法参见tree的fields',
               type:"Array",
               default:"-"
+            },{
+              attribute: 'transfer',
+              describe:'是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果',
+              type:"Boolean",
+              default:"false"
             }],
             eventsColumns:[
               {
