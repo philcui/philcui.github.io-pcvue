@@ -430,6 +430,37 @@ var data=[
       }]
   },
   {
+    "id": "api_ACA475D5A3Ew92F9AF70D6B5E63s34",
+    "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
+    "name": "TreeSelect 下拉树选择器",
+    "url": "/form/treeSelect",
+    "children":[
+      {
+        "id": "treeSelect1",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63s34",
+        "name": "基础用法",
+        "isAct":false
+      },
+      {
+        "id": "treeSelect2",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63s34",
+        "name": "设置宽高",
+        "isAct":false
+      },
+      {
+        "id": "treeSelect3",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63s34",
+        "name": "默认选中",
+        "isAct":false
+      },
+      {
+        "id": "treeSelect4",
+        "pid": "api_ACA475D5A3Ew92F9AF70D6B5E63s34",
+        "name": "API",
+        "isAct":false
+      }]
+  },
+  {
     "id": "api_qq475D5A3EB492F9AF70D6B5E63D273",
     "pid": "CCDB211FCB4C4D7981C0B02E28BA3D14",
     "name": "Slider 滑块",

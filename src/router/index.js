@@ -62,6 +62,7 @@ const footRack = resolve => require(['../views/topMenu/footRack.vue'], resolve)
 const guide = resolve => require(['../views/topMenu/guide.vue'], resolve)
 const assembly = resolve => require(['../views/topMenu/assembly.vue'], resolve)
 const update = resolve => require(['../views/update.vue'], resolve)
+const treeSelect = resolve => require(['../views/form/treeSelect.vue'], resolve)
 
 Vue.use(Router)
 
@@ -100,6 +101,7 @@ export default new Router({
             {path: '/form/radio', component: radio},
             {path: '/form/rate', component: rate},
             {path: '/form/select', component: select},
+            {path: '/form/treeSelect', component: treeSelect},
             {path: '/form/slider', component: slider},
             {path: '/form/switchMark', component: switchMark},
             {path: '/form/timePicker', component: timePicker},

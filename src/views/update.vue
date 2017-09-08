@@ -12,7 +12,7 @@
     </ul>
     <card v-for="(log, index) in logs" :key="index" class="logCard">
        <p slot="title">
-         <span>{{log.version}}</span>  
+         <span>{{log.version}}</span>
          <span>{{log.time}}</span>
       </p>
       <ul class="content">
@@ -26,7 +26,7 @@
 export default {
   data(){
     return {
-      logs:[
+      updateLogs:[
         {
           version:'V1.0.2',
           time: '2017.8.23',
@@ -51,8 +51,41 @@ export default {
           content: [
             {text:"treeSelect数据treeData增加watch以保证外部数据更新后同步更新"}
           ]
+        },
+        {
+          version:'V1.0.7',
+          time: '2017.9.5',
+          content: [
+            {text:"treeselect下拉选项高度可设置"},
+            {text:"treeselect回显功能：数据回显，方法回显"},
+            {text:"修复form的resetFields对treeselect无效的问题（绑定model)"},
+            {text:"tree监听data，data变化时发送on-tree-init事件，返回默认选中的节点"},
+            {text:"tree  cascade=true时，selected与checked一致"},
+            {text:"将tree的widthCheckAll属性改为withCheckAll"},
+            {text:"修改tabletree图标样式和图标引入方式"}
+          ]
+        },
+        {
+          version:'V1.0.8',
+          time: '2017.9.6',
+          content: [
+            {text:"新增部分字体图标"}
+          ]
+        },
+        {
+          version:'V1.0.9',
+          time: '2017.9.7',
+          content: [
+            {text:"解决table的高度问题"},
+            {text:"treeSelect加入transfer配置，浮层移动到body内（适用于高度大于父级时，下拉树显示不全）"}
+          ]
         }
       ]
+    }
+  },
+  computed: {
+    logs(){
+      return this.updateLogs.reverse();
     }
   },
   methods:{
