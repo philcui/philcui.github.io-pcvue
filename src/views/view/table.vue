@@ -301,8 +301,8 @@
             default: "normal"
           },{
             attribute: 'icon',
-            describe:'当某列的type为treetable时，若数据源中有对应的节点图标地址(如icon:"http://....xx.npg")，则能够在此树的节点前边显示此图标',
-            type:"String",
+            describe:'图标类型或url',
+            type:"String || url",
             default:"-"
           }, {
           attribute: 'width',

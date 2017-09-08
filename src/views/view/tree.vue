@@ -296,6 +296,12 @@ export default {
           'default':"true"
         },
         {
+          'attribute': 'withParentChecked',
+          'describe':'子节点全选时父节点是否被选中',
+          'type':"Boolean",
+          'default':"false"
+        },
+        {
           'attribute': 'show-checkbox',
           'describe':'是否显示多选框',
           'type':"Boolean",
@@ -443,7 +449,7 @@ export default {
         },
         {
           'attribute': 'icon',
-          'describe':'图标类型',
+          'describe':'图标类型或url',
           'type':"string || url",
           'default':"-"
         }
