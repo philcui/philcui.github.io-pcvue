@@ -86,7 +86,7 @@ export default {
           content: [
             {text:"table表头底部边框由2px改成1px"},
             {text:"table表头上的checkbox和表体checkbox不同步问题"},
-            {text:"treeSelect和select的下拉选项出现位置调整（transfer=false时）"}
+            {text:"treeSelect的下拉选项出现位置调整（transfer=false时）"}
           ]
         },
         {
