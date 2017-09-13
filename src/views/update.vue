@@ -88,6 +88,14 @@ export default {
             {text:"table表头上的checkbox和表体checkbox不同步问题"},
             {text:"treeSelect和select的下拉选项出现位置调整（transfer=false时）"}
           ]
+        },
+        {
+          version:'V1.0.11',//版本还未发布，先记录改动记录，请发布此版本的人继续在此版本改动内容下添加
+          time: '2017.9.13',
+          content: [
+            {text:"message水平位置居中显示"},
+            {text:"tree展开图标样式改动（无子节点时，图标由display:none改成 visibility: hidden;）"}
+          ]
         }
       ]
     }
