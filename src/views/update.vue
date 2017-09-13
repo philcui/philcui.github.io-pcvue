@@ -79,6 +79,15 @@ export default {
             {text:"解决table的高度问题"},
             {text:"treeSelect加入transfer配置，浮层移动到body内（适用于高度大于父级时，下拉树显示不全）"}
           ]
+        },
+        {
+          version:'V1.0.10',
+          time: '2017.9.12',
+          content: [
+            {text:"table表头底部边框由2px改成1px"},
+            {text:"table表头上的checkbox和表体checkbox不同步问题"},
+            {text:"treeSelect和select的下拉选项出现位置调整（transfer=false时）"}
+          ]
         }
       ]
     }
