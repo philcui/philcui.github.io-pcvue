@@ -111,7 +111,8 @@ export default {
           version:'V1.0.13',
           time: '2017.9.19',
           content: [
-            {text:"transfer下，treeselect点击节点的展开图标，下拉项收起"}
+            {text:"transfer下，treeselect点击节点的展开图标，下拉项收起"},
+            {text:"tabs嵌套tabs，右键菜单显示修改"}
           ]
         }
       ]
