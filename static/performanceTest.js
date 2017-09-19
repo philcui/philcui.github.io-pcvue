@@ -28,6 +28,7 @@ function getInfo () {
     sitePerformance.children = {}
     // js请求个数
     let resources = performance.getEntriesByType('resource')
+    console.table(resources)
     sitePerformance.children.script = {
       count: 0,
       duration: 0,

@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="hc-right">
-      <router-view></router-view>
+        <router-view></router-view>
     </div>
   </div>
 </template>

@@ -99,6 +99,13 @@ export default {
             {text:"message水平位置居中显示"},
             {text:"tree展开图标样式改动（无子节点时，图标由display:none改成 visibility: hidden;）"}
           ]
+        },
+        {
+          version:'V1.0.12',//版本还未发布，先记录改动记录，请发布此版本的人继续在此版本改动内容下添加
+          time: '2017.9.18',
+          content: [
+            {text:"input加入字体图标"}
+          ]
         }
       ]
     }
