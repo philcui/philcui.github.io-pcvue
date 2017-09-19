@@ -86,14 +86,14 @@ export default {
           content: [
             {text:"table表头底部边框由2px改成1px"},
             {text:"table表头上的checkbox和表体checkbox不同步问题"},
-            {text:"treeSelect和select的下拉选项出现位置调整（transfer=false时）"},
+            {text:"treeSelect的下拉选项出现位置调整（transfer=false时）"},
             {text:"tree组件增加配置子元素全选时父元素是否被选中的功能"},
             {text:"table组件修复checkbox全选功能和全不选功能"},
             {text:"table组件删除记录后checkbox状态变化修正"}
           ]
         },
         {
-          version:'V1.0.11',//版本还未发布，先记录改动记录，请发布此版本的人继续在此版本改动内容下添加
+          version:'V1.0.11',
           time: '2017.9.13',
           content: [
             {text:"message水平位置居中显示"},
