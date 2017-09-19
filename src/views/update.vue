@@ -101,10 +101,17 @@ export default {
           ]
         },
         {
-          version:'V1.0.12',//版本还未发布，先记录改动记录，请发布此版本的人继续在此版本改动内容下添加
+          version:'V1.0.12',
           time: '2017.9.18',
           content: [
             {text:"input加入字体图标"}
+          ]
+        },
+        {
+          version:'V1.0.13',
+          time: '2017.9.19',
+          content: [
+            {text:"transfer下，treeselect点击节点的展开图标，下拉项收起"}
           ]
         }
       ]
