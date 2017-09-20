@@ -114,6 +114,13 @@ export default {
             {text:"transfer下，treeselect点击节点的展开图标，下拉项收起"},
             {text:"tabs嵌套tabs，右键菜单显示修改"}
           ]
+        },
+        {
+          version:'V1.0.14',//版本还未发布
+          time: '2017.9.20',
+          content: [
+            {text:"图标库更新"}
+          ]
         }
       ]
     }
