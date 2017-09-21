@@ -116,17 +116,18 @@ export default {
           ]
         },
         {
-          version:'V1.0.14',//版本还未发布
+          version:'V1.0.14',
           time: '2017.9.20',
           content: [
             {text:"图标库更新"}
           ]
         },
         {
-          version:'V1.0.14',//版本还未发布
+          version:'V1.0.15',
           time: '2017.9.21',
           content: [
-            {text:"select添加图标"}
+            {text:"select添加图标"},
+            {text:"modal样式修改"}
           ]
         }
       ]
