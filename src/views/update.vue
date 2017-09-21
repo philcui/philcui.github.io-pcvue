@@ -121,6 +121,13 @@ export default {
           content: [
             {text:"图标库更新"}
           ]
+        },
+        {
+          version:'V1.0.14',//版本还未发布
+          time: '2017.9.21',
+          content: [
+            {text:"select添加图标"}
+          ]
         }
       ]
     }

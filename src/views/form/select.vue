@@ -390,6 +390,11 @@
           describe:'是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果',
           type:"Boolean",
           default:"false"
+        },{
+          attribute: 'icon',
+          describe:'添加图标（仅单选时生效）',
+          type:"String",
+          default:""
         }],
         eventsColumns:[
           {
