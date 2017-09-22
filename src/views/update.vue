@@ -129,6 +129,13 @@ export default {
             {text:"select添加图标"},
             {text:"modal样式修改"}
           ]
+        },
+        {
+          version:'V1.0.16', //待发布
+          time: '2017.9.22',
+          content: [
+            {text:"tree配置父节点和叶子节点checkbox是否显示"}
+          ]
         }
       ]
     }
