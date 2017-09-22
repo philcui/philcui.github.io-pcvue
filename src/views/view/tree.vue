@@ -303,9 +303,9 @@ export default {
         },
         {
           'attribute': 'show-checkbox',
-          'describe':'是否显示多选框',
-          'type':"Boolean",
-          'default':"false"
+          'describe':'是否显示多选框,为Boolean时不区分父节点和叶子节点，为Object时分别配置父节点和子节点，其中root代表父节点，leaf代表叶子节点',
+          'type':"Boolean || Object",
+          'default':"false || {leaf: false,root:false}"
         },
         {
           'attribute': 'cascade',
@@ -326,7 +326,7 @@ export default {
           'default':"false"
         },
         {
-          'attribute': 'field',
+          'attribute': 'fields',
           'describe':'配置字段映射',
           'type':"Object",
           'default':"-"
