@@ -168,7 +168,7 @@
   @width: 1200px;
   .ind-wrap {
     background-color: #fff;
-    background-image: url("../assets/index-bg.png");
+    background-image: url("../assets/index-bg.jpg");
     background-position: top center;
     background-repeat:no-repeat;
     overflow-x: hidden;
