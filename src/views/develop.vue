@@ -46,6 +46,10 @@
   import menuData from '../../server/mock/leftMenu.js'
   const wh = window.innerHeight;
   const top = wh - 180;
+  //首页未加载组件库
+  import Vue from 'vue'
+  import utvue from 'utvue'
+  Vue.use(utvue)
   export  default {
     data(){
       return {

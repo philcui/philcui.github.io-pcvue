@@ -25,6 +25,10 @@
   </div>
 </template>
 <script>
+  //首页未加载组件库
+  import Vue from 'vue'
+  import utvue from 'utvue'
+  Vue.use(utvue)  
   export default {
       data () {
           return {
