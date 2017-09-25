@@ -149,10 +149,12 @@ export default {
           ]
         },
         {
-          version:'V1.0.18', //待发布
+          version:'V1.0.19', //待发布
           time: '2017.9.25',
           content: [
-            {text:"treeselect实现在form里的验证"}
+            {text:"treeselect实现在form里的验证"},
+			{text:"修复tree的withCheckAll"},
+			{text:"修复tree的拖拽"}
           ]
         }
       ]
