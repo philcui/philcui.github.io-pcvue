@@ -131,10 +131,28 @@ export default {
           ]
         },
         {
-          version:'V1.0.16', //待发布
-          time: '2017.9.22',
+          version:'V1.0.16', 
+          time: '2017.9.23',
           content: [
-            {text:"tree配置父节点和叶子节点checkbox是否显示"}
+            {text:"tree配置父节点和叶子节点checkbox是否显示"},
+			{text:"新增图标库icon-3，icon-edit"},
+			{text:"tabs 样式修改"}
+          ]
+        },
+        {
+          version:'V1.0.17',
+          time: '2017.9.24',
+          content: [
+            {text:"table背景颜色修改为白色"},
+			{text:"去掉icon动画"},
+			{text:"form样式修改"}
+          ]
+        },
+        {
+          version:'V1.0.18', //待发布
+          time: '2017.9.25',
+          content: [
+            {text:"treeselect实现在form里的验证"}
           ]
         }
       ]

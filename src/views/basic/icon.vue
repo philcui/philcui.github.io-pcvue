@@ -56,7 +56,7 @@ export default {
         "icon-Report","icon-Report-class","icon-Form","icon-Service","icon-Draft","icon-User","icon-Process-class",
         "icon-Enable","icon-Release","icon-Organizational","icon-Form-class","icon-checkbox-in","icon-shibai","icon-Leftarrows",
         "icon-Right-arrows","icon-chenggong","icon-lastPage","icon-chuyidong","icon-liucheng","icon-biaodan","icon-yunying","icon-report1",
-        "icon-tiaodu","icon-renyuan","icon-document","icon-xitong","icon-shuaxin","icon-home","icon-fuzhi","icon-huaban","icon-guanbiqita","icon-peizhi"
+        "icon-tiaodu","icon-renyuan","icon-document","icon-xitong","icon-shuaxin","icon-home1","icon-fuzhi","icon-huaban","icon-guanbiqita","icon-peizhi","icon-3","icon-edit"
       ],
       showIcons:[],
        "propsColumns":[
