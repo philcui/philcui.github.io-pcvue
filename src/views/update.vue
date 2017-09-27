@@ -149,12 +149,27 @@ export default {
           ]
         },
         {
-          version:'V1.0.19', //待发布
+          version:'V1.0.19', 
           time: '2017.9.25',
           content: [
             {text:"treeselect实现在form里的验证"},
 			{text:"修复tree的withCheckAll"},
-			{text:"修复tree的拖拽"}
+			{text:"修复tree的拖拽"},
+			{text:"修改假render编译后不能被正常挂载的问题"}
+          ]
+        },
+        {
+          version:'V1.0.20', 
+          time: '2017.9.26',
+          content: [
+            {text:"开启表格顺序变化后重新渲染"}
+          ]
+        },
+        {
+          version:'V1.0.21', 
+          time: '2017.9.27',
+          content: [
+            {text:"select的option更新后，新的option的label未能更新"}
           ]
         }
       ]
