@@ -99,6 +99,16 @@
         </div>
       </demoTab>
     </section>
+    <section id="input7" class="demo">
+      <demoTab :code="inputCode07" :describeTitle="subTitle07">
+        <div slot="sample" style="height: 170px">
+          <Input v-model="value14" placeholder="请输入..." autoComplate :fetch-suggestions="cities"></Input>
+        </div>
+        <div slot="describe-content">
+          通过添加<code>autoComplate</code>属性可设置自动补全功能。补全的数据通过<code>fetch-suggestions</code>传入
+        </div>
+      </demoTab>
+    </section>
     <h2 id="switch3">API</h2>
     <h3>Input props</h3>
     <section class="demo" id="api">
@@ -296,12 +306,23 @@
             describe:'class="ivu-icon-left"图标在做显示',
             type:"String",
             default:"-"
+          },{
+            attribute: 'autoComplate',
+            describe:'添加自动补全功能',
+            type:"Boolean",
+            default:"false"
+          },{
+            attribute: 'fetch-suggestions',
+            describe:'传入自动补全的数据，仅在autoComplate下有效。',
+            type:"Array",
+            default:""
           }],
           value9: '',
           value:'',
           value10: '',
           subTitle06:'复合型输入框',
           subTitle05:'禁用状态',
+          subTitle07:'自动补全',
           value7: '',
           value8: '',
           subTitle04:'适应文本高度的文本域',
@@ -313,10 +334,12 @@
           value11:'',
           value12:"",
           value13:'',
+          value14: '',
+          cities: ['北京','上海','成都','沈阳','杭州','西安'],
           select1: 'http',
           select2: 'com',
           select3: 'day',
-            subTitle02:'带Icon的输入框',
+          subTitle02:'带Icon的输入框',
           subTitle1:'基础用法',
           "inputCode": `
             &lt;template>
@@ -396,6 +419,21 @@
             &lt;/template>
             &lt;script>
                 export default {
+                }
+            &lt;/script>
+            `,
+        "inputCode07": `
+            &lt;template>
+               &lt;Input v-model="value12" placeholder="请输入..." autoComplate :fetch-suggestions="cities">&lt;/Input>
+            &lt;/template>
+            &lt;script>
+                export default {
+                  data(){
+                    return{
+                      value12:'',
+                      cities: ['北京','上海','成都','沈阳','杭州','西安']
+                    }
+                  }
                 }
             &lt;/script>
             `
