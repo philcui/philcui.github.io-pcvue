@@ -115,6 +115,21 @@
       </demoTab>
     </section>
 
+    <section class="demo" id="lazyTree">
+      <demoTab :code="lazyTree" :describeTitle="lazyLoadingDescTitle">
+        <div slot="sample">
+          <div style="width: 80px">
+            <Tree :data="lazyLoadingData" :lazy="true" :load="loadNewNode" :fields="fields" :show-checkbox="true"></Tree>
+          </div>
+        </div>
+        <div slot="describe-content">
+          通过配置lazy 设置是否懒加载<br>
+          load 方法用于下载子树<br>
+          由于在点击节点时才进行该层数据的获取，默认情况下 Tree 无法预知某个节点是否为叶子节点，所以会为每个节点添加一个下拉按钮，如果节点没有下层数据，则点击后下拉按钮会消失。同时，你也可以提前告知 Tree 某个节点是否为叶子节点，从而避免在叶子节点前渲染下拉按钮。
+        </div>
+      </demoTab>
+    </section>
+
     <h2 id="api">API</h2>
 
     <h3>Tree props</h3>
@@ -156,6 +171,7 @@ export default {
       subTitlemap:"字段映射",
       subTitlechildrenChecked:"父子节点同步状态设置",
       editDis:'可编辑',
+      lazyLoadingDescTitle: "懒加载",
       fields: [
           {field: "name", map: "title"},
           {field: "child", map: "children"}
@@ -180,6 +196,9 @@ export default {
                   title: 'leaf',
               }]
           }]
+      }],
+      lazyLoadingData: [{
+        name: 'parent1',
       }],
       childrenCheckedData: [{
           expand: true,
@@ -336,6 +355,18 @@ export default {
           'describe':'是否可编辑',
           'type':"Boolean",
           'default':"false"
+        },
+        {
+          'attribute': 'lazy',
+          'describe':'是否懒加载',
+          'type':"Boolean",
+          'default':"false"
+        },
+        {
+          'attribute': 'load',
+          'describe':'加载子树数据的方法',
+          'type':"Function(node, resolve)",
+          'default':"-"
         }
       ],
       eventcolumns:[
@@ -451,6 +482,13 @@ export default {
           'attribute': 'icon',
           'describe':'图标类型或url',
           'type':"string || url",
+          'default':"-"
+        }
+        ,
+        {
+          'attribute': 'isLeaf',
+          'describe':'懒加载时该节点是否为叶子节点',
+          'type':"Boolean",
           'default':"-"
         }
       ],
@@ -799,13 +837,63 @@ searchableTree: `
       }
     }
     &lt;/script>
+    `,
+    lazyTree: `
+      &lt;template>
+        &lt;Tree :data="baseData" :lazy="true" :load="loadNewNode" :fields="fields" :show-checkbox="true">&lt;/Tree>
+      &lt;/template>
+      &lt;script>
+        export default {
+          data () {
+            return {
+              baseData: [{
+                name: 'parent1',
+              }],
+              fields: [
+                {field: 'name', map: 'title'},
+                {field: 'child', map: 'children'}
+              ],
+            }
+          },
+          methods:{
+                loadNewNode(node, resolve) {
+                  setTimeout(() => {
+                    if (node.name == 'parent1') {
+                        resolve([{
+                            name: 'child1',
+                        },{
+                            name: 'child2',
+                            isLeaf: true,
+                        }]);
+                    } else {
+                        resolve([]);
+                    }
+                  }, 500);
+                },
+          }
+        }
+      &lt;/script>
     `
     }
   },
   methods:{
     onItemTitleChange(oldData,newData){
       console.log("old:"+oldData.title +" , new:"+newData.title);
-    }
+    },
+    loadNewNode(node, resolve) {
+      setTimeout(() => {
+        if (node.name == 'parent1') {
+            resolve([{
+                name: 'child1',
+            },{
+                name: 'child2',
+                isLeaf: true,
+            }]);
+        } else {
+            resolve([]);
+        }
+      }, 500);
+    },
   }
 }
 </script>
