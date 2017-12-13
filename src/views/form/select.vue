@@ -188,6 +188,26 @@
         </div>
       </demoTab>
     </section>
+    <section class="demo" id="select11">
+      <demoTab :code="selectCode10" :describeTitle="subTitle10">
+        <div slot="sample" class="example">
+          <Row>
+            <Col span="12" style="padding-right:10px">
+              <Select 
+                v-model="model15" 
+                multiple 
+                filterable 
+                allowCreate>
+                  <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+              </Select>
+            </Col>
+          </Row>
+        </div>
+        <div slot="describe-content">
+          自定义项需同时设置 <code>filterable</code>、<code>multiple</code>、<code>allowCreate</code> 三个 props。
+        </div>
+      </demoTab>
+    </section>
 
     <h2 id="select10">API</h2>
     <h3>Select props</h3>
@@ -291,6 +311,7 @@
         loading1: false,
         options1: [],
         model14: [],
+        model15:  [],
         loading2: false,
         options2: [],
         list: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New hampshire', 'New jersey', 'New mexico', 'New york', 'North carolina', 'North dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode island', 'South carolina', 'South dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West virginia', 'Wisconsin', 'Wyoming'],
@@ -395,6 +416,11 @@
           describe:'添加图标（仅单选时生效）',
           type:"String",
           default:""
+        },{
+          attribute: 'allowCreate',
+          describe:'允许添加自定义项',
+          type:"Boolean",
+          default:"false"
         }],
         eventsColumns:[
           {
@@ -944,6 +970,53 @@
                             this.options2 = [];
                         }
                     }
+                }
+              }
+          &lt;/script>
+        `,
+        "subTitle10": '自定义项',
+        "selectCode10": `
+          &lt;template>
+             &lt;Row>
+                 &lt;Col span="12" style="padding-right:10px">
+                     &lt;Select v-model="model15" filterable multiple allowCreate>
+                         &lt;Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}&lt;/Option>
+                     &lt;/Select>
+                 &lt;/Col>
+             &lt;/Row>
+          &lt;/template>
+          &lt;script>
+              export default {
+                data () {
+                  return {
+                    cityList: [
+                      {
+                          value: 'beijing',
+                          label: '北京市'
+                      },
+                      {
+                          value: 'shanghai',
+                          label: '上海市'
+                      },
+                      {
+                          value: 'shenzhen',
+                          label: '深圳市'
+                      },
+                      {
+                          value: 'hangzhou',
+                          label: '杭州市'
+                      },
+                      {
+                          value: 'nanjing',
+                          label: '南京市'
+                      },
+                      {
+                          value: 'chongqing',
+                          label: '重庆市'
+                      }
+                    ],
+                    model15: []
+                  }
                 }
               }
           &lt;/script>
