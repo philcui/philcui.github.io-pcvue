@@ -171,6 +171,15 @@ export default {
           content: [
             {text:"select的option更新后，新的option的label未能更新"}
           ]
+        },
+        {
+          version:'V1.0.22', 
+          time: '2017.12.13',
+          content: [
+            {text:"新增input自动补全功能"},
+            {text:"新增select多选模式下，选择自定义项"},
+            {text:"新增tree懒加载功能"}
+          ]
         }
       ]
     }
