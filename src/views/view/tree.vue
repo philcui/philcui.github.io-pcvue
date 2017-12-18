@@ -104,12 +104,12 @@
     <section class="demo" id="editTree">
       <demoTab :code="editTree" :describeTitle="editDis">
         <div slot="sample">
-          <div style="width: 80px">
-            <Tree :data="baseData" :contentEditable="true" :onItemTitleChange="onItemTitleChange" :fields="fields"></Tree>
+          <div>
+            <Tree :data="baseDataEdit" :onItemTitleChange="onItemTitleChange" :fields="fields"></Tree>
           </div>
         </div>
         <div slot="describe-content">
-          通过配置contentEditable 设置表格是否可编辑。<br>
+          通过设置baseDataEdit中的edit属性，配置对应的数据项是否可以修改<br>
           onItemTitleChange通过方法可获取修改之前的对象和修改之后的。
         </div>
       </demoTab>
@@ -118,7 +118,7 @@
     <section class="demo" id="lazyTree">
       <demoTab :code="lazyTree" :describeTitle="lazyLoadingDescTitle">
         <div slot="sample">
-          <div style="width: 80px">
+          <div>
             <Tree :data="lazyLoadingData" :lazy="true" :load="loadNewNode" :fields="fields" :show-checkbox="true"></Tree>
           </div>
         </div>
@@ -187,6 +187,31 @@ export default {
                   title: 'leaf',
               }, {
                   title: 'leaf',
+                  checked: true
+              }]
+          }, {
+              title: 'parent 1-1',
+              expand: true,
+              children: [{
+                  title: 'leaf',
+              }]
+          }]
+      }],
+      baseDataEdit: [{
+          expand: true,
+          title: 'parent 1',
+          edit: true,
+          children: [{
+              title: 'parent 1-0',
+              edit: true,
+              expand: true,
+              disabled: true,
+              children: [{
+                  title: 'leaf',
+                  edit: true,
+              }, {
+                  title: 'leaf',
+                  edit: true,
                   checked: true
               }]
           }, {
@@ -351,12 +376,6 @@ export default {
           'default':"-"
         },
         {
-          'attribute': 'contentEditable',
-          'describe':'是否可编辑',
-          'type':"Boolean",
-          'default':"false"
-        },
-        {
           'attribute': 'lazy',
           'describe':'是否懒加载',
           'type':"Boolean",
@@ -441,6 +460,12 @@ export default {
           'describe':'标题',
           'type':"String | Element String",
           'default':"-"
+        },
+        {
+          'attribute': 'edit',
+          'describe':'当前子节点是否可编辑',
+          'type':"Boolean",
+          'default':"false"
         },
         {
           'attribute': 'expand',
@@ -796,24 +821,28 @@ searchableTree: `
 `,
        editTree: `
        &lt;template>
-       &lt;Tree :data="baseData" :contentEditable="true" :onItemTitleChange="onItemTitleChange" :fields="fields">&lt;/Tree>
+       &lt;Tree :data="baseDataEdit" :onItemTitleChange="onItemTitleChange" :fields="fields">&lt;/Tree>
       &lt;/template>
       &lt;script>
     export default {
       data () {
         return {
-          baseData: [{
+          baseDataEdit: [{
             expand: true,
             name: 'parent 1',
+            edit: true
             child: [{
               name: 'parent 1-0',
+              edit: true
               expand: true,
               disabled: true,
               child: [{
                 name: 'leaf',
+                edit: true
                 disableCheckbox: true
               }, {
                 name: 'leaf',
+                edit: true
               }]
             }, {
               name: 'parent 1-1',
